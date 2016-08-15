@@ -22,9 +22,12 @@ Cheatsheet about tips and tricks for Android Development
 |Surround With|`Opt`+`Cmd`+`T`|`Alt`+`Ctrl`+`T`
 
 #####**Tip #2 - Use plugins to become more efficient**
-The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. 
+1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
+	The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. 
+	Its also is usefull features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
 
-Its also is usefull features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
+1. [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
+2. [Lines Sorter](https://plugins.jetbrains.com/plugin/5919)
 
 #####**Tip #3 - Use the Darcula Theme in Android Studio**
 Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.
@@ -40,7 +43,6 @@ You should use a standard codestyle
 + [AOSP Codestyle](https://source.android.com/source/code-style.html)
 + [Square IntelliJ Codestyle](https://github.com/square/java-code-styles)
 
-
 ####***Emulator***
 Apart from using physical devices , one should use emulators as they are as of now easy to manage and equivalently powerful.
 
@@ -54,6 +56,29 @@ Apart from using physical devices , one should use emulators as they are as of n
 #### **Tip #1 - Use OkHttp over HttpUrlConnect**
 HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspot.in/2011/09/androids-http-clients.html). 
 [Okhttp](https://square.github.io/okhttp/) solves them in a more elegant manner. [[Ref]](https://corner.squareup.com/2013/05/announcing-okhttp.html)
+
+#### **Tip #2 - Use [Pidcat](https://github.com/JakeWharton/pidcat) for logging**
+
+#### **Tip #3 - Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html)**
+
+#### **Tip #4 - Use git**
+
+#### **Tip #5 - Use [ClassyShark](https://github.com/google/android-classyshark)**
+Its a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies
+
+#### **Tip #5 - Use [ClassyShark](https://github.com/google/android-classyshark)**
+
+---
+###***Other Resources***
+
+#### **Tip #1 - Listen to podcasts**
+1. [Fragmented](http://fragmentedpodcast.com/)
+2. [Android Developers Backstage](https://androidbackstage.blogspot.in/)
+
+P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en) , all for FREE.
+
+#### **Tip #2 - Checkout new android libraries**
+[Android Arsenal](https://android-arsenal.com/)
 
 
 License

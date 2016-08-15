@@ -68,6 +68,12 @@ Its a standalone tool for Android Devs used to browse any Android executable and
 
 #### **Tip #5 - Use [ClassyShark](https://github.com/google/android-classyshark)**
 
+#### **Tip #6 - Use [Stetho](https://github.com/facebook/stetho)**
+Debug your android apps using Chrome Dev Tools.
+
+#### **Tip #7 - Use [Battery Historian](https://github.com/google/battery-historian)**
+A tool to analyze battery consumers using Android "bugreport" files.
+
 ---
 ###***Other Resources***
 

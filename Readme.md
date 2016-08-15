@@ -66,13 +66,20 @@ HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspo
 #### **Tip #5 - Use [ClassyShark](https://github.com/google/android-classyshark)**
 Its a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies
 
-#### **Tip #5 - Use [ClassyShark](https://github.com/google/android-classyshark)**
+#### **Tip #6 - Use [ClassyShark](https://github.com/google/android-classyshark)**
 
-#### **Tip #6 - Use [Stetho](https://github.com/facebook/stetho)**
+#### **Tip #7 - Use [Stetho](https://github.com/facebook/stetho)**
 Debug your android apps using Chrome Dev Tools.
 
-#### **Tip #7 - Use [Battery Historian](https://github.com/google/battery-historian)**
+#### **Tip #8 - Use [Battery Historian](https://github.com/google/battery-historian)**
 A tool to analyze battery consumers using Android "bugreport" files.
+
+#### **Tip #9 - Always use a constant version value like "24.1.1"**
+Avoid using `+` when specifying the version of dependencies.
+
++ Keeps one secured from unexpected API changes in the dependency.
++ Avoids doing an extra network call for the checking latest version of each dependency on every build.
+
 
 ---
 ###***Other Resources***

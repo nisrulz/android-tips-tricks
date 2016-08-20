@@ -102,6 +102,20 @@ P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They ev
 + [Mocky](http://www.mocky.io/) - Mock your HTTP responses to test your REST API
 + [Mockbin](http://mockbin.com) - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.
 
+---
+#### **Extra : Android Libraries built by me**
+
++ [EasyDeviceInfo](https://github.com/nisrulz/easydeviceinfo) - Enabling device information to be at android developers hand like a piece of cake!
++ [Sensey](https://github.com/nisrulz/Sensey) - Android library to make detecting gestures easy
++ [PackageHunter](https://github.com/nisrulz/PackageHunter) - Android library to hunt down package information
++ [Zentone](https://github.com/nisrulz/zentone) - Easily generate audio tone in android
++ [RecyclerViewHelper](https://github.com/nisrulz/recyclerviewhelper) - RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.
++ [StackedHorizontalProgressbar](https://github.com/nisrulz/stackedhorizontalprogressbar) - Android Library to implement stacked horizontal progressbar
++ [QREader](https://github.com/nisrulz/qreader) - A library that uses google's mobile vision api and simplify the QR code reading process
++ [ScreenShott](https://github.com/nisrulz/screenshott) - Simple library to take a screenshot of the device screen , programmatically! 
++ [EvTrack](https://github.com/nisrulz/EvTrack) - Android library to make event and exception tracking easy
++ [OptimusHTTP](https://github.com/nisrulz/OptimusHTTP) - Android library that simplifys networking in android via an async http client
++ [ShoutOut](https://github.com/nisrulz/ShoutOut) - Android library for logging information in android
 
 License
 =======

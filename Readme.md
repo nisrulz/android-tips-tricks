@@ -94,20 +94,20 @@ defaultConfig {
   }
 
 //Split into platform dependent APK
-splits {
+  splits {
     abi {
       enable true
       reset()
       include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
       universalApk false //generate an additional APK that contains all the ABIs
     }
-}
+  }
 
-// map for the version code
-project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
+  // map for the version code
+  project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
 
-// Rename with proper versioning
-android.applicationVariants.all { variant ->
+  // Rename with proper versioning
+  android.applicationVariants.all { variant ->
     // assign different version code for each output
     variant.outputs.each { output ->
       output.versionCodeOverride =
@@ -115,7 +115,7 @@ android.applicationVariants.all { variant ->
               1000000 +
               android.defaultConfig.versionCode
     }
-}
+  }
 ```
 
 ---
@@ -137,6 +137,12 @@ P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They ev
 + [API Studio](http://apistudio.io/) - a playground for API developers
 + [Mocky](http://www.mocky.io/) - Mock your HTTP responses to test your REST API
 + [Mockbin](http://mockbin.com) - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.
+
+#### **Tip #4 - Subscribe to newsletters to stay upto date**
++ [Android Weekly](http://androidweekly.net/)
++ [AndroidDevDigest](https://www.androiddevdigest.com/)
++ [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/)
++ [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6)
 
 ---
 #### **Extra : Android Libraries built by me**

@@ -11,14 +11,14 @@ Cheatsheet about tips and tricks for Android Development
 |---|---|---
 |Open Class|`Cmd`+`O`|`Ctrl`+`O`
 |Open File|`Cmd`+`Shift`+`O`|`Ctrl`+`Shift`+`N`
+|Open recently edited file|`Cmd`+`Shift`+`E`|`Ctrl`+`Shift`+`E`
+|Lookup Actions|`Cmd`+`Shift`+`A`|`Ctrl`+`Shift`+`A`
 |Open Symbol|`Cmd`+`Opt`+`O`|`Alt`+`Shift`+`N`
 |Open recently used file|`Cmd`+`E`|`Ctrl`+`E`
-|Open recently edited file|`Cmd`+`Shift`+`E`|`Ctrl`+`Shift`+`E`
 |Last Edited Location|`Cmd`+`Shift`+`Backspace`|`Ctrl`+`Shift`+`Backspace`
 |Find Usage in persistent window|`Opt`+`F7`|`Alt`+`F7`
 |Find Usage in floating window|`Cmd`+`Opt`+`F7`|`Ctrl`+`Alt`+`F7`
 |Format the code with proper Indentation|`Cmd`+`Opt`+`L`|`Ctrl`+`Alt`+`L`
-|Lookup Actions|`Cmd`+`Shift`+`A`|`Ctrl`+`Shift`+`A`
 |Surround With|`Opt`+`Cmd`+`T`|`Alt`+`Ctrl`+`T`
 
 #####**Tip #2 - Use plugins to become more efficient**
@@ -117,6 +117,12 @@ defaultConfig {
     }
   }
 ```
+
+#### **Tip #11 - Use [Handler instead of a TimerTask](http://www.mopri.de/2010/timertask-bad-do-it-the-android-way-use-a-handler/) for scheduling**
+
+#### **Tip #12 - Learn about some architecture such as MVP or Clean**
+
+#### **Tip #13 - Try to understand and follow TDD (Test Driven Development)**
 
 ---
 ###***Other Resources***

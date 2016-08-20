@@ -82,6 +82,42 @@ Avoid using `+` when specifying the version of dependencies.
 
 #### **Tip #10 - Use [Handler instead of a TimerTask](http://www.mopri.de/2010/timertask-bad-do-it-the-android-way-use-a-handler/)**
 
+#### **Tip #11 - Split your apk using gradle when using Native code, donot bundle all of em together and ship!.. coz that will make you evil**
+
+```gradle
+defaultConfig {
+    ...
+
+    ndk {
+      abiFilters "armeabi", "armeabi-v7a", "mips", "x86"
+    }
+  }
+
+//Split into platform dependent APK
+splits {
+    abi {
+      enable true
+      reset()
+      include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
+      universalApk false //generate an additional APK that contains all the ABIs
+    }
+}
+
+// map for the version code
+project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
+
+// Rename with proper versioning
+android.applicationVariants.all { variant ->
+    // assign different version code for each output
+    variant.outputs.each { output ->
+      output.versionCodeOverride =
+          project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) *
+              1000000 +
+              android.defaultConfig.versionCode
+    }
+}
+```
+
 ---
 ###***Other Resources***
 

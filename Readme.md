@@ -86,6 +86,12 @@ A tool to analyze battery consumers using Android "bugreport" files.
     If you do **have** to use png, compress them. Take a look at [TinyPNG](https://tinypng.com).
 + **Use proguard**
 
++ **[Simulating Android killing your app in the background](https://twitter.com/Jahnold/status/759775495655333888),  run in terminal**
+    `adb shell am kill`
+
++ **Follow the below [rule to have faster gradle builds](https://medium.com/@skaliakoudas/decreasing-build-times-by-decreasing-gradle-memory-requirements-7fcafc6d98ea#.otnm0ofb6)**
+    `Gradle memory >= Dex memory + 1Gb`
+
 + **Split your apk using gradle when using Native code, donot bundle all of em together and ship!.. coz that will make you evil**
 
     ```gradle
@@ -133,9 +139,8 @@ DRY = Donot Repeat Yourself
 
 + **[Package by Feature, not layers](https://medium.com/the-engineering-team/package-by-features-not-layers-2d076df1964d)**
 
-
-
 ---
+
 ###***Other Resources***
 
 + **Listen to podcasts**

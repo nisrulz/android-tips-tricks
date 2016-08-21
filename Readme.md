@@ -44,6 +44,8 @@ You should use a standard codestyle
  So possible contenders can be
     + [AOSP Codestyle](https://source.android.com/source/code-style.html)
     + [Square IntelliJ Codestyle](https://github.com/square/java-code-styles)
++ **Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html)**
++ **Use the Memory/Network/CPU Monitor inside Android Studio to profile your code/app**
 
 ####***Emulator***
 Apart from using physical devices , one should use emulators as they are as of now easy to manage and equivalently powerful.
@@ -62,8 +64,6 @@ HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspo
 
 + **Use [Pidcat](https://github.com/JakeWharton/pidcat) for logging**
 
-+ **Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html)**
-
 + **Use some Version Control System(VCS) like [Git](https://git-scm.com/)**
 
 + **Use [ClassyShark](https://github.com/google/android-classyshark)**
@@ -81,6 +81,10 @@ A tool to analyze battery consumers using Android "bugreport" files.
     + Avoids doing an extra network call for the checking latest version of each dependency on every build.
 
 + **Use [Handler instead of a TimerTask](http://www.mopri.de/2010/timertask-bad-do-it-the-android-way-use-a-handler/)**
++ **[Donot use your own personal email for Google Play Developer Account](https://www.reddit.com/r/Android/comments/2hywu9/google_play_only_one_strike_is_needed_to_ruin_you/)**
++ **Use Vectors instead of PNG**
+    If you do **have** to use png, compress them. Take a look at [TinyPNG](https://tinypng.com).
++ **Use proguard**
 
 + **Split your apk using gradle when using Native code, donot bundle all of em together and ship!.. coz that will make you evil**
 
@@ -171,6 +175,11 @@ DRY = Donot Repeat Yourself
 + [EvTrack](https://github.com/nisrulz/EvTrack) - Android library to make event and exception tracking easy
 + [OptimusHTTP](https://github.com/nisrulz/OptimusHTTP) - Android library that simplifys networking in android via an async http client
 + [ShoutOut](https://github.com/nisrulz/ShoutOut) - Android library for logging information in android
+
+
+####Credits
+Some of the tips and tricks are something I have been following in my workflow and some of them have been from various other sources.
+I have tried to add direct links  wherever I could remember, giving people due credit who have explained the concepts. If  you think I have missed any , then either send a PR or open an issue and I will fix it asap.
 
 License
 =======

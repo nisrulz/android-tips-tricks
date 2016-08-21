@@ -142,11 +142,28 @@ DRY = Donot Repeat Yourself
     1. [Fragmented](http://fragmentedpodcast.com/)
     2. [Android Developers Backstage](https://androidbackstage.blogspot.in/)
 
+    There are others too, but the above two are the popular ones, you can lookup more using tag `android` on sites offering Podcast Services.
+
     P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en) , all for FREE.
 
 + **Checkout new android libraries**
 [Android Arsenal](https://android-arsenal.com/)
 
++ **Bookmark these sites for staying upto date **
+    + [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
+    + [Android Niceties - UI Showcase](http://androidniceties.tumblr.com/)
+    + [Material Design Specs](https://material.google.com/)
+    + [Platform Version Distribution](https://developer.android.com/about/dashboards/index.html#Platform)
+    + [Android Studio Release Notes](https://sites.google.com/a/android.com/tools/recent)
+    + [Android Developers Blog](https://android-developers.blogspot.in/)
+    + [AndroidDev-Reddit](https://www.reddit.com/r/androiddev)
+    + [Github Trending Java Projects](https://github.com/trending?l=java&since=weekly)
+    + [Stackoverflow-Android tag](https://stackoverflow.com/questions/tagged/android)
+    + [Support Library History](https://developer.android.com/topic/libraries/support-library/revisions.html)
+    + [Android Conferences](https://androidstudygroup.github.io/conferences/)
+    + [Android Dev Docs](https://developer.android.com/reference/packages.html)
+    + [Material Up - DesignShowcase](http://www.material.uplabs.com/)
+    + [Dribbble - MaterialDeisgnShowcase](https://dribbble.com/tags/material_design)
 
 + **Use freely available mockable api points**
     + [Mockey](https://github.com/clafonta/Mockey) - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.

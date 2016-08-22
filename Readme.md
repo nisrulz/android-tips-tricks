@@ -24,8 +24,8 @@ Cheatsheet about tips and tricks for Android Development
 
 + **Use plugins to become more efficient**
 1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
-    The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. 
-    Its also is useful features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
+  The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. 
+  Its also is useful features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
 1. [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
 1. [Lines Sorter](https://plugins.jetbrains.com/plugin/5919)
 1. [Findbugs](https://plugins.jetbrains.com/plugin/3847?pr=idea) 
@@ -42,8 +42,8 @@ I use [Menlo font](https://en.wikipedia.org/wiki/Menlo_(typeface)).
 + **Use a code style**
 You should use a standard codestyle 
  So possible contenders can be
-    + [AOSP Codestyle](https://source.android.com/source/code-style.html)
-    + [Square IntelliJ Codestyle](https://github.com/square/java-code-styles)
+  + [AOSP Codestyle](https://source.android.com/source/code-style.html)
+  + [Square IntelliJ Codestyle](https://github.com/square/java-code-styles)
 + **Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html)**
 + **Use the Memory/Network/CPU Monitor inside Android Studio to profile your code/app**
 
@@ -76,57 +76,68 @@ Debug your android apps using Chrome Dev Tools.
 A tool to analyze battery consumers using Android "bugreport" files.
 
 + **Always use a constant version value like "24.1.1"**
-    Avoid using `+` when specifying the version of dependencies.
-    + Keeps one secured from unexpected API changes in the dependency.
-    + Avoids doing an extra network call for the checking latest version of each dependency on every build.
+  Avoid using `+` when specifying the version of dependencies.
+  + Keeps one secured from unexpected API changes in the dependency.
+  + Avoids doing an extra network call for the checking latest version of each dependency on every build.
 
 + **Use [Handler instead of a TimerTask](http://www.mopri.de/2010/timertask-bad-do-it-the-android-way-use-a-handler/)**
 + **[Donot use your own personal email for Google Play Developer Account](https://www.reddit.com/r/Android/comments/2hywu9/google_play_only_one_strike_is_needed_to_ruin_you/)**
 + **Use Vectors instead of PNG**
-    If you do **have** to use png, compress them. Take a look at [TinyPNG](https://tinypng.com).
+  If you do **have** to use png, compress them. Take a look at [TinyPNG](https://tinypng.com).
 + **Use proguard**
+  ```gradle
+  android {
+    ...
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+  ```
 
 + **[Simulating Android killing your app in the background](https://twitter.com/Jahnold/status/759775495655333888),  run in terminal**
-    `adb shell am kill`
+  `adb shell am kill`
 
 + **Follow the below [rule to have faster gradle builds](https://medium.com/@skaliakoudas/decreasing-build-times-by-decreasing-gradle-memory-requirements-7fcafc6d98ea#.otnm0ofb6)**
-    `Gradle memory >= Dex memory + 1Gb`
+  `Gradle memory >= Dex memory + 1Gb`
 
 + **Split your apk using gradle when using Native code, donot bundle all of em together and ship!.. coz that will make you evil**
 
-    ```gradle
-    defaultConfig {
-        ...
-    
-        ndk {
-          abiFilters "armeabi", "armeabi-v7a", "mips", "x86"
-        }
+  ```gradle
+  defaultConfig {
+      ...
+  
+      ndk {
+        abiFilters "armeabi", "armeabi-v7a", "mips", "x86"
       }
-    
-    //Split into platform dependent APK
-      splits {
-        abi {
-          enable true
-          reset()
-          include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
-          universalApk false //generate an additional APK that contains all the ABIs
-        }
+    }
+  
+  //Split into platform dependent APK
+    splits {
+      abi {
+        enable true
+        reset()
+        include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
+        universalApk false //generate an additional APK that contains all the ABIs
       }
-    
-      // map for the version code
-      project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
-    
-      // Rename with proper versioning
-      android.applicationVariants.all { variant ->
-        // assign different version code for each output
-        variant.outputs.each { output ->
-          output.versionCodeOverride =
-              project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) *
-                  1000000 +
-                  android.defaultConfig.versionCode
-        }
+    }
+  
+    // map for the version code
+    project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
+  
+    // Rename with proper versioning
+    android.applicationVariants.all { variant ->
+      // assign different version code for each output
+      variant.outputs.each { output ->
+        output.versionCodeOverride =
+            project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) *
+                1000000 +
+                android.defaultConfig.versionCode
       }
-    ```
+    }
+  ```
 
 + **Use [Handler instead of a TimerTask](http://www.mopri.de/2010/timertask-bad-do-it-the-android-way-use-a-handler/) for scheduling**
 
@@ -144,50 +155,50 @@ DRY = Donot Repeat Yourself
 ###***Other Resources***
 
 + **Listen to podcasts**
-    1. [Fragmented](http://fragmentedpodcast.com/)
-    2. [Android Developers Backstage](https://androidbackstage.blogspot.in/)
+  1. [Fragmented](http://fragmentedpodcast.com/)
+  2. [Android Developers Backstage](https://androidbackstage.blogspot.in/)
 
-    There are others too, but the above two are the popular ones, you can lookup more using tag `android` on sites offering Podcast Services.
+  There are others too, but the above two are the popular ones, you can lookup more using tag `android` on sites offering Podcast Services.
 
-    P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en) , all for FREE.
+  P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en) , all for FREE.
 
 + **Checkout new android libraries**
 [Android Arsenal](https://android-arsenal.com/)
 
 + **Follow on Twitter**
-    + [#AndroidDev](https://twitter.com/search?q=%23AndroidDev)
+  + [#AndroidDev](https://twitter.com/search?q=%23AndroidDev)
 
 + **Create a List on Twitter**
-    + [Android List](https://twitter.com/nisrulz/lists/android)
+  + [Android List](https://twitter.com/nisrulz/lists/android)
 
 + **Bookmark these sites for staying upto date **
-    + [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
-    + [Android Niceties - UI Showcase](http://androidniceties.tumblr.com/)
-    + [Material Design Specs](https://material.google.com/)
-    + [Platform Version Distribution](https://developer.android.com/about/dashboards/index.html#Platform)
-    + [Android Studio Release Notes](https://sites.google.com/a/android.com/tools/recent)
-    + [Android Developers Blog](https://android-developers.blogspot.in/)
-    + [AndroidDev-Reddit](https://www.reddit.com/r/androiddev)
-    + [Github Trending Java Projects](https://github.com/trending?l=java&since=weekly)
-    + [Stackoverflow-Android tag](https://stackoverflow.com/questions/tagged/android)
-    + [Support Library History](https://developer.android.com/topic/libraries/support-library/revisions.html)
-    + [Android Conferences](https://androidstudygroup.github.io/conferences/)
-    + [Android Dev Docs](https://developer.android.com/reference/packages.html)
-    + [Material Up - DesignShowcase](http://www.material.uplabs.com/)
-    + [Dribbble - MaterialDeisgnShowcase](https://dribbble.com/tags/material_design)
+  + [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
+  + [Android Niceties - UI Showcase](http://androidniceties.tumblr.com/)
+  + [Material Design Specs](https://material.google.com/)
+  + [Platform Version Distribution](https://developer.android.com/about/dashboards/index.html#Platform)
+  + [Android Studio Release Notes](https://sites.google.com/a/android.com/tools/recent)
+  + [Android Developers Blog](https://android-developers.blogspot.in/)
+  + [AndroidDev-Reddit](https://www.reddit.com/r/androiddev)
+  + [Github Trending Java Projects](https://github.com/trending?l=java&since=weekly)
+  + [Stackoverflow-Android tag](https://stackoverflow.com/questions/tagged/android)
+  + [Support Library History](https://developer.android.com/topic/libraries/support-library/revisions.html)
+  + [Android Conferences](https://androidstudygroup.github.io/conferences/)
+  + [Android Dev Docs](https://developer.android.com/reference/packages.html)
+  + [Material Up - DesignShowcase](http://www.material.uplabs.com/)
+  + [Dribbble - MaterialDeisgnShowcase](https://dribbble.com/tags/material_design)
 
 + **Use freely available mockable api points**
-    + [Mockey](https://github.com/clafonta/Mockey) - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.
-    + [JSON Placeholder](http://jsonplaceholder.typicode.com/) - Fake Online REST API for Testing and Prototyping
-    + [API Studio](http://apistudio.io/) - a playground for API developers
-    + [Mocky](http://www.mocky.io/) - Mock your HTTP responses to test your REST API
-    + [Mockbin](http://mockbin.com) - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.
+  + [Mockey](https://github.com/clafonta/Mockey) - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.
+  + [JSON Placeholder](http://jsonplaceholder.typicode.com/) - Fake Online REST API for Testing and Prototyping
+  + [API Studio](http://apistudio.io/) - a playground for API developers
+  + [Mocky](http://www.mocky.io/) - Mock your HTTP responses to test your REST API
+  + [Mockbin](http://mockbin.com) - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.
 
 + **Subscribe to newsletters to stay upto date**
-    + [Android Weekly](http://androidweekly.net/)
-    + [AndroidDevDigest](https://www.androiddevdigest.com/)
-    + [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/)
-    + [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6)
+  + [Android Weekly](http://androidweekly.net/)
+  + [AndroidDevDigest](https://www.androiddevdigest.com/)
+  + [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/)
+  + [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6)
 
 ---
 

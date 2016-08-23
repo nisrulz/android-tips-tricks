@@ -85,6 +85,7 @@ A tool to analyze battery consumers using Android "bugreport" files.
 + **Use Vectors instead of PNG**
   If you do **have** to use png, compress them. Take a look at [TinyPNG](https://tinypng.com).
 + **Use proguard**
+
   ```gradle
   android {
     ...
@@ -92,6 +93,20 @@ A tool to analyze battery consumers using Android "bugreport" files.
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+  ```
++ **Use shrinkResources**
+
+  ```gradle
+  android {
+    ...
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            ...
         }
     }
 }

@@ -7,30 +7,32 @@ Cheatsheet about tips and tricks for Android Development
 ####***Android Studio***
 
 + **Code faster by using keyboard shortcuts**
-|Description|Mac|Linux/Win
-|---|---|---
-|Open Class|`Cmd`+`O`|`Ctrl`+`O`
-|Open File|`Cmd`+`Shift`+`O`|`Ctrl`+`Shift`+`N`
-|Open recently edited file|`Cmd`+`Shift`+`E`|`Ctrl`+`Shift`+`E`
-|Lookup Actions|`Cmd`+`Shift`+`A`|`Ctrl`+`Shift`+`A`
-|Open Symbol|`Cmd`+`Opt`+`O`|`Alt`+`Shift`+`N`
-|Open recently used file|`Cmd`+`E`|`Ctrl`+`E`
-|Last Edited Location|`Cmd`+`Shift`+`Backspace`|`Ctrl`+`Shift`+`Backspace`
-|Find Usage in persistent window|`Opt`+`F7`|`Alt`+`F7`
-|Find Usage in floating window|`Cmd`+`Opt`+`F7`|`Ctrl`+`Alt`+`F7`
-|Format the code with proper Indentation|`Cmd`+`Opt`+`L`|`Ctrl`+`Alt`+`L`
-|Surround With|`Opt`+`Cmd`+`T`|`Alt`+`Ctrl`+`T`
+  
+  |Description|Mac|Linux/Win
+  |---|---|---
+  |Open Class|`Cmd`+`O`|`Ctrl`+`O`
+  |Open File|`Cmd`+`Shift`+`O`|`Ctrl`+`Shift`+`N`
+  |Open recently edited file|`Cmd`+`Shift`+`E`|`Ctrl`+`Shift`+`E`
+  |Lookup Actions|`Cmd`+`Shift`+`A`|`Ctrl`+`Shift`+`A`
+  |Open Symbol|`Cmd`+`Opt`+`O`|`Alt`+`Shift`+`N`
+  |Open recently used file|`Cmd`+`E`|`Ctrl`+`E`
+  |Last Edited Location|`Cmd`+`Shift`+`Backspace`|`Ctrl`+`Shift`+`Backspace`
+  |Find Usage in persistent window|`Opt`+`F7`|`Alt`+`F7`
+  |Find Usage in floating window|`Cmd`+`Opt`+`F7`|`Ctrl`+`Alt`+`F7`
+  |Format the code with proper Indentation|`Cmd`+`Opt`+`L`|`Ctrl`+`Alt`+`L`
+  |Surround With|`Opt`+`Cmd`+`T`|`Alt`+`Ctrl`+`T`
 
 
 + **Use plugins to become more efficient**
-1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
-  The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. 
-  Its also is useful features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
-1. [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
-1. [Lines Sorter](https://plugins.jetbrains.com/plugin/5919)
-1. [Findbugs](https://plugins.jetbrains.com/plugin/3847?pr=idea) 
-1. [Sonar Lint](https://plugins.jetbrains.com/plugin/7973) 
-1. [Checkstyles](https://plugins.jetbrains.com/plugin/1065) 
+  1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
+  
+    The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. 
+    Its also is useful features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
+  1. [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
+  1. [Lines Sorter](https://plugins.jetbrains.com/plugin/5919)
+  1. [Findbugs](https://plugins.jetbrains.com/plugin/3847?pr=idea) 
+  1. [Sonar Lint](https://plugins.jetbrains.com/plugin/7973) 
+  1. [Checkstyles](https://plugins.jetbrains.com/plugin/1065) 
 
 + **Use the Darcula Theme in Android Studio**
 Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.

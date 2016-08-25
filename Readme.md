@@ -196,7 +196,7 @@ DRY = Donot Repeat Yourself
 + **Create a List on Twitter**
   + [Android List](https://twitter.com/nisrulz/lists/android)
 
-+ **Bookmark these sites for staying upto date **
++ **Bookmark these sites for staying upto date**
   + [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
   + [Android Niceties - UI Showcase](http://androidniceties.tumblr.com/)
   + [Material Design Specs](https://material.google.com/)

@@ -25,6 +25,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
   |Find Usage in floating window|`Cmd`+`Opt`+`F7`|`Ctrl`+`Alt`+`F7`
   |Format the code with proper Indentation|`Cmd`+`Opt`+`L`|`Ctrl`+`Alt`+`L`
   |Surround With|`Opt`+`Cmd`+`T`|`Alt`+`Ctrl`+`T`
+  |Open Terminal|`Opt`+`F12`|`Alt`+`F12`
 
 
 + **Use plugins to become more efficient**

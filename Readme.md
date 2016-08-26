@@ -1,4 +1,4 @@
-# Android Tips & Tricks
+![Image](https://github.com/nisrulz/android-tips-tricks/blob/master/img/github_banner.png)
 
 Cheatsheet about tips and tricks for Android Development
 

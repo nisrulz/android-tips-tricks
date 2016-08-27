@@ -26,6 +26,11 @@ Contributions are always welcome, hoping people will help me in growing this. To
   |Format the code with proper Indentation|`Cmd`+`Opt`+`L`|`Ctrl`+`Alt`+`L`
   |Surround With|`Opt`+`Cmd`+`T`|`Alt`+`Ctrl`+`T`
   |Open Terminal|`Opt`+`F12`|`Alt`+`F12`
+  |Generate Setter/Getters/|`Cmd`+`N`|`Alt`+`Ins`
+  |Find Class|`CMD`+`O`|`Ctrl`+`N`
+  |Refactor/Rename|`Shift`+`F6`|`Shift`+`F6`
+  |Quick Fix|`Opt`+`Enter`|`Alt`+`Enter`
+  |Goto Definition|`Cmd`+`B`|`Ctrl`+`B`
 
 
 + **Use plugins to become more efficient**

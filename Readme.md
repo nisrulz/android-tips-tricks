@@ -31,6 +31,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
   |Refactor/Rename|`Shift`+`F6`|`Shift`+`F6`
   |Quick Fix|`Opt`+`Enter`|`Alt`+`Enter`
   |Goto Definition|`Cmd`+`B`|`Ctrl`+`B`
+  |Show parameters for selected method|`Cmd`+`P`|`Ctrl`+`P`
 
 
 + **Use plugins to become more efficient**

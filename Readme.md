@@ -68,6 +68,9 @@ Apart from using physical devices , one should use emulators as they are as of n
 + [Genymotion](https://www.genymotion.com/)
 + [Intel Emulator bundled in SDK Manger](https://developer.android.com/studio/run/emulator.html)
 
+####***[Vysor](http://www.vysor.io/)***
+This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demo-ing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version , paid version is totally worth buying. 
+
 
 -
 ###***Make better choices while coding***

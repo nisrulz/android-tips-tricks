@@ -14,6 +14,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
   
   |Description|Mac|Linux/Win
   |---|---|---
+  |Lookup IDE commands|`Cmd`+`Shift`+`A`|`Ctrl`+`Shift`+`A`
   |Open Class|`Cmd`+`O`|`Ctrl`+`O`
   |Open File|`Cmd`+`Shift`+`O`|`Ctrl`+`Shift`+`N`
   |Open recently edited file|`Cmd`+`Shift`+`E`|`Ctrl`+`Shift`+`E`
@@ -32,7 +33,8 @@ Contributions are always welcome, hoping people will help me in growing this. To
   |Quick Fix|`Opt`+`Enter`|`Alt`+`Enter`
   |Goto Definition|`Cmd`+`B`|`Ctrl`+`B`
   |Show parameters for selected method|`Cmd`+`P`|`Ctrl`+`P`
-
+  |Refactor This|`Ctrl`+`T`|`Ctrl`+`Alt`+`Shift`+`T`
+  |Stop Process|`Cmd`+`F2`|`Ctrl`+`F2`
 
 + **Use plugins to become more efficient**
   1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)

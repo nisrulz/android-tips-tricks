@@ -183,6 +183,23 @@ DRY = Do not Repeat Yourself
 
 + **[Learn about Dependency Resolution](http://crushingcode.co/the-curious-case-of-dependency-conflicts/)** 
   With the speed android dependencies update, sooner or later you are going to encounter some sort of dependency conflict. Solution is making use of Dependency Resoultion. [Official Reference](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html)
+  
++ **Use different package name for non-release builds**
+  ```gradle
+    android {
+        buildTypes {
+            debug {
+                applicationIdSuffix '.debug'
+                versionNameSuffix '-DEBUG'
+            }
+
+            release {
+                // ...
+            }
+        }
+    }
+  ```
+
 
 -
 

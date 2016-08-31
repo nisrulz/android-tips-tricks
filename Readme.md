@@ -277,8 +277,7 @@ DRY = Do not Repeat Yourself
 
 
 ####Credits
-Some of the tips and tricks are something I have been following in my workflow and some of them have been from various other sources.
-I have tried to add direct links  wherever I could remember, giving people due credit who have explained the concepts. If  you think I have missed any , then either send a PR or open an issue and I will fix it asap.
+This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links  wherever I could remember, giving people due credit who have explained the concepts. If  you think I have missed any , then either send a PR or open an issue and I will fix it asap.
 
 License
 =======

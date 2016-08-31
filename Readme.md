@@ -251,6 +251,15 @@ DRY = Do not Repeat Yourself
   + [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/)
   + [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6)
 
++ **Some awesome utility tools**
+  + [Android SVG to VectorDrawable](https://inloop.github.io/svg2android/)
+  + [SQLite Viewer](https://inloop.github.io/sqlite-viewer/)
+  + [Android 9-patch shadow generator](https://inloop.github.io/shadow4android/)
+  + [APK method count](https://inloop.github.io/apk-method-count/)
+  + [Material Palette](https://www.materialpalette.com/)
+  + [Javadoc Themer](javadocthemer.crushingcode.co)
+  + [Method Count](http://www.methodscount.com/)
+
 -
 
 #### **Extra : Android Libraries built by me**

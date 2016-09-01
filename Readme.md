@@ -42,10 +42,20 @@ Contributions are always welcome, hoping people will help me in growing this. To
     The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. 
     Its also is useful features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
   1. [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
+
+    Provides actions for text manipulation such as Toggle case, encode/decode, sorting, 
   1. [Lines Sorter](https://plugins.jetbrains.com/plugin/5919)
+
+    Add Sort Lines action in Edit menu to sort selected lines or whole file if selection is empty.
   1. [Findbugs](https://plugins.jetbrains.com/plugin/3847?pr=idea) 
+
+    Provides static byte code analysis to look for bugs in Java code from within Android Studio
   1. [Sonar Lint](https://plugins.jetbrains.com/plugin/7973) 
+
+    Plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code.
   1. [Checkstyles](https://plugins.jetbrains.com/plugin/1065) 
+
+    Plugin provides both real-time and on-demand scanning of Java files from within Android Studio.
 
 + **Use the Darcula Theme in Android Studio**
 Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.

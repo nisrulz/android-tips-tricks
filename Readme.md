@@ -90,6 +90,20 @@ HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspo
 [Okhttp](https://square.github.io/okhttp/) solves them in a more elegant manner. 
 [[Reference Link]](https://corner.squareup.com/2013/05/announcing-okhttp.html)
 
+
++ ** Reference local `aar` files as below [[Stackoverflow Ref](http://stackoverflow.com/a/28816265/2745762)]**
+  ```gradle
+    dependencies {
+       compile(name:'nameOfYourAARFileWithoutExtension', ext:'aar')
+     }
+    repositories{
+          flatDir{
+                  dirs 'libs'
+           }
+     }
+
+  ```
+
 + **Use [Pidcat](https://github.com/JakeWharton/pidcat) for logging**
 
 + **Use some Version Control System(VCS) like [Git](https://git-scm.com/)**
@@ -265,7 +279,7 @@ DRY = Do not Repeat Yourself
   + [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/) - Fresh news from Droid zone
   + [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6) - Free newsletter to stay uptodate with Kotlin Development
 
-+ **Some awesome utility tools**
++ **Some other awesome utility tools**
   + [Android SVG to VectorDrawable](https://inloop.github.io/svg2android/) - One VectorDrawable to rule all screen densities
   + [SQLite Viewer](https://inloop.github.io/sqlite-viewer/) - View sqlite file online
   + [Android 9-patch shadow generator](https://inloop.github.io/shadow4android/) - Tool that makes fully customizable shadows possible

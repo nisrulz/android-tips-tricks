@@ -216,6 +216,10 @@ DRY = Do not Repeat Yourself
 + **Checkout new android libraries**
 [Android Arsenal](https://android-arsenal.com/)
 
++ **Checkout android example apps**
+  + [Android Example](https://github.com/nisrulz/android-examples)
+  + [Google Samples](https://github.com/googlesamples)
+
 + **Follow on Twitter**
   + [#AndroidDev](https://twitter.com/search?q=%23AndroidDev)
 

@@ -35,6 +35,8 @@ Contributions are always welcome, hoping people will help me in growing this. To
   |Show parameters for selected method|`Cmd`+`P`|`Ctrl`+`P`
   |Refactor This|`Ctrl`+`T`|`Ctrl`+`Alt`+`Shift`+`T`
   |Stop Process|`Cmd`+`F2`|`Ctrl`+`F2`
+  |Search Everywhere|`Shift`+`Shift`|`Shift`+`Shift`
+  |Select Methods to Override|`Ctrl`+`O`|`Ctrl`+`O`
 
 + **Use plugins to become more efficient**
   1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
@@ -56,6 +58,11 @@ Contributions are always welcome, hoping people will help me in growing this. To
   1. [Checkstyles](https://plugins.jetbrains.com/plugin/1065) 
 
     Plugin provides both real-time and on-demand scanning of Java files from within Android Studio.
+
++ **Use Live Templates in Android Studio**
+  + `logd` - Generates `Log.d(TAG, "");`
+  + `newInstance` - Generates the static `newInstance` function inside a Fragment
+  + `Toast` - Generates `Toast.makeText(context, "", Toast.LENGTH_SHORT).show();`
 
 + **Use the Darcula Theme in Android Studio**
 Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.

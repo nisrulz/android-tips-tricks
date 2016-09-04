@@ -207,6 +207,12 @@ A tool to analyze battery consumers using Android "bugreport" files.
 
 + **Try to understand and follow TDD (Test Driven Development)**
 
++ **To force re-download of dependencies**
+
+  ```gradle 
+  ./gradlew --refresh-dependencies
+  ```
+
 + **Follow the DRY principle**
 DRY = Do not Repeat Yourself
 

@@ -1,5 +1,8 @@
 ![Image](https://github.com/nisrulz/android-tips-tricks/blob/master/img/github_banner.png)
 
+### Featured in
+[![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221)
+
 Cheatsheet about tips and tricks for Android Development
 
 This is a simple set of tips and tricks regarding Android Development which I have gathered from various sources. It helps me direct other android devs in my community regarding stuff each android dev should know about. Its also there for me to keep track of anything I either learn on my own or from other sources now and then when browsing the internet.

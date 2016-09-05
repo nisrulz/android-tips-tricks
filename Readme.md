@@ -40,6 +40,10 @@ Contributions are always welcome, hoping people will help me in growing this. To
   |Stop Process|`Cmd`+`F2`|`Ctrl`+`F2`
   |Search Everywhere|`Shift`+`Shift`|`Shift`+`Shift`
   |Select Methods to Override|`Ctrl`+`O`|`Ctrl`+`O`
+  |Delete Line|`Cmd`+`Backspace`|`Ctrl`+`Y`
+  |Duplicate Line|`Cmd`+`D`|`Ctrl`+`D`
+
+  **Complete Keymap Guide :  [MacOSX](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard_mac.pdf) | [Linux/Win](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf)**
 
 + **Use plugins to become more efficient**
   1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
@@ -101,7 +105,7 @@ HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspo
 [[Reference Link]](https://corner.squareup.com/2013/05/announcing-okhttp.html)
 
 
-+ ** Reference local `aar` files as below [[Stackoverflow Ref](http://stackoverflow.com/a/28816265/2745762)]**
++ **Reference local `aar` files as below [[Stackoverflow Ref](http://stackoverflow.com/a/28816265/2745762)]**
   ```gradle
     dependencies {
        compile(name:'nameOfYourAARFileWithoutExtension', ext:'aar')

@@ -307,6 +307,8 @@ DRY = Do not Repeat Yourself
   + [Material Palette](https://www.materialpalette.com/) - Easily generate the color pallete based on material design
   + [Javadoc Themer](javadocthemer.crushingcode.co) - Give your boooring javadocs a splash of colors!
   + [Method Count](http://www.methodscount.com/) - Use this tool to avoid the dreaded 65K method limit of the DEX file format!
+  + [Gradle, please](https://gradleplease.appspot.com/) - Lookup dependency reference name to include as your gradle dependencies
+  + [jsonschema2pojo](http://www.jsonschema2pojo.org/) - Generate Plain Old Java Objects from JSON or JSON-Schema
 
 -
 

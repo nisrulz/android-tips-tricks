@@ -247,6 +247,15 @@ DRY = Do not Repeat Yourself
 
 -
 
+###***Tips regarding UI/UX***
+
++ **Points to note**
+  + When implementing Ripple Effect use `?attr/selectableItemBackground` instead of `?android:attr` ([Ref](https://twitter.com/pareshmayani/status/772061422729637893))
+  + When implementing Ripples contained within the view like Button, use `android:background="?attr/selectableItemBackground"` ([Ref](https://twitter.com/pareshmayani/status/772268888931176448))
+  + When implementing Ripples that extend beyond the view's bounds like ImageView: `?attr/selectableItemBackgroundBorderless` ([Ref](https://twitter.com/pareshmayani/status/772269413290520576))
+
+-
+
 ###***Other Resources***
 
 + **Listen to podcasts**

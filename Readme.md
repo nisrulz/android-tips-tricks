@@ -244,6 +244,8 @@ DRY = Do not Repeat Yourself
     }
   ```
 
++ **[Find and STOP leaking memory in your android app](http://blog.nimbledroid.com/2016/09/06/stop-memory-leaks.html)**
+
 
 -
 

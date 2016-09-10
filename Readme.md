@@ -72,13 +72,16 @@ Contributions are always welcome, hoping people will help me in growing this. To
   + `Toast` - Generates `Toast.makeText(context, "", Toast.LENGTH_SHORT).show();`
 
 + **Use the Darcula Theme in Android Studio**
+
 Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.
 
 + **Don't use a small font**
+
 Preferably use a font in Android Studio thats easy to read and is at a font size which doesnot forces you to strain your eyes.
 I use [Menlo font](https://en.wikipedia.org/wiki/Menlo_(typeface)).
 
 + **Use a code style**
+
 You should use a standard codestyle 
  So possible contenders can be
   + [AOSP Codestyle](https://source.android.com/source/code-style.html)
@@ -100,6 +103,7 @@ This one needs special mention due to how useful it is. It basically is a window
 ###***Make better choices while coding***
 
 + **Use OkHttp over HttpUrlConnect**
+
 HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspot.in/2011/09/androids-http-clients.html). 
 [Okhttp](https://square.github.io/okhttp/) solves them in a more elegant manner. 
 [[Reference Link]](https://corner.squareup.com/2013/05/announcing-okhttp.html)
@@ -123,15 +127,19 @@ HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspo
 + **Use some Version Control System(VCS) like [Git](https://git-scm.com/)**
 
 + **Use [ClassyShark](https://github.com/google/android-classyshark)**
+
 Its a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies
 
 + **Use [Stetho](https://github.com/facebook/stetho)**
+
 Debug your android apps using Chrome Dev Tools.
 
 + **Use [Battery Historian](https://github.com/google/battery-historian)**
+
 A tool to analyze battery consumers using Android "bugreport" files.
 
-+ **Always use a constant version value like "24.1.1"**
++ **Always use a constant version value like "24.2.0"**
+
   Avoid using `+` when specifying the version of dependencies.
   + Keeps one secured from unexpected API changes in the dependency.
   + Avoids doing an extra network call for the checking latest version of each dependency on every build.
@@ -139,7 +147,9 @@ A tool to analyze battery consumers using Android "bugreport" files.
 + **Use [Handler instead of a TimerTask](http://www.mopri.de/2010/timertask-bad-do-it-the-android-way-use-a-handler/)**
 + **[Do not use your own personal email for Google Play Developer Account](https://www.reddit.com/r/Android/comments/2hywu9/google_play_only_one_strike_is_needed_to_ruin_you/)**
 + **Use Vectors instead of PNG**
+
   If you do **have** to use png, compress them. Take a look at [TinyPNG](https://tinypng.com).
+
 + **Use proguard**
 
   ```gradle
@@ -226,6 +236,7 @@ DRY = Do not Repeat Yourself
 + **[Package by Feature, not layers](https://medium.com/the-engineering-team/package-by-features-not-layers-2d076df1964d)**
 
 + **[Learn about Dependency Resolution](http://crushingcode.co/the-curious-case-of-dependency-conflicts/)** 
+
   With the speed android dependencies update, sooner or later you are going to encounter some sort of dependency conflict. Solution is making use of Dependency Resoultion. [Official Reference](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html)
   
 + **Use different package name for non-release builds**

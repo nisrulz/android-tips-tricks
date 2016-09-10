@@ -1,7 +1,7 @@
 ![Image](https://github.com/nisrulz/android-tips-tricks/blob/master/img/github_banner.png)
 
 ### Featured in
-[![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221)
+[![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23110-blue.svg)](https://www.androiddevdigest.com/digest-110/)
 
 Cheatsheet about tips and tricks for Android Development
 

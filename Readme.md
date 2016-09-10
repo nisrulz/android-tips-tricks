@@ -102,9 +102,7 @@ This one needs special mention due to how useful it is. It basically is a window
 
 + **Use OkHttp over HttpUrlConnect**
 
-HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspot.in/2011/09/androids-http-clients.html). 
-[Okhttp](https://square.github.io/okhttp/) solves them in a more elegant manner. 
-[[Reference Link]](https://corner.squareup.com/2013/05/announcing-okhttp.html)
+  HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspot.in/2011/09/androids-http-clients.html). [Okhttp](https://square.github.io/okhttp/) solves them in a more elegant manner. [[Reference Link]](https://corner.squareup.com/2013/05/announcing-okhttp.html)
 
 
 + **Reference local `aar` files as below [[Stackoverflow Ref](http://stackoverflow.com/a/28816265/2745762)]**

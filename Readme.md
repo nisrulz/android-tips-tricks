@@ -73,17 +73,15 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 + **Use the Darcula Theme in Android Studio**
 
-Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.
+  Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.
 
 + **Don't use a small font**
 
-Preferably use a font in Android Studio thats easy to read and is at a font size which doesnot forces you to strain your eyes.
-I use [Menlo font](https://en.wikipedia.org/wiki/Menlo_(typeface)).
+  Preferably use a font in Android Studio thats easy to read and is at a font size which doesnot forces you to strain your eyes. I use [Menlo font](https://en.wikipedia.org/wiki/Menlo_(typeface)).
 
 + **Use a code style**
 
-You should use a standard codestyle 
- So possible contenders can be
+  You should use a standard codestyle, so possible contenders can be
   + [AOSP Codestyle](https://source.android.com/source/code-style.html)
   + [Square IntelliJ Codestyle](https://github.com/square/java-code-styles)
 + **Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html)**
@@ -128,15 +126,15 @@ HttpUrlConnect suffers from [quite some bugs](https://android-developers.blogspo
 
 + **Use [ClassyShark](https://github.com/google/android-classyshark)**
 
-Its a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies
+  Its a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies
 
 + **Use [Stetho](https://github.com/facebook/stetho)**
 
-Debug your android apps using Chrome Dev Tools.
+  Debug your android apps using Chrome Dev Tools.
 
 + **Use [Battery Historian](https://github.com/google/battery-historian)**
 
-A tool to analyze battery consumers using Android "bugreport" files.
+  A tool to analyze battery consumers using Android "bugreport" files.
 
 + **Always use a constant version value like "24.2.0"**
 
@@ -182,7 +180,9 @@ A tool to analyze battery consumers using Android "bugreport" files.
   `adb shell am kill`
 
 + **Follow the below [rule to have faster gradle builds](https://medium.com/@skaliakoudas/decreasing-build-times-by-decreasing-gradle-memory-requirements-7fcafc6d98ea#.otnm0ofb6)**
-  `Gradle memory >= Dex memory + 1Gb`
+  ```gradle
+  Gradle memory >= Dex memory + 1Gb
+  ```
 
 + **Split your apk using gradle when using Native code, do not bundle all of em together and ship!.. coz that will make you evil**
 
@@ -231,7 +231,7 @@ A tool to analyze battery consumers using Android "bugreport" files.
   ```
 
 + **Follow the DRY principle**
-DRY = Do not Repeat Yourself
+  DRY = Do not Repeat Yourself
 
 + **[Package by Feature, not layers](https://medium.com/the-engineering-team/package-by-features-not-layers-2d076df1964d)**
 

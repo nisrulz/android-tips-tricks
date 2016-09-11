@@ -290,6 +290,8 @@ This one needs special mention due to how useful it is. It basically is a window
 
    It is the central crowdsourced resource for complete and up-to-date practical Android developer guides for any topic.
 
++ **[Take care about copyright](http://jeroenmols.com/blog/2016/08/03/copyright/)**
+
 + **Checkout new android libraries**
 
   [Android Arsenal](https://android-arsenal.com/) - Android developer portal with tools, libraries, and apps

@@ -255,6 +255,7 @@ This one needs special mention due to how useful it is. It basically is a window
 
 + **[Find and STOP leaking memory in your android app](http://blog.nimbledroid.com/2016/09/06/stop-memory-leaks.html)**
 
++ **[Follow a standard naming convention for your resources](http://jeroenmols.com/blog/2016/03/07/resourcenaming/)**
 
 -
 

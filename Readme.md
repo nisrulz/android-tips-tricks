@@ -66,6 +66,9 @@ Contributions are always welcome, hoping people will help me in growing this. To
   1. [Checkstyles](https://plugins.jetbrains.com/plugin/1065) 
 
     Plugin provides both real-time and on-demand scanning of Java files from within Android Studio.
+  1. [ADB Idea](https://plugins.jetbrains.com/plugin/7380) 
+
+    Plugin that adds ADB commands to Android Studio and Intellij such as ADB Uninstall App, ADB Kill App, ADB Restart App, etc
 
 + **Use Live Templates in Android Studio**
   + `logd` - Generates `Log.d(TAG, "");`

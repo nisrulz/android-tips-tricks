@@ -102,6 +102,10 @@ Apart from using physical devices , one should use emulators as they are as of n
 ####***[Vysor](http://www.vysor.io/)***
 This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demo-ing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version , paid version is totally worth buying. 
 
+####***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.pro)***
+Yes, vysor was great, but if you want to share your keyboard and mouse directly to your Android device, then this app is for you. It enables you to control your Android device as if it was part of your desktop computer. The FREE version includes use of computer mouse, while the PRO version includes features such as use of keyboard. This is useful where you can test your app without your hands ever leaving your keyboard.
+
+
 
 -
 ###***Make better choices while coding***

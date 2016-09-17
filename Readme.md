@@ -267,6 +267,11 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **[Follow a standard naming convention for your resources](http://jeroenmols.com/blog/2016/03/07/resourcenaming/)**
 
++ **Make use of custom gradle tasks in your build.gradle files**
+  
+  Android uses Gradle as its build system, which actually allows one to make a lot of things easy by creating tasks to automate things.
+  [This reddit post enlists a lot of such useful gradle scripts](https://www.reddit.com/r/androiddev/comments/3ig3gm/show_us_your_gradle_tasks)
+
 -
 
 ###***Tips regarding UI/UX***

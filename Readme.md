@@ -245,6 +245,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   ./gradlew clean build -x javaDoc
   ```
 
+  **[Checkout more gradle tips here](https://github.com/shekhargulati/gradle-tips)**
+
 + **Follow the DRY principle**
   DRY = Do not Repeat Yourself
 

@@ -237,6 +237,13 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   ```gradle 
   ./gradlew --refresh-dependencies
   ```
++ **To exclude a certain task from being run by gradle**
+
+  Suppose you want to exclude the task `javaDoc` then use `-x` option followed by the task name, i.e `javaDoc` in this case.
+
+  ```gradle 
+  ./gradlew clean build -x javaDoc
+  ```
 
 + **Follow the DRY principle**
   DRY = Do not Repeat Yourself

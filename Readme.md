@@ -298,6 +298,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     ?attr/selectableItemBackgroundBorderless
     ```
 
+  + If you plan on keeping a reference to any ViewGroup (LinearLayout, FrameLayout, RelativeLayout, etc.), and you don’t want to use any methods specific to this particular type of Layout, keep it as a ViewGroup object. [[More Info]](https://android.jlelse.eu/android-pro-tip-1-443f423b4de6#.pklc9djmc)
+
 -
 
 ###***Other Resources***

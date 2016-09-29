@@ -281,6 +281,10 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   Android uses Gradle as its build system, which actually allows one to make a lot of things easy by creating tasks to automate things.
   [This reddit post enlists a lot of such useful gradle scripts](https://www.reddit.com/r/androiddev/comments/3ig3gm/show_us_your_gradle_tasks)
 
++ **[Use a proper .gitignore in your Android Projects](/android.gitignore)**
+
++ **[Use LeakCanary to detect memory leaks in your app](https://github.com/square/leakcanary)** - Its a memory leak detection library for Android and Java.
+
 -
 
 ###***Tips regarding UI/UX***
@@ -312,6 +316,9 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
   P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en) , all for FREE.
 
++ **Checkout [Android Dialogue](https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed)**
+  Short byte sized android interview videos with experts.
+
 + **Checkout [CodePath Android Cliffnotes](https://guides.codepath.com/android)**
 
    It is the central crowdsourced resource for complete and up-to-date practical Android developer guides for any topic.
@@ -325,6 +332,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 + **Checkout android example apps**
   + [Android Examples](https://github.com/nisrulz/android-examples) - Simple basic isolated apps, for budding android devs.
   + [Google Samples](https://github.com/googlesamples) - Various sample apps provided by Google
+  + [Google Android Codelabs](https://codelabs.developers.google.com/?cat=Android)
 
 + **Follow on Twitter**
   + [#AndroidDev](https://twitter.com/search?q=%23AndroidDev)

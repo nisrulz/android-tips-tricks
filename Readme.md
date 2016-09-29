@@ -316,7 +316,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
   P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en) , all for FREE.
 
-+ **Checkout [Android Dialogue](https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed)**
++ **Checkout [Android Dialogs](https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed)**
   Short byte sized android interview videos with experts.
 
 + **Checkout [CodePath Android Cliffnotes](https://guides.codepath.com/android)**

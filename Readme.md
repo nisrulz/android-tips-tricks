@@ -285,6 +285,20 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **[Use LeakCanary to detect memory leaks in your app](https://github.com/square/leakcanary)** - Its a memory leak detection library for Android and Java.
 
++ **Speed up your gradle builds in Android Studio 2.2+**
+  + Switch to gradle 3.1
+
+    Run this inside your project folder to update your gradle wrapper
+
+    ```bash
+    ./gradlew wrapper --gradle-version 3.1
+    ```
+  + Set the below property in your global `gradle.properties` file
+
+    ```
+    android.enableBuildCache=true
+    ```
+
 -
 
 ###***Tips regarding UI/UX***

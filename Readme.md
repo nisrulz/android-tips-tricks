@@ -401,7 +401,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Android 9-patch shadow generator](https://inloop.github.io/shadow4android/) - Tool that makes fully customizable shadows possible
   + [APK method count](https://inloop.github.io/apk-method-count/) - Tool that outputs per-package method counts
   + [Material Palette](https://www.materialpalette.com/) - Easily generate the color pallete based on material design
-  + [Javadoc Themer](javadocthemer.crushingcode.co) - Give your boooring javadocs a splash of colors!
+  + [Javadoc Themer](http://javadocthemer.crushingcode.co/) - Give your boooring javadocs a splash of colors!
   + [Method Count](http://www.methodscount.com/) - Use this tool to avoid the dreaded 65K method limit of the DEX file format!
   + [Gradle, please](https://gradleplease.appspot.com/) - Lookup dependency reference name to include as your gradle dependencies
   + [jsonschema2pojo](http://www.jsonschema2pojo.org/) - Generate Plain Old Java Objects from JSON or JSON-Schema

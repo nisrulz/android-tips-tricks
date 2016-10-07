@@ -42,6 +42,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
   |Select Methods to Override|`Ctrl`+`O`|`Ctrl`+`O`
   |Delete Line|`Cmd`+`Backspace`|`Ctrl`+`Y`
   |Duplicate Line|`Cmd`+`D`|`Ctrl`+`D`
+  |Grow/Shrink selection from cursor|`Opt`+`Up/Down Arrow key`|`Shift` +`Ctrl`+`W`
   |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|`Ctrl`+`G`|`Alt`+`J`
 
   **Complete Keymap Guide :  [MacOSX](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard_mac.pdf) | [Linux/Win](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf)**

@@ -256,6 +256,15 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   ```gradle 
   ./gradlew clean build -x javaDoc
   ```
++ **To have the each subproject script name match that of the project name**
+  
+  Then add this line in settings.gradle
+
+  ```gradle
+  rootProject.children.each{
+    it.buildFileName = it.name + '.gradle'
+  }
+  ```
 
   **[Checkout more gradle tips here](https://github.com/shekhargulati/gradle-tips)**
 

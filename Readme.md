@@ -320,6 +320,12 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     android.enableBuildCache=true
     ```
 
++ **Stop a running gradle build process**
+
+    ```bash
+    ./gradlew -stop
+    ```
+
 -
 
 ###***Tips regarding UI/UX***

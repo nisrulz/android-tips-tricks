@@ -85,6 +85,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
   + `soutm` - Prints current class and method names to System.out
   + `soutp` - Prints method parameter names and values to System.out
   + `visible` - Set view visibility to VISIBLE
+  + `gone` - Set view visibility to GONE
   + `noInstance` - private empty constructor to prohibit instance creation
 
   [Comprehensive list of all Live Templates in Android Studio](https://github.com/keyboardsurfer/idea-live-templates)

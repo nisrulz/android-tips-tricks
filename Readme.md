@@ -334,7 +334,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     android.builder.sdkDownload=true
     ```
 
-    > This is an experimental option and it only downloads build tools and platforms, but doesn't actually update Google or Support repository [Bug Ref](https://code.google.com/p/android/issues/detail?id=212309)
+    > This is an experimental option and it only downloads build tools and platforms, but doesn't actually update Google or Support repository [[Bug Ref]](https://code.google.com/p/android/issues/detail?id=212309)
 
 -
 

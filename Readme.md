@@ -336,6 +336,10 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
     > This is an experimental option and it only downloads build tools and platforms, but doesn't actually update Google or Support repository [[Bug Ref]](https://code.google.com/p/android/issues/detail?id=212309)
 
++ **Donot include both `jcenter()` & `mavenCentral()` in your `build.gradle` file**
+  
+  JCenter is a superset of MavenCentral. [[Ref tweet](https://twitter.com/molsjeroen/status/791606774210199553)
+
 -
 
 ###***Tips regarding UI/UX***

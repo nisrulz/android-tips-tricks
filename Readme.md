@@ -338,7 +338,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Donot include both `jcenter()` & `mavenCentral()` in your `build.gradle` file**
   
-  JCenter is a superset of MavenCentral. [[Ref tweet](https://twitter.com/molsjeroen/status/791606774210199553)
+  JCenter is a superset of MavenCentral. [[Ref tweet]](https://twitter.com/molsjeroen/status/791606774210199553)
 
 -
 

@@ -3,6 +3,9 @@
 ### Featured in
 [![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23110-blue.svg)](https://www.androiddevdigest.com/digest-110/)
 
+**Also included in**
++ [Awesome Android Newsletter #Issue 16](https://android.libhunt.com/newsletter/16)
+
 Cheatsheet about tips and tricks for Android Development
 
 This is a simple set of tips and tricks regarding Android Development which I have gathered from various sources. It helps me direct other android devs in my community regarding stuff each android dev should know about. Its also there for me to keep track of anything I either learn on my own or from other sources now and then when browsing the internet.

@@ -343,6 +343,13 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   
   JCenter is a superset of MavenCentral. [[Ref tweet]](https://twitter.com/molsjeroen/status/791606774210199553)
 
++ **Clear your gradle cache if you think that bundled support and google play services lib in android sdk are inconsistent**
+
+  + Goto `~/.gradle/caches/` and delete everything inside the `cache` folder.
+  + Open SDK Manager and resync all support libs and google play services
+  + Next re-sync your project
+  + Everything should become consistent and functional.
+  
 -
 
 ###***Tips regarding UI/UX***

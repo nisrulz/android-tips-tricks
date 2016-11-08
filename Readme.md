@@ -349,6 +349,18 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + Open SDK Manager and resync all support libs and google play services
   + Next re-sync your project
   + Everything should become consistent and functional.
+
++ **Setup handy `adb` aliases for your terminal** [[Ref Link]](https://medium.com/@jonfhancock/bash-your-way-to-better-android-development-1169bc3e0424#.8zcc4m5ch)
+
+  Append the below **Aliases** to your `~/.bashrc` or `~/.zshrc` file, save and restart the terminal. Once saved , use them as show in **Usage** column
+
+  |Alias|Usage
+  |---|---
+  |`alias screenshot="adb exec-out screencap -p > screen-$(date -j "+%s").png"`|`screenshot`
+  |`alias startintent="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X shell am start $1"`|`startintent https://twitter.com/nisrulz`
+  |`alias apkinstall="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X install -r $1"`|`apkinstall ~/Desktop/DemoApp.apk`
+  |`alias rmapp="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X uninstall $1"`|`rmapp com.example.demoapp`
+  |`alias clearapp="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X shell pm clear $1"`|`clearapp com.example.demoapp`
   
 -
 

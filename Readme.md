@@ -306,7 +306,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   Android uses Gradle as its build system, which actually allows one to make a lot of things easy by creating tasks to automate things.
   [This reddit post enlists a lot of such useful gradle scripts](https://www.reddit.com/r/androiddev/comments/3ig3gm/show_us_your_gradle_tasks)
 
-+ **[Use a proper .gitignore in your Android Projects](/android.gitignore)**
++ **Use a proper .gitignore in your Android Projects, [Check it here](/android.gitignore)**
 
 + **[Use LeakCanary to detect memory leaks in your app](https://github.com/square/leakcanary)** - Its a memory leak detection library for Android and Java.
 

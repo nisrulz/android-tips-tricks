@@ -361,6 +361,27 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   |`alias apkinstall="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X install -r $1"`|`apkinstall ~/Desktop/DemoApp.apk`
   |`alias rmapp="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X uninstall $1"`|`rmapp com.example.demoapp`
   |`alias clearapp="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X shell pm clear $1"`|`clearapp com.example.demoapp`
+
++ **Setup Android Studio to fail build if code contains `//STOPSHIP`** [[Ref Link]](https://www.reddit.com/r/androiddev/comments/5c8b0a/i_know_android_studio_allows_you_to_make_custom/d9uhdzt/)
+  
+  To enable the `//STOPSHIP` lint check, in your `build.gradle`
+
+  ```gradle
+  android {
+  ...
+      lintOptions {
+          abortOnError true
+          fatal 'StopShip'
+      }
+  }
+  ```
+  If you have a //STOPSHIP comment in your code, this will cause an error to be thrown when a release apk is generated.
+  > You can turn on //STOPSHIP highlighting in Android Studio (isn't enabled by default) in 
+  >
+  >  `Preferences` > `Editor` > `Code Style` > `Inspections`. 
+  > Search for STOPSHIP to find the correct setting.
+
+
   
 -
 

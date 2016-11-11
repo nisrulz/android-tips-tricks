@@ -378,7 +378,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   If you have a //STOPSHIP comment in your code, this will cause an error to be thrown when a release apk is generated.
   > You can turn on //STOPSHIP highlighting in Android Studio (isn't enabled by default) in 
   >
-  >  `Preferences` > `Editor` > `Code Style` > `Inspections`. 
+  >  `Preferences` > `Editor` > `Code Style` > `Inspections`.
+  > 
   > Search for STOPSHIP to find the correct setting.
 
 

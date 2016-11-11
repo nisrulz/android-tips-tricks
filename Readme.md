@@ -1,4 +1,4 @@
-![Image](https://github.com/nisrulz/android-tips-tricks/blob/master/img/github_banner.png)
+![Image](/img/github_banner.png)
 
 ### Featured in
 [![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23110-blue.svg)](https://www.androiddevdigest.com/digest-110/)
@@ -498,6 +498,10 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 ####Credits
 This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links  wherever I could remember, giving people due credit who have explained the concepts. If  you think I have missed any , then either send a PR or open an issue and I will fix it asap.
+
+> If you found this cheatsheet helpful or you learned something today and want to thank me, consider buying me a cup of :coffee:
+>
+> <a href='https://ko-fi.com/A443EQ6' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi1.png?v=f' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
 
 License
 =======

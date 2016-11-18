@@ -382,7 +382,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   > 
   > Search for STOPSHIP to find the correct setting.
 
-
++ **Use `adb install -g` to grant all permissions listed in the manifest** [[More Info]](https://developer.android.com/studio/command-line/adb.html)
   
 -
 

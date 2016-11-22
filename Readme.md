@@ -405,7 +405,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     ```
 + **Output unit tests directly to the console** [[Ref Link]](https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f)
 
-  > A small neat trick so we can use to see Android unit tests logging results as they happen.
+  > A small neat trick to see Android unit tests logging results as they happen in the terminal.
   
   ```gradle
   android {

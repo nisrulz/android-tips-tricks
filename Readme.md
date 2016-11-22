@@ -385,7 +385,9 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 + **Use `adb install -g` to grant all permissions listed in the manifest** [[More Info]](https://developer.android.com/studio/command-line/adb.html)
 
 + **Use [`alfi`](https://github.com/cesarferreira/alfi) to find the gradle dependency statement for a library**
-  Its basically the commandline version of [Gradle, Please](gradleplease.appspot.com) which is a web hosted.
+  
+  >Its basically the commandline version of [Gradle, Please](gradleplease.appspot.com) which is a web hosted.
+  
   + Run 
 
     ```bash
@@ -393,6 +395,14 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     ```
   + Copy the desired library
   + Paste in your build.gradle
+
++ **Use [`dryrun`](https://github.com/cesarferreira/dryrun) to test a library directly**
+  
+  + Just Run 
+
+    ```bash
+    dryrun REMOTE_GIT_URL
+    ```
   
 -
 

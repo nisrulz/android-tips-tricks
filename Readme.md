@@ -403,6 +403,22 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     ```bash
     dryrun REMOTE_GIT_URL
     ```
++ **Output unit tests directly to the console** [[Ref Link]](https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f)
+
+  > A small neat trick so we can use to see Android unit tests logging results as they happen.
+  
+  ```gradle
+  android {
+      ...
+      testOptions.unitTests.all {
+        testLogging {
+          events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+          outputs.upToDateWhen { false }
+          showStandardStreams = true
+        }
+      }
+    }
+  ```
   
 -
 

@@ -419,12 +419,12 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
       }
     }
   ```
-+ **Make your builds faster by building offline**
++ **Make your builds faster by building offline** [[Ref Link]](https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f)
   
   > The `--offline` flag tells gradle to always use dependency modules from the cache, regardless if they are due to be checked again. When running offline, gradle will never attempt to access the network to perform dependency resolution. If required modules are not present in the dependency cache, build execution will fail.
 
   + Assembling develop debug at full speed:
-  
+
     ```gradle
     ./gradlew assembleDevelopDebug --offline
     ```

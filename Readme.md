@@ -90,9 +90,26 @@ Contributions are always welcome, hoping people will help me in growing this. To
   + `visible` - Set view visibility to VISIBLE
   + `gone` - Set view visibility to GONE
   + `noInstance` - private empty constructor to prohibit instance creation
-
+ 
+ 
   [Comprehensive list of all Live Templates in Android Studio](https://github.com/keyboardsurfer/idea-live-templates)
 
+
+ 
++ **Postfix code completion in Android Studio**
+  
+  Android Studio/IntelliJ havea special kind of code completion which allows you to write code specific to a field
+  + `<expr>.null` will auto complete to `if(<expr> == null)`
+  + `<expr>.nootnull` will auto complete to `if(<expr> != null)`
+  + `<expr>.var` will auto complete to `T name = <expr>` 
+  + `<expr>.field` will auto complete to create a global field variable `field = <expr>`
+  + `<ArrayExpr>.for` will auto complete to `for(T item : <Arrayexpr>)`
+  + `<ArrayExpr>.fori` will auto complete to `for(int i = 0; i < <Arrayexpr>.length; i++)`
+  + `<ArrayExpr>.forr` will auto complete to `for(int i = <Arrayexpr>.length - 1; i > 0 ; i--)`
+  
+  Complete list of available postfix code completion can be found at Settings → Editor → Postfix Templates
+  
+  
 + **Use the Darcula Theme in Android Studio**
 
   Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.
@@ -144,7 +161,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
   ```
 
-+ **Use [Pidcat](https://github.com/JakeWharton/pidcat) for logging**
++ **Use [Pidcat](https://github.com/JakeWharton/pidcat) for a better log reading experience**
 
 + **Use some Version Control System(VCS) like [Git](https://git-scm.com/)**
 
@@ -154,7 +171,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Use [Stetho](https://github.com/facebook/stetho)**
 
-  Debug your android apps using Chrome Dev Tools.
+  Debug your android apps using Chrome Dev Tools. Includes tools like Network Monitor, Shared Preference explorer etc.
 
 + **Use [Battery Historian](https://github.com/google/battery-historian)**
 

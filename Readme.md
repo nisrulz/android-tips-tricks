@@ -450,6 +450,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     ```gradle
     ./gradlew test --offline
     ```
++ **Use an abtracted [Logger](/Logger.java) class**
   
 -
 

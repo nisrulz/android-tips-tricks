@@ -451,8 +451,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     ./gradlew test --offline
     ```
 + **Use an abtracted [Logger](/Logger.java) class**
-  
--
+
++ **If you want to automatically initialize your library, use a Content Provider** [[Read how Firebase does it - Ref Link]](https://firebase.googleblog.com/2016/12/how-does-firebase-initialize-on-android.html)
 
 ###***Tips regarding UI/UX***
 

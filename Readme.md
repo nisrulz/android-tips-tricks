@@ -509,6 +509,12 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + If you plan on keeping a reference to any ViewGroup (LinearLayout, FrameLayout, RelativeLayout, etc.), and you don’t want to use any methods specific to this particular type of Layout, keep it as a ViewGroup object. [[More Info]](https://android.jlelse.eu/android-pro-tip-1-443f423b4de6#.pklc9djmc)
   + While picking an accent color (if the brand already has one), pick a color complementary to the primary color so that the contrast is high enough
 
+
+###***Tips if you use [Kotlin](https://kotlinlang.org/)***
+
++ **Checkout [From Java to Kotlin](https://fabiomsr.github.io/from-java-to-kotlin/)**
+  Cheatsheet when you come from Java to Kotlin. Very nice resource to compare the two languages.
+
 -
 
 ###***Other Resources***

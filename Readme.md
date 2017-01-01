@@ -513,6 +513,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 ###***Tips if you use [Kotlin](https://kotlinlang.org/)***
 
 + **Checkout [From Java to Kotlin](https://fabiomsr.github.io/from-java-to-kotlin/)**
+
   Cheatsheet when you come from Java to Kotlin. Very nice resource to compare the two languages.
 
 -

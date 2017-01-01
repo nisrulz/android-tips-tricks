@@ -587,6 +587,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [jsonschema2pojo](http://www.jsonschema2pojo.org/) - Generate Plain Old Java Objects from JSON or JSON-Schema
   + [Android Asset Studio](https://developer.android.com/distribute/tools/promote/device-art.html) - Quickly wrap app screenshots in device artwork
   + [Google Translator Toolkit](https://translate.google.com/toolkit/list?hl=en#translations/) - Translate strings.xml files to any language and download as XML
+  + [JSONViewer](http://jsonviewer.stack.hu/) - Awesome JSON formatter
 
 -
 

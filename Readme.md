@@ -132,6 +132,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
   + [Square IntelliJ Codestyle](https://github.com/square/java-code-styles)
 + **Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html)**
 + **Use the Memory/Network/CPU Monitor inside Android Studio to profile your code/app**
++ **[Configure Android Studio](https://medium.com/google-developer-experts/configuring-android-studio-4aa4f54f1153#.rq0z6qlaq)** 
 
 ####***Emulator***
 Apart from using physical devices , one should use emulators as they are as of now easy to manage and equivalently powerful.

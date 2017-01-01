@@ -146,8 +146,6 @@ This one needs special mention due to how useful it is. It basically is a window
 ####***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free)***
 Yes, vysor was great, but if you want to share your keyboard and mouse directly to your Android device, then this app is for you. It enables you to control your Android device as if it was part of your desktop computer. The [FREE version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) includes use of computer mouse, while the [PRO version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.pro) includes features such as use of keyboard. This is useful where you can test your app without your hands ever leaving your keyboard.
 
-
-
 -
 ###***Make better choices while coding***
 
@@ -588,6 +586,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Gradle, please](https://gradleplease.appspot.com/) - Lookup dependency reference name to include as your gradle dependencies
   + [jsonschema2pojo](http://www.jsonschema2pojo.org/) - Generate Plain Old Java Objects from JSON or JSON-Schema
   + [Android Asset Studio](https://developer.android.com/distribute/tools/promote/device-art.html) - Quickly wrap app screenshots in device artwork
+  + [Google Translator Toolkit](https://translate.google.com/toolkit/list?hl=en#translations/) - Translate strings.xml files to any language and download as XML
 
 -
 

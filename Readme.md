@@ -1,6 +1,6 @@
 ![Image](/img/github_banner.png)
 
-### Show some :heart:
+### Show some :heart: and star the repo to support the project
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/android-tips-tricks.svg?style=social&label=Star)](https://github.com/nisrulz/android-tips-tricks) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/android-tips-tricks.svg?style=social&label=Fork)](https://github.com/nisrulz/android-tips-tricks/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/android-tips-tricks.svg?style=social&label=Watch)](https://github.com/nisrulz/android-tips-tricks) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/android-tips-tricks)  
 [![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz) 
 

@@ -582,6 +582,12 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/) - Fresh news from Droid zone
   + [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6) - Free newsletter to stay uptodate with Kotlin Development
 
++ **[ADB/Fastboot Tools made avaialble as a separate package by google](https://plus.google.com/+ElliottHughes/posts/U3B6H3Sejvv), download latest version for**
+  + [MacOSX](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)
+  + [Linux](
+https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
+  + [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
+
 + **Some other awesome utility tools**
   + [Android SVG to VectorDrawable](https://inloop.github.io/svg2android/) - One VectorDrawable to rule all screen densities
   + [SQLite Viewer](https://inloop.github.io/sqlite-viewer/) - View sqlite file online

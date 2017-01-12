@@ -460,6 +460,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **If you want to automatically initialize your library, use a Content Provider** [[Read how Firebase does it - Ref Link]](https://firebase.googleblog.com/2016/12/how-does-firebase-initialize-on-android.html)
 
++ **Reduce installed app size with `"android:extractNativeLibs:false"` in `<application>`** [[Ref Link]](https://medium.com/@wkalicinski/smallerapk-part-8-native-libraries-open-from-apk-fc22713861ff#.bajqmlshi)
+
 ###***Tips regarding UI/UX***
 
 

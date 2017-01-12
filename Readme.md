@@ -462,6 +462,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Reduce installed app size with `"android:extractNativeLibs:false"` in `<application>`** [[Ref Link]](https://medium.com/@wkalicinski/smallerapk-part-8-native-libraries-open-from-apk-fc22713861ff#.bajqmlshi)
 
+  > This will essentially prevent the system from creating a second copy of the .so files and fix the System.loadLibrary call so it’s able to find and open native libs straight from the APK, no code changes on your part required.
+
 ###***Tips regarding UI/UX***
 
 

@@ -114,7 +114,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
   + `<ArrayExpr>.fori` will auto complete to `for(int i = 0; i < <Arrayexpr>.length; i++)`
   + `<ArrayExpr>.forr` will auto complete to `for(int i = <Arrayexpr>.length - 1; i > 0 ; i--)`
   
-  Complete list of available postfix code completion can be found at Settings → Editor → Postfix Templates
+  Complete list of available postfix code completion can be found at **Settings → Editor → Postfix Templates**
   
   
 + **Use the Darcula Theme in Android Studio**
@@ -463,6 +463,10 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 + **Reduce installed app size with `"android:extractNativeLibs:false"` in `<application>`** [[Ref Link]](https://medium.com/@wkalicinski/smallerapk-part-8-native-libraries-open-from-apk-fc22713861ff#.bajqmlshi)
 
   > This will essentially prevent the system from creating a second copy of the .so files and fix the System.loadLibrary call so it’s able to find and open native libs straight from the APK, no code changes on your part required.
+
++ **Selectivily execute a specific method in Android Studio** [[Ref Link]](https://twitter.com/tasomaniac/status/820019068140945408)
+	
+	![Image](/img/selectiverun.gif)
 
 ###***Tips regarding UI/UX***
 

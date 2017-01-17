@@ -80,7 +80,9 @@ Contributions are always welcome, hoping people will help me in growing this. To
   1. [Exynap](https://plugins.jetbrains.com/androidstudio/plugin/8600-exynap) 
 
     Plugin which helps you find and implement the code you require in an instant.
+  1. [Dagger IntelliJ Plugin](https://github.com/square/dagger-intellij-plugin) 
 
+     The Dagger IntelliJ plugin creates visual connections between a @Inject object and the @Provides method that creates it.
 + **Use Live Templates in Android Studio**
   + `newInstance` - Generates the static `newInstance` function inside a Fragment
   + `Toast` - Generates `Toast.makeText(context, "", Toast.LENGTH_SHORT).show();`

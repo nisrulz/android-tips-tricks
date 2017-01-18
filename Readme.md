@@ -83,6 +83,10 @@ Contributions are always welcome, hoping people will help me in growing this. To
   1. [Dagger IntelliJ Plugin](https://github.com/square/dagger-intellij-plugin) 
 
      The Dagger IntelliJ plugin creates visual connections between a @Inject object and the @Provides method that creates it.
+  1. [JVM Debugger Memory View](https://plugins.jetbrains.com/idea/plugin/8537-jvm-debugger-memory-view)
+
+    This plugin extends the built-in JVM debugger with capabilities to explore objects in the JVM heap during a debug session.
+
 + **Use Live Templates in Android Studio**
   + `newInstance` - Generates the static `newInstance` function inside a Fragment
   + `Toast` - Generates `Toast.makeText(context, "", Toast.LENGTH_SHORT).show();`

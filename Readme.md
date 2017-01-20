@@ -618,7 +618,9 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [JSONViewer](http://jsonviewer.stack.hu/) - Awesome JSON formatter
 
 + **Awesome android libraries**
+
   + [StorIO](https://github.com/pushtorefresh/storio) - Beautiful API for SQLiteDatabase and ContentResolver
+  + [Retrofit](https://github.com/square/retrofit) - Type-safe HTTP client for Android and Java by Square, Inc.
 -
 
 #### **Extra : Android Libraries built by me**

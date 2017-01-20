@@ -617,6 +617,8 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [Google Translator Toolkit](https://translate.google.com/toolkit/list?hl=en#translations/) - Translate strings.xml files to any language and download as XML
   + [JSONViewer](http://jsonviewer.stack.hu/) - Awesome JSON formatter
 
++ **Awesome android libraries**
+  + [StorIO](https://github.com/pushtorefresh/storio) - Beautiful API for SQLiteDatabase and ContentResolver
 -
 
 #### **Extra : Android Libraries built by me**

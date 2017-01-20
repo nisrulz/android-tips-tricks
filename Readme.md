@@ -621,7 +621,8 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [StorIO](https://github.com/pushtorefresh/storio) - Beautiful API for SQLiteDatabase and ContentResolver
   + [Retrofit](https://github.com/square/retrofit) - Type-safe HTTP client for Android and Java by Square, Inc.
   + [Picasso](https://github.com/square/picasso) - A powerful image downloading and caching library for Android
-
+  + [LeakCanary](https://github.com/square/leakcanary) - A memory leak detection library for Android and Java. 
+  
 
 -
 

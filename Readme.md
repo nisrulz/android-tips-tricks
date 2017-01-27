@@ -623,6 +623,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [Picasso](https://github.com/square/picasso) - A powerful image downloading and caching library for Android
   + [LeakCanary](https://github.com/square/leakcanary) - A memory leak detection library for Android and Java.
   + [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) - Cute view animation collection. 
+  + [Calligraphy](https://github.com/chrisjenx/Calligraphy) - Custom fonts in Android the easy way.
   
 
 -

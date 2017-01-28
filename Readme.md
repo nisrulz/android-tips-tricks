@@ -566,6 +566,9 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 + **Create a List on Twitter**
   + [Android List](https://twitter.com/nisrulz/lists/android)
 
++ **[Read the Effective Java by Joshua Bloch](https://www.amazon.ca/Effective-Java-2nd-Joshua-Bloch/dp/0321356683)**
+  + [Cheatsheet/Summary](https://github.com/HugoMatilla/Effective-JAVA-Summary)
+
 + **Bookmark these sites for staying upto date**
   + [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
   + [Android Niceties - UI Showcase](http://androidniceties.tumblr.com/)

@@ -570,6 +570,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Cheatsheet/Summary](https://github.com/HugoMatilla/Effective-JAVA-Summary)
 
 + **[Subscribe to Caster.io](https://caster.io/)**
+
   Bite sized Android development videos
 
 + **Bookmark these sites for staying upto date**

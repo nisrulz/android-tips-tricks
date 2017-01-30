@@ -328,6 +328,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **[Find and STOP leaking memory in your android app](http://blog.nimbledroid.com/2016/09/06/stop-memory-leaks.html)**
 
++ **[If you’re creating a gradient in xml with a part being completely transparent, be really careful when using `@android:color/transparent`](https://android.jlelse.eu/android-dev-tip-3-99da754151ad#.clbqzz3zh)**
+
 + **[Follow a standard naming convention for your resources](http://jeroenmols.com/blog/2016/03/07/resourcenaming/)**
 
 + **Make use of custom gradle tasks in your build.gradle files**

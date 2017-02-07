@@ -22,10 +22,10 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 + **Code faster by using keyboard shortcuts**
   
-  |Description|Mac|Linux/Win
-  |---|---|---
-  |Lookup IDE commands|`Cmd`+`Shift`+`A`|`Ctrl`+`Shift`+`A`
-  |Open Class|`Cmd`+`O`|`Ctrl`+`O`
+  |Description                                         |Mac                    |Linux/Win
+  |----------------------------------------------------|-----------------------|----------------------------
+  |Lookup IDE commands                                 |<kbd>Cmd+Shift+A</kbd> |<kbd>Ctrl+Shift+A</kbd> 
+  |Open Class                                          |<kbd>Cmd+O</kbd>       |<kbd>Ctrl+O</kbd>
   |Open File|`Cmd`+`Shift`+`O`|`Ctrl`+`Shift`+`N`
   |Open recently edited file|`Cmd`+`Shift`+`E`|`Ctrl`+`Shift`+`E`
   |Lookup Actions|`Cmd`+`Shift`+`A`|`Ctrl`+`Shift`+`A`

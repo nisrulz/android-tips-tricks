@@ -22,35 +22,35 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 + **Code faster by using keyboard shortcuts**
   
-  |Description                                         |Mac                    |Linux/Win
-  |----------------------------------------------------|-----------------------|----------------------------
-  |Lookup IDE commands                                 |<kbd>Cmd+Shift+A</kbd> |<kbd>Ctrl+Shift+A</kbd> 
-  |Open Class                                          |<kbd>Cmd+O</kbd>       |<kbd>Ctrl+O</kbd>
-  |Open File|`Cmd`+`Shift`+`O`|`Ctrl`+`Shift`+`N`
-  |Open recently edited file|`Cmd`+`Shift`+`E`|`Ctrl`+`Shift`+`E`
-  |Lookup Actions|`Cmd`+`Shift`+`A`|`Ctrl`+`Shift`+`A`
-  |Open Symbol|`Cmd`+`Opt`+`O`|`Alt`+`Shift`+`N`
-  |Open recently used file|`Cmd`+`E`|`Ctrl`+`E`
-  |Last Edited Location|`Cmd`+`Shift`+`Backspace`|`Ctrl`+`Shift`+`Backspace`
-  |Find Usage in persistent window|`Opt`+`F7`|`Alt`+`F7`
-  |Find Usage in floating window|`Cmd`+`Opt`+`F7`|`Ctrl`+`Alt`+`F7`
-  |Format the code with proper Indentation|`Cmd`+`Opt`+`L`|`Ctrl`+`Alt`+`L`
-  |Surround With|`Opt`+`Cmd`+`T`|`Alt`+`Ctrl`+`T`
-  |Open Terminal|`Opt`+`F12`|`Alt`+`F12`
-  |Generate Setter/Getters/|`Cmd`+`N`|`Alt`+`Ins`
-  |Find Class|`CMD`+`O`|`Ctrl`+`N`
-  |Refactor/Rename|`Shift`+`F6`|`Shift`+`F6`
-  |Quick Fix|`Opt`+`Enter`|`Alt`+`Enter`
-  |Goto Definition|`Cmd`+`B`|`Ctrl`+`B`
-  |Show parameters for selected method|`Cmd`+`P`|`Ctrl`+`P`
-  |Refactor This|`Ctrl`+`T`|`Ctrl`+`Alt`+`Shift`+`T`
-  |Stop Process|`Cmd`+`F2`|`Ctrl`+`F2`
-  |Search Everywhere|`Shift`+`Shift`|`Shift`+`Shift`
-  |Select Methods to Override|`Ctrl`+`O`|`Ctrl`+`O`
-  |Delete Line|`Cmd`+`Backspace`|`Ctrl`+`Y`
-  |Duplicate Line|`Cmd`+`D`|`Ctrl`+`D`
-  |Grow/Shrink selection from cursor|`Opt`+`Up/Down Arrow key`|`Shift` +`Ctrl`+`W`
-  |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|`Ctrl`+`G`|`Alt`+`J`
+  |Description                                                                      |Mac                                                        |Linux/Win
+  |---------------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------
+  |Lookup IDE commands                                                              |<kbd>Cmd+Shift+A</kbd>                                     |<kbd>Ctrl+Shift+A</kbd> 
+  |Open Class                                                                       |<kbd>Cmd+O</kbd>                                           |<kbd>Ctrl+O</kbd>
+  |Open File                                                                        |<kbd>Cmd+Shift+O</kbd>                                     |<kbd>Ctrl+Shift+N</kbd>
+  |Open recently edited file                                                        |<kbd>Cmd+Shift+E</kbd>                                     |<kbd>Ctrl+Shift+E</kbd>
+  |Lookup Actions                                                                   |<kbd>Cmd+Shift+A</kbd>                                     |<kbd>Ctrl+Shift+A</kbd>
+  |Open Symbol                                                                      |<kbd>Cmd+Opt+O</kbd>                                       |<kbd>Alt+Shift+N</kbd>
+  |Open recently used file                                                          |<kbd>Cmd+E</kbd>                                           |<kbd>Ctrl+E</kbd>
+  |Last Edited Location                                                             |<kbd>Cmd+Shift+Backspace</kbd>                             |<kbd>Ctrl+Shift+Backspace</kbd>
+  |Find Usage in persistent window                                                  |<kbd>Opt+F7</kbd>                                          |<kbd>Alt+F7</kbd>
+  |Find Usage in floating window                                                    |<kbd>Cmd+Opt+F7</kbd>                                      |<kbd>Ctrl+Alt+F7</kbd>
+  |Format the code with proper Indentation                                          |<kbd>Cmd+Opt+L</kbd>                                       |<kbd>Ctrl+Alt+L</kbd>
+  |Surround With                                                                    |<kbd>Opt+Cmd+T</kbd>                                       |<kbd>Alt+Ctrl+T</kbd>
+  |Open Terminal                                                                    |<kbd>Opt+F12</kbd>                                         |<kbd>Alt+F12</kbd>
+  |Generate Setter/Getters                                                          |<kbd>Cmd+N</kbd>                                           |<kbd>Alt+Ins</kbd>
+  |Find Class                                                                       |<kbd>CMD+O</kbd>                                           |<kbd>Ctrl+N</kbd>
+  |Refactor/Rename                                                                  |<kbd>Shift+F6</kbd>                                        |<kbd>Shift+F6</kbd>
+  |Quick Fix                                                                        |<kbd>Opt+Enter</kbd>                                       |<kbd>Alt+Enter</kbd>
+  |Goto Definition                                                                  |<kbd>Cmd+B</kbd>                                           |<kbd>Ctrl+B</kbd>
+  |Show parameters for selected method                                              |<kbd>Cmd+P</kbd>                                           |<kbd>Ctrl+P</kbd>
+  |Refactor This                                                                    |<kbd>Ctrl+T</kbd>                                          |<kbd>Ctrl+Alt+Shift+T</kbd>
+  |Stop Process                                                                     |<kbd>Cmd+F2</kbd>                                          |<kbd>Ctrl+F2</kbd>
+  |Search Everywhere                                                                |<kbd>Shift+Shift</kbd>                                     |<kbd>Shift+Shift</kbd>
+  |Select Methods to Override                                                       |<kbd>Ctrl+O</kbd>                                          |<kbd>Ctrl+O</kbd>
+  |Delete Line                                                                      |<kbd>Cmd+Backspace</kbd>                                   |<kbd>Ctrl+Y</kbd>
+  |Duplicate Line                                                                   |<kbd>Cmd+D</kbd>                                           |<kbd>Ctrl+D</kbd>
+  |Grow/Shrink selection from cursor                                                |<kbd>Opt+Up/Down Arrow key</kbd>                           |<kbd>Shift+Ctrl+W</kbd>
+  |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|<kbd>Ctrl+G</kbd>                                          |<kbd>Alt+J</kbd>
 
   **Complete Keymap Guide :  [MacOSX](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard_mac.pdf) | [Linux/Win](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf)**
 

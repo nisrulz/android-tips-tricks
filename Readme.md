@@ -627,7 +627,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [Device Art Generator](https://developer.android.com/distribute/tools/promote/device-art.html) - Quickly wrap app screenshots in device artwork
   + [Google Translator Toolkit](https://translate.google.com/toolkit/list?hl=en#translations/) - Translate strings.xml files to any language and download as XML
   + [JSONViewer](http://jsonviewer.stack.hu/) - Awesome JSON formatter
-  + [Trevor](https://github.com/vadimdemedes/trevor) - Your own Travis CI to run tests locally.
+  + [ShapeShifter](https://alexjlockwood.github.io/ShapeShifter/) - SVG path morphing animation editor.
 
 + **Awesome android libraries**
   + [StorIO](https://github.com/pushtorefresh/storio) - Beautiful API for SQLiteDatabase and ContentResolver

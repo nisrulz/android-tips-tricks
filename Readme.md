@@ -628,6 +628,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [Google Translator Toolkit](https://translate.google.com/toolkit/list?hl=en#translations/) - Translate strings.xml files to any language and download as XML
   + [JSONViewer](http://jsonviewer.stack.hu/) - Awesome JSON formatter
   + [ShapeShifter](https://alexjlockwood.github.io/ShapeShifter/) - SVG path morphing animation editor.
+  + [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/) - Generate a generic privacy policy for your app for the playstore.
 
 + **Awesome android libraries**
   + [StorIO](https://github.com/pushtorefresh/storio) - Beautiful API for SQLiteDatabase and ContentResolver

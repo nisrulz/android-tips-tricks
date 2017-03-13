@@ -495,11 +495,13 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   ```gradle
   defaultConfig {
     ...
-    buildConfigField STRING, REST_ENDPOINT, '"http://www.myendpoint.com"'
+    buildConfigField "String", "SERVER_ENDPOINT", '"http://www.myendpoint.com"'
+    buildConfigField "int", "FOO", "52"
+    buildConfigField "boolean", "LOG", "false"
     ...
   }
   ```
-  and then use it in code as `BuildConfig.REST_ENDPOINT`
+  and then use it in code as `BuildConfig.SERVER_ENDPOINT`, `BuildConfig.FOO`,`BuildConfig.LOG`
 
 ###***Tips regarding UI/UX***
 

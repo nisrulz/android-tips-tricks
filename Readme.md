@@ -489,6 +489,17 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   versionCode = versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
   versionName = "${versionMajor}.${versionMinor}.${versionPatch}"
   ```
++ **Define a variable at build time**
+  In your `build.gradle` 
+
+  ```gradle
+  defaultConfig {
+    ...
+    buildConfigField STRING, REST_ENDPOINT, '"http://www.myendpoint.com"'
+    ...
+  }
+  ```
+  and then use it in code as `BuildConfig.REST_ENDPOINT`
 
 ###***Tips regarding UI/UX***
 

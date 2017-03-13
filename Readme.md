@@ -478,6 +478,18 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Did you get one of these Google Play Developer Policy Violation Emails? Worry not, generate a Privacy Policy for your android app** [[Ref ink]](https://medium.com/@ali.muzaffar/did-you-get-one-of-these-google-play-developer-policy-violation-emails-6c529ceb082d#.f10upj3fy)
 
++ **Calculate version code and version name in your `build.gradle`***
+
+  ```gradle
+  versionMajor = 0
+  versionMinor = 0
+  versionPatch = 0
+  versionBuild = 1
+
+  versionCode = versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
+  versionName = "${versionMajor}.${versionMinor}.${versionPatch}"
+  ```
+
 ###***Tips regarding UI/UX***
 
 

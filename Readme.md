@@ -16,9 +16,9 @@ This is a simple set of tips and tricks regarding Android Development which I ha
 
 Contributions are always welcome, hoping people will help me in growing this. To contribute, simply open up a PR with the changes.
 
-###***Know Your Tools***
+### ***Know Your Tools***
 
-####***Android Studio***
+#### ***Android Studio***
 
 + **Code faster by using keyboard shortcuts**
 
@@ -57,35 +57,34 @@ Contributions are always welcome, hoping people will help me in growing this. To
 + **Use plugins to become more efficient**
   1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
 
-    The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time.
-    Its also is useful features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
+      The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. Its also is useful features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
   1. [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
 
-    Provides actions for text manipulation such as Toggle case, encode/decode, sorting,
+      Provides actions for text manipulation such as Toggle case, encode/decode, sorting,
   1. [Lines Sorter](https://plugins.jetbrains.com/plugin/5919)
-
-    Add Sort Lines action in Edit menu to sort selected lines or whole file if selection is empty.
+      
+      Add Sort Lines action in Edit menu to sort selected lines or whole file if selection is empty.
   1. [Findbugs](https://plugins.jetbrains.com/plugin/3847?pr=idea)
-
-    Provides static byte code analysis to look for bugs in Java code from within Android Studio
+      
+      Provides static byte code analysis to look for bugs in Java code from within Android Studio
   1. [Sonar Lint](https://plugins.jetbrains.com/plugin/7973)
 
-    Plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code.
+      Plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code.
   1. [Checkstyles](https://plugins.jetbrains.com/plugin/1065)
 
-    Plugin provides both real-time and on-demand scanning of Java files from within Android Studio.
+      Plugin provides both real-time and on-demand scanning of Java files from within Android Studio.
   1. [ADB Idea](https://plugins.jetbrains.com/plugin/7380)
 
-    Plugin that adds ADB commands to Android Studio and Intellij such as ADB Uninstall App, ADB Kill App, ADB Restart App, etc
+      Plugin that adds ADB commands to Android Studio and Intellij such as ADB Uninstall App, ADB Kill App, ADB Restart App, etc
   1. [Exynap](https://plugins.jetbrains.com/androidstudio/plugin/8600-exynap)
 
-    Plugin which helps you find and implement the code you require in an instant.
+      Plugin which helps you find and implement the code you require in an instant.
   1. [Dagger IntelliJ Plugin](https://github.com/square/dagger-intellij-plugin)
 
-     The Dagger IntelliJ plugin creates visual connections between a @Inject object and the @Provides method that creates it.
+      The Dagger IntelliJ plugin creates visual connections between a @Inject object and the @Provides method that creates it.
   1. [JVM Debugger Memory View](https://plugins.jetbrains.com/idea/plugin/8537-jvm-debugger-memory-view)
 
-    This plugin extends the built-in JVM debugger with capabilities to explore objects in the JVM heap during a debug session.
+      This plugin extends the built-in JVM debugger with capabilities to explore objects in the JVM heap during a debug session.
 
 + **Use Live Templates in Android Studio**
   + `newInstance` - Generates the static `newInstance` function inside a Fragment
@@ -140,20 +139,20 @@ Contributions are always welcome, hoping people will help me in growing this. To
 + **Use the Memory/Network/CPU Monitor inside Android Studio to profile your code/app**
 + **[Configure Android Studio](https://medium.com/google-developer-experts/configuring-android-studio-4aa4f54f1153#.rq0z6qlaq)**
 
-####***Emulator***
+#### ***Emulator***
 Apart from using physical devices , one should use emulators as they are as of now easy to manage and equivalently powerful.
 
 + [Genymotion](https://www.genymotion.com/)
 + [Intel Emulator bundled in SDK Manger](https://developer.android.com/studio/run/emulator.html)
 
-####***[Vysor](http://www.vysor.io/)***
+#### ***[Vysor](http://www.vysor.io/)***
 This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demo-ing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version , paid version is totally worth buying.
 
-####***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free)***
+#### ***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free)***
 Yes, vysor was great, but if you want to share your keyboard and mouse directly to your Android device, then this app is for you. It enables you to control your Android device as if it was part of your desktop computer. The [FREE version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) includes use of computer mouse, while the [PRO version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.pro) includes features such as use of keyboard. This is useful where you can test your app without your hands ever leaving your keyboard.
 
 -
-###***Make better choices while coding***
+### ***Make better choices while coding***
 
 + **Use OkHttp over HttpUrlConnect**
 
@@ -212,7 +211,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
+  }
   ```
 + **Use shrinkResources**
 
@@ -249,28 +248,28 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     }
 
   //Split into platform dependent APK
-    splits {
-      abi {
-        enable true
-        reset()
-        include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
-        universalApk false //generate an additional APK that contains all the ABIs
-      }
+  splits {
+    abi {
+      enable true
+      reset()
+      include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
+      universalApk false //generate an additional APK that contains all the ABIs
     }
+  }
 
-    // map for the version code
-    project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
+  // map for the version code
+  project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
 
-    // Rename with proper versioning
-    android.applicationVariants.all { variant ->
-      // assign different version code for each output
-      variant.outputs.each { output ->
-        output.versionCodeOverride =
-            project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) *
-                1000000 +
-                android.defaultConfig.versionCode
-      }
+  // Rename with proper versioning
+  android.applicationVariants.all { variant ->
+    // assign different version code for each output
+    variant.outputs.each { output ->
+      output.versionCodeOverride =
+          project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) *
+              1000000 +
+              android.defaultConfig.versionCode
     }
+  }
   ```
 
 + **Learn about some architecture such as MVP or Clean**
@@ -342,12 +341,12 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 + **[Use LeakCanary to detect memory leaks in your app](https://github.com/square/leakcanary)** - Its a memory leak detection library for Android and Java.
 
 + **Speed up your gradle builds in Android Studio 2.3+**
-  + Switch to gradle 3.3
+  + Switch to gradle 3.4.1
 
     Run this inside your project folder to update your gradle wrapper
 
     ```bash
-    ./gradlew wrapper --gradle-version 3.3 --distribution-type all
+    ./gradlew wrapper --gradle-version 3.4.1 --distribution-type all
     ```
   + Set the below property in your global `gradle.properties` file
 
@@ -605,7 +604,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   }
   ```
 
-###***Tips regarding UI/UX***
+### ***Tips regarding UI/UX***
 
 
 + **Motion**
@@ -655,15 +654,15 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + While picking an accent color (if the brand already has one), pick a color complementary to the primary color so that the contrast is high enough
 
 
-###***Tips if you use [Kotlin](https://kotlinlang.org/)***
+### ***Tips if you use [Kotlin](https://kotlinlang.org/)***
 
 + **Checkout [From Java to Kotlin](https://fabiomsr.github.io/from-java-to-kotlin/)**
 
   Cheatsheet when you come from Java to Kotlin. Very nice resource to compare the two languages.
 
--
 
-###***Other Resources***
+
+### ***Other Resources***
 
 + **Listen to podcasts**
   1. [Fragmented](http://fragmentedpodcast.com/)
@@ -782,7 +781,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
 + [ShoutOut](https://github.com/nisrulz/ShoutOut) - Android library for logging information in android
 
 
-####Credits
+#### Credits
 This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links  wherever I could remember, giving people due credit who have explained the concepts. If  you think I have missed any , then either send a PR or open an issue and I will fix it asap.
 
 > If you found this cheatsheet helpful or you learned something today and want to thank me, consider [buying me a cup of](https://www.paypal.me/nisrulz) :coffee:

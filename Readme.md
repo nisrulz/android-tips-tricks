@@ -1,4 +1,4 @@
-![Image](/img/github_banner.png)
+![Image](.github/img/github_banner.png)
 
 ### Show some :heart: and star the repo to support the project
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/android-tips-tricks.svg?style=social&label=Star)](https://github.com/nisrulz/android-tips-tricks) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/android-tips-tricks.svg?style=social&label=Fork)](https://github.com/nisrulz/android-tips-tricks/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/android-tips-tricks.svg?style=social&label=Watch)](https://github.com/nisrulz/android-tips-tricks) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/android-tips-tricks)  
@@ -473,7 +473,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Selectivily execute a specific method in Android Studio** [[Ref Link]](https://twitter.com/tasomaniac/status/820019068140945408)
 
-	![Image](/img/selectiverun.gif)
+	![Image](.github/img/selectiverun.gif)
 
 + **Did you get one of these Google Play Developer Policy Violation Emails? Worry not, generate a Privacy Policy for your android app** [[Ref ink]](https://medium.com/@ali.muzaffar/did-you-get-one-of-these-google-play-developer-policy-violation-emails-6c529ceb082d#.f10upj3fy)
 
@@ -764,8 +764,6 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) - Cute view animation collection.
   + [Calligraphy](https://github.com/chrisjenx/Calligraphy) - Custom fonts in Android the easy way.
 
-
--
 
 #### **Extra : Android Libraries built by me**
 + [EasyDeviceInfo](https://github.com/nisrulz/easydeviceinfo) - Enabling device information to be at android developers hand like a piece of cake!

@@ -478,7 +478,24 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Did you get one of these Google Play Developer Policy Violation Emails? Worry not, generate a Privacy Policy for your android app** [[Ref ink]](https://medium.com/@ali.muzaffar/did-you-get-one-of-these-google-play-developer-policy-violation-emails-6c529ceb082d#.f10upj3fy)
 
-+ **Calculate version code and version name in your `build.gradle`***
++ **Define a variable at build time**
+  In your `build.gradle` 
+
+  ```gradle
+  android{
+    defaultConfig {
+      ...
+      buildConfigField "String", "SERVER_ENDPOINT", '"http://www.myendpoint.com"'
+      buildConfigField "int", "FOO", "52"
+      buildConfigField "boolean", "LOG", "false"
+      ...
+    }
+  }
+  ```
+  and then use it in code as `BuildConfig.SERVER_ENDPOINT`, `BuildConfig.FOO`,`BuildConfig.LOG`
+
++ **Calculate the version code and version name in your `build.gradle` ***manually***, based of version values***
+  In your app's `build.gradle` 
 
   ```gradle
   versionMajor = 0
@@ -486,22 +503,107 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   versionPatch = 0
   versionBuild = 1
 
-  versionCode = versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
-  versionName = "${versionMajor}.${versionMinor}.${versionPatch}"
-  ```
-+ **Define a variable at build time**
-  In your `build.gradle` 
 
-  ```gradle
-  defaultConfig {
-    ...
-    buildConfigField "String", "SERVER_ENDPOINT", '"http://www.myendpoint.com"'
-    buildConfigField "int", "FOO", "52"
-    buildConfigField "boolean", "LOG", "false"
-    ...
+  verCode = versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
+  verName = "${versionMajor}.${versionMinor}.${versionPatch}"
+
+  // Use
+  android{
+    defaultConfig {
+      ...
+      versionCode verCode
+      versionName verName
+      ...
+    }
   }
   ```
-  and then use it in code as `BuildConfig.SERVER_ENDPOINT`, `BuildConfig.FOO`,`BuildConfig.LOG`
+
++ **Calculate the version code and version name in your `build.gradle` ***automatically***, based of git information***
+  
+  > Note: These functions go specifically inside the app's `build.gradle` and cannot be used with `ext`.
+
+  In your app's `build.gradle` 
+
+  ```gradle
+  // Version code is calculated as the number of commits from last commit on master
+  def getVersionCode = { ->
+    try {
+      def code = new ByteArrayOutputStream()
+      exec {
+        commandLine 'git', 'rev-list', 'HEAD', '--count'
+        standardOutput = code
+      }
+      return Integer.parseInt(code.toString().trim())
+    } catch (exception) {
+      return "1";
+    }
+  }
+
+  // Version name is Last Tag Name + No. of commits form last Tag +  short git sha
+  def getVersionName = { ->
+    try {
+      def stdout = new ByteArrayOutputStream()
+      exec {
+        commandLine 'git', 'describe', '--tags', '--dirty'
+        standardOutput = stdout
+      }
+      return stdout.toString().trim()
+    } catch (exception) {
+      return "0.0.0.1";
+    }
+  }
+
+  // Use
+  android{
+    defaultConfig {
+      ...
+      versionCode getVersionCode()
+      versionName getVersionName()
+      ...
+    }
+  }
+  ```
+
++ **Get the date of build as a variable***
+  In your app's `build.gradle` 
+
+  ```gradle
+  // Get the date of build
+  def getDateOfBuild = { -> // ISO 8601 time format
+    return new Date().format("yyyy-MM-dd'T'HH:mm'Z'").toString().trim()
+  }
+
+  // then use it as a variable in BuildConfig
+  android{
+    defaultConfig {
+      ...
+      buildConfigField "String", "DATE_OF_BUILD", "\"${getDateOfBuild()}\""
+    }
+  }
+  ```
+
++ **Get the Git SHA as a variable***
+  In your app's `build.gradle` 
+
+  ```gradle
+  // Get the last Git Short Hash
+  def getGitHash = { ->
+    def stdout = new ByteArrayOutputStream()
+    exec {
+      commandLine 'git', 'rev-parse', '--short', 'HEAD'
+      standardOutput = stdout
+    }
+    return stdout.toString().trim()
+  }
+
+  // then use it as a variable in BuildConfig
+  android{
+    defaultConfig {
+      ...
+      buildConfigField "String", "GIT_SHA", "\"${getGitHash()}\""
+    }
+  }
+  ```
 
 ###***Tips regarding UI/UX***
 

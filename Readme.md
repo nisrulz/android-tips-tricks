@@ -779,6 +779,12 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
 + [ShoutOut](https://github.com/nisrulz/ShoutOut) - Android library for logging information in android
 
 
+#### Translations
+If you would like to contribute by translating this doc, please do so by sending a PR which follows the below points
++ Make sure the filename is `README-language.md` i.e `README-English.md`, `README-Greek.md`, etc.
++ The original content/formatting is retained in the translated doc.
++ Check for grammer and spelling mistakes before hand.
+
 #### Credits
 This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links  wherever I could remember, giving people due credit who have explained the concepts. If  you think I have missed any , then either send a PR or open an issue and I will fix it asap.
 

@@ -603,6 +603,11 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     }
   }
   ```
++ **Activity LifeCycle** [[Ref Link](https://www.bignerdranch.com/blog/android-activity-lifecycle-onStop/)]
+  ![diagram](.github/img/activityStateDiagram.jpeg)
+  
++ **Tip about `onSaveInstanceState()`**  
+  `onSaveInstanceState()` is called **_only when the OS decides to kill the `Activity` instance_**. It will not be called when Activity is explicitly killed i.e User pressed back button or `finish()` is called from code.
 
 ### ***Tips regarding UI/UX***
 

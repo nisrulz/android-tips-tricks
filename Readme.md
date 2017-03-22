@@ -664,6 +664,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 ### ***Other Resources***
 
++ [Adhere to the coding guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md)
+
 + **Listen to podcasts**
   1. [Fragmented](http://fragmentedpodcast.com/)
   2. [Android Developers Backstage](https://androidbackstage.blogspot.in/)

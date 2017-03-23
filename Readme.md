@@ -12,7 +12,7 @@
 
 Cheatsheet about tips and tricks for Android Development
 
-This is a simple set of tips and tricks regarding Android Development which I have gathered from various sources. It helps me direct other android devs in my community regarding stuff each android dev should know about. Its also there for me to keep track of anything I either learn on my own or from other sources now and then when browsing the internet.
+This is a simple set of tips and tricks regarding Android Development which I have gathered from various sources. It helps me direct other android devs in my community regarding stuff each android dev should know about. It is also there for me to keep track of anything I either learn on my own or from other sources now and then when browsing the internet.
 
 Contributions are always welcome, hoping people will help me in growing this. To contribute, simply open up a PR with the changes.
 
@@ -57,28 +57,28 @@ Contributions are always welcome, hoping people will help me in growing this. To
 + **Use plugins to become more efficient**
   1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
 
-      The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used , if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. Its also is useful features, like it will prompt you to create a key binding for a command which does not have a key binding and you have used it 3 times.
+      The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used, if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. It also has some useful features, like it will prompt you to create a key binding for a command whenever an action does not have a key binding and you have used it 3 times using your cursor.
   1. [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
 
       Provides actions for text manipulation such as Toggle case, encode/decode, sorting,
   1. [Lines Sorter](https://plugins.jetbrains.com/plugin/5919)
       
-      Add Sort Lines action in Edit menu to sort selected lines or whole file if selection is empty.
+      Add Sort Lines action in Edit menu to sort selected lines or whole file if the selection is empty.
   1. [Findbugs](https://plugins.jetbrains.com/plugin/3847?pr=idea)
       
       Provides static byte code analysis to look for bugs in Java code from within Android Studio
   1. [Sonar Lint](https://plugins.jetbrains.com/plugin/7973)
 
-      Plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code.
+      The plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code.
   1. [Checkstyles](https://plugins.jetbrains.com/plugin/1065)
 
-      Plugin provides both real-time and on-demand scanning of Java files from within Android Studio.
+      The plugin provides both real-time and on-demand scanning of Java files from within Android Studio.
   1. [ADB Idea](https://plugins.jetbrains.com/plugin/7380)
 
-      Plugin that adds ADB commands to Android Studio and Intellij such as ADB Uninstall App, ADB Kill App, ADB Restart App, etc
+      The plugin that adds ADB commands to Android Studio and IntelliJ such as ADB Uninstall App, ADB Kill App, ADB Restart App, etc
   1. [Exynap](https://plugins.jetbrains.com/androidstudio/plugin/8600-exynap)
 
-      Plugin which helps you find and implement the code you require in an instant.
+      The plugin which helps you find and implement the code you require in an instant.
   1. [Dagger IntelliJ Plugin](https://github.com/square/dagger-intellij-plugin)
 
       The Dagger IntelliJ plugin creates visual connections between a @Inject object and the @Provides method that creates it.
@@ -124,11 +124,11 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 + **Use the Darcula Theme in Android Studio**
 
-  Ok, I know its more like a preference , but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.
+  Ok, I know its more like a preference, but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.
 
 + **Don't use a small font**
 
-  Preferably use a font in Android Studio thats easy to read and is at a font size which doesnot forces you to strain your eyes. I use [Menlo font](https://en.wikipedia.org/wiki/Menlo_(typeface)).
+  Preferably use a font in Android Studio that's easy to read and is at a font size which does not forces you to strain your eyes. I use [Menlo font](https://en.wikipedia.org/wiki/Menlo_(typeface)).
 
 + **Use a code style**
 
@@ -140,16 +140,16 @@ Contributions are always welcome, hoping people will help me in growing this. To
 + **[Configure Android Studio](https://medium.com/google-developer-experts/configuring-android-studio-4aa4f54f1153#.rq0z6qlaq)**
 
 #### ***Emulator***
-Apart from using physical devices , one should use emulators as they are as of now easy to manage and equivalently powerful.
+Apart from using physical devices, one should use emulators as they are as of now easy to manage and equivalently powerful.
 
 + [Genymotion](https://www.genymotion.com/)
 + [Intel Emulator bundled in SDK Manger](https://developer.android.com/studio/run/emulator.html)
 
 #### ***[Vysor](http://www.vysor.io/)***
-This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demo-ing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version , paid version is totally worth buying.
+This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demoing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version, paid version is totally worth buying.
 
 #### ***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free)***
-Yes, vysor was great, but if you want to share your keyboard and mouse directly to your Android device, then this app is for you. It enables you to control your Android device as if it was part of your desktop computer. The [FREE version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) includes use of computer mouse, while the [PRO version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.pro) includes features such as use of keyboard. This is useful where you can test your app without your hands ever leaving your keyboard.
+Yes, vysor was great, but if you want to share your keyboard and mouse directly to your Android device, then this app is for you. It enables you to control your Android device as if it was part of your desktop computer. The [FREE version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) includes the use of computer mouse, while the [PRO version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.pro) includes features such as use of keyboard. This is useful where you can test your app without your hands ever leaving your keyboard.
 
 -
 ### ***Make better choices while coding***
@@ -178,7 +178,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Use [ClassyShark](https://github.com/google/android-classyshark)**
 
-  Its a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies
+  It is a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies
 
 + **Use [Stetho](https://github.com/facebook/stetho)**
 
@@ -188,7 +188,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
   A tool to analyze battery consumers using Android "bugreport" files.
 
-+ **Always use a constant version value like "24.2.0"**
++ **Always use a constant version value like "1.2.0"**
 
   Avoid using `+` when specifying the version of dependencies.
   + Keeps one secured from unexpected API changes in the dependency.
@@ -307,7 +307,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **[Learn about Dependency Resolution](http://crushingcode.co/the-curious-case-of-dependency-conflicts/)**
 
-  With the speed android dependencies update, sooner or later you are going to encounter some sort of dependency conflict. Solution is making use of Dependency Resoultion. [Official Reference](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html)
+  With the speed android dependencies update, sooner or later you are going to encounter some sort of dependency conflict. The solution is making use of Dependency Resolution. [Official Reference](https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html)
 
 + **Use different package name for non-release builds**
   ```gradle
@@ -382,7 +382,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Setup handy `adb` aliases for your terminal** [[Ref Link]](https://medium.com/@jonfhancock/bash-your-way-to-better-android-development-1169bc3e0424#.8zcc4m5ch)
 
-  Append the below **Aliases** to your `~/.bashrc` or `~/.zshrc` file, save and restart the terminal. Once saved , use them as show in **Usage** column
+  Append the below **Aliases** to your `~/.bashrc` or `~/.zshrc` file, save and restart the terminal. Once saved, use them as show in **Usage** column
 
   |Alias|Usage
   |---|---
@@ -416,7 +416,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Use [`alfi`](https://github.com/cesarferreira/alfi) to find the gradle dependency statement for a library**
 
-  >Its basically the commandline version of [Gradle, Please](gradleplease.appspot.com) which is a web hosted.
+  >Its basically the command line version of [Gradle, Please](gradleplease.appspot.com) which is a web hosted.
 
   + Run
 
@@ -517,7 +517,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   }
   ```
 
-+ **Calculate the version code and version name in your `build.gradle` ***automatically***, based of git information***
++ **Calculate the version code and version name in your `build.gradle` ***automatically***, based on git information***
   
   > Note: These functions go specifically inside the app's `build.gradle` and cannot be used with `ext`.
 
@@ -621,7 +621,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     +  While custom typefaces can be used for branding, it is essential to stick to Roboto and Noto if possible, especially for body text, due to their clarity and optimistic nature.
     +  Roboto covers Latin, Greek and Cyrillic extended scripts, with Noto filling in for other language scripts [[More Info]](https://material.google.com/style/typography.html#)
     +  Weight balancing is an important aspect of typography, the fundamental concept of which is that the larger a typeface is, the less its weight should be so that it doesn't appear too thick and balances its weight with smaller typefaces of higher weights
-    +  Typography should align to a 4dp baseline grid, and maintain a minimum contrast ratio of 4.5:1 based on luminance values, with a recomemended ratio being 7:1.
+    +  Typography should align to a 4dp baseline grid, and maintain a minimum contrast ratio of 4.5:1 based on luminance values, with a recommended ratio being 7:1.
     +  The ideal reading length for large blocks of text is 40 to 60 characters per line. Anything less is too narrow and anything more is too wide.
 
 
@@ -677,7 +677,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
   There are others too, but the above two are the popular ones, you can lookup more using tag `android` on sites offering Podcast Services.
 
-  P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en) , all for FREE.
+  P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en), all for FREE.
 
 + **Checkout [Android Dialogs](https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed)**
   Short byte sized android interview videos with experts.
@@ -708,7 +708,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **[Subscribe to Caster.io](https://caster.io/)**
 
-  Bite sized Android development videos
+  Bite-sized Android development videos
 
 + **Bookmark these sites for staying upto date**
   + [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
@@ -740,7 +740,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/) - Fresh news from Droid zone
   + [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6) - Free newsletter to stay uptodate with Kotlin Development
 
-+ **[ADB/Fastboot Tools made avaialble as a separate package by google](https://plus.google.com/+ElliottHughes/posts/U3B6H3Sejvv), download latest version for**
++ **[ADB/Fastboot Tools made available as a separate package by google](https://plus.google.com/+ElliottHughes/posts/U3B6H3Sejvv), download latest version for**
   + [MacOSX](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)
   + [Linux](
 https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
@@ -779,10 +779,10 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
 + [Zentone](https://github.com/nisrulz/zentone) - Easily generate audio tone in android
 + [RecyclerViewHelper](https://github.com/nisrulz/recyclerviewhelper) - RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.
 + [StackedHorizontalProgressbar](https://github.com/nisrulz/stackedhorizontalprogressbar) - Android Library to implement stacked horizontal progressbar
-+ [QREader](https://github.com/nisrulz/qreader) - A library that uses google's mobile vision api and simplify the QR code reading process
-+ [ScreenShott](https://github.com/nisrulz/screenshott) - Simple library to take a screenshot of the device screen , programmatically!
++ [QREader](https://github.com/nisrulz/qreader) - A library that uses google's mobile vision api and simplifies the QR code reading process
++ [ScreenShott](https://github.com/nisrulz/screenshott) - Simple library to take a screenshot of the device screen, programmatically!
 + [EvTrack](https://github.com/nisrulz/EvTrack) - Android library to make event and exception tracking easy
-+ [OptimusHTTP](https://github.com/nisrulz/OptimusHTTP) - Android library that simplifys networking in android via an async http client
++ [OptimusHTTP](https://github.com/nisrulz/OptimusHTTP) - Android library that simplifies networking in android via an async http client
 + [ShoutOut](https://github.com/nisrulz/ShoutOut) - Android library for logging information in android
 
 
@@ -790,10 +790,10 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
 If you would like to contribute by translating this doc, please do so by sending a PR which follows the below points
 + Make sure the filename is `README-language.md` i.e `README-English.md`, `README-Greek.md`, etc.
 + The original content/formatting is retained in the translated doc.
-+ Check for grammer and spelling mistakes before hand.
++ Check for grammar and spelling mistakes before hand.
 
 #### Credits
-This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links  wherever I could remember, giving people due credit who have explained the concepts. If  you think I have missed any , then either send a PR or open an issue and I will fix it asap.
+This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links wherever I could remember, giving people due credit who have explained the concepts. If you think I have missed any, then either send a PR or open an issue and I will fix it asap.
 
 > If you found this cheatsheet helpful or you learned something today and want to thank me, consider [buying me a cup of](https://www.paypal.me/nisrulz) :coffee:
 

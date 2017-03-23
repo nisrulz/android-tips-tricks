@@ -476,6 +476,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 	![Image](.github/img/selectiverun.gif)
 
 + **Did you get one of these Google Play Developer Policy Violation Emails? Worry not, generate a Privacy Policy for your android app** [[Ref ink]](https://medium.com/@ali.muzaffar/did-you-get-one-of-these-google-play-developer-policy-violation-emails-6c529ceb082d#.f10upj3fy)
+    + Take a look at [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/), a web app to generate a generic privacy policy for your app.
 
 + **Define a variable at build time**
   In your `build.gradle` 
@@ -752,7 +753,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [Android 9-patch shadow generator](https://inloop.github.io/shadow4android/) - Tool that makes fully customizable shadows possible
   + [APK method count](https://inloop.github.io/apk-method-count/) - Tool that outputs per-package method counts
   + [Material Palette](https://www.materialpalette.com/) - Easily generate the color pallete based on material design
-  + [Javadoc Themer](http://javadocthemer.crushingcode.co/) - Give your boooring javadocs a splash of colors!
+  + [Javadoc Themer](https://javadoc-themer.firebaseapp.com/) - Give your boooring javadocs a splash of colors!
   + [Method Count](http://www.methodscount.com/) - Use this tool to avoid the dreaded 65K method limit of the DEX file format!
   + [Gradle, please](https://gradleplease.appspot.com/) - Lookup dependency reference name to include as your gradle dependencies
   + [jsonschema2pojo](http://www.jsonschema2pojo.org/) - Generate Plain Old Java Objects from JSON or JSON-Schema

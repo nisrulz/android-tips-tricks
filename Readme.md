@@ -610,6 +610,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 + **Tip about `onSaveInstanceState()`**  
   `onSaveInstanceState()` is called **_only when the OS decides to kill the `Activity` instance_**. It will not be called when Activity is explicitly killed i.e User pressed back button or `finish()` is called from code.
 
++ **[If you are into developing Android Libraries, then read here for more tips](https://android.jlelse.eu/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries-dba1a524d619)**
+
 ### ***Tips regarding UI/UX***
 
 

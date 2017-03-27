@@ -777,6 +777,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [LeakCanary](https://github.com/square/leakcanary) - A memory leak detection library for Android and Java.
   + [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) - Cute view animation collection.
   + [Calligraphy](https://github.com/chrisjenx/Calligraphy) - Custom fonts in Android the easy way.
+  + [Alerter](https://github.com/Tapadoo/Alerter) - Android Alerting Library
 
 
 #### **Extra : Android Libraries built by me**

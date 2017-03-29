@@ -616,6 +616,12 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **[Learn about various techniques involved when using ADB](https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8)**
 
++ **[Input some text in an editfield in a running emulator from your keyboard ](http://fragmentedpodcast.com/episodes/77/)**
+  
+  ```gradle
+  adb shell input text "keyboard text"
+  ```
+
 ### ***Tips regarding UI/UX***
 
 

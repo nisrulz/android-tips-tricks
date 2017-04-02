@@ -24,33 +24,32 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
   |Description                                                                      |Mac                                                        |Linux/Win
   |---------------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------
-  |Lookup IDE commands                                                              |<kbd>Cmd+Shift+A</kbd>                                     |<kbd>Ctrl+Shift+A</kbd>
-  |Open Class                                                                       |<kbd>Cmd+O</kbd>                                           |<kbd>Ctrl+O</kbd>
-  |Open File                                                                        |<kbd>Cmd+Shift+O</kbd>                                     |<kbd>Ctrl+Shift+N</kbd>
-  |Open recently edited file                                                        |<kbd>Cmd+Shift+E</kbd>                                     |<kbd>Ctrl+Shift+E</kbd>
-  |Lookup Actions                                                                   |<kbd>Cmd+Shift+A</kbd>                                     |<kbd>Ctrl+Shift+A</kbd>
-  |Open Symbol                                                                      |<kbd>Cmd+Opt+O</kbd>                                       |<kbd>Alt+Shift+N</kbd>
-  |Open recently used file                                                          |<kbd>Cmd+E</kbd>                                           |<kbd>Ctrl+E</kbd>
-  |Last Edited Location                                                             |<kbd>Cmd+Shift+Backspace</kbd>                             |<kbd>Ctrl+Shift+Backspace</kbd>
-  |Find Usage in persistent window                                                  |<kbd>Opt+F7</kbd>                                          |<kbd>Alt+F7</kbd>
-  |Find Usage in floating window                                                    |<kbd>Cmd+Opt+F7</kbd>                                      |<kbd>Ctrl+Alt+F7</kbd>
-  |Format the code with proper Indentation                                          |<kbd>Cmd+Opt+L</kbd>                                       |<kbd>Ctrl+Alt+L</kbd>
-  |Surround With                                                                    |<kbd>Opt+Cmd+T</kbd>                                       |<kbd>Alt+Ctrl+T</kbd>
-  |Open Terminal                                                                    |<kbd>Opt+F12</kbd>                                         |<kbd>Alt+F12</kbd>
-  |Generate Setter/Getters                                                          |<kbd>Cmd+N</kbd>                                           |<kbd>Alt+Ins</kbd>
-  |Find Class                                                                       |<kbd>CMD+O</kbd>                                           |<kbd>Ctrl+N</kbd>
-  |Refactor/Rename                                                                  |<kbd>Shift+F6</kbd>                                        |<kbd>Shift+F6</kbd>
-  |Quick Fix                                                                        |<kbd>Opt+Enter</kbd>                                       |<kbd>Alt+Enter</kbd>
-  |Goto Definition                                                                  |<kbd>Cmd+B</kbd>                                           |<kbd>Ctrl+B</kbd>
-  |Show parameters for selected method                                              |<kbd>Cmd+P</kbd>                                           |<kbd>Ctrl+P</kbd>
-  |Refactor This                                                                    |<kbd>Ctrl+T</kbd>                                          |<kbd>Ctrl+Alt+Shift+T</kbd>
-  |Stop Process                                                                     |<kbd>Cmd+F2</kbd>                                          |<kbd>Ctrl+F2</kbd>
-  |Search Everywhere                                                                |<kbd>Shift+Shift</kbd>                                     |<kbd>Shift+Shift</kbd>
-  |Select Methods to Override                                                       |<kbd>Ctrl+O</kbd>                                          |<kbd>Ctrl+O</kbd>
-  |Delete Line                                                                      |<kbd>Cmd+Backspace</kbd>                                   |<kbd>Ctrl+Y</kbd>
-  |Duplicate Line                                                                   |<kbd>Cmd+D</kbd>                                           |<kbd>Ctrl+D</kbd>
-  |Grow/Shrink selection from cursor                                                |<kbd>Opt+Up/Down Arrow key</kbd>                           |<kbd>Shift+Ctrl+W</kbd>
-  |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|<kbd>Ctrl+G</kbd>                                          |<kbd>Alt+J</kbd>
+  |Lookup IDE commands / Actions                                                              |<kbd>Cmd</kbd><kbd>Shift</kbd><kbd>A</kbd>                                     |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>A</kbd>
+  |Open Class                                                                       |<kbd>Cmd</kbd><kbd>O</kbd>                                           |<kbd>Ctrl</kbd><kbd>O</kbd>
+  |Open File                                                                        |<kbd>Cmd</kbd><kbd>Shift</kbd><kbd>O</kbd>                                     |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd>
+  |Open recently edited file                                                        |<kbd>Cmd</kbd><kbd>Shift</kbd><kbd>E</kbd>                                     |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>
+  |Open Symbol                                                                      |<kbd>Cmd</kbd><kbd>Opt</kbd><kbd>O</kbd>                                       |<kbd>Alt</kbd><kbd>Shift</kbd><kbd>N</kbd>
+  |Open recently used file                                                          |<kbd>Cmd</kbd><kbd>E</kbd>                                           |<kbd>Ctrl</kbd><kbd>E</kbd>
+  |Last Edited Location                                                             |<kbd>Cmd</kbd><kbd>Shift</kbd><kbd>Backspace</kbd>                             |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Backspace</kbd>
+  |Find Usage in persistent window                                                  |<kbd>Opt</kbd><kbd>F7</kbd>                                          |<kbd>Alt</kbd><kbd>F7</kbd>
+  |Find Usage in floating window                                                    |<kbd>Cmd</kbd><kbd>Opt</kbd><kbd>F7</kbd>                                      |<kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F7</kbd>
+  |Format the code with proper Indentation                                          |<kbd>Cmd</kbd><kbd>Opt</kbd><kbd>L</kbd>                                       |<kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>L</kbd>
+  |Surround With                                                                    |<kbd>Opt</kbd><kbd>Cmd</kbd><kbd>T</kbd>                                       |<kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>T</kbd>
+  |Open Terminal                                                                    |<kbd>Opt</kbd><kbd>F12</kbd>                                         |<kbd>Alt</kbd><kbd>F12</kbd>
+  |Generate Setter/Getters                                                          |<kbd>Cmd</kbd><kbd>N</kbd>                                           |<kbd>Alt</kbd><kbd>Ins</kbd>
+  |Find Class                                                                       |<kbd>CMD</kbd><kbd>O</kbd>                                           |<kbd>Ctrl</kbd><kbd>N</kbd>
+  |Refactor/Rename                                                                  |<kbd>Shift</kbd><kbd>F6</kbd>                                        |<kbd>Shift</kbd><kbd>F6</kbd>
+  |Quick Fix                                                                        |<kbd>Opt</kbd><kbd>Enter</kbd>                                       |<kbd>Alt</kbd><kbd>Enter</kbd>
+  |Goto Definition                                                                  |<kbd>Cmd</kbd><kbd>B</kbd>                                           |<kbd>Ctrl</kbd><kbd>B</kbd>
+  |Show parameters for selected method                                              |<kbd>Cmd</kbd><kbd>P</kbd>                                           |<kbd>Ctrl</kbd><kbd>P</kbd>
+  |Refactor This                                                                    |<kbd>Ctrl</kbd><kbd>T</kbd>                                          |<kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>T</kbd>
+  |Stop Process                                                                     |<kbd>Cmd</kbd><kbd>F2</kbd>                                          |<kbd>Ctrl</kbd><kbd>F2</kbd>
+  |Search Everywhere                                                                |<kbd>Shift</kbd><kbd>Shift</kbd>                                     |<kbd>Shift</kbd><kbd>Shift</kbd>
+  |Select Methods to Override                                                       |<kbd>Ctrl</kbd><kbd>O</kbd>                                          |<kbd>Ctrl</kbd><kbd>O</kbd>
+  |Delete Line                                                                      |<kbd>Cmd</kbd><kbd>Backspace</kbd>                                   |<kbd>Ctrl</kbd><kbd>Y</kbd>
+  |Duplicate Line                                                                   |<kbd>Cmd</kbd><kbd>D</kbd>                                           |<kbd>Ctrl</kbd><kbd>D</kbd>
+  |Grow/Shrink selection from cursor                                                |<kbd>Opt</kbd><kbd>Up/Down Arrow key</kbd>                           |<kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>W</kbd>
+  |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|<kbd>Ctrl</kbd><kbd>G</kbd>                                          |<kbd>Alt</kbd><kbd>J</kbd>
 
   **Complete Keymap Guide :  [MacOSX](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard_mac.pdf) | [Linux/Win](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf)**
 

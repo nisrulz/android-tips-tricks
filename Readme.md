@@ -24,32 +24,32 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
   |Description                                                                      |Mac                                                        |Linux/Win
   |---------------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------
-  |Lookup IDE commands / Actions                                                    |<kbd>Cmd</kbd><kbd>Shift</kbd><kbd>A</kbd>                 |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>A</kbd>
-  |Open Class                                                                       |<kbd>Cmd</kbd><kbd>O</kbd>                                 |<kbd>Ctrl</kbd><kbd>O</kbd>
-  |Open File                                                                        |<kbd>Cmd</kbd><kbd>Shift</kbd><kbd>O</kbd>                 |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>N</kbd>
-  |Open recently edited file                                                        |<kbd>Cmd</kbd><kbd>Shift</kbd><kbd>E</kbd>                 |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>E</kbd>
-  |Open Symbol                                                                      |<kbd>Cmd</kbd><kbd>Opt</kbd><kbd>O</kbd>                   |<kbd>Alt</kbd><kbd>Shift</kbd><kbd>N</kbd>
-  |Open recently used file                                                          |<kbd>Cmd</kbd><kbd>E</kbd>                                 |<kbd>Ctrl</kbd><kbd>E</kbd>
-  |Last Edited Location                                                             |<kbd>Cmd</kbd><kbd>Shift</kbd><kbd>Backspace</kbd>         |<kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Backspace</kbd>
-  |Find Usage in persistent window                                                  |<kbd>Opt</kbd><kbd>F7</kbd>                                |<kbd>Alt</kbd><kbd>F7</kbd>
-  |Find Usage in floating window                                                    |<kbd>Cmd</kbd><kbd>Opt</kbd><kbd>F7</kbd>                  |<kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>F7</kbd>
-  |Format the code with proper Indentation                                          |<kbd>Cmd</kbd><kbd>Opt</kbd><kbd>L</kbd>                   |<kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>L</kbd>
-  |Surround With                                                                    |<kbd>Opt</kbd><kbd>Cmd</kbd><kbd>T</kbd>                   |<kbd>Alt</kbd><kbd>Ctrl</kbd><kbd>T</kbd>
-  |Open Terminal                                                                    |<kbd>Opt</kbd><kbd>F12</kbd>                               |<kbd>Alt</kbd><kbd>F12</kbd>
-  |Generate Setter/Getters                                                          |<kbd>Cmd</kbd><kbd>N</kbd>                                 |<kbd>Alt</kbd><kbd>Ins</kbd>
-  |Find Class                                                                       |<kbd>CMD</kbd><kbd>O</kbd>                                 |<kbd>Ctrl</kbd><kbd>N</kbd>
-  |Refactor/Rename                                                                  |<kbd>Shift</kbd><kbd>F6</kbd>                              |<kbd>Shift</kbd><kbd>F6</kbd>
-  |Quick Fix                                                                        |<kbd>Opt</kbd><kbd>Enter</kbd>                             |<kbd>Alt</kbd><kbd>Enter</kbd>
-  |Goto Definition                                                                  |<kbd>Cmd</kbd><kbd>B</kbd>                                 |<kbd>Ctrl</kbd><kbd>B</kbd>
-  |Show parameters for selected method                                              |<kbd>Cmd</kbd><kbd>P</kbd>                                 |<kbd>Ctrl</kbd><kbd>P</kbd>
-  |Refactor This                                                                    |<kbd>Ctrl</kbd><kbd>T</kbd>                                |<kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Shift</kbd><kbd>T</kbd>
-  |Stop Process                                                                     |<kbd>Cmd</kbd><kbd>F2</kbd>                                |<kbd>Ctrl</kbd><kbd>F2</kbd>
-  |Search Everywhere                                                                |<kbd>Shift</kbd><kbd>Shift</kbd>                           |<kbd>Shift</kbd><kbd>Shift</kbd>
-  |Select Methods to Override                                                       |<kbd>Ctrl</kbd><kbd>O</kbd>                                |<kbd>Ctrl</kbd><kbd>O</kbd>
-  |Delete Line                                                                      |<kbd>Cmd</kbd><kbd>Backspace</kbd>                         |<kbd>Ctrl</kbd><kbd>Y</kbd>
-  |Duplicate Line                                                                   |<kbd>Cmd</kbd><kbd>D</kbd>                                 |<kbd>Ctrl</kbd><kbd>D</kbd>
-  |Grow/Shrink selection from cursor                                                |<kbd>Opt</kbd><kbd>Up/Down Arrow key</kbd>                 |<kbd>Shift</kbd><kbd>Ctrl</kbd><kbd>W</kbd>
-  |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|<kbd>Ctrl</kbd><kbd>G</kbd>                                |<kbd>Alt</kbd><kbd>J</kbd>
+  |Lookup IDE commands / Actions                                                    |<kbd>Cmd</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>A</kbd>                 |<kbd>Ctrl</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>A</kbd>
+  |Open Class                                                                       |<kbd>Cmd</kbd>&nbsp;<kbd>O</kbd>                                 |<kbd>Ctrl</kbd>&nbsp;<kbd>O</kbd>
+  |Open File                                                                        |<kbd>Cmd</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>O</kbd>                 |<kbd>Ctrl</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>N</kbd>
+  |Open recently edited file                                                        |<kbd>Cmd</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>E</kbd>                 |<kbd>Ctrl</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>E</kbd>
+  |Open Symbol                                                                      |<kbd>Cmd</kbd>&nbsp;<kbd>Opt</kbd>&nbsp;<kbd>O</kbd>                   |<kbd>Alt</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>N</kbd>
+  |Open recently used file                                                          |<kbd>Cmd</kbd>&nbsp;<kbd>E</kbd>                                 |<kbd>Ctrl</kbd>&nbsp;<kbd>E</kbd>
+  |Last Edited Location                                                             |<kbd>Cmd</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>Backspace</kbd>         |<kbd>Ctrl</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>Backspace</kbd>
+  |Find Usage in persistent window                                                  |<kbd>Opt</kbd>&nbsp;<kbd>F7</kbd>                                |<kbd>Alt</kbd>&nbsp;<kbd>F7</kbd>
+  |Find Usage in floating window                                                    |<kbd>Cmd</kbd>&nbsp;<kbd>Opt</kbd>&nbsp;<kbd>F7</kbd>                  |<kbd>Ctrl</kbd>&nbsp;<kbd>Alt</kbd>&nbsp;<kbd>F7</kbd>
+  |Format the code with proper Indentation                                          |<kbd>Cmd</kbd>&nbsp;<kbd>Opt</kbd>&nbsp;<kbd>L</kbd>                   |<kbd>Ctrl</kbd>&nbsp;<kbd>Alt</kbd>&nbsp;<kbd>L</kbd>
+  |Surround With                                                                    |<kbd>Opt</kbd>&nbsp;<kbd>Cmd</kbd>&nbsp;<kbd>T</kbd>                   |<kbd>Alt</kbd>&nbsp;<kbd>Ctrl</kbd>&nbsp;<kbd>T</kbd>
+  |Open Terminal                                                                    |<kbd>Opt</kbd>&nbsp;<kbd>F12</kbd>                               |<kbd>Alt</kbd>&nbsp;<kbd>F12</kbd>
+  |Generate Setter/Getters                                                          |<kbd>Cmd</kbd>&nbsp;<kbd>N</kbd>                                 |<kbd>Alt</kbd>&nbsp;<kbd>Ins</kbd>
+  |Find Class                                                                       |<kbd>CMD</kbd>&nbsp;<kbd>O</kbd>                                 |<kbd>Ctrl</kbd>&nbsp;<kbd>N</kbd>
+  |Refactor/Rename                                                                  |<kbd>Shift</kbd>&nbsp;<kbd>F6</kbd>                              |<kbd>Shift</kbd>&nbsp;<kbd>F6</kbd>
+  |Quick Fix                                                                        |<kbd>Opt</kbd>&nbsp;<kbd>Enter</kbd>                             |<kbd>Alt</kbd>&nbsp;<kbd>Enter</kbd>
+  |Goto Definition                                                                  |<kbd>Cmd</kbd>&nbsp;<kbd>B</kbd>                                 |<kbd>Ctrl</kbd>&nbsp;<kbd>B</kbd>
+  |Show parameters for selected method                                              |<kbd>Cmd</kbd>&nbsp;<kbd>P</kbd>                                 |<kbd>Ctrl</kbd>&nbsp;<kbd>P</kbd>
+  |Refactor This                                                                    |<kbd>Ctrl</kbd>&nbsp;<kbd>T</kbd>                                |<kbd>Ctrl</kbd>&nbsp;<kbd>Alt</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>T</kbd>
+  |Stop Process                                                                     |<kbd>Cmd</kbd>&nbsp;<kbd>F2</kbd>                                |<kbd>Ctrl</kbd>&nbsp;<kbd>F2</kbd>
+  |Search Everywhere                                                                |<kbd>Shift</kbd>&nbsp;<kbd>Shift</kbd>                           |<kbd>Shift</kbd>&nbsp;<kbd>Shift</kbd>
+  |Select Methods to Override                                                       |<kbd>Ctrl</kbd>&nbsp;<kbd>O</kbd>                                |<kbd>Ctrl</kbd>&nbsp;<kbd>O</kbd>
+  |Delete Line                                                                      |<kbd>Cmd</kbd>&nbsp;<kbd>Backspace</kbd>                         |<kbd>Ctrl</kbd>&nbsp;<kbd>Y</kbd>
+  |Duplicate Line                                                                   |<kbd>Cmd</kbd>&nbsp;<kbd>D</kbd>                                 |<kbd>Ctrl</kbd>&nbsp;<kbd>D</kbd>
+  |Grow/Shrink selection from cursor                                                |<kbd>Opt</kbd>&nbsp;<kbd>Up/Down Arrow key</kbd>                 |<kbd>Shift</kbd>&nbsp;<kbd>Ctrl</kbd>&nbsp;<kbd>W</kbd>
+  |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|<kbd>Ctrl</kbd>&nbsp;<kbd>G</kbd>                                |<kbd>Alt</kbd>&nbsp;<kbd>J</kbd>
 
   **Complete Keymap Guide :  [MacOSX](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard_mac.pdf) | [Linux/Win](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf)**
 

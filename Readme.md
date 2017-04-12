@@ -620,6 +620,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   ```gradle
   adb shell input text "keyboard text"
   ```
++ **Use `areNotificationsEnabled()` from `NotificationManagerCompat` to detect whether your users blocked your Notifications** [[Ref Link](https://twitter.com/tasomaniac/status/851888395152392193/photo/1)]
 
 ### ***Tips regarding UI/UX***
 

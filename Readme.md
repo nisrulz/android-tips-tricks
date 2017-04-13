@@ -622,13 +622,19 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   ```
 + **Use [`areNotificationsEnabled()`](https://developer.android.com/reference/android/support/v4/app/NotificationManagerCompat.html#areNotificationsEnabled()) from [`NotificationManagerCompat`](https://developer.android.com/reference/android/support/v4/app/NotificationManagerCompat.html#areNotificationsEnabled) to detect whether your users blocked your Notifications** [[Ref Link](https://twitter.com/tasomaniac/status/851888395152392193/photo/1)]
 
-+ **Don't hard-code encryption keys, a simple grep for "Ljavax/crypto" reveals them in bytecode** [[Ref Link](https://twitter.com/molsjeroen/status/851708885782204417)]
++ **Don't hard-code encryption keys, a simple grep for `"Ljavax/crypto"` reveals them in bytecode** [[Ref Link](https://twitter.com/molsjeroen/status/851708885782204417)]
 
 + **Intents have a limited payload size (1Mb), don't serialize and attach entire file to it** [[Ref Link](https://twitter.com/molsjeroen/status/851353828905627648)]
 
 + **Always copy a file before sending it as intent URI. Receiving app could edit it & send a canceled result** [[Ref Link](https://twitter.com/molsjeroen/status/851354820883689473)]
 
-+ **Use http:// as scheme for app deeplinks, they are more universal & when app not installed drive users to a domain you own** [[Ref Link](https://twitter.com/molsjeroen/status/851349683440111616)]
++ **Use `http://` as scheme for app deeplinks, they are more universal & when app not installed drive users to a domain you own** [[Ref Link](https://twitter.com/molsjeroen/status/851349683440111616)]
+
++ **Use below to display your app launch time** [[Ref Link](https://twitter.com/molsjeroen/status/851367439996784640)]
+
+  ```bash
+  adb shell am start -W <packagename>/. <activityname>
+  ```
 
 ### ***Tips regarding UI/UX***
 

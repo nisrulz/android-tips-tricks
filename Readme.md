@@ -636,6 +636,19 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   adb shell am start -W <packagename>/. <activityname>
   ```
 
++ **[Use Java 8 features by adding `sourceCompatibility` & `targetCompatibility` to your build.gradle file](https://developer.android.com/studio/preview/features/java8-support.html)**
+
+  ```gradle
+  android {
+    ...
+    compileOptions {
+      sourceCompatibility JavaVersion.VERSION_1_8
+      targetCompatibility JavaVersion.VERSION_1_8
+    }
+  }
+  ```
+ 
+
 ### ***Tips regarding UI/UX***
 
 

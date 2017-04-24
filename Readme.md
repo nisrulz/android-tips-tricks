@@ -647,7 +647,31 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     }
   }
   ```
- 
+
++ **[Setup a gradle task to archive apks and proguard files on build, for backup purposes](https://medium.com/pressure-labs/a-new-devs-guide-to-google-play-sanity-4-a-groovy-script-to-save-them-all-456a12672886)**
+
+  ```gradle
+  task deployApks(type:Copy) {
+      description = "Copies APKs and Proguard mappings to the deploy directory"
+      def appName = "<app_name>";
+      def versionDir = android.defaultConfig.versionName+"_"+android.defaultConfig.versionCode;
+
+      println("Copies APK and Proguard to " + versionDir)
+
+      from 'build/outputs/mapping/release/'
+      include '**/mapping.txt'
+      into '../.admin/deploy/' + versionDir
+      rename ('mapping.txt', "${versionDir}-mapping.txt")
+
+      from ('.') {
+          exclude '**/build', '**/src'
+      }
+
+      include '*.apk'
+      into '../.admin/deploy/' + versionDir
+      rename ('app-release.apk', "${appName}-${versionDir}.apk")
+  }
+  ```
 
 ### ***Tips regarding UI/UX***
 

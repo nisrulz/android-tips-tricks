@@ -16,8 +16,21 @@ This is a simple set of tips and tricks regarding Android Development which I ha
 
 Contributions are always welcome, hoping people will help me in growing this. To contribute, simply open up a PR with the changes.
 
-### ***Know Your Tools***
 
+## Index
+
+* [Know Your Tools](#know-your-tools)
+    * [Android Studio](#android-studio)
+    * [Emulator](#emulator)
+    * [Vysor](#vysor)
+    * [DeskDock](#deskdock)
+* [Make better choices while coding](#make-better-choices-while-coding)
+* [Tips regarding UI/UX](#tips-regarding-uiux)
+* [Tips if you use Kotlin](#tips-if-you-use-kotlin)
+* [Extra : Android Libraries built by me](#extra--android-libraries-built-by-me)
+* [Translations](#translations)
+
+### ***Know Your Tools***
 #### ***Android Studio***
 
 + **Code faster by using keyboard shortcuts**
@@ -138,19 +151,23 @@ Contributions are always welcome, hoping people will help me in growing this. To
 + **Use the Memory/Network/CPU Monitor inside Android Studio to profile your code/app**
 + **[Configure Android Studio](https://medium.com/google-developer-experts/configuring-android-studio-4aa4f54f1153#.rq0z6qlaq)**
 
+
+[<p align="right">Back to Index</p>](#index)
 #### ***Emulator***
 Apart from using physical devices, one should use emulators as they are as of now easy to manage and equivalently powerful.
 
 + [Genymotion](https://www.genymotion.com/)
 + [Intel Emulator bundled in SDK Manger](https://developer.android.com/studio/run/emulator.html)
 
+[<p align="right">Back to Index</p>](#index)
 #### ***[Vysor](http://www.vysor.io/)***
 This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demoing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version, paid version is totally worth buying.
 
+[<p align="right">Back to Index</p>](#index)
 #### ***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free)***
 Yes, vysor was great, but if you want to share your keyboard and mouse directly to your Android device, then this app is for you. It enables you to control your Android device as if it was part of your desktop computer. The [FREE version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) includes the use of computer mouse, while the [PRO version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.pro) includes features such as use of keyboard. This is useful where you can test your app without your hands ever leaving your keyboard.
 
--
+[<p align="right">Back to Index</p>](#index)
 ### ***Make better choices while coding***
 
 + **Use OkHttp over HttpUrlConnect**
@@ -673,6 +690,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   }
   ```
 
+[<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***
 
 
@@ -723,6 +741,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + While picking an accent color (if the brand already has one), pick a color complementary to the primary color so that the contrast is high enough
 
 
+[<p align="right">Back to Index</p>](#index)
 ### ***Tips if you use [Kotlin](https://kotlinlang.org/)***
 
 + **Checkout [From Java to Kotlin](https://fabiomsr.github.io/from-java-to-kotlin/)**
@@ -731,6 +750,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 
 
+[<p align="right">Back to Index</p>](#index)
 ### ***Other Resources***
 
 + [Adhere to the coding guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md)
@@ -839,6 +859,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [Alerter](https://github.com/Tapadoo/Alerter) - Android Alerting Library
 
 
+[<p align="right">Back to Index</p>](#index)
 #### **Extra : Android Libraries built by me**
 + [EasyDeviceInfo](https://github.com/nisrulz/easydeviceinfo) - Enabling device information to be at android developers hand like a piece of cake!
 + [Sensey](https://github.com/nisrulz/Sensey) - Android library to make detecting gestures easy
@@ -853,12 +874,14 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
 + [ShoutOut](https://github.com/nisrulz/ShoutOut) - Android library for logging information in android
 
 
+[<p align="right">Back to Index</p>](#index)
 #### Translations
 If you would like to contribute by translating this doc, please do so by sending a PR which follows the below points
 + Make sure the filename is `README-language.md` i.e `README-English.md`, `README-Greek.md`, etc.
 + The original content/formatting is retained in the translated doc.
 + Check for grammar and spelling mistakes before hand.
 
+[<p align="right">Back to Index</p>](#index)
 #### Credits
 This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links wherever I could remember, giving people due credit who have explained the concepts. If you think I have missed any, then either send a PR or open an issue and I will fix it asap.
 

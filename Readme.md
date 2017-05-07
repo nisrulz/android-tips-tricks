@@ -489,7 +489,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **Selectivily execute a specific method in Android Studio** [[Ref Link]](https://twitter.com/tasomaniac/status/820019068140945408)
 
-	![Image](.github/img/selectiverun.gif)
+	![Image](img/selectiverun.gif)
 
 + **Did you get one of these Google Play Developer Policy Violation Emails? Worry not, generate a Privacy Policy for your android app** [[Ref ink]](https://medium.com/@ali.muzaffar/did-you-get-one-of-these-google-play-developer-policy-violation-emails-6c529ceb082d#.f10upj3fy)
     + Take a look at [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/), a web app to generate a generic privacy policy for your app.
@@ -621,7 +621,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   }
   ```
 + **Activity LifeCycle** [[Ref Link](https://www.bignerdranch.com/blog/android-activity-lifecycle-onStop/)]
-  ![diagram](.github/img/activityStateDiagram.jpeg)
+
+  ![diagram](img/activityStateDiagram.jpeg)
   
 + **Tip about `onSaveInstanceState()`**  
   `onSaveInstanceState()` is called **_only when the OS decides to kill the `Activity` instance_**. It will not be called when Activity is explicitly killed i.e User pressed back button or `finish()` is called from code.
@@ -689,6 +690,9 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
       rename ('app-release.apk', "${appName}-${versionDir}.apk")
   }
   ```
+
++ **[Use activity-alias or your launcher icons will disappear when renaming/moving your MainActivity](https://medium.com/@Mauin/the-case-of-disappearing-launcher-icons-657c3663b9d3)**
+
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***

@@ -786,6 +786,10 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Android Examples](https://github.com/nisrulz/android-examples) - Simple basic isolated apps, for budding android devs.
   + [Google Samples](https://github.com/googlesamples) - Various sample apps provided by Google
   + [Google Android Codelabs](https://codelabs.developers.google.com/?cat=Android)
+  + [Google Android Codelabs](https://codelabs.developers.google.com/?cat=Android)
+  + [QualityMatters](https://github.com/artem-zinnatullin/qualitymatters)
+  + [Android-Testing](https://github.com/googlesamples/android-testing)
+  + [Espresso-Samples](https://github.com/chiuki/espresso-samples)
 
 + **Follow on Twitter**
   + [#AndroidDev](https://twitter.com/search?q=%23AndroidDev)
@@ -816,6 +820,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Android Dev Docs](https://developer.android.com/reference/packages.html)
   + [Material Up - DesignShowcase](http://www.material.uplabs.com/)
   + [Dribbble - MaterialDeisgnShowcase](https://dribbble.com/tags/material_design)
+
++ **[Checkout the Testing guide](https://github.com/ravidsrk/android-testing-guide)**
 
 + **Use freely available mockable api points**
   + [Mockey](https://github.com/clafonta/Mockey) - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.
@@ -863,7 +869,6 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [AndroidViewAnimations](https://github.com/daimajia/AndroidViewAnimations) - Cute view animation collection.
   + [Calligraphy](https://github.com/chrisjenx/Calligraphy) - Custom fonts in Android the easy way.
   + [Alerter](https://github.com/Tapadoo/Alerter) - Android Alerting Library
-
 
 [<p align="right">Back to Index</p>](#index)
 #### **Extra : Android Libraries built by me**

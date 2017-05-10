@@ -620,6 +620,8 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     }
   }
   ```
+  > Have a look at the [Paperwork Project](https://github.com/zsoltk/paperwork), which generates build info for your Android project without breaking incremental compilation
+
 + **Activity LifeCycle** [[Ref Link](https://www.bignerdranch.com/blog/android-activity-lifecycle-onStop/)]
 
   ![diagram](img/activityStateDiagram.jpeg)

@@ -808,6 +808,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
   + [Android Niceties - UI Showcase](http://androidniceties.tumblr.com/)
   + [Material Design Specs](https://material.google.com/)
+  + [Material Components](https://material.io/components/)
   + [Everything About Material Design](https://material.io/)
   + [Platform Version Distribution](https://developer.android.com/about/dashboards/index.html#Platform)
   + [Android Studio Release Notes](https://sites.google.com/a/android.com/tools/recent)

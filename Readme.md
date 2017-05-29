@@ -884,6 +884,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
 + [EvTrack](https://github.com/nisrulz/EvTrack) - Android library to make event and exception tracking easy
 + [OptimusHTTP](https://github.com/nisrulz/OptimusHTTP) - Android library that simplifies networking in android via an async http client
 + [ShoutOut](https://github.com/nisrulz/ShoutOut) - Android library for logging information in android
++ [Lantern](https://github.com/nisrulz/lantern) - Android library handling flashlight for camera and camera2 api. Added support for handling display/screen light.
 
 
 [<p align="right">Back to Index</p>](#index)

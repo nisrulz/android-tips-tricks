@@ -861,6 +861,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [ShapeShifter](https://alexjlockwood.github.io/ShapeShifter/) - SVG path morphing animation editor.
   + [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/) - Generate a generic privacy policy for your app for the playstore.
   + [gnirehtet](https://github.com/Genymobile/gnirehtet) - Reverse tethering for Android.
+  + [Adaptive Icons](https://adapticon.tooo.io/) - Try out the new Adaptive Icons in your browser
 
 + **Awesome android libraries**
   + [StorIO](https://github.com/pushtorefresh/storio) - Beautiful API for SQLiteDatabase and ContentResolver

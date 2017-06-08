@@ -695,6 +695,18 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 + **[Use activity-alias or your launcher icons will disappear when renaming/moving your MainActivity](https://medium.com/@Mauin/the-case-of-disappearing-launcher-icons-657c3663b9d3)**
 
++ To enable `aapt2` set below in gradle properties 
+
+  ```gradle
+  android.enableaapt2=true
+  ```
+
++ To testout doze mode, trigger it using `adb` [[Ref Link](https://developer.android.com/training/monitoring-device-state/doze-standby.html#testing_doze)
+
+  ```bash
+  adb shell dumpsys deviceidle force-idle
+  ```
+
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***

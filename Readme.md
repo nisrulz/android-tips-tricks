@@ -707,6 +707,10 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   adb shell dumpsys deviceidle force-idle
   ```
 
++ Thumb rule regarding setting `compileSdkVersion`, `minSdkVersion` and `targetSdkVersion`
+
+  > `minSdkVersion` (lowest possible) <= `targetSdkVersion` == `compileSdkVersion` (latest SDK)
+
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***

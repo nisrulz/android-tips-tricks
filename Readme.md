@@ -837,6 +837,7 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   + [Android Dev Docs](https://developer.android.com/reference/packages.html)
   + [Material Up - DesignShowcase](http://www.material.uplabs.com/)
   + [Dribbble - MaterialDeisgnShowcase](https://dribbble.com/tags/material_design)
+  + [UltimateAndroidReference](https://github.com/aritraroy/UltimateAndroidReference)
 
 + **[Checkout the Testing guide](https://github.com/ravidsrk/android-testing-guide)**
 

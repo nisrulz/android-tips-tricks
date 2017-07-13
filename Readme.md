@@ -916,7 +916,9 @@ If you would like to contribute by translating this doc, please do so by sending
 #### Credits
 This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links wherever I could remember, giving people due credit who have explained the concepts. If you think I have missed any, then either send a PR or open an issue and I will fix it asap.
 
-> If you found this cheatsheet helpful or you learned something today and want to thank me, consider [buying me a cup of](https://www.paypal.me/nisrulz/5) :coffee:
+> If you found this cheatsheet helpful or you learned something today and want to thank me, consider buying me a cup of :coffee:
+>  + [PayPal](https://www.paypal.me/nisrulz/5)
+>  + Bitcoin Address: 13PjuJcfVW2Ad81fawqwLtku4bZLv1AxCL
 
 License
 =======

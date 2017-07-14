@@ -174,111 +174,24 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 
 #### ***ADB SHELL***
 Few handy commands you can use to interact with emulator/device, through terminal.
-	
-+  List all connected devices
 
-  ```sh
-	adb devices
-  
-  ```
-  
-+ Install an application on device 
-	- -s to install on the SD Card
-	- -g to grant all permissions listed in the manifest [[More Info]](https://developer.android.com/studio/command-line/adb.html)
-
-  ```sh
-  adb install -r ~/application.apk
-  
-  ```
-  
-+ Uninstall an application
-
-  ```sh
-  adb uninstall your.app.package
-  
-  ```
-  
-+ Download a file from device
-
-  ```sh
-  	adb pull /sdcard/file.ext
-  
-  ```
-  
-+ Upload a file to a device
-
-  ```sh
-	adb push file.ext /sdcard
-  
-  ```
-  
-+ Print all installed packages on device
-
-  ```sh
-	adb shell pm list packages -f
-  
-  ```
-  
-+ Clear Application data
-
-  ```sh
-  adb shell pm clear your.app.package
-  
-  ```
-  
-+ Toggle Data and Wifi for device.
-	
-	```sh
-	adb shell svc data disable
-	  
-	```
-	
-	```sh
-	adb shell svc wifi enable
-	  
-	```
-  
-+ Location of Device
-	- High accuracy: gps,wifi,network or gps,network (in case you want the wifi)
-	- Battery saving: wifi,network or network only
-	- Device only: gps 
-	
-	```sh
-	adb shell settings put secure location_providers_allowed gps
-	  
-	```
-+ Reset all granted permissions.
-
-	```sh
-	adb shell pm reset-permissions -p your.app.package
-	  
-	```
-+ Reset a specific permission
-  
-	```
-	adb shell pm revoke your.app.package android.permission.WRITE_EXTERNAL_STORAGE
-	  
-	```
-+ Broadcast Actions
-  	  
-	```sh
-	adb shell am broadcast -a 'my_action' 
-	  
-	```
-+ [Simulating Android killing your app in the background] (https://twitter.com/Jahnold/status/759775495655333888)
-
-	```sh
-	  adb shell am kill
-	  
-	```
-	  
-+ Take a Screenshot
-
-  ```sh
-  adb shell screencap -p | perl -pe 's/\x0D\x0A/\x0A/g' > screenshot.png
-  
-  ```
-  
+|Description|Command|
+|---|---|
+|List all connected devices|adb devices|
+|Install an application on device<br>-s to install on the SD Card<br>-g to grant all permissions listed in the manifest [[More Info]](https://developer.android.com/studio/command-line/adb.html)|adb install -r ~/application.apk|
+|Uninstall an application|adb uninstall your.app.package|
+|Download a file from device|adb pull /sdcard/file.ext|
+|Upload a file to a device|adb push file.ext /sdcard|
+|Print all installed packages on device|adb shell pm list packages -f|
+|Clear Application data|adb shell pm clear your.app.package|
+|Toggle Data for device|adb shell svc data disable|
+|Toggle Wifi for device|adb shell svc wifi enable|
+|Location of Device<br>- High accuracy: gps,wifi,network or gps,network (if you want the wifi)<br>- Battery saving: wifi,network or network only<br>- Device only: gps |adb shell settings put secure location_providers_allowed gps|
+|Reset all granted permissions|adb shell pm reset-permissions -p your.app.package|
+|Reset a specific permission|adb shell pm revoke your.app.package android.permission.WRITE_EXTERNAL_STORAGE|
+|Broadcast Actions|adb shell am broadcast -a 'my_action' |
+|[Simulating Android killing your app in the background] (https://twitter.com/Jahnold/status/759775495655333888)|adb shell am kill|
+|Take a Screenshot|adb shell screencap -p \| perl -pe 's/\x0D\x0A/\x0A/g' > screenshot.png|  
 
 + **[Learn about various techniques involved when using ADB](https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8)**
 

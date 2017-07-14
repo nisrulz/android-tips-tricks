@@ -190,7 +190,7 @@ Few handy commands you can use to interact with emulator/device, through termina
 |Reset all granted permissions|adb shell pm reset-permissions -p your.app.package|
 |Reset a specific permission|adb shell pm revoke your.app.package android.permission.WRITE_EXTERNAL_STORAGE|
 |Broadcast Actions|adb shell am broadcast -a 'my_action' |
-|[Simulating Android killing your app in the background] (https://twitter.com/Jahnold/status/759775495655333888)|adb shell am kill|
+|[Simulating Android killing your app in the background](https://twitter.com/Jahnold/status/759775495655333888)|adb shell am kill|
 |Take a Screenshot|adb shell screencap -p \| perl -pe 's/\x0D\x0A/\x0A/g' > screenshot.png|  
 
 + **[Learn about various techniques involved when using ADB](https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8)**

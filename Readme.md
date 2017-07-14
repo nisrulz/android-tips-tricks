@@ -24,6 +24,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
     * [Emulator](#emulator)
     * [Vysor](#vysor)
     * [DeskDock](#deskdock)
+    * [ADB Shell](#adb-shell)
 * [Make better choices while coding](#make-better-choices-while-coding)
 * [Tips regarding UI/UX](#tips-regarding-uiux)
 * [Tips if you use Kotlin](#tips-if-you-use-kotlin)
@@ -160,12 +161,40 @@ Apart from using physical devices, one should use emulators as they are as of no
 + [Intel Emulator bundled in SDK Manger](https://developer.android.com/studio/run/emulator.html)
 
 [<p align="right">Back to Index</p>](#index)
+
+
 #### ***[Vysor](http://www.vysor.io/)***
 This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demoing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version, paid version is totally worth buying.
 
 [<p align="right">Back to Index</p>](#index)
 #### ***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free)***
 Yes, vysor was great, but if you want to share your keyboard and mouse directly to your Android device, then this app is for you. It enables you to control your Android device as if it was part of your desktop computer. The [FREE version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) includes the use of computer mouse, while the [PRO version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.pro) includes features such as use of keyboard. This is useful where you can test your app without your hands ever leaving your keyboard.
+
+[<p align="right">Back to Index</p>](#index)
+
+#### ***ADB SHELL***
+Few handy commands you can use to interact with emulator/device, through terminal.
+
+|Description|Command|
+|---|---|
+|List all connected devices|adb devices|
+|Install an application on device<br>-s to install on the SD Card<br>-g to grant all permissions listed in the manifest [[More Info]](https://developer.android.com/studio/command-line/adb.html)|adb install -r ~/application.apk|
+|Uninstall an application|adb uninstall your.app.package|
+|Download a file from device|adb pull /sdcard/file.ext|
+|Upload a file to a device|adb push file.ext /sdcard|
+|Print all installed packages on device|adb shell pm list packages -f|
+|Clear Application data|adb shell pm clear your.app.package|
+|Toggle Data for device|adb shell svc data disable|
+|Toggle Wifi for device|adb shell svc wifi enable|
+|Location of Device<br>- High accuracy: gps,wifi,network or gps,network (if you want the wifi)<br>- Battery saving: wifi,network or network only<br>- Device only: gps |adb shell settings put secure location_providers_allowed gps|
+|Reset all granted permissions|adb shell pm reset-permissions -p your.app.package|
+|Reset a specific permission|adb shell pm revoke your.app.package android.permission.WRITE_EXTERNAL_STORAGE|
+|Broadcast Actions|adb shell am broadcast -a 'my_action' |
+|[Simulating Android killing your app in the background](https://twitter.com/Jahnold/status/759775495655333888)|adb shell am kill|
+|Take a Screenshot|adb shell screencap -p \| perl -pe 's/\x0D\x0A/\x0A/g' > screenshot.png|  
+
++ **[Learn about various techniques involved when using ADB](https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8)**
+
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Make better choices while coding***
@@ -243,9 +272,6 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
     }
   }
   ```
-
-+ **[Simulating Android killing your app in the background](https://twitter.com/Jahnold/status/759775495655333888),  run in terminal**
-  `adb shell am kill`
 
 + **Follow the below [rule to have faster gradle builds](https://medium.com/@skaliakoudas/decreasing-build-times-by-decreasing-gradle-memory-requirements-7fcafc6d98ea#.otnm0ofb6)**
   ```gradle
@@ -427,8 +453,6 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
   >  `Preferences` > `Editor` > `Code Style` > `Inspections`.
   >
   > Search for STOPSHIP to find the correct setting.
-
-+ **Use `adb install -g` to grant all permissions listed in the manifest** [[More Info]](https://developer.android.com/studio/command-line/adb.html)
 
 + **Use [`alfi`](https://github.com/cesarferreira/alfi) to find the gradle dependency statement for a library**
 
@@ -632,8 +656,6 @@ Yes, vysor was great, but if you want to share your keyboard and mouse directly 
 + **[If you are into building Android Libraries, then read here for more tips](https://android.jlelse.eu/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries-dba1a524d619)**
 
 + **[Read about whats in an APK here](http://crushingcode.nisrulz.com/whats-in-the-apk/)**
-
-+ **[Learn about various techniques involved when using ADB](https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8)**
 
 + **[Input some text in an editfield in a running emulator from your keyboard ](http://fragmentedpodcast.com/episodes/77/)**
   

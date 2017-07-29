@@ -901,6 +901,7 @@ https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
   + [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/) - Generate a generic privacy policy for your app for the playstore.
   + [gnirehtet](https://github.com/Genymobile/gnirehtet) - Reverse tethering for Android.
   + [Adaptive Icons](https://adapticon.tooo.io/) - Try out the new Adaptive Icons in your browser
+  + [Android Starters](http://androidstarters.com/) - Handcrafted starter projects, optimized for simplicity and ease of use.
 
 + **Awesome android libraries**
   + [StorIO](https://github.com/pushtorefresh/storio) - Beautiful API for SQLiteDatabase and ContentResolver

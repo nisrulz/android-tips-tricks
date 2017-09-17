@@ -787,6 +787,7 @@ Few handy commands you can use to interact with emulator/device, through termina
   >
   > Recorded video file is saved at the location mentioned in the command on the device itself. 
 
++ Use certificate pinning to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates, when making requests from your app. [[Ref Link](https://dev.to/mplacona/certificate-pinning-in-android)]
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***

@@ -742,6 +742,42 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ![diagram](img/mergetaginlayout.jpg)
 
++ Checkout the Background Execution Limits on Android Oreo and update your app to work with the restrictions [[Ref Link](https://medium.com/exploring-android/exploring-background-execution-limits-on-android-oreo-ab384762a66c)]
+
++ To take good screenshots with clean status bar use the [**Demo Mode**](https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md) in Android [[Ref Link](https://android.jlelse.eu/clean-your-status-bar-like-a-pro-76c89a1e2c2f)]
+
+  + Steps
+   
+    1. Enable Demo Mode
+
+        ```bash
+        adb shell settings put global sysui_demo_allowed 1 
+        ```
+
+    1. Enable/disable icons by running the right command
+
+        ```bash
+        // display time 12:00
+        adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200
+
+        // Display full mobile data without type
+        adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false
+
+        // Hide notifications
+        adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false
+
+        // Show full battery but not in charging state
+        adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100
+        ```
+    1. Run app and take screenshots
+    
+    1. Exit demo mode once you are done
+
+        ```bash
+        adb shell am broadcast -a com.android.systemui.demo -e command exit
+        ```
+
+
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***
@@ -800,8 +836,6 @@ Few handy commands you can use to interact with emulator/device, through termina
 + **Checkout [From Java to Kotlin](https://fabiomsr.github.io/from-java-to-kotlin/)**
 
   Cheatsheet when you come from Java to Kotlin. Very nice resource to compare the two languages.
-
-
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Other Resources***

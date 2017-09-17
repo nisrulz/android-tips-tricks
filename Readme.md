@@ -777,6 +777,15 @@ Few handy commands you can use to interact with emulator/device, through termina
         adb shell am broadcast -a com.android.systemui.demo -e command exit
         ```
 
++ To record video of your android device [[Ref Link](https://dev.to/aneesahammed/best-way-to-record-your-screen-on-android)]
+
+  ```bash
+  adb shell && screenrecord /sdcard/download/fileName.mp4
+  ```
+
+  > Hit `Ctrl+C` to exit/stop recording
+  >
+  > Recorded video file is saved at the location mentioned in the command on the device itself. 
 
 
 [<p align="right">Back to Index</p>](#index)

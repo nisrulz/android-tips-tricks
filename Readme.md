@@ -738,6 +738,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   > [Checkout a working example here](https://github.com/nisrulz/android-examples/tree/master/OSSLicenseActivity)
 
++ Make Android Studio render `<merge>` layouts correctly by specifying the layout type with the tools:parentTag attribute [[Ref Link](https://twitter.com/m_evans10/status/907635918550511617)]
+
+  ![diagram](img/mergetaginlayout.jpg)
+
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***

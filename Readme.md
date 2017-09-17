@@ -734,6 +734,11 @@ Few handy commands you can use to interact with emulator/device, through termina
   > `minSdkVersion` (lowest possible) <= `targetSdkVersion` == `compileSdkVersion` (latest SDK)
 
 
++ Google released an option to include OSS license activity in your app, use that to attribute credits to the OSS libs in your app [[Ref Link](https://developers.google.com/android/guides/opensource)]
+
+  > [Checkout a working example here](https://github.com/nisrulz/android-examples/tree/master/OSSLicenseActivity)
+
+
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***
 

@@ -863,6 +863,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 + **Checkout [Android Dialogs](https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed)**
   Short byte sized android interview videos with experts.
 
++ **Checkout [Google's Udacity Android courses](https://www.udacity.com/courses/android)**
+  
+  Free courses and (paid) Nanodegree programs aimed at beginners up to advanced Android developers taught by professionals.
+
 + **Checkout [CodePath Android Cliffnotes](https://guides.codepath.com/android)**
 
    It is the central crowdsourced resource for complete and up-to-date practical Android developer guides for any topic.

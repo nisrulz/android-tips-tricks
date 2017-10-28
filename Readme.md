@@ -141,13 +141,15 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 + **Don't use a small font**
 
-  Preferably use a font in Android Studio that's easy to read and is at a font size which does not forces you to strain your eyes. I use [Menlo font](https://en.wikipedia.org/wiki/Menlo_(typeface)).
+  Preferably use a font in Android Studio that's easy to read and is at a font size which does not forces you to strain your eyes. My primary font is [FiraCode](https://github.com/tonsky/FiraCode) and secondary font is [Menlo font](https://en.wikipedia.org/wiki/Menlo_(typeface))
 
 + **Use a code style**
 
   You should use a standard codestyle, so possible contenders can be
   + [AOSP Codestyle](https://source.android.com/source/code-style.html)
   + [Square IntelliJ Codestyle](https://github.com/square/java-code-styles)
+  + [Grandcentrix Codestyle](https://github.com/grandcentrix/AndroidCodeStyle)
+
 + **Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html)**
 + **Use the Memory/Network/CPU Monitor inside Android Studio to profile your code/app**
 + **[Configure Android Studio](https://medium.com/google-developer-experts/configuring-android-studio-4aa4f54f1153#.rq0z6qlaq)**
@@ -785,7 +787,21 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   > Hit `Ctrl+C` to exit/stop recording
   >
-  > Recorded video file is saved at the location mentioned in the command on the device itself. 
+  > Recorded video file is saved at the location mentioned in the command on the device itself.
+
++ Use Dao inheritance to reduce the amount of boilerplate code [[Ref Link](https://gist.github.com/florina-muntenescu/1c78858f286d196d545c038a71a3e864)]
+
++ Instead of using `getActivity()` in fragment, keep a habit of getting context from `onAttach()`. [[Ref Link](https://twitter.com/ravi_rupareliya/status/920881340245073920)]
+
++ Avoid setting a background in every view/fragment as it likely causes overdraw. [[Ref Link](https://twitter.com/molsjeroen/status/923543967978881025)]
+
++ `View.getWidth() = 0?` That's because your view hasn't been layout yet, use globallayoutListener to know layout done. [[Ref Link](https://twitter.com/molsjeroen/status/923542864877047808)]
+
++ Android never kills activities, it only kills processes. When low memory the lowest priority ranked will be killed.[[Ref Link](https://twitter.com/molsjeroen/status/923510846696951809)]
+
++ [Use `.([filename].java:[line])` in your log statements to make them clickable in Android Studio and Intellij IDEA.](https://medium.com/@tauno/android-studio-pro-tip-go-to-source-from-logcat-output-f13bf46411b5)
+
++ Use `-whyareyoukeeping class com.jeroenmols.MyClass` to figure out why certain a class wasn't removed.[[Ref Link](https://twitter.com/molsjeroen/status/905713748173881345)]
 
 + Use certificate pinning to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates, when making requests from your app. [[Ref Link](https://dev.to/mplacona/certificate-pinning-in-android)]
 
@@ -851,6 +867,8 @@ Few handy commands you can use to interact with emulator/device, through termina
 ### ***Other Resources***
 
 + [Adhere to the coding guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md)
+
++ [Google's Maven Repository](https://dl.google.com/dl/android/maven2/index.html)
 
 + **Listen to podcasts**
   1. [Fragmented](http://fragmentedpodcast.com/)

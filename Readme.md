@@ -805,6 +805,15 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 + Use certificate pinning to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates, when making requests from your app. [[Ref Link](https://dev.to/mplacona/certificate-pinning-in-android)]
 
++ Do download the latest emulator using CLI
+  ```
+  cd <android_sdk>/tools/bin
+  ./sdkmanager --channel=3 emulator
+  ```
+
+  To check the version of emulator, use `./sdkmanager --channel=3 emulator`
+
+
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***
 

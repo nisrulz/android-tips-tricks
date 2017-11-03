@@ -872,6 +872,8 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   Cheatsheet when you come from Java to Kotlin. Very nice resource to compare the two languages.
 
++ **Checkout [Kotlin Style Guide](https://android.github.io/kotlin-guides/index.html) by Google**
+
 [<p align="right">Back to Index</p>](#index)
 ### ***Other Resources***
 

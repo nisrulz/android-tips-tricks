@@ -65,7 +65,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
   |Grow/Shrink selection from cursor                                                |<kbd>Opt</kbd>&nbsp;<kbd>Up/Down Arrow key</kbd>                 |<kbd>Shift</kbd>&nbsp;<kbd>Ctrl</kbd>&nbsp;<kbd>W</kbd>
   |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|<kbd>Ctrl</kbd>&nbsp;<kbd>G</kbd>                                |<kbd>Alt</kbd>&nbsp;<kbd>J</kbd>
 
-  **Complete Keymap Guide :  [MacOSX](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard_mac.pdf) | [Linux/Win](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf)**
+  **Complete Keymap Guide :  [Linux/Win | MacOSX](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)**
 
 + **Use plugins to become more efficient**
   1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)

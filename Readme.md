@@ -125,7 +125,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
   Android Studio/IntelliJ havea special kind of code completion which allows you to write code specific to a field
   + `<expr>.null` will auto complete to `if(<expr> == null)`
-  + `<expr>.nootnull` will auto complete to `if(<expr> != null)`
+  + `<expr>.notnull` will auto complete to `if(<expr> != null)`
   + `<expr>.var` will auto complete to `T name = <expr>`
   + `<expr>.field` will auto complete to create a global field variable `field = <expr>`
   + `<ArrayExpr>.for` will auto complete to `for(T item : <Arrayexpr>)`

@@ -813,6 +813,7 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   To check the version of emulator, use `./sdkmanager --channel=3 emulator`
 
++ **[Checkout some tricks when using Android Strings in XML](https://android.jlelse.eu/android-strings-xml-tips-tricks-52b0c820cf7a)**
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***

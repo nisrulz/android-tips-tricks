@@ -815,6 +815,14 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 + **[Checkout some tricks when using Android Strings in XML](https://android.jlelse.eu/android-strings-xml-tips-tricks-52b0c820cf7a)**
 
++ Cleanup your Gradle caches by deleting files not accessed within the last month [[Ref Link](https://github.com/gradle/gradle/issues/2304)]
+  ```
+  find ~/.gradle -type f -atime +30 -delete
+  find ~/.gradle -type d -mindepth 1 -empty -delete
+  ```
+  > To check the size of your gradle cache, run:  `du -sh ~/.gradle`
+  
+
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***
 

@@ -821,7 +821,8 @@ Few handy commands you can use to interact with emulator/device, through termina
   find ~/.gradle -type d -mindepth 1 -empty -delete
   ```
   > To check the size of your gradle cache, run:  `du -sh ~/.gradle`
-  
+
++ **[Checkout some cool tricks when using `tools:` attribute in your android layouts, such as sample data and recyclerview item layout previews](https://blog.stylingandroid.com/tool-time-part-1-2/)**
 
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***

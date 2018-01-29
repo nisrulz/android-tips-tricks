@@ -826,6 +826,15 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 + **[Checkout some cool tricks when using `tools:` attribute in your android layouts, such as sample data and recyclerview item layout previews](https://blog.stylingandroid.com/tool-time-part-1-2/)**
 
++ Remove all debug log statements from the release build using the below proguard rules. (app's build.gradle should have `minifyEnabled true` set for this to work)
+  ```
+  # Remove all debug logs
+  -assumenosideeffects class android.util.Log {
+      public static *** d(...);
+  }
+  ```
+  > The above snippet is usually appended to contents of app/proguard-rules.pro file
+
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***
 

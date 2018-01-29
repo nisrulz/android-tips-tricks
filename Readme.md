@@ -260,6 +260,8 @@ Few handy commands you can use to interact with emulator/device, through termina
     }
   }
   ```
+  [[Read more from the manual here](https://www.guardsquare.com/en/proguard/manual/usage)]
+
 + **Use shrinkResources**
 
   ```gradle

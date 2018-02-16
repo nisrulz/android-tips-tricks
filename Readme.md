@@ -835,6 +835,32 @@ Few handy commands you can use to interact with emulator/device, through termina
   ```
   > The above snippet is usually appended to contents of app/proguard-rules.pro file
 
++ **[Should I use Enums in Android?](https://trevore.com/post/should-i-use-enums-in-android/)**
+
+  **tl;dr**
+  + If you need code to be very performant integer constants may be the way to go
+    ```java
+    public class Operator {
+        public static final int ADD = 1;
+        public static final int SUBTRACT = 2;
+        public static final int MULTIPLY = 3;
+        public static final int DIVIDE = 4;
+    }
+    ```
+  + Use Enums because
+    + Are type-safe, so you can only use valid enum types
+    + Provide better code readability
+    + Can implement interfaces
+    + Support polymorphic behavior
+    + In some really trivial cases, Proguard can optimize Enums into integer constants for you [[Ref Link](https://www.guardsquare.com/en/proguard/manual/optimizations)]
+    + Performance difference rarely makes a difference.
+
+    ```java
+    public enum Operators {
+        Add, Subtract, Multiply, Divide
+    }
+    ```
+
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***
 

@@ -861,6 +861,10 @@ Few handy commands you can use to interact with emulator/device, through termina
     }
     ```
 
++ The string resource `android.R.string.yes` doesnot yield string "Yes" instead it yields "Ok". Similarly the string resource `android.R.string.no` doesnot yield string "No" instead it yields "Cancel" [[Ref Link](https://twitter.com/mandybess/status/971901727711535105)]
+
+  ![string resource](img/android_str_mismatch.jpg)
+
 [<p align="right">Back to Index</p>](#index)
 ### ***Tips regarding UI/UX***
 

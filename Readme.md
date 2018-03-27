@@ -98,6 +98,11 @@ Contributions are always welcome, hoping people will help me in growing this. To
   1. [JVM Debugger Memory View](https://plugins.jetbrains.com/idea/plugin/8537-jvm-debugger-memory-view)
 
       This plugin extends the built-in JVM debugger with capabilities to explore objects in the JVM heap during a debug session.
+      
+  1. [Android Parcelable code generator](https://plugins.jetbrains.com/plugin/7332-android-parcelable-code-generator)
+  
+      Plugin which generates Android Parcelable boilerplate code for you.
+
 
 + **Use Live Templates in Android Studio**
   + `newInstance` - Generates the static `newInstance` function inside a Fragment

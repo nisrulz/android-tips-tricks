@@ -22,7 +22,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
 * [Know Your Tools](#know-your-tools)
     * [Android Studio](#android-studio)
     * [Emulator](#emulator)
-    * [Vysor](#vysor)
+    * [Vysor](#vysor) / [scrcpy](#scrcpy)
     * [DeskDock](#deskdock)
     * [ADB Shell](#adb-shell)
 * [Make better choices while coding](#make-better-choices-while-coding)
@@ -172,6 +172,9 @@ Apart from using physical devices, one should use emulators as they are as of no
 
 #### ***[Vysor](http://www.vysor.io/)***
 This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demoing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version, paid version is totally worth buying.
+
+#### ***[scrcpy](https://github.com/genymobile/scrcpy)***
+It is basically used to display and control your Android device and is the open source equivalent of [Vysor](http://www.vysor.io/). The good folks at [Genymotion](https://www.genymotion.com/) built this tool and then open sourced it (Open Source FTW).
 
 [<p align="right">Back to Index</p>](#index)
 #### ***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free)***

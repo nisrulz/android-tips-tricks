@@ -202,7 +202,6 @@ Few handy commands you can use to interact with emulator/device, through termina
 |Broadcast Actions|`adb shell am broadcast -a 'my_action'` |
 |[Simulating Android killing your app in the background](https://twitter.com/Jahnold/status/759775495655333888)|`adb shell am kill`|
 |Take a Screenshot|`adb shell screencap -p \| perl -pe 's/\x0D\x0A/\x0A/g' > screenshot.png`|
-|Get package name from debug apk when inside the project|`aapt dump badging path/to/apk/AppDebug.apk | grep -e "package: name" | cut -d \' -f 2`|
 |Launch an installed app using its package name|`adb shell monkey -p com.yourapp.packagename 1`|
 
 + **[Learn about various techniques involved when using ADB](https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8)**

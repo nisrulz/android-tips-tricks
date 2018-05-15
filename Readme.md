@@ -249,13 +249,13 @@ Few handy commands you can use to interact with emulator/device, through termina
 + **Reference local `aar` files as below [[Stackoverflow Ref](http://stackoverflow.com/a/28816265/2745762)]**
   ```gradle
     dependencies {
-       compile(name:'nameOfYourAARFileWithoutExtension', ext:'aar')
-     }
-    repositories{
-          flatDir{
-                  dirs 'libs'
-           }
-     }
+       implementation(name:'nameOfYourAARFileWithoutExtension', ext:'aar')
+    }
+    repositories {
+       flatDir {
+          dirs 'libs'
+       }
+    }
 
   ```
 

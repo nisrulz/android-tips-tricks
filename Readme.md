@@ -575,7 +575,7 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 * **Selectivily execute a specific method in Android Studio** [[Ref Link]](https://twitter.com/tasomaniac/status/820019068140945408)
 
-      	![Image](img/selectiverun.gif)
+  ![Image](img/selectiverun.gif)
 
 * **Did you get one of these Google Play Developer Policy Violation Emails? Worry not, generate a Privacy Policy for your android app** [[Ref ink]](https://medium.com/@ali.muzaffar/did-you-get-one-of-these-google-play-developer-policy-violation-emails-6c529ceb082d#.f10upj3fy)
 
@@ -598,7 +598,7 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   and then use it in code as `BuildConfig.SERVER_ENDPOINT`, `BuildConfig.FOO`,`BuildConfig.LOG`
 
-* **Calculate the version code and version name in your `build.gradle` \***manually**_, based of version values_**
+* **Calculate the version code and version name in your `build.gradle` **manually**_, based of version values_**
   In your app's `build.gradle`
 
   ```gradle
@@ -606,69 +606,68 @@ Few handy commands you can use to interact with emulator/device, through termina
   versionMinor = 0
   versionPatch = 0
   versionBuild = 1
+
+  verCode = versionMajor _ 1000000 + versionMinor _ 10000 + versionPatch \* 100 + versionBuild
+  verName = "${versionMajor}.${versionMinor}.${versionPatch}"
+
+  // Use
+  android{
+    defaultConfig {
+          ...
+          versionCode verCode
+          versionName verName
+          ...
+    }
+  }
   ```
 
-verCode = versionMajor _ 1000000 + versionMinor _ 10000 + versionPatch \* 100 + versionBuild
-verName = "${versionMajor}.${versionMinor}.${versionPatch}"
+- **Calculate the version code and version name in your `build.gradle` automatically, based on git information**
 
-// Use
-android{
-defaultConfig {
-...
-versionCode verCode
-versionName verName
-...
-}
-}
+  > Note: These functions go specifically inside the app's `build.gradle` and cannot be used with `ext`.
 
-````
-+ **Calculate the version code and version name in your `build.gradle` ***automatically***, based on git information***
+  In your app's `build.gradle`
 
-> Note: These functions go specifically inside the app's `build.gradle` and cannot be used with `ext`.
-
-In your app's `build.gradle`
-
-```gradle
-// Version code is calculated as the number of commits from last commit on master
-def getVersionCode = { ->
-  try {
-    def code = new ByteArrayOutputStream()
-    exec {
-      commandLine 'git', 'rev-list', 'HEAD', '--count'
-      standardOutput = code
+  ```gradle
+  // Version code is calculated as the number of commits from last commit on master
+  def getVersionCode = { ->
+    try {
+      def code = new ByteArrayOutputStream()
+      exec {
+        commandLine 'git', 'rev-list', 'HEAD', '--count'
+        standardOutput = code
+      }
+      return Integer.parseInt(code.toString().trim())
+    } catch (exception) {
+      return "1";
     }
-    return Integer.parseInt(code.toString().trim())
-  } catch (exception) {
-    return "1";
   }
-}
 
-// Version name is Last Tag Name + No. of commits form last Tag +  short git sha
-def getVersionName = { ->
-  try {
-    def stdout = new ByteArrayOutputStream()
-    exec {
-      commandLine 'git', 'describe', '--tags', '--dirty'
-      standardOutput = stdout
+  // Version name is Last Tag Name + No. of commits form last Tag +  short git sha
+  def getVersionName = { ->
+    try {
+      def stdout = new ByteArrayOutputStream()
+      exec {
+        commandLine 'git', 'describe', '--tags', '--dirty'
+        standardOutput = stdout
+      }
+      return stdout.toString().trim()
+    } catch (exception) {
+      return "0.0.0.1";
     }
-    return stdout.toString().trim()
-  } catch (exception) {
-    return "0.0.0.1";
   }
-}
 
-// Use
-android{
-  defaultConfig {
-    ...
-    versionCode getVersionCode()
-    versionName getVersionName()
-    ...
+  // Use
+  android{
+    defaultConfig {
+      ...
+      versionCode getVersionCode()
+      versionName getVersionName()
+      ...
+    }
   }
-}
-````
+  ```
 
-- **Get the date of build as a variable\***
+* **Get the date of build as a variable**
   In your app's `build.gradle`
 
   ```gradle
@@ -686,7 +685,7 @@ android{
   }
   ```
 
-- **Get the Git SHA as a variable\***
+* **Get the Git SHA as a variable**
   In your app's `build.gradle`
 
   ```gradle
@@ -711,40 +710,40 @@ android{
 
   > Have a look at the [Paperwork Project](https://github.com/zsoltk/paperwork), which generates build info for your Android project without breaking incremental compilation
 
-- **Activity LifeCycle** [[Ref Link](https://www.bignerdranch.com/blog/android-activity-lifecycle-onStop/)]
+* **Activity LifeCycle** [[Ref Link](https://www.bignerdranch.com/blog/android-activity-lifecycle-onStop/)]
 
   ![diagram](img/activityStateDiagram.jpeg)
 
-- **Tip about `onSaveInstanceState()`**  
+* **Tip about `onSaveInstanceState()`**  
   `onSaveInstanceState()` is called **_only when the OS decides to kill the `Activity` instance_**. It will not be called when Activity is explicitly killed i.e User pressed back button or `finish()` is called from code.
 
-- **[If you are into building Android Libraries, then read here for more tips](https://android.jlelse.eu/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries-dba1a524d619)**
+* **[If you are into building Android Libraries, then read here for more tips](https://android.jlelse.eu/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries-dba1a524d619)**
 
-- **[Read about whats in an APK here](http://crushingcode.nisrulz.com/whats-in-the-apk/)**
+* **[Read about whats in an APK here](http://crushingcode.nisrulz.com/whats-in-the-apk/)**
 
-- **[Input some text in an editfield in a running emulator from your keyboard ](http://fragmentedpodcast.com/episodes/77/)**
+* **[Input some text in an editfield in a running emulator from your keyboard ](http://fragmentedpodcast.com/episodes/77/)**
 
   ```gradle
   adb shell input text "keyboard text"
   ```
 
-- **Use [`areNotificationsEnabled()`](<https://developer.android.com/reference/android/support/v4/app/NotificationManagerCompat.html#areNotificationsEnabled()>) from [`NotificationManagerCompat`](https://developer.android.com/reference/android/support/v4/app/NotificationManagerCompat.html#areNotificationsEnabled) to detect whether your users blocked your Notifications** [[Ref Link](https://twitter.com/tasomaniac/status/851888395152392193/photo/1)]
+* **Use [`areNotificationsEnabled()`](<https://developer.android.com/reference/android/support/v4/app/NotificationManagerCompat.html#areNotificationsEnabled()>) from [`NotificationManagerCompat`](https://developer.android.com/reference/android/support/v4/app/NotificationManagerCompat.html#areNotificationsEnabled) to detect whether your users blocked your Notifications** [[Ref Link](https://twitter.com/tasomaniac/status/851888395152392193/photo/1)]
 
-- **Don't hard-code encryption keys, a simple grep for `"Ljavax/crypto"` reveals them in bytecode** [[Ref Link](https://twitter.com/molsjeroen/status/851708885782204417)]
+* **Don't hard-code encryption keys, a simple grep for `"Ljavax/crypto"` reveals them in bytecode** [[Ref Link](https://twitter.com/molsjeroen/status/851708885782204417)]
 
-- **Intents have a limited payload size (1Mb), don't serialize and attach entire file to it** [[Ref Link](https://twitter.com/molsjeroen/status/851353828905627648)]
+* **Intents have a limited payload size (1Mb), don't serialize and attach entire file to it** [[Ref Link](https://twitter.com/molsjeroen/status/851353828905627648)]
 
-- **Always copy a file before sending it as intent URI. Receiving app could edit it & send a canceled result** [[Ref Link](https://twitter.com/molsjeroen/status/851354820883689473)]
+* **Always copy a file before sending it as intent URI. Receiving app could edit it & send a canceled result** [[Ref Link](https://twitter.com/molsjeroen/status/851354820883689473)]
 
-- **Use `http://` as scheme for app deeplinks, they are more universal & when app not installed drive users to a domain you own** [[Ref Link](https://twitter.com/molsjeroen/status/851349683440111616)]
+* **Use `http://` as scheme for app deeplinks, they are more universal & when app not installed drive users to a domain you own** [[Ref Link](https://twitter.com/molsjeroen/status/851349683440111616)]
 
-- **Use below to display your app launch time** [[Ref Link](https://twitter.com/molsjeroen/status/851367439996784640)]
+* **Use below to display your app launch time** [[Ref Link](https://twitter.com/molsjeroen/status/851367439996784640)]
 
   ```bash
   adb shell am start -W <packagename>/. <activityname>
   ```
 
-- **[Use Java 8 features by adding `sourceCompatibility` & `targetCompatibility` to your build.gradle file](https://developer.android.com/studio/preview/features/java8-support.html)**
+* **[Use Java 8 features by adding `sourceCompatibility` & `targetCompatibility` to your build.gradle file](https://developer.android.com/studio/preview/features/java8-support.html)**
 
   ```gradle
   android {
@@ -756,7 +755,7 @@ android{
   }
   ```
 
-- **[Setup a gradle task to archive apks and proguard files on build, for backup purposes](https://medium.com/pressure-labs/a-new-devs-guide-to-google-play-sanity-4-a-groovy-script-to-save-them-all-456a12672886)**
+* **[Setup a gradle task to archive apks and proguard files on build, for backup purposes](https://medium.com/pressure-labs/a-new-devs-guide-to-google-play-sanity-4-a-groovy-script-to-save-them-all-456a12672886)**
 
   ```gradle
   task deployApks(type:Copy) {
@@ -781,35 +780,35 @@ android{
   }
   ```
 
-- **[Use activity-alias or your launcher icons will disappear when renaming/moving your MainActivity](https://medium.com/@Mauin/the-case-of-disappearing-launcher-icons-657c3663b9d3)**
+* **[Use activity-alias or your launcher icons will disappear when renaming/moving your MainActivity](https://medium.com/@Mauin/the-case-of-disappearing-launcher-icons-657c3663b9d3)**
 
-- To enable `aapt2` set below in gradle properties
+* To enable `aapt2` set below in gradle properties
 
   ```gradle
   android.enableaapt2=true
   ```
 
-- To testout doze mode, trigger it using `adb` [[Ref Link](https://developer.android.com/training/monitoring-device-state/doze-standby.html#testing_doze)
+* To testout doze mode, trigger it using `adb` [[Ref Link](https://developer.android.com/training/monitoring-device-state/doze-standby.html#testing_doze)
 
   ```bash
   adb shell dumpsys deviceidle force-idle
   ```
 
-- Thumb rule regarding setting `compileSdkVersion`, `minSdkVersion` and `targetSdkVersion`
+* Thumb rule regarding setting `compileSdkVersion`, `minSdkVersion` and `targetSdkVersion`
 
   > `minSdkVersion` (lowest possible) <= `targetSdkVersion` == `compileSdkVersion` (latest SDK)
 
-* Google released an option to include OSS license activity in your app, use that to attribute credits to the OSS libs in your app [[Ref Link](https://developers.google.com/android/guides/opensource)]
+- Google released an option to include OSS license activity in your app, use that to attribute credits to the OSS libs in your app [[Ref Link](https://developers.google.com/android/guides/opensource)]
 
   > [Checkout a working example here](https://github.com/nisrulz/android-examples/tree/master/OSSLicenseActivity)
 
-* Make Android Studio render `<merge>` layouts correctly by specifying the layout type with the tools:parentTag attribute [[Ref Link](https://twitter.com/m_evans10/status/907635918550511617)]
+- Make Android Studio render `<merge>` layouts correctly by specifying the layout type with the tools:parentTag attribute [[Ref Link](https://twitter.com/m_evans10/status/907635918550511617)]
 
   ![diagram](img/mergetaginlayout.jpg)
 
-* Checkout the Background Execution Limits on Android Oreo and update your app to work with the restrictions [[Ref Link](https://medium.com/exploring-android/exploring-background-execution-limits-on-android-oreo-ab384762a66c)]
+- Checkout the Background Execution Limits on Android Oreo and update your app to work with the restrictions [[Ref Link](https://medium.com/exploring-android/exploring-background-execution-limits-on-android-oreo-ab384762a66c)]
 
-* To take good screenshots with clean status bar use the [**Demo Mode**](https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md) in Android [[Ref Link](https://android.jlelse.eu/clean-your-status-bar-like-a-pro-76c89a1e2c2f)]
+- To take good screenshots with clean status bar use the [**Demo Mode**](https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md) in Android [[Ref Link](https://android.jlelse.eu/clean-your-status-bar-like-a-pro-76c89a1e2c2f)]
 
   - Steps
 
@@ -843,7 +842,7 @@ android{
         adb shell am broadcast -a com.android.systemui.demo -e command exit
         ```
 
-* To record video of your android device [[Ref Link](https://dev.to/aneesahammed/best-way-to-record-your-screen-on-android)]
+- To record video of your android device [[Ref Link](https://dev.to/aneesahammed/best-way-to-record-your-screen-on-android)]
 
   ```bash
   adb shell && screenrecord /sdcard/download/fileName.mp4
@@ -853,23 +852,23 @@ android{
   >
   > Recorded video file is saved at the location mentioned in the command on the device itself.
 
-* Use Dao inheritance to reduce the amount of boilerplate code [[Ref Link](https://gist.github.com/florina-muntenescu/1c78858f286d196d545c038a71a3e864)]
+- Use Dao inheritance to reduce the amount of boilerplate code [[Ref Link](https://gist.github.com/florina-muntenescu/1c78858f286d196d545c038a71a3e864)]
 
-* Instead of using `getActivity()` in fragment, keep a habit of getting context from `onAttach()`. [[Ref Link](https://twitter.com/ravi_rupareliya/status/920881340245073920)]
+- Instead of using `getActivity()` in fragment, keep a habit of getting context from `onAttach()`. [[Ref Link](https://twitter.com/ravi_rupareliya/status/920881340245073920)]
 
-* Avoid setting a background in every view/fragment as it likely causes overdraw. [[Ref Link](https://twitter.com/molsjeroen/status/923543967978881025)]
+- Avoid setting a background in every view/fragment as it likely causes overdraw. [[Ref Link](https://twitter.com/molsjeroen/status/923543967978881025)]
 
-* `View.getWidth() = 0?` That's because your view hasn't been layout yet, use globallayoutListener to know layout done. [[Ref Link](https://twitter.com/molsjeroen/status/923542864877047808)]
+- `View.getWidth() = 0?` That's because your view hasn't been layout yet, use globallayoutListener to know layout done. [[Ref Link](https://twitter.com/molsjeroen/status/923542864877047808)]
 
-* Android never kills activities, it only kills processes. When low memory the lowest priority ranked will be killed.[[Ref Link](https://twitter.com/molsjeroen/status/923510846696951809)]
+- Android never kills activities, it only kills processes. When low memory the lowest priority ranked will be killed.[[Ref Link](https://twitter.com/molsjeroen/status/923510846696951809)]
 
-* [Use `.([filename].java:[line])` in your log statements to make them clickable in Android Studio and Intellij IDEA.](https://medium.com/@tauno/android-studio-pro-tip-go-to-source-from-logcat-output-f13bf46411b5)
+- [Use `.([filename].java:[line])` in your log statements to make them clickable in Android Studio and Intellij IDEA.](https://medium.com/@tauno/android-studio-pro-tip-go-to-source-from-logcat-output-f13bf46411b5)
 
-* Use `-whyareyoukeeping class com.jeroenmols.MyClass` to figure out why certain a class wasn't removed.[[Ref Link](https://twitter.com/molsjeroen/status/905713748173881345)]
+- Use `-whyareyoukeeping class com.jeroenmols.MyClass` to figure out why certain a class wasn't removed.[[Ref Link](https://twitter.com/molsjeroen/status/905713748173881345)]
 
-* Use certificate pinning to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates, when making requests from your app. [[Ref Link](https://dev.to/mplacona/certificate-pinning-in-android)]
+- Use certificate pinning to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates, when making requests from your app. [[Ref Link](https://dev.to/mplacona/certificate-pinning-in-android)]
 
-* Do download the latest emulator using CLI
+- Do download the latest emulator using CLI
 
   ```
   cd <android_sdk>/tools/bin
@@ -878,9 +877,9 @@ android{
 
   To check the version of emulator, use `./sdkmanager --channel=3 emulator`
 
-* **[Checkout some tricks when using Android Strings in XML](https://android.jlelse.eu/android-strings-xml-tips-tricks-52b0c820cf7a)**
+- **[Checkout some tricks when using Android Strings in XML](https://android.jlelse.eu/android-strings-xml-tips-tricks-52b0c820cf7a)**
 
-* Cleanup your Gradle caches by deleting files not accessed within the last month [[Ref Link](https://github.com/gradle/gradle/issues/2304)]
+- Cleanup your Gradle caches by deleting files not accessed within the last month [[Ref Link](https://github.com/gradle/gradle/issues/2304)]
 
   ```
   find ~/.gradle -type f -atime +30 -delete
@@ -889,9 +888,9 @@ android{
 
   > To check the size of your gradle cache, run: `du -sh ~/.gradle`
 
-* **[Checkout some cool tricks when using `tools:` attribute in your android layouts, such as sample data and recyclerview item layout previews](https://blog.stylingandroid.com/tool-time-part-1-2/)**
+- **[Checkout some cool tricks when using `tools:` attribute in your android layouts, such as sample data and recyclerview item layout previews](https://blog.stylingandroid.com/tool-time-part-1-2/)**
 
-* Remove all debug log statements from the release build using the below proguard rules. (app's build.gradle should have `minifyEnabled true` set for this to work)
+- Remove all debug log statements from the release build using the below proguard rules. (app's build.gradle should have `minifyEnabled true` set for this to work)
 
   ```
   # Remove all debug logs
@@ -902,7 +901,7 @@ android{
 
   > The above snippet is usually appended to contents of app/proguard-rules.pro file
 
-* **[Should I use Enums in Android?](https://trevore.com/post/should-i-use-enums-in-android/)**
+- **[Should I use Enums in Android?](https://trevore.com/post/should-i-use-enums-in-android/)**
 
   **tl;dr**
 
@@ -930,17 +929,17 @@ android{
     }
     ```
 
-* The string resource `android.R.string.yes` doesnot yield string "Yes" instead it yields "Ok". Similarly the string resource `android.R.string.no` doesnot yield string "No" instead it yields "Cancel" [[Ref Link](https://twitter.com/mandybess/status/971901727711535105)]
+- The string resource `android.R.string.yes` doesnot yield string "Yes" instead it yields "Ok". Similarly the string resource `android.R.string.no` doesnot yield string "No" instead it yields "Cancel" [[Ref Link](https://twitter.com/mandybess/status/971901727711535105)]
 
   ![string resource](img/android_str_mismatch.jpg)
 
-* Don’t want generated files in your AS search results? Go to `Preferences -> File Types -> Ignore files and folders` and add the pattern to ignore - e.g. `*.dex;*.class;` [[Ref Link](https://twitter.com/marianeum/status/1021385021695852544)]
+- Don’t want generated files in your AS search results? Go to `Preferences -> File Types -> Ignore files and folders` and add the pattern to ignore - e.g. `*.dex;*.class;` [[Ref Link](https://twitter.com/marianeum/status/1021385021695852544)]
 
-* If you uncheck “Suspend” and check “Evaluate and Log” in breakpoint menu, the breakpoint will print evaluated statement into the uncluttered “Console” window. No need for recompile due to added Log.d statements anymore [[Ref Link](https://twitter.com/jernejv/status/1021456131925979136)]
+- If you uncheck “Suspend” and check “Evaluate and Log” in breakpoint menu, the breakpoint will print evaluated statement into the uncluttered “Console” window. No need for recompile due to added Log.d statements anymore [[Ref Link](https://twitter.com/jernejv/status/1021456131925979136)]
 
   ![Breakpoint Logs](img/breakpoint_logs.jpg)
 
-* To measure how long a method took to execute, you can use `TimingLogger` class. [[Ref Link](https://developer.android.com/reference/android/util/TimingLogger)]
+- To measure how long a method took to execute, you can use `TimingLogger` class. [[Ref Link](https://developer.android.com/reference/android/util/TimingLogger)]
 
   - Typical Usage
     ```java
@@ -962,7 +961,7 @@ android{
     D/TAG     ( 3459): methodA: end, 16 ms
     ```
 
-* If you're working with Android Things and you don't have an extrenal screen for your device, install [scrcpy](https://github.com/Genymobile/scrcpy) and use it to see what's going on your Android IoT device. It works a charm over wireless adb. [[Ref Link](https://twitter.com/Tunji_D/status/1019985858575978497)]
+- If you're working with Android Things and you don't have an extrenal screen for your device, install [scrcpy](https://github.com/Genymobile/scrcpy) and use it to see what's going on your Android IoT device. It works a charm over wireless adb. [[Ref Link](https://twitter.com/Tunji_D/status/1019985858575978497)]
 
 [<p align="right">Back to Index</p>](#index)
 
@@ -973,7 +972,7 @@ android{
   - Material Design uses real-world metaphors as its foundation. Objects in the real world don't move linearly, they move in curved paths and accelerate and decelerate according to the motion's properties.
   - As such, motion should also use such properties and animate objects so that the motion feels natural rather than forced
   - For example, a car leaving the screen in a movie starts off slowly, then accelerates till it's out of the frame. Similarly, views should be interpolated using classes like AccelerateInterpolator, FastOutSlowInInterpolator, etc. [[More Info]](https://developer.android.com/reference/android/animation/TimeInterpolator.html)
-  - When changing the visibilities of views, if you `android:animateLayoutChanges="true"` to the parent, you get a nice little animation for free. [[Ref Link](https://proandroiddev.com/the-little-secret-of-android-animatelayoutchanges-e4caab2fddec)]
+  - When changing the visibilities of views, if you add `android:animateLayoutChanges="true"` to the parent, you get a nice little animation for free. [[Ref Link](https://proandroiddev.com/the-little-secret-of-android-animatelayoutchanges-e4caab2fddec)]
 
 - **Typography**
   - While custom typefaces can be used for branding, it is essential to stick to Roboto and Noto if possible, especially for body text, due to their clarity and optimistic nature.

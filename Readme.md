@@ -963,6 +963,37 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - If you're working with Android Things and you don't have an extrenal screen for your device, install [scrcpy](https://github.com/Genymobile/scrcpy) and use it to see what's going on your Android IoT device. It works a charm over wireless adb. [[Ref Link](https://twitter.com/Tunji_D/status/1019985858575978497)]
 
+- Android Studio has this weird behaviour that it allows to edit its default code style, which leads to a weird side-effect. If you open your pre-setup project(with set codestyle and copyright configs) in Android Studio it will delete all pre-setup codestyle and copyright profile in this project. This is every much evident if you checked in your configs into git for sharing purpose, which is lost immediately as soon as you open the project
+
+  ```bash
+  deleted:    .idea/codeStyles/Project.xml
+  deleted:    .idea/codeStyles/codeStyleConfig.xml
+  deleted:    .idea/copyright/profiles_settings.xml
+  deleted:    .idea/copyright/copyright.xml
+  ```
+
+  To fix that please follow along as below: [All thanks to [Said Tahsin Dane](https://twitter.com/tasomaniac) for the solution]
+
+  - We first need to verify that your `Default` codestyle isn't modified. To check that please open Android Studio with any project except your pre-setup(with set codestyle and copyright configs) project. Then navigate to `Preferences>Edior>Codestyle` and check if your code scheme has `Default` in **BLUE** color (this means it is modified).
+
+    ![modified_default](img/modified_default.png)
+
+  - However if it is not colored **BLUE**, you are good and you can go ahead to open your pre-setup(with set codestyle and copyright configs) project and everything should be pre-setup for you.
+
+  - If it is modified (colored **BLUE**), then click on the cog icon and select `Restore Default`
+
+    ![restore_default](img/restore_default.png)
+
+  - After you hit that option, simply accept the change
+
+    ![accept_change](img/accept_change.png)
+
+  - Once done, you will see your Default is no more colored **BLUE** or modified, which means you are good
+
+    ![unmodified_default](img/unmodified_default.png)
+
+  - Now simply go ahead and open your pre-setup(with set codestyle and copyright configs) project and everything should be pre-setup for you.
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

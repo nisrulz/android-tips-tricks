@@ -1015,6 +1015,9 @@ Few handy commands you can use to interact with emulator/device, through termina
 - Reduce installed app size with `android:extractNativeLibs="false"` in <application> [[Tweet Link](https://twitter.com/molsjeroen/status/819457612005736448), [Ref Link](https://medium.com/@wkalicinski/smallerapk-part-8-native-libraries-open-from-apk-fc22713861ff)]
 
   <img src="img/extract_native_libs.jpg" width="600"/>
+
+- Run a single unit test from the command line using the `--tests` option e.g: `./gradlew testDebugUnitTest --tests "*.MainPresenterTest"` . Use `*` to avoid typing the entire package name. [[Ref Link](https://twitter.com/molsjeroen/status/976469806068256769)]
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

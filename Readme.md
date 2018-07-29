@@ -1018,6 +1018,9 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - Run a single unit test from the command line using the `--tests` option e.g: `./gradlew testDebugUnitTest --tests "*.MainPresenterTest"` . Use `*` to avoid typing the entire package name. [[Ref Link](https://twitter.com/molsjeroen/status/976469806068256769)]
 
+- Improve Android Studio code inspections with Thread annotations [[Tweet Link](https://twitter.com/molsjeroen/status/989447750176706560), [Ref Link](https://developer.android.com/studio/write/annotations#thread-annotations)]
+
+  <img src="img/thread_annotations.jpg" width="600"/>
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

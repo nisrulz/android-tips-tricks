@@ -1067,6 +1067,8 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ![running_hierarchy_viewer](img/running_hierarchy_viewer.jpg)
 
+- Variable and `init` block declaration order in Kotlin, actually matters :) if you want to use a variable inside init {} initialize it before it.
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

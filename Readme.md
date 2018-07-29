@@ -1063,6 +1063,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - Requesting updates from a system service may drain battery, so register for updates in onResume and unregister in onPause. [[Ref Link](https://twitter.com/nisrulz/status/818356887041118208)]
 
+- Hierarchy Viewer won’t run on prod devices, if however u want to run it then follow below steps [[Tweet Link](https://twitter.com/nisrulz/status/800016465805983744), [Ref Link](https://developer.android.com/studio/profile/hierarchy-viewer#setup)]
+
+  ![running_hierarchy_viewer](img/running_hierarchy_viewer.jpg)
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

@@ -1061,6 +1061,8 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ![inject_vars_in_manifest](img/inject_vars_in_manifest.png)
 
+- Requesting updates from a system service may drain battery, so register for updates in onResume and unregister in onPause. [[Ref Link](https://twitter.com/nisrulz/status/818356887041118208)]
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

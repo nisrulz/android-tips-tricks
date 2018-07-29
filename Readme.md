@@ -1011,6 +1011,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 - Avoid the annoying jump to Design tab while editing XML. Prefer XML editor under Settings [[Ref Link](https://twitter.com/rakshakhegde/status/907913497115160576)]
 
   ![set_xml_as_preferred](img/set_xml_as_preferred.jpg)
+
+- Reduce installed app size with `android:extractNativeLibs="false"` in <application> [[Tweet Link](https://twitter.com/molsjeroen/status/819457612005736448), [Ref Link](https://medium.com/@wkalicinski/smallerapk-part-8-native-libraries-open-from-apk-fc22713861ff)]
+
+  <img src="img/extract_native_libs.jpg" width="600"/>
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

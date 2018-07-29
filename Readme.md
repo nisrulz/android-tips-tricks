@@ -1053,6 +1053,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - If you're not building a replacement for the dialer, use `ACTION_DIAL` _not_ `ACTION_CALL` to initiate a call. [[Ref Link](https://twitter.com/kdarty/status/20971150330)]
 
+- Specifying `buildToolsVersion` in your build.gradle files is optional when using Android plugin 3.0.0 or later. By default the plugin uses the minimum version of the build tools required by the version of the plugin you're using. [[Tweet Link](https://twitter.com/nisrulz/status/976730548084211718), [Ref Link](https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.LibraryExtension.html#com.android.build.gradle.LibraryExtension:buildToolsVersion)]
+
+  ![dont_specify_buildtoolsversion](img/dont_specify_buildtoolsversion.jpg)
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

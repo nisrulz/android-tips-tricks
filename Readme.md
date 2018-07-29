@@ -1046,6 +1046,9 @@ Few handy commands you can use to interact with emulator/device, through termina
 - Use `areNotificationsEnabled()` from `NotificationManagerCompat` to detect whether your users blocked your Notifications [[Tweet Link](https://twitter.com/tasomaniac/status/851888395152392193), [Ref Link](<https://developer.android.com/reference/androidx/core/app/NotificationManagerCompat.html#areNotificationsEnabled()>)]
 
   <img src="img/are_notification_enabled.jpg" height="400"/>
+
+- `Activity.runOnUiThread` is just a convenient wrapper of `Handler.post`; don't pass around `Activity` just so you can use it. [[Ref Link](https://twitter.com/devunwired/status/193385939115053056)]
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

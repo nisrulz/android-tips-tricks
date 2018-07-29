@@ -1003,6 +1003,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 - You can group your recent Android Studio projects, and add icons to them [[Ref Link](https://twitter.com/Flashmasterdash/status/996309558120402954/photo/1)]
 
   ![group_recent_projects](img/group_recent_projects.jpg)
+
+- Only build a single configuration to speed up debug builds. [[Ref Link](https://twitter.com/molsjeroen/status/973615936279281666)]
+
+  ![build_single_config](img/build_single_config.jpg)
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

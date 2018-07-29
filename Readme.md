@@ -1007,6 +1007,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 - Only build a single configuration to speed up debug builds. [[Ref Link](https://twitter.com/molsjeroen/status/973615936279281666)]
 
   ![build_single_config](img/build_single_config.jpg)
+
+- Avoid the annoying jump to Design tab while editing XML. Prefer XML editor under Settings [[Ref Link](https://twitter.com/rakshakhegde/status/907913497115160576)]
+
+  ![set_xml_as_preferred](img/set_xml_as_preferred.jpg)
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

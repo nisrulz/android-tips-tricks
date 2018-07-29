@@ -1069,6 +1069,8 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - Variable and `init` block declaration order in Kotlin, actually matters :) if you want to use a variable inside init {} initialize it before it.
 
+- When comparing intents it does _not_ compare any extra data included in the intents [[Tweet Link](https://twitter.com/scottyab/status/388393250286870529), [Ref Link](<https://developer.android.com/reference/android/content/Intent#filterEquals(android.content.Intent)>)]
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

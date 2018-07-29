@@ -1025,6 +1025,24 @@ Few handy commands you can use to interact with emulator/device, through termina
 - Use `adb` to put a phone into doze mode for testing [[Tweet Link](https://twitter.com/molsjeroen/status/872007858300362752), [Ref Link](https://developer.android.com/training/monitoring-device-state/doze-standby#testing_doze)]
 
   <img src="img/testing_doze_mode.jpg" width="600"/>
+
+- Get faster gradle builds by only using one resource configuration for your development builds [[Ref Link](https://developer.android.com/studio/build/optimize-your-build#reduce_resources)]
+
+  ```
+  android {
+    ...
+    productFlavors {
+      dev {
+        ...
+        // The following configuration limits the "dev" flavor to using
+        // English stringresources and xxhdpi screen-density resources.
+        resConfigs "en", "xxhdpi"
+      }
+      ...
+    }
+  }
+  ```
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

@@ -1049,6 +1049,8 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - `Activity.runOnUiThread` is just a convenient wrapper of `Handler.post`; don't pass around `Activity` just so you can use it. [[Ref Link](https://twitter.com/devunwired/status/193385939115053056)]
 
+- Define your interfaces with the highest possible option that will suffice. Don't use an `Activity` when a Context will do. [[Ref Link](https://twitter.com/devunwired/status/193102514047041538)]
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

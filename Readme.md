@@ -1057,6 +1057,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ![dont_specify_buildtoolsversion](img/dont_specify_buildtoolsversion.jpg)
 
+- You can insert variables into AndroidManifest defined in `build.gradle` [[Tweet Link](https://twitter.com/jabbar_jigariyo/status/910754663925899264), [Ref Link](https://developer.android.com/studio/build/manifest-build-variables)]
+
+  ![inject_vars_in_manifest](img/inject_vars_in_manifest.png)
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

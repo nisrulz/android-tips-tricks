@@ -999,6 +999,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 - When opening up methods for testing, use otherwise to still hide it from code complete.[[Tweet Link](https://twitter.com/molsjeroen/status/996684391891038208), [Ref Link](https://plugins.jetbrains.com/plugin/9952-visiblefortesting)]
 
   ![making_methods_visible_for_testing](img/making_methods_visible_for_testing.jpg)
+
+- You can group your recent Android Studio projects, and add icons to them [[Ref Link](https://twitter.com/Flashmasterdash/status/996309558120402954/photo/1)]
+
+  ![group_recent_projects](img/group_recent_projects.jpg)
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

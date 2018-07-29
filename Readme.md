@@ -1071,6 +1071,8 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - When comparing intents it does _not_ compare any extra data included in the intents [[Tweet Link](https://twitter.com/scottyab/status/388393250286870529), [Ref Link](<https://developer.android.com/reference/android/content/Intent#filterEquals(android.content.Intent)>)]
 
+- To show a ringtone picker to the user, use the `ACTION_RINGTONE_PICKER` intent to launch the picker as a subactivity. [[Ref Link](https://twitter.com/pareshmayani/status/359390161399853056)]
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

@@ -996,6 +996,9 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - If you add `android:sharedUserId` to an already published app, the app data will be cleared for all users that install your upgrade (because Android changes the process). So if you ever intend to use it, you must add it before publishing your app [[Ref Link](https://twitter.com/molsjeroen/status/1022840282012966912)]
 
+- When opening up methods for testing, use otherwise to still hide it from code complete.[[Tweet Link](https://twitter.com/molsjeroen/status/996684391891038208), [Ref Link](https://plugins.jetbrains.com/plugin/9952-visiblefortesting)]
+
+  ![making_methods_visible_for_testing](img/making_methods_visible_for_testing.jpg)
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

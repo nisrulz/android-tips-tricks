@@ -1021,6 +1021,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 - Improve Android Studio code inspections with Thread annotations [[Tweet Link](https://twitter.com/molsjeroen/status/989447750176706560), [Ref Link](https://developer.android.com/studio/write/annotations#thread-annotations)]
 
   <img src="img/thread_annotations.jpg" width="600"/>
+
+- Use `adb` to put a phone into doze mode for testing [[Tweet Link](https://twitter.com/molsjeroen/status/872007858300362752), [Ref Link](https://developer.android.com/training/monitoring-device-state/doze-standby#testing_doze)]
+
+  <img src="img/testing_doze_mode.jpg" width="600"/>
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

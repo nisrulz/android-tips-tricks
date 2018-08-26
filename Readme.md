@@ -1314,7 +1314,7 @@ This curated cheatsheet includes tips and tricks that I have been following in m
 
 > If you found this cheatsheet helpful or you learned something today and want to thank me, consider buying me a cup of :coffee:
 >
-> - [PayPal](https://www.paypal.me/nisrulz/5)
+> - [PayPal](https://www.paypal.me/nisrulz/5usd)
 > - Bitcoin Address: 13PjuJcfVW2Ad81fawqwLtku4bZLv1AxCL
 
 # License

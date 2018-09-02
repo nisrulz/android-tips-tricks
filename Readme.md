@@ -72,9 +72,10 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 - **Use plugins to become more efficient**
 
-  1.  [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
+  1.  [KeyPromoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x)
 
       The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used, if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. It also has some useful features, like it will prompt you to create a key binding for a command whenever an action does not have a key binding and you have used it 3 times using your cursor.
+      [ Old Version: [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)]
 
   1.  [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
 

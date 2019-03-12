@@ -1076,6 +1076,14 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - Want to remove focusState on an item in GridView? Try: `android:listSelector="#00000000"` [[Ref Link](https://twitter.com/BSkretting/status/176655811899166721)]
 
+- You can generate the **proguard** keep rules via the APK Analyzer inside Android Studio. [[Ref Link](https://medium.com/androiddevelopers/troubleshooting-proguard-issues-on-android-bce9de4f8a74)]
+
+  ![proguard_rules_apk_analyzer](img/proguard_rules_apk_analyzer.gif)
+
+- When viewing an Android Manifest, there is a tab at the bottom that allows you to see the merged manifest. Use this to inspect the merged manifest and find conflicts. [[Ref Link](https://developer.android.com/studio/build/manifest-merge#inspect_the_merged_manifest_and_find_conflicts)]
+
+  ![manifest-merged](img/manifest-merged.png)
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

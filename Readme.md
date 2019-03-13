@@ -1084,6 +1084,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ![manifest-merged](img/manifest-merged.png)
 
+- In the APK analyzer in Android Studio, classes/members listed in italic are only references, not definitions. If it's in italics, it's defined in another DEX file (or the SDK). [[Ref Link](https://twitter.com/jebstuart/status/1093502138943197191)]
+
+  ![apk_analyzer_ref](img/apk_analyzer_ref.jpeg)
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

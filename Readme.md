@@ -265,13 +265,13 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ```gradle
     dependencies {
-       compile(name:'nameOfYourAARFileWithoutExtension', ext:'aar')
-     }
-    repositories{
-          flatDir{
-                  dirs 'libs'
-           }
-     }
+       implementation(name:'nameOfYourAARFileWithoutExtension', ext:'aar')
+    }
+    repositories {
+       flatDir {
+          dirs 'libs'
+       }
+    }
   ```
 
 * **Use [Pidcat](https://github.com/JakeWharton/pidcat) for a better log reading experience**

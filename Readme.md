@@ -1089,6 +1089,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ![apk_analyzer_ref](img/apk_analyzer_ref.jpeg)
 
+- To be able to write multiline Todo comments, simply indent by 1 tab from second line onwards. [[Ref Link](https://twitter.com/Saketme/status/1156667576946253825)]
+
+  ![multiline_todo_comment](img/multiline_todo_comment.png)
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

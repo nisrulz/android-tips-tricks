@@ -1093,6 +1093,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ![multiline_todo_comment](img/multiline_todo_comment.png)
 
+- You can get rid of a lot of noise in the Logcat, by Right Clicking a selected text > "Fold lines like this" option!. [[Ref Link](https://twitter.com/nisrulz/status/1197253137683357698)]
+
+  ![fold_line_like_this](img/fold_line_like_this.gif)
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

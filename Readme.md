@@ -1097,6 +1097,17 @@ Few handy commands you can use to interact with emulator/device, through termina
 
   ![fold_line_like_this](img/fold_line_like_this.gif)
 
+- There is a quick way to surround your layout with a Linear Layout via using a Live Template. You can create one called `wrapll` by setting it up [[Ref Link](https://twitter.com/nisrulz/status/1197666095886454789)]
+
+  ![live_template_wrapll_2](img/live_template_wrapll_2.png)
+  ![live_template_wrapll_3](img/live_template_wrapll_3.png)
+
+  ...and use it as below
+
+  ![live_template_wrapll_1](img/live_template_wrapll_1.gif)
+
+  > You can create more based on your usecase :smile:
+
 [<p align="right">Back to Index</p>](#index)
 
 ### **_Tips regarding UI/UX_**

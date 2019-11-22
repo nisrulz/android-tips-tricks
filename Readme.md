@@ -1301,8 +1301,9 @@ Few handy commands you can use to interact with emulator/device, through termina
   - [gnirehtet](https://github.com/Genymobile/gnirehtet) - Reverse tethering for Android.
   - [Adaptive Icons](https://adapticon.tooo.io/) - Try out the new Adaptive Icons in your browser
   - [Android Starters](http://androidstarters.com/) - Handcrafted starter projects, optimized for simplicity and ease of use.
-    - [Language Switcher Tile](https://github.com/AzimoLabs/Language-Switcher-Tile) - An android plugin that allows you to easily change your device language.
-    
+  - [Language Switcher Tile](https://github.com/AzimoLabs/Language-Switcher-Tile) - An android plugin that allows you to easily change your device language.
+  - [Flipper](https://fbflipper.com/) - Flipper is a platform for debugging mobile apps on iOS and Android. Visualize, inspect, and control your apps from a simple desktop interface.
+
 - **Awesome android libraries**
   - [StorIO](https://github.com/pushtorefresh/storio) - Beautiful API for SQLiteDatabase and ContentResolver
   - [Retrofit](https://github.com/square/retrofit) - Type-safe HTTP client for Android and Java by Square, Inc.

@@ -1110,7 +1110,10 @@ Few handy commands you can use to interact with emulator/device, through termina
 
 - You know how you can group ur code inside IDEs such as Android Studio and IntelliJ IDEA by using the `region` and `endregion` comment blocks. Turns out you can use the same trick to group inside XML files such as for layout, strings, styles, colors xml files [[Ref Tweet](https://twitter.com/nisrulz/status/1271954906015023104)]
   
-    ![live_template_wrapll_1](img/region_cmt.gif)
+    ![region_comments](img/region_cmt.gif)
+  
+  You can also use keyboard shortcuts to do the same. Select the code block and use <kbd>Ctrl</kbd>&nbsp;+<kbd>Alt</kbd>&nbsp;+<kbd>T</kbd> (Win/Linux) or <kbd>Ctrl</kbd>&nbsp;+<kbd>Opt</kbd>&nbsp;+<kbd>T</kbd> (Mac), followed by 2, to get the region comments in place.
+    ![region_comments_template](img/region_cmt_template.gif)
 
 
 [<p align="right">Back to Index</p>](#index)

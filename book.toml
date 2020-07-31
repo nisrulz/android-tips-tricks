@@ -1,0 +1,6 @@
+[book]
+authors = ["Nishant Srivastava"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Android Tips & Tricks" 

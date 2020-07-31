@@ -1,7 +1,9 @@
-language: minimal
-os: linux
-dist: xenial
+language: rust
+rust:
+  - stable
 
+jobs:
+  fast_finish: true
 # --------------------------------- Travis ----------------------------------
 notifications:
   email: false
@@ -17,13 +19,20 @@ git:
   depth: false
   quiet: true
 
-  # ------------------------ Deploy to Github Pages ------------------------
+# --------------------------------- Install ----------------------------------
+install:
+  - cargo install mdbook
 
-  deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  local-dir: book
-  keep-history: false
-  on:
-    branch: develop
+# ------------------------ Deploy to Github Pages ------------------------
+
+before_deploy:
+  - mdbook build
+
+deploy:
+provider: pages
+skip-cleanup: true
+github-token: $GITHUB_TOKEN
+local-dir: book
+keep-history: false
+on:
+  branch: develop

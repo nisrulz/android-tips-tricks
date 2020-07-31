@@ -1,4 +1,4 @@
-[![Image](src/img/github_banner.png)](https://nisrulz.com/android-tips-tricks)
+<a href="https://nisrulz.com/android-tips-tricks" target="_blank" noopener>![Image](src/img/github_banner.png)</a>
 
 Cheatsheet about tips and tricks for Android Development.
 
@@ -6,7 +6,7 @@ This is a simple set of tips and tricks regarding Android Development which I ha
 
 Contributions are always welcome, hoping people will help me in growing this. To contribute, simply open up a PR with the changes.
 
-<a href="https://nisrulz.com/android-tips-tricks" target="_blank" noopener>Click here to navigate to the searcheable book version</a>
+<a href="https://nisrulz.com/android-tips-tricks" target="_blank" noopener>Click here to navigate to the searchable book version</a>
 
 ### Show some ♥️ and 🌟 the repo to support the project
 

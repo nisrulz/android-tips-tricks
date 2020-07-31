@@ -853,3 +853,17 @@
 - You know how you can group ur code inside IDEs such as Android Studio and IntelliJ IDEA by using the `region` and `endregion` comment blocks. Turns out you can use the same trick to group inside XML files such as for layout, strings, styles, colors xml files [[Ref Tweet](https://twitter.com/nisrulz/status/1271954906015023104)]
   
     ![live_template_wrapll_1](img/region_cmt.gif)
+
+- How many of you have had issue with special characters (&,<, >, etc) in your strings.xml file? Did you know there is an action called "Encode XML/HTML Special Characters" inside Android Studio that can escape those characters for you! [[Ref Tweet](https://twitter.com/nisrulz/status/1288498430525005824)]
+
+    <video width="640" controls>
+        <source src="img/encode_special_1.mp4" type="video/mp4">
+    </video>
+
+    - The option is also avaliable under **Edit menu** drop down
+
+        ![encode_special_2](img/encode_special_2.png)
+
+    - In case the issue is in just one line, you can also just `ALT+ENTER` to get contextual fix.
+
+        ![encode_special_3](img/encode_special_3.png)

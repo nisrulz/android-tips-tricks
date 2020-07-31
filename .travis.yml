@@ -19,15 +19,15 @@ git:
   depth: false
   quiet: true
 
-# --------------------------------- Install ----------------------------------
+# --------------------------------- Install ---------------------------------
 install:
   - cargo install mdbook
 
-# ------------------------ Deploy to Github Pages ------------------------
-
-before_deploy:
+# --------------------------------- Script ----------------------------------
+script:
   - mdbook build
 
+# ------------------------ Deploy to Github Pages ---------------------------
 deploy:
 provider: pages
 skip-cleanup: true

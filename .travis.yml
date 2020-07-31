@@ -1,0 +1,29 @@
+language: minimal
+os: linux
+dist: xenial
+
+# --------------------------------- Travis ----------------------------------
+notifications:
+  email: false
+
+branches:
+  # Ensures when "Build pushed branches is enabled" in Travis setting, then only the below branches will execute the build
+  # Note: When "Build pushed pull requests" is enabled then all open PR are built with every commit pushed.
+  only:
+    - master
+    - develop
+
+git:
+  depth: false
+  quiet: true
+
+  # ------------------------ Deploy to Github Pages ------------------------
+
+  deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: book
+  keep-history: false
+  on:
+    branch: develop

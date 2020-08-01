@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Code faster by using keyboard shortcuts - Android Tips &amp; Tricks</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Mastering Android Studio</li><li><ol class="section"><li class="chapter-item expanded "><a href="code-faster-using-keyboard.html" class="active"><strong aria-hidden="true">2.1.</strong> Code faster by using keyboard shortcuts</a></li><li class="chapter-item expanded "><a href="use-plugins-in-as.html"><strong aria-hidden="true">2.2.</strong> Use plugins to become more efficient</a></li><li class="chapter-item expanded "><a href="use-code-completion-in-as.html"><strong aria-hidden="true">2.3.</strong> Speed code using code-completion</a></li><li class="chapter-item expanded "><a href="configure-as.html"><strong aria-hidden="true">2.4.</strong> Configuring Android Studio</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> Playing in the Terminal</li><li><ol class="section"><li class="chapter-item expanded "><a href="adb-shell.html"><strong aria-hidden="true">3.1.</strong> Get used to ADB Shell</a></li><li class="chapter-item expanded "><a href="adb-aliases.html"><strong aria-hidden="true">3.2.</strong> Setup ADB Aliases</a></li><li class="chapter-item expanded "><a href="scrcpy.html"><strong aria-hidden="true">3.3.</strong> scrcpy: Control/Share your Android device</a></li></ol></li><li class="chapter-item expanded "><a href="make-better-choices-while-coding.html"><strong aria-hidden="true">4.</strong> Make better choices while coding</a></li><li class="chapter-item expanded "><a href="tips-regarding-uiux.html"><strong aria-hidden="true">5.</strong> Tips regarding UI/UX</a></li><li class="chapter-item expanded "><a href="tips-if-you-use-kotlin.html"><strong aria-hidden="true">6.</strong> Tips if you use Kotlin</a></li><li class="chapter-item expanded "><a href="misc.html"><strong aria-hidden="true">7.</strong> Misc</a></li><li class="chapter-item expanded "><a href="extra-android-libraries-built-by-me.html"><strong aria-hidden="true">8.</strong> Extra : Android Libraries built by me</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Android Tips &amp; Tricks</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#code-faster-by-using-keyboard-shortcuts" id="code-faster-by-using-keyboard-shortcuts">Code faster by using keyboard shortcuts</a></h1>
+<table><thead><tr><th>Description</th><th>Mac</th><th>Linux/Win</th></tr></thead><tbody>
+<tr><td>Lookup IDE commands / Actions</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>A</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>A</kbd></td></tr>
+<tr><td>Open Class</td><td><kbd>Cmd</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>O</kbd></td></tr>
+<tr><td>Open File</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd></td></tr>
+<tr><td>Open recently edited file</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>E</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd></td></tr>
+<tr><td>Open Symbol</td><td><kbd>Cmd</kbd> <kbd>Opt</kbd> <kbd>O</kbd></td><td><kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>N</kbd></td></tr>
+<tr><td>Open recently used file</td><td><kbd>Cmd</kbd> <kbd>E</kbd></td><td><kbd>Ctrl</kbd> <kbd>E</kbd></td></tr>
+<tr><td>Last Edited Location</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>Backspace</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Backspace</kbd></td></tr>
+<tr><td>Find Usage in persistent window</td><td><kbd>Opt</kbd> <kbd>F7</kbd></td><td><kbd>Alt</kbd> <kbd>F7</kbd></td></tr>
+<tr><td>Find Usage in floating window</td><td><kbd>Cmd</kbd> <kbd>Opt</kbd> <kbd>F7</kbd></td><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>F7</kbd></td></tr>
+<tr><td>Format the code with proper Indentation</td><td><kbd>Cmd</kbd> <kbd>Opt</kbd> <kbd>L</kbd></td><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>L</kbd></td></tr>
+<tr><td>Surround With</td><td><kbd>Opt</kbd> <kbd>Cmd</kbd> <kbd>T</kbd></td><td><kbd>Alt</kbd> <kbd>Ctrl</kbd> <kbd>T</kbd></td></tr>
+<tr><td>Open Terminal</td><td><kbd>Opt</kbd> <kbd>F12</kbd></td><td><kbd>Alt</kbd> <kbd>F12</kbd></td></tr>
+<tr><td>Generate Setter/Getters</td><td><kbd>Cmd</kbd> <kbd>N</kbd></td><td><kbd>Alt</kbd> <kbd>Ins</kbd></td></tr>
+<tr><td>Find Class</td><td><kbd>CMD</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>N</kbd></td></tr>
+<tr><td>Refactor/Rename</td><td><kbd>Shift</kbd> <kbd>F6</kbd></td><td><kbd>Shift</kbd> <kbd>F6</kbd></td></tr>
+<tr><td>Quick Fix</td><td><kbd>Opt</kbd> <kbd>Enter</kbd></td><td><kbd>Alt</kbd> <kbd>Enter</kbd></td></tr>
+<tr><td>Goto Definition</td><td><kbd>Cmd</kbd> <kbd>B</kbd></td><td><kbd>Ctrl</kbd> <kbd>B</kbd></td></tr>
+<tr><td>Show parameters for selected method</td><td><kbd>Cmd</kbd> <kbd>P</kbd></td><td><kbd>Ctrl</kbd> <kbd>P</kbd></td></tr>
+<tr><td>Refactor This</td><td><kbd>Ctrl</kbd> <kbd>T</kbd></td><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd></td></tr>
+<tr><td>Stop Process</td><td><kbd>Cmd</kbd> <kbd>F2</kbd></td><td><kbd>Ctrl</kbd> <kbd>F2</kbd></td></tr>
+<tr><td>Search Everywhere</td><td><kbd>Shift</kbd> <kbd>Shift</kbd></td><td><kbd>Shift</kbd> <kbd>Shift</kbd></td></tr>
+<tr><td>Select Methods to Override</td><td><kbd>Ctrl</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>O</kbd></td></tr>
+<tr><td>Delete Line</td><td><kbd>Cmd</kbd> <kbd>Backspace</kbd></td><td><kbd>Ctrl</kbd> <kbd>Y</kbd></td></tr>
+<tr><td>Duplicate Line</td><td><kbd>Cmd</kbd> <kbd>D</kbd></td><td><kbd>Ctrl</kbd> <kbd>D</kbd></td></tr>
+<tr><td>Grow/Shrink selection from cursor</td><td><kbd>Opt</kbd> <kbd>Up/Down Arrow key</kbd></td><td><kbd>Shift</kbd> <kbd>Ctrl</kbd> <kbd>W</kbd></td></tr>
+<tr><td><a href="https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3">Multicursor Selection</a></td><td><kbd>Ctrl</kbd> <kbd>G</kbd></td><td><kbd>Alt</kbd> <kbd>J</kbd></td></tr>
+</tbody></table>
+<p><strong>Complete Keymap Guide : <a href="https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf">Linux/Win | MacOSX</a></strong></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="use-plugins-in-as.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="use-plugins-in-as.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

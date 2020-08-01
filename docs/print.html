@@ -1,0 +1,1625 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Android Tips &amp; Tricks</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Mastering Android Studio</li><li><ol class="section"><li class="chapter-item expanded "><a href="code-faster-using-keyboard.html"><strong aria-hidden="true">2.1.</strong> Code faster by using keyboard shortcuts</a></li><li class="chapter-item expanded "><a href="use-plugins-in-as.html"><strong aria-hidden="true">2.2.</strong> Use plugins to become more efficient</a></li><li class="chapter-item expanded "><a href="use-code-completion-in-as.html"><strong aria-hidden="true">2.3.</strong> Speed code using code-completion</a></li><li class="chapter-item expanded "><a href="configure-as.html"><strong aria-hidden="true">2.4.</strong> Configuring Android Studio</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> Playing in the Terminal</li><li><ol class="section"><li class="chapter-item expanded "><a href="adb-shell.html"><strong aria-hidden="true">3.1.</strong> Get used to ADB Shell</a></li><li class="chapter-item expanded "><a href="adb-aliases.html"><strong aria-hidden="true">3.2.</strong> Setup ADB Aliases</a></li><li class="chapter-item expanded "><a href="scrcpy.html"><strong aria-hidden="true">3.3.</strong> scrcpy: Control/Share your Android device</a></li></ol></li><li class="chapter-item expanded "><a href="make-better-choices-while-coding.html"><strong aria-hidden="true">4.</strong> Make better choices while coding</a></li><li class="chapter-item expanded "><a href="tips-regarding-uiux.html"><strong aria-hidden="true">5.</strong> Tips regarding UI/UX</a></li><li class="chapter-item expanded "><a href="tips-if-you-use-kotlin.html"><strong aria-hidden="true">6.</strong> Tips if you use Kotlin</a></li><li class="chapter-item expanded "><a href="misc.html"><strong aria-hidden="true">7.</strong> Misc</a></li><li class="chapter-item expanded "><a href="extra-android-libraries-built-by-me.html"><strong aria-hidden="true">8.</strong> Extra : Android Libraries built by me</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Android Tips &amp; Tricks</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p><img src="img/github_banner.png" alt="Image" /></p>
+<p>Cheatsheet about tips and tricks for Android Development</p>
+<p>This is a simple set of tips and tricks regarding Android Development which I have gathered from various sources. It helps me direct other android devs in my community regarding stuff each android dev should know about. It is also there for me to keep track of anything I either learn on my own or from other sources now and then when browsing the internet.</p>
+<p>Contributions are always welcome, hoping people will help me in growing this. To contribute, simply open up a PR with the changes.</p>
+<h3><a class="header" href="#show-some--and--the-repo-to-support-the-project" id="show-some--and--the-repo-to-support-the-project">Show some ♥️ and 🌟 the repo to support the project</a></h3>
+<p><a href="https://github.com/nisrulz/android-tips-tricks"><img src="https://img.shields.io/github/stars/nisrulz/android-tips-tricks.svg?style=social&amp;label=Star" alt="GitHub stars" /></a> <a href="https://github.com/nisrulz/android-tips-tricks/fork"><img src="https://img.shields.io/github/forks/nisrulz/android-tips-tricks.svg?style=social&amp;label=Fork" alt="GitHub forks" /></a> <a href="https://github.com/nisrulz/android-tips-tricks"><img src="https://img.shields.io/github/watchers/nisrulz/android-tips-tricks.svg?style=social&amp;label=Watch" alt="GitHub watchers" /></a> <a href="https://github.com/nisrulz/android-tips-tricks"><img src="https://img.shields.io/github/followers/nisrulz.svg?style=social&amp;label=Follow" alt="GitHub followers" /></a></p>
+<h3><a class="header" href="#featured-in" id="featured-in">Featured in</a></h3>
+<p><a href="http://androidweekly.net/issues/issue-221"><img src="https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg" alt="Android Weekly" /></a> <a href="https://www.androiddevdigest.com/digest-110/"><img src="https://img.shields.io/badge/AndroidDev%20Digest-%23110-blue.svg" alt="AndroidDev Digest" /></a> <a href="https://github.com/JStumpp/awesome-android#resources"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="awesome-android" /></a></p>
+<p><strong>Also included in</strong></p>
+<ul>
+<li><a href="https://android.libhunt.com/newsletter/16">Awesome Android Newsletter #Issue 16</a></li>
+</ul>
+<h4><a class="header" href="#credits" id="credits">Credits</a></h4>
+<p>This curated cheatsheet includes tips and tricks that I have been following in my workflow as well as those being suggested/followed by other android devs worldwide.I have tried to add direct links wherever I could remember, giving people due credit who have explained the concepts. If you think I have missed any, then either send a PR or open an issue and I will fix it asap.</p>
+<p>If you appreciate my work, consider <a href="https://www.paypal.me/nisrulz/5usd">buying me</a> a cup of ☕️ to keep me recharged 🤘🏼 [<a href="https://www.paypal.me/nisrulz/5usd">PayPal</a>]</p>
+<p><a href="https://twitter.com/nisrulz"><img src="https://img.shields.io/twitter/follow/nisrulz.svg?style=social" alt="Twitter Follow" /></a></p>
+<h1><a class="header" href="#code-faster-by-using-keyboard-shortcuts" id="code-faster-by-using-keyboard-shortcuts">Code faster by using keyboard shortcuts</a></h1>
+<table><thead><tr><th>Description</th><th>Mac</th><th>Linux/Win</th></tr></thead><tbody>
+<tr><td>Lookup IDE commands / Actions</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>A</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>A</kbd></td></tr>
+<tr><td>Open Class</td><td><kbd>Cmd</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>O</kbd></td></tr>
+<tr><td>Open File</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd></td></tr>
+<tr><td>Open recently edited file</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>E</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>E</kbd></td></tr>
+<tr><td>Open Symbol</td><td><kbd>Cmd</kbd> <kbd>Opt</kbd> <kbd>O</kbd></td><td><kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>N</kbd></td></tr>
+<tr><td>Open recently used file</td><td><kbd>Cmd</kbd> <kbd>E</kbd></td><td><kbd>Ctrl</kbd> <kbd>E</kbd></td></tr>
+<tr><td>Last Edited Location</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>Backspace</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Backspace</kbd></td></tr>
+<tr><td>Find Usage in persistent window</td><td><kbd>Opt</kbd> <kbd>F7</kbd></td><td><kbd>Alt</kbd> <kbd>F7</kbd></td></tr>
+<tr><td>Find Usage in floating window</td><td><kbd>Cmd</kbd> <kbd>Opt</kbd> <kbd>F7</kbd></td><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>F7</kbd></td></tr>
+<tr><td>Format the code with proper Indentation</td><td><kbd>Cmd</kbd> <kbd>Opt</kbd> <kbd>L</kbd></td><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>L</kbd></td></tr>
+<tr><td>Surround With</td><td><kbd>Opt</kbd> <kbd>Cmd</kbd> <kbd>T</kbd></td><td><kbd>Alt</kbd> <kbd>Ctrl</kbd> <kbd>T</kbd></td></tr>
+<tr><td>Open Terminal</td><td><kbd>Opt</kbd> <kbd>F12</kbd></td><td><kbd>Alt</kbd> <kbd>F12</kbd></td></tr>
+<tr><td>Generate Setter/Getters</td><td><kbd>Cmd</kbd> <kbd>N</kbd></td><td><kbd>Alt</kbd> <kbd>Ins</kbd></td></tr>
+<tr><td>Find Class</td><td><kbd>CMD</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>N</kbd></td></tr>
+<tr><td>Refactor/Rename</td><td><kbd>Shift</kbd> <kbd>F6</kbd></td><td><kbd>Shift</kbd> <kbd>F6</kbd></td></tr>
+<tr><td>Quick Fix</td><td><kbd>Opt</kbd> <kbd>Enter</kbd></td><td><kbd>Alt</kbd> <kbd>Enter</kbd></td></tr>
+<tr><td>Goto Definition</td><td><kbd>Cmd</kbd> <kbd>B</kbd></td><td><kbd>Ctrl</kbd> <kbd>B</kbd></td></tr>
+<tr><td>Show parameters for selected method</td><td><kbd>Cmd</kbd> <kbd>P</kbd></td><td><kbd>Ctrl</kbd> <kbd>P</kbd></td></tr>
+<tr><td>Refactor This</td><td><kbd>Ctrl</kbd> <kbd>T</kbd></td><td><kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>T</kbd></td></tr>
+<tr><td>Stop Process</td><td><kbd>Cmd</kbd> <kbd>F2</kbd></td><td><kbd>Ctrl</kbd> <kbd>F2</kbd></td></tr>
+<tr><td>Search Everywhere</td><td><kbd>Shift</kbd> <kbd>Shift</kbd></td><td><kbd>Shift</kbd> <kbd>Shift</kbd></td></tr>
+<tr><td>Select Methods to Override</td><td><kbd>Ctrl</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>O</kbd></td></tr>
+<tr><td>Delete Line</td><td><kbd>Cmd</kbd> <kbd>Backspace</kbd></td><td><kbd>Ctrl</kbd> <kbd>Y</kbd></td></tr>
+<tr><td>Duplicate Line</td><td><kbd>Cmd</kbd> <kbd>D</kbd></td><td><kbd>Ctrl</kbd> <kbd>D</kbd></td></tr>
+<tr><td>Grow/Shrink selection from cursor</td><td><kbd>Opt</kbd> <kbd>Up/Down Arrow key</kbd></td><td><kbd>Shift</kbd> <kbd>Ctrl</kbd> <kbd>W</kbd></td></tr>
+<tr><td><a href="https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3">Multicursor Selection</a></td><td><kbd>Ctrl</kbd> <kbd>G</kbd></td><td><kbd>Alt</kbd> <kbd>J</kbd></td></tr>
+</tbody></table>
+<p><strong>Complete Keymap Guide : <a href="https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf">Linux/Win | MacOSX</a></strong></p>
+<h1><a class="header" href="#use-plugins-to-become-more-efficient" id="use-plugins-to-become-more-efficient">Use plugins to become more efficient</a></h1>
+<ol>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/9792-key-promoter-x">KeyPromoter X</a></p>
+<p>The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used, if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. It also has some useful features, like it will prompt you to create a key binding for a command whenever an action does not have a key binding and you have used it 3 times using your cursor. [ Old Version: <a href="https://plugins.jetbrains.com/plugin/4455">KeyPromoter</a>]</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/2162">String Manipulation</a></p>
+<p>Provides actions for text manipulation such as Toggle case, encode/decode, sorting,</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/5919">Lines Sorter</a></p>
+<p>Add Sort Lines action in Edit menu to sort selected lines or whole file if the selection is empty.</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/3847?pr=idea">Findbugs</a></p>
+<p>Provides static byte code analysis to look for bugs in Java code from within Android Studio</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/7973">Sonar Lint</a></p>
+<p>The plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code.</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/1065">Checkstyles</a></p>
+<p>The plugin provides both real-time and on-demand scanning of Java files from within Android Studio.</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/7380">ADB Idea</a></p>
+<p>The plugin that adds ADB commands to Android Studio and IntelliJ such as ADB Uninstall App, ADB Kill App, ADB Restart App, etc</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/androidstudio/plugin/8600-exynap">Exynap</a></p>
+<p>The plugin which helps you find and implement the code you require in an instant.</p>
+</li>
+<li>
+<p><a href="https://github.com/square/dagger-intellij-plugin">Dagger IntelliJ Plugin</a></p>
+<p>The Dagger IntelliJ plugin creates visual connections between a @Inject object and the @Provides method that creates it.</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/idea/plugin/8537-jvm-debugger-memory-view">JVM Debugger Memory View</a></p>
+<p>This plugin extends the built-in JVM debugger with capabilities to explore objects in the JVM heap during a debug session.</p>
+</li>
+<li>
+<p><a href="https://plugins.jetbrains.com/plugin/7332-android-parcelable-code-generator">Android Parcelable code generator</a></p>
+<p>Plugin which generates Android Parcelable boilerplate code for you.</p>
+</li>
+</ol>
+<h1><a class="header" href="#speed-code-using-code-completion" id="speed-code-using-code-completion">Speed code using code-completion</a></h1>
+<h2><a class="header" href="#use-live-templates-in-android-studio" id="use-live-templates-in-android-studio">Use Live Templates in Android Studio</a></h2>
+<ul>
+<li><code>newInstance</code> - Generates the static <code>newInstance</code> function inside a Fragment</li>
+<li><code>Toast</code> - Generates <code>Toast.makeText(context, &quot;&quot;, Toast.LENGTH_SHORT).show();</code></li>
+<li><code>fbc</code> - findViewById with cast</li>
+<li><code>const</code> - Define a android style int constant</li>
+<li><code>logd</code> - Generates <code>Log.d(TAG, &quot;&quot;);</code></li>
+<li><code>logm</code> - Log current method name and its arguments.</li>
+<li><code>logr</code> - Log result of the current method</li>
+<li><code>logt</code> - static logtaf with current classname</li>
+<li><code>psf</code> - public static final</li>
+<li><code>sout</code> - Prints a string to System.out</li>
+<li><code>soutm</code> - Prints current class and method names to System.out</li>
+<li><code>soutp</code> - Prints method parameter names and values to System.out</li>
+<li><code>visible</code> - Set view visibility to VISIBLE</li>
+<li><code>gone</code> - Set view visibility to GONE</li>
+<li><code>noInstance</code> - private empty constructor to prohibit instance creation</li>
+</ul>
+<p><a href="https://github.com/keyboardsurfer/idea-live-templates">Comprehensive list of all Live Templates in Android Studio</a></p>
+<h2><a class="header" href="#postfix-code-completion-in-android-studio" id="postfix-code-completion-in-android-studio">Postfix code completion in Android Studio</a></h2>
+<p>Android Studio/IntelliJ havea special kind of code completion which allows you to write code specific to a field</p>
+<ul>
+<li><code>&lt;expr&gt;.null</code> will auto complete to <code>if(&lt;expr&gt; == null)</code></li>
+<li><code>&lt;expr&gt;.notnull</code> will auto complete to <code>if(&lt;expr&gt; != null)</code></li>
+<li><code>&lt;expr&gt;.var</code> will auto complete to <code>T name = &lt;expr&gt;</code></li>
+<li><code>&lt;expr&gt;.field</code> will auto complete to create a global field variable <code>field = &lt;expr&gt;</code></li>
+<li><code>&lt;ArrayExpr&gt;.for</code> will auto complete to <code>for(T item : &lt;Arrayexpr&gt;)</code></li>
+<li><code>&lt;ArrayExpr&gt;.fori</code> will auto complete to <code>for(int i = 0; i &lt; &lt;Arrayexpr&gt;.length; i++)</code></li>
+<li><code>&lt;ArrayExpr&gt;.forr</code> will auto complete to <code>for(int i = &lt;Arrayexpr&gt;.length - 1; i &gt; 0 ; i--)</code></li>
+</ul>
+<p>Complete list of available postfix code completion can be found via navigating inside Android Studio/IntelliJ menu:</p>
+<p><strong>Settings → Editor → Postfix Templates</strong></p>
+<h1><a class="header" href="#configuring-android-studio" id="configuring-android-studio">Configuring Android Studio</a></h1>
+<h2><a class="header" href="#use-the-darcula-theme-in-android-studio" id="use-the-darcula-theme-in-android-studio">Use the Darcula Theme in Android Studio</a></h2>
+<p>Ok, I know its more like a preference, but trust me using that keeps your eyes less strained as they would be if you used the Default Light theme.</p>
+<h2><a class="header" href="#dont-use-a-small-font" id="dont-use-a-small-font">Don't use a small font</a></h2>
+<p>Preferably use a font in Android Studio that's easy to read and is at a font size which does not forces you to strain your eyes. Also using fonts that support lingature increases readeablity. While everyone has a preferred font, below are some options for interested folks:</p>
+<ul>
+<li><a href="https://www.jetbrains.com/lp/mono/">Jetbrains Mono</a></li>
+<li><a href="https://github.com/tonsky/FiraCode">FiraCode</a></li>
+</ul>
+<h2><a class="header" href="#use-a-code-style" id="use-a-code-style">Use a code style</a></h2>
+<p>You should use a standard codestyle, so possible contenders can be</p>
+<ul>
+<li><a href="https://source.android.com/source/code-style.html">AOSP Codestyle</a></li>
+<li><a href="https://github.com/square/java-code-styles">Square IntelliJ Codestyle</a></li>
+<li><a href="https://github.com/grandcentrix/AndroidCodeStyle">Grandcentrix Codestyle</a></li>
+</ul>
+<h2><a class="header" href="#misc-tips" id="misc-tips">Misc tips</a></h2>
+<ul>
+<li>
+<p><strong>Use the <a href="https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html">Embedded Terminal inside Android Studio</a></strong></p>
+</li>
+<li>
+<p><strong>Use the Memory/Network/CPU Monitor inside Android Studio to profile your code/app</strong></p>
+</li>
+<li>
+<p><strong><a href="https://medium.com/google-developer-experts/configuring-android-studio-4aa4f54f1153#.rq0z6qlaq">Configure Android Studio for speed</a></strong></p>
+</li>
+</ul>
+<h1><a class="header" href="#adb-shell" id="adb-shell">ADB Shell</a></h1>
+<p>Few handy commands you can use to interact with emulator/device, through terminal.</p>
+<table><thead><tr><th>Description</th><th>Command</th></tr></thead><tbody>
+<tr><td>List all connected devices</td><td><code>adb devices</code></td></tr>
+<tr><td>Install an application on device<br>-s to install on the SD Card<br>-g to grant all permissions listed in the manifest <a href="https://developer.android.com/studio/command-line/adb.html">[More Info]</a></td><td><code>adb install -r ~/application.apk</code></td></tr>
+<tr><td>Uninstall an application</td><td><code>adb uninstall your.app.package</code></td></tr>
+<tr><td>Download a file from device</td><td><code>adb pull /sdcard/file.ext</code></td></tr>
+<tr><td>Upload a file to a device</td><td><code>adb push file.ext /sdcard</code></td></tr>
+<tr><td>Print all installed packages on device</td><td><code>adb shell pm list packages -f</code></td></tr>
+<tr><td>Clear Application data</td><td><code>adb shell pm clear your.app.package</code></td></tr>
+<tr><td>Toggle Data for device</td><td><code>adb shell svc data disable</code></td></tr>
+<tr><td>Toggle Wifi for device</td><td><code>adb shell svc wifi enable</code></td></tr>
+<tr><td>Location of Device<br>- High accuracy: gps,wifi,network or gps,network (if you want the wifi)<br>- Battery saving: wifi,network or network only<br>- Device only: gps</td><td><code>adb shell settings put secure location_providers_allowed gps</code></td></tr>
+<tr><td>Reset all granted permissions</td><td><code>adb shell pm reset-permissions -p your.app.package</code></td></tr>
+<tr><td>Reset a specific permission</td><td><code>adb shell pm revoke your.app.package android.permission.WRITE_EXTERNAL_STORAGE</code></td></tr>
+<tr><td>Broadcast Actions</td><td><code>adb shell am broadcast -a 'my_action'</code></td></tr>
+<tr><td><a href="https://twitter.com/Jahnold/status/759775495655333888">Simulating Android killing your app in the background</a></td><td><code>adb shell am kill</code></td></tr>
+<tr><td>Take a Screenshot</td><td><code>adb shell screencap -p \| perl -pe 's/\x0D\x0A/\x0A/g' &gt; screenshot.png</code></td></tr>
+<tr><td>Launch an installed app using its package name</td><td><code>adb shell monkey -p com.yourapp.packagename 1</code></td></tr>
+<tr><td><a href="https://developer.android.com/studio/test/monkey">Stress test</a> your app using its package name by sending a pseudo-random stream of user events into the system</td><td><code>adb shell monkey -p com.yourapp.packagename -v 500</code></td></tr>
+</tbody></table>
+<ul>
+<li><strong><a href="https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8">Learn about various techniques involved when using ADB</a></strong></li>
+</ul>
+<h1><a class="header" href="#setup-adb-aliases" id="setup-adb-aliases">Setup ADB Aliases</a></h1>
+<p><strong>Setup handy <code>adb</code> aliases for your terminal</strong> <a href="https://medium.com/@jonfhancock/bash-your-way-to-better-android-development-1169bc3e0424#.8zcc4m5ch">[Ref Link]</a></p>
+<p>Append the below <strong>Aliases</strong> to your <code>~/.bashrc</code> or <code>~/.zshrc</code> file, save and restart the terminal. Once saved, use them as show in <strong>Usage</strong> column</p>
+<pre><code class="language-bash"># Take a screenshot
+# Usage: screenshot
+alias screenshot=&quot;adb exec-out screencap -p &gt; screen-$(date -j &quot;+%s&quot;).png&quot;
+
+# Fire an intent
+# Usage: startintent https://twitter.com/nisrulz
+alias startintent=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X shell am start $1&quot;
+
+# Install Apk
+# Usage: apkinstall ~/path/to/apk/App.apk
+alias apkinstall=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X install -r $1&quot;
+
+# Uninstall an app
+# Usage: rmapp com.example.demoapp
+alias rmapp=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X uninstall $1&quot;
+
+# Clear all data of an app
+# Usage: clearapp com.example.demoapp
+alias clearapp=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X shell pm clear $1&quot;
+
+# Launch your debug apk on your connected device
+# Execute at the root of your android project
+# Usage: launchDebugApk
+alias launchDebugApk=&quot;adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e 'package: name' | cut -d \' -f 2` 1&quot;
+</code></pre>
+<h1><a class="header" href="#a-hrefhttpsgithubcomgenymobilescrcpyscrcpya" id="a-hrefhttpsgithubcomgenymobilescrcpyscrcpya"><a href="https://github.com/genymobile/scrcpy">scrcpy</a></a></h1>
+<p>It is basically used to display and control your Android device and is the open source equivalent of <a href="http://www.vysor.io/">Vysor</a>. The good folks at <a href="https://www.genymotion.com/">Genymotion</a> built this tool and then open sourced it (Open Source FTW).</p>
+<h1><a class="header" href="#make-better-choices-while-coding" id="make-better-choices-while-coding">Make better choices while coding</a></h1>
+<ul>
+<li>
+<p><strong>Use OkHttp over HttpUrlConnect</strong></p>
+<p>HttpUrlConnect suffers from <a href="https://android-developers.blogspot.in/2011/09/androids-http-clients.html">quite some bugs</a>. <a href="https://square.github.io/okhttp/">Okhttp</a> solves them in a more elegant manner. <a href="https://corner.squareup.com/2013/05/announcing-okhttp.html">[Reference Link]</a></p>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Reference local <code>aar</code> files as below [<a href="http://stackoverflow.com/a/28816265/2745762">Stackoverflow Ref</a>]</strong></p>
+<pre><code class="language-gradle">  dependencies {
+     implementation(name:'nameOfYourAARFileWithoutExtension', ext:'aar')
+  }
+  repositories {
+     flatDir {
+        dirs 'libs'
+     }
+  }
+</code></pre>
+</li>
+<li>
+<p><strong>Use <a href="https://github.com/JakeWharton/pidcat">Pidcat</a> for a better log reading experience</strong></p>
+</li>
+<li>
+<p><strong>Use some Version Control System(VCS) like <a href="https://git-scm.com/">Git</a></strong></p>
+</li>
+<li>
+<p><strong>Use <a href="https://github.com/google/android-classyshark">ClassyShark</a></strong></p>
+<p>It is a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies</p>
+</li>
+<li>
+<p><strong>Use <a href="https://github.com/facebook/stetho">Stetho</a></strong></p>
+<p>Debug your android apps using Chrome Dev Tools. Includes tools like Network Monitor, Shared Preference explorer etc.</p>
+</li>
+<li>
+<p><strong>Use <a href="https://github.com/google/battery-historian">Battery Historian</a></strong></p>
+<p>A tool to analyze battery consumers using Android &quot;bugreport&quot; files.</p>
+</li>
+<li>
+<p><strong>Always use a constant version value like &quot;1.2.0&quot;</strong></p>
+<p>Avoid using <code>+</code> when specifying the version of dependencies.</p>
+<ul>
+<li>Keeps one secured from unexpected API changes in the dependency.</li>
+<li>Avoids doing an extra network call for the checking latest version of each dependency on every build.</li>
+</ul>
+</li>
+<li>
+<p><strong>Use <a href="http://www.mopri.de/2010/timertask-bad-do-it-the-android-way-use-a-handler/">Handler instead of a TimerTask</a></strong></p>
+</li>
+<li>
+<p><strong><a href="https://www.reddit.com/r/Android/comments/2hywu9/google_play_only_one_strike_is_needed_to_ruin_you/">Do not use your own personal email for Google Play Developer Account</a></strong></p>
+</li>
+<li>
+<p><strong>Use Vectors instead of PNG</strong></p>
+<p>If you do <strong>have</strong> to use png, compress them. Take a look at <a href="https://tinypng.com">TinyPNG</a>.</p>
+</li>
+<li>
+<p><strong>Use proguard</strong></p>
+<pre><code class="language-gradle">android {
+  ...
+  buildTypes {
+      release {
+          minifyEnabled true
+          proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      }
+  }
+}
+</code></pre>
+<p>[<a href="https://www.guardsquare.com/en/proguard/manual/usage">Read more from the manual here</a>]</p>
+</li>
+<li>
+<p><strong>Use shrinkResources</strong></p>
+<pre><code class="language-gradle">android {
+  ...
+  buildTypes {
+      release {
+          shrinkResources true
+          minifyEnabled true
+          ...
+      }
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Follow the below <a href="https://medium.com/@skaliakoudas/decreasing-build-times-by-decreasing-gradle-memory-requirements-7fcafc6d98ea#.otnm0ofb6">rule to have faster gradle builds</a></strong></p>
+<pre><code class="language-gradle">Gradle memory &gt;= Dex memory + 1Gb
+</code></pre>
+</li>
+<li>
+<p><strong>Split your apk using gradle when using Native code, do not bundle all of em together and ship!.. coz that will make you evil</strong></p>
+<pre><code class="language-gradle">defaultConfig {
+    ...
+
+    ndk {
+      abiFilters &quot;armeabi&quot;, &quot;armeabi-v7a&quot;, &quot;mips&quot;, &quot;x86&quot;
+    }
+  }
+
+//Split into platform dependent APK
+splits {
+  abi {
+    enable true
+    reset()
+    include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
+    universalApk false //generate an additional APK that contains all the ABIs
+  }
+}
+
+// map for the version code
+project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
+
+// Rename with proper versioning
+android.applicationVariants.all { variant -&gt;
+  // assign different version code for each output
+  variant.outputs.each { output -&gt;
+    output.versionCodeOverride =
+        project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) *
+            1000000 +
+            android.defaultConfig.versionCode
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Learn about some architecture such as MVP or Clean</strong></p>
+</li>
+<li>
+<p><strong>Try to understand and follow TDD (Test Driven Development)</strong></p>
+</li>
+<li>
+<p><strong>To force re-download of dependencies</strong></p>
+<pre><code class="language-gradle">./gradlew --refresh-dependencies
+</code></pre>
+</li>
+<li>
+<p><strong>To exclude a certain task from being run by gradle</strong></p>
+<p>Suppose you want to exclude the task <code>javaDoc</code> then use <code>-x</code> option followed by the task name, i.e <code>javaDoc</code> in this case.</p>
+<pre><code class="language-gradle">./gradlew clean build -x javaDoc
+</code></pre>
+</li>
+<li>
+<p><strong>To have the each subproject script name match that of the project name</strong></p>
+<p>Then add this line in settings.gradle</p>
+<pre><code class="language-gradle">rootProject.children.each{
+  it.buildFileName = it.name + '.gradle'
+}
+</code></pre>
+<p><strong><a href="https://github.com/shekhargulati/gradle-tips">Checkout more gradle tips here</a></strong></p>
+</li>
+<li>
+<p><strong>Follow the DRY principle</strong>
+DRY = Do not Repeat Yourself</p>
+</li>
+<li>
+<p><strong><a href="https://medium.com/the-engineering-team/package-by-features-not-layers-2d076df1964d">Package by Feature, not layers</a></strong></p>
+</li>
+<li>
+<p><strong><a href="http://crushingcode.co/the-curious-case-of-dependency-conflicts/">Learn about Dependency Resolution</a></strong></p>
+<p>With the speed android dependencies update, sooner or later you are going to encounter some sort of dependency conflict. The solution is making use of Dependency Resolution. <a href="https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html">Official Reference</a></p>
+</li>
+<li>
+<p><strong>Use different package name for non-release builds</strong></p>
+<pre><code class="language-gradle">  android {
+      buildTypes {
+          debug {
+              applicationIdSuffix '.debug'
+              versionNameSuffix '-DEBUG'
+          }
+
+          release {
+              // ...
+          }
+      }
+  }
+</code></pre>
+</li>
+<li>
+<p><strong><a href="http://blog.nimbledroid.com/2016/09/06/stop-memory-leaks.html">Find and STOP leaking memory in your android app</a></strong></p>
+</li>
+<li>
+<p><strong><a href="https://android.jlelse.eu/android-dev-tip-3-99da754151ad#.clbqzz3zh">If you’re creating a gradient in xml with a part being completely transparent, be really careful when using <code>@android:color/transparent</code></a></strong></p>
+</li>
+<li>
+<p><strong><a href="http://jeroenmols.com/blog/2016/03/07/resourcenaming/">Follow a standard naming convention for your resources</a></strong></p>
+</li>
+<li>
+<p><strong>Make use of custom gradle tasks in your build.gradle files</strong></p>
+<p>Android uses Gradle as its build system, which actually allows one to make a lot of things easy by creating tasks to automate things.
+<a href="https://www.reddit.com/r/androiddev/comments/3ig3gm/show_us_your_gradle_tasks">This reddit post enlists a lot of such useful gradle scripts</a></p>
+</li>
+<li>
+<p><strong>Use a proper .gitignore in your Android Projects, <a href="/android.gitignore">Check it here</a></strong></p>
+</li>
+<li>
+<p><strong><a href="https://github.com/square/leakcanary">Use LeakCanary to detect memory leaks in your app</a></strong> - Its a memory leak detection library for Android and Java.</p>
+</li>
+<li>
+<p><strong>Speed up your gradle builds in Android Studio 2.3+</strong></p>
+<ul>
+<li>
+<p>Switch to gradle 3.4.1</p>
+<p>Run this inside your project folder to update your gradle wrapper</p>
+<pre><code class="language-bash">./gradlew wrapper --gradle-version 3.4.1 --distribution-type all
+</code></pre>
+</li>
+<li>
+<p>Set the below property in your global <code>gradle.properties</code> file</p>
+<pre><code>android.enableBuildCache=true
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Stop a running gradle build process</strong></p>
+<pre><code class="language-bash">./gradlew -stop
+</code></pre>
+</li>
+<li>
+<p><strong>Enable gradle to automatically download missing platforms in android sdk</strong></p>
+<p>Set the below property in your global <code>gradle.properties</code> file</p>
+<pre><code>android.builder.sdkDownload=true
+</code></pre>
+<blockquote>
+<p>This is an experimental option and it only downloads build tools and platforms, but doesn't actually update Google or Support repository <a href="https://code.google.com/p/android/issues/detail?id=212309">[Bug Ref]</a></p>
+</blockquote>
+</li>
+<li>
+<p><strong>Donot include both <code>jcenter()</code> &amp; <code>mavenCentral()</code> in your <code>build.gradle</code> file</strong></p>
+<p>JCenter is a superset of MavenCentral. <a href="https://twitter.com/molsjeroen/status/791606774210199553">[Ref tweet]</a></p>
+</li>
+<li>
+<p><strong>Clear your gradle cache if you think that bundled support and google play services lib in android sdk are inconsistent</strong></p>
+<ul>
+<li>Goto <code>~/.gradle/caches/</code> and delete everything inside the <code>cache</code> folder.</li>
+<li>Open SDK Manager and resync all support libs and google play services</li>
+<li>Next re-sync your project</li>
+<li>Everything should become consistent and functional.</li>
+</ul>
+</li>
+<li>
+<p><strong>Setup Android Studio to fail build if code contains <code>//STOPSHIP</code></strong> <a href="https://www.reddit.com/r/androiddev/comments/5c8b0a/i_know_android_studio_allows_you_to_make_custom/d9uhdzt/">[Ref Link]</a></p>
+<p>To enable the <code>//STOPSHIP</code> lint check, in your <code>build.gradle</code></p>
+<pre><code class="language-gradle">android {
+...
+    lintOptions {
+        abortOnError true
+        fatal 'StopShip'
+    }
+}
+</code></pre>
+<p>If you have a <code>//STOPSHIP</code> comment in your code, this will cause an error to be thrown when a release apk is generated.</p>
+<blockquote>
+<p>You can turn on //STOPSHIP highlighting in Android Studio (isn't enabled by default) in</p>
+<p><code>Preferences</code> &gt; <code>Editor</code> &gt; <code>Code Style</code> &gt; <code>Inspections</code>.</p>
+<p>Search for STOPSHIP to find the correct setting.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Use <a href="https://github.com/cesarferreira/alfi"><code>alfi</code></a> to find the gradle dependency statement for a library</strong></p>
+<blockquote>
+<p>Its basically the command line version of <a href="gradleplease.appspot.com">Gradle, Please</a> which is a web hosted.</p>
+</blockquote>
+<ul>
+<li>
+<p>Run</p>
+<pre><code class="language-bash">alfi name_of_library
+</code></pre>
+</li>
+<li>
+<p>Copy the desired library</p>
+</li>
+<li>
+<p>Paste in your build.gradle</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Use <a href="https://github.com/cesarferreira/dryrun"><code>dryrun</code></a> to test a library directly</strong></p>
+<ul>
+<li>
+<p>Just Run</p>
+<pre><code class="language-bash">dryrun REMOTE_GIT_URL
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Output unit tests directly to the console</strong> <a href="https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f">[Ref Link]</a></p>
+<blockquote>
+<p>A small neat trick to see Android unit tests logging results as they happen in the terminal.</p>
+</blockquote>
+<pre><code class="language-gradle">android {
+    ...
+    testOptions.unitTests.all {
+      testLogging {
+        events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+        outputs.upToDateWhen { false }
+        showStandardStreams = true
+      }
+    }
+  }
+</code></pre>
+</li>
+<li>
+<p><strong>Make your builds faster by building offline</strong> <a href="https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f">[Ref Link]</a></p>
+<blockquote>
+<p>The <code>--offline</code> flag tells gradle to always use dependency modules from the cache, regardless if they are due to be checked again. When running offline, gradle will never attempt to access the network to perform dependency resolution. If required modules are not present in the dependency cache, build execution will fail.</p>
+</blockquote>
+<ul>
+<li>
+<p>Assembling develop debug at full speed:</p>
+<pre><code class="language-gradle">./gradlew assembleDevelopDebug --offline
+</code></pre>
+</li>
+<li>
+<p>Running your unit tests at full speed:</p>
+<pre><code class="language-gradle">./gradlew test --offline
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Use an abtracted <a href="/Logger.java">Logger</a> class</strong></p>
+</li>
+<li>
+<p><strong>If you want to automatically initialize your library, use a Content Provider</strong> <a href="https://firebase.googleblog.com/2016/12/how-does-firebase-initialize-on-android.html">[Read how Firebase does it - Ref Link]</a></p>
+</li>
+<li>
+<p><strong>Reduce installed app size with <code>&quot;android:extractNativeLibs:false&quot;</code> in <code>&lt;application&gt;</code></strong> <a href="https://medium.com/@wkalicinski/smallerapk-part-8-native-libraries-open-from-apk-fc22713861ff#.bajqmlshi">[Ref Link]</a></p>
+<blockquote>
+<p>This will essentially prevent the system from creating a second copy of the .so files and fix the System.loadLibrary call so it’s able to find and open native libs straight from the APK, no code changes on your part required.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Selectivily execute a specific method in Android Studio</strong> <a href="https://twitter.com/tasomaniac/status/820019068140945408">[Ref Link]</a></p>
+<p><img src="img/selectiverun.gif" alt="Image" /></p>
+</li>
+<li>
+<p><strong>Did you get one of these Google Play Developer Policy Violation Emails? Worry not, generate a Privacy Policy for your android app</strong> <a href="https://medium.com/@ali.muzaffar/did-you-get-one-of-these-google-play-developer-policy-violation-emails-6c529ceb082d#.f10upj3fy">[Ref ink]</a></p>
+<ul>
+<li>Take a look at <a href="https://app-privacy-policy-generator.firebaseapp.com/">App Privacy Policy Generator</a>, a web app to generate a generic privacy policy for your app.</li>
+</ul>
+</li>
+<li>
+<p><strong>Define a variable at build time</strong>
+In your <code>build.gradle</code></p>
+<pre><code class="language-gradle">android{
+  defaultConfig {
+    ...
+    buildConfigField &quot;String&quot;, &quot;SERVER_ENDPOINT&quot;, '&quot;http://www.myendpoint.com&quot;'
+    buildConfigField &quot;int&quot;, &quot;FOO&quot;, &quot;52&quot;
+    buildConfigField &quot;boolean&quot;, &quot;LOG&quot;, &quot;false&quot;
+    ...
+  }
+}
+</code></pre>
+<p>and then use it in code as <code>BuildConfig.SERVER_ENDPOINT</code>, <code>BuildConfig.FOO</code>,<code>BuildConfig.LOG</code></p>
+</li>
+<li>
+<p><strong>Calculate the version code and version name in your <code>build.gradle</code> <strong>manually</strong><em>, based of version values</em></strong>
+In your app's <code>build.gradle</code></p>
+<pre><code class="language-gradle">versionMajor = 0
+versionMinor = 0
+versionPatch = 0
+versionBuild = 1
+
+verCode = versionMajor _ 1000000 + versionMinor _ 10000 + versionPatch \* 100 + versionBuild
+verName = &quot;${versionMajor}.${versionMinor}.${versionPatch}&quot;
+
+// Use
+android{
+  defaultConfig {
+        ...
+        versionCode verCode
+        versionName verName
+        ...
+  }
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Calculate the version code and version name in your <code>build.gradle</code> automatically, based on git information</strong></p>
+<blockquote>
+<p>Note: These functions go specifically inside the app's <code>build.gradle</code> and cannot be used with <code>ext</code>.</p>
+</blockquote>
+<p>In your app's <code>build.gradle</code></p>
+<pre><code class="language-gradle">// Version code is calculated as the number of commits from last commit on master
+def getVersionCode = { -&gt;
+  try {
+    def code = new ByteArrayOutputStream()
+    exec {
+      commandLine 'git', 'rev-list', 'HEAD', '--count'
+      standardOutput = code
+    }
+    return Integer.parseInt(code.toString().trim())
+  } catch (exception) {
+    return &quot;1&quot;;
+  }
+}
+
+// Version name is Last Tag Name + No. of commits form last Tag +  short git sha
+def getVersionName = { -&gt;
+  try {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+      commandLine 'git', 'describe', '--tags', '--dirty'
+      standardOutput = stdout
+    }
+    return stdout.toString().trim()
+  } catch (exception) {
+    return &quot;0.0.0.1&quot;;
+  }
+}
+
+// Use
+android{
+  defaultConfig {
+    ...
+    versionCode getVersionCode()
+    versionName getVersionName()
+    ...
+  }
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Get the date of build as a variable</strong>
+In your app's <code>build.gradle</code></p>
+<pre><code class="language-gradle">// Get the date of build
+def getDateOfBuild = { -&gt; // ISO 8601 time format
+  return new Date().format(&quot;yyyy-MM-dd'T'HH:mm'Z'&quot;).toString().trim()
+}
+
+// then use it as a variable in BuildConfig
+android{
+  defaultConfig {
+    ...
+    buildConfigField &quot;String&quot;, &quot;DATE_OF_BUILD&quot;, &quot;\&quot;${getDateOfBuild()}\&quot;&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Get the Git SHA as a variable</strong>
+In your app's <code>build.gradle</code></p>
+<pre><code class="language-gradle">// Get the last Git Short Hash
+def getGitHash = { -&gt;
+  def stdout = new ByteArrayOutputStream()
+  exec {
+    commandLine 'git', 'rev-parse', '--short', 'HEAD'
+    standardOutput = stdout
+  }
+  return stdout.toString().trim()
+}
+
+// then use it as a variable in BuildConfig
+android{
+  defaultConfig {
+    ...
+    buildConfigField &quot;String&quot;, &quot;GIT_SHA&quot;, &quot;\&quot;${getGitHash()}\&quot;&quot;
+  }
+}
+</code></pre>
+<blockquote>
+<p>Have a look at the <a href="https://github.com/zsoltk/paperwork">Paperwork Project</a>, which generates build info for your Android project without breaking incremental compilation</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Activity LifeCycle</strong> [<a href="https://www.bignerdranch.com/blog/android-activity-lifecycle-onStop/">Ref Link</a>]</p>
+<p><img src="img/activityStateDiagram.jpeg" alt="diagram" /></p>
+</li>
+<li>
+<p><strong>Tip about <code>onSaveInstanceState()</code></strong><br />
+<code>onSaveInstanceState()</code> is called <strong><em>only when the OS decides to kill the <code>Activity</code> instance</em></strong>. It will not be called when Activity is explicitly killed i.e User pressed back button or <code>finish()</code> is called from code.</p>
+</li>
+<li>
+<p><strong><a href="https://android.jlelse.eu/things-i-wish-i-knew-when-i-started-building-android-sdk-libraries-dba1a524d619">If you are into building Android Libraries, then read here for more tips</a></strong></p>
+</li>
+<li>
+<p><strong><a href="http://crushingcode.nisrulz.com/whats-in-the-apk/">Read about whats in an APK here</a></strong></p>
+</li>
+<li>
+<p><strong><a href="http://fragmentedpodcast.com/episodes/77/">Input some text in an editfield in a running emulator from your keyboard </a></strong></p>
+<pre><code class="language-gradle">adb shell input text &quot;keyboard text&quot;
+</code></pre>
+</li>
+<li>
+<p><strong>Use <a href="https://developer.android.com/reference/android/support/v4/app/NotificationManagerCompat.html#areNotificationsEnabled()"><code>areNotificationsEnabled()</code></a> from <a href="https://developer.android.com/reference/android/support/v4/app/NotificationManagerCompat.html#areNotificationsEnabled"><code>NotificationManagerCompat</code></a> to detect whether your users blocked your Notifications</strong> [<a href="https://twitter.com/tasomaniac/status/851888395152392193/photo/1">Ref Link</a>]</p>
+</li>
+<li>
+<p><strong>Don't hard-code encryption keys, a simple grep for <code>&quot;Ljavax/crypto&quot;</code> reveals them in bytecode</strong> [<a href="https://twitter.com/molsjeroen/status/851708885782204417">Ref Link</a>]</p>
+</li>
+<li>
+<p><strong>Intents have a limited payload size (1Mb), don't serialize and attach entire file to it</strong> [<a href="https://twitter.com/molsjeroen/status/851353828905627648">Ref Link</a>]</p>
+</li>
+<li>
+<p><strong>Always copy a file before sending it as intent URI. Receiving app could edit it &amp; send a canceled result</strong> [<a href="https://twitter.com/molsjeroen/status/851354820883689473">Ref Link</a>]</p>
+</li>
+<li>
+<p><strong>Use <code>http://</code> as scheme for app deeplinks, they are more universal &amp; when app not installed drive users to a domain you own</strong> [<a href="https://twitter.com/molsjeroen/status/851349683440111616">Ref Link</a>]</p>
+</li>
+<li>
+<p><strong>Use below to display your app launch time</strong> [<a href="https://twitter.com/molsjeroen/status/851367439996784640">Ref Link</a>]</p>
+<pre><code class="language-bash">adb shell am start -W &lt;packagename&gt;/. &lt;activityname&gt;
+</code></pre>
+</li>
+<li>
+<p><strong><a href="https://developer.android.com/studio/preview/features/java8-support.html">Use Java 8 features by adding <code>sourceCompatibility</code> &amp; <code>targetCompatibility</code> to your build.gradle file</a></strong></p>
+<pre><code class="language-gradle">android {
+  ...
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong><a href="https://medium.com/pressure-labs/a-new-devs-guide-to-google-play-sanity-4-a-groovy-script-to-save-them-all-456a12672886">Setup a gradle task to archive apks and proguard files on build, for backup purposes</a></strong></p>
+<pre><code class="language-gradle">task deployApks(type:Copy) {
+    description = &quot;Copies APKs and Proguard mappings to the deploy directory&quot;
+    def appName = &quot;&lt;app_name&gt;&quot;;
+    def versionDir = android.defaultConfig.versionName+&quot;_&quot;+android.defaultConfig.versionCode;
+
+    println(&quot;Copies APK and Proguard to &quot; + versionDir)
+
+    from 'build/outputs/mapping/release/'
+    include '**/mapping.txt'
+    into '../.admin/deploy/' + versionDir
+    rename ('mapping.txt', &quot;${versionDir}-mapping.txt&quot;)
+
+    from ('.') {
+        exclude '**/build', '**/src'
+    }
+
+    include '*.apk'
+    into '../.admin/deploy/' + versionDir
+    rename ('app-release.apk', &quot;${appName}-${versionDir}.apk&quot;)
+}
+</code></pre>
+</li>
+<li>
+<p><strong><a href="https://medium.com/@Mauin/the-case-of-disappearing-launcher-icons-657c3663b9d3">Use activity-alias or your launcher icons will disappear when renaming/moving your MainActivity</a></strong></p>
+</li>
+<li>
+<p>To enable <code>aapt2</code> set below in gradle properties</p>
+<pre><code class="language-gradle">android.enableaapt2=true
+</code></pre>
+</li>
+<li>
+<p>To testout doze mode, trigger it using <code>adb</code> [<a href="https://developer.android.com/training/monitoring-device-state/doze-standby.html#testing_doze">Ref Link</a></p>
+<pre><code class="language-bash">adb shell dumpsys deviceidle force-idle
+</code></pre>
+</li>
+<li>
+<p>Thumb rule regarding setting <code>compileSdkVersion</code>, <code>minSdkVersion</code> and <code>targetSdkVersion</code></p>
+<blockquote>
+<p><code>minSdkVersion</code> (lowest possible) &lt;= <code>targetSdkVersion</code> == <code>compileSdkVersion</code> (latest SDK)</p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li>
+<p>Google released an option to include OSS license activity in your app, use that to attribute credits to the OSS libs in your app [<a href="https://developers.google.com/android/guides/opensource">Ref Link</a>]</p>
+<blockquote>
+<p><a href="https://github.com/nisrulz/android-examples/tree/master/OSSLicenseActivity">Checkout a working example here</a></p>
+</blockquote>
+</li>
+<li>
+<p>Make Android Studio render <code>&lt;merge&gt;</code> layouts correctly by specifying the layout type with the tools:parentTag attribute [<a href="https://twitter.com/m_evans10/status/907635918550511617">Ref Link</a>]</p>
+<p><img src="img/mergetaginlayout.jpg" alt="diagram" /></p>
+</li>
+<li>
+<p>Checkout the Background Execution Limits on Android Oreo and update your app to work with the restrictions [<a href="https://medium.com/exploring-android/exploring-background-execution-limits-on-android-oreo-ab384762a66c">Ref Link</a>]</p>
+</li>
+<li>
+<p>To take good screenshots with clean status bar use the <a href="https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md"><strong>Demo Mode</strong></a> in Android [<a href="https://android.jlelse.eu/clean-your-status-bar-like-a-pro-76c89a1e2c2f">Ref Link</a>]</p>
+<ul>
+<li>
+<p>Steps</p>
+<ol>
+<li>
+<p>Enable Demo Mode</p>
+<pre><code class="language-bash">adb shell settings put global sysui_demo_allowed 1
+</code></pre>
+</li>
+<li>
+<p>Enable/disable icons by running the right command</p>
+<pre><code class="language-bash">// display time 12:00
+adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200
+
+// Display full mobile data without type
+adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false
+
+// Hide notifications
+adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false
+
+// Show full battery but not in charging state
+adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100
+</code></pre>
+</li>
+<li>
+<p>Run app and take screenshots</p>
+</li>
+<li>
+<p>Exit demo mode once you are done</p>
+<pre><code class="language-bash">adb shell am broadcast -a com.android.systemui.demo -e command exit
+</code></pre>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>To record video of your android device [<a href="https://dev.to/aneesahammed/best-way-to-record-your-screen-on-android">Ref Link</a>]</p>
+<pre><code class="language-bash">adb shell &amp;&amp; screenrecord /sdcard/download/fileName.mp4
+</code></pre>
+<blockquote>
+<p>Hit <code>Ctrl+C</code> to exit/stop recording</p>
+<p>Recorded video file is saved at the location mentioned in the command on the device itself.</p>
+</blockquote>
+</li>
+<li>
+<p>Use Dao inheritance to reduce the amount of boilerplate code [<a href="https://gist.github.com/florina-muntenescu/1c78858f286d196d545c038a71a3e864">Ref Link</a>]</p>
+</li>
+<li>
+<p>Instead of using <code>getActivity()</code> in fragment, keep a habit of getting context from <code>onAttach()</code>. [<a href="https://twitter.com/ravi_rupareliya/status/920881340245073920">Ref Link</a>]</p>
+</li>
+<li>
+<p>Avoid setting a background in every view/fragment as it likely causes overdraw. [<a href="https://twitter.com/molsjeroen/status/923543967978881025">Ref Link</a>]</p>
+</li>
+<li>
+<p><code>View.getWidth() = 0?</code> That's because your view hasn't been layout yet, use globallayoutListener to know layout done. [<a href="https://twitter.com/molsjeroen/status/923542864877047808">Ref Link</a>]</p>
+</li>
+<li>
+<p>Android never kills activities, it only kills processes. When low memory the lowest priority ranked will be killed.[<a href="https://twitter.com/molsjeroen/status/923510846696951809">Ref Link</a>]</p>
+</li>
+<li>
+<p><a href="https://medium.com/@tauno/android-studio-pro-tip-go-to-source-from-logcat-output-f13bf46411b5">Use <code>.([filename].java:[line])</code> in your log statements to make them clickable in Android Studio and Intellij IDEA.</a></p>
+</li>
+<li>
+<p>Use <code>-whyareyoukeeping class com.jeroenmols.MyClass</code> to figure out why certain a class wasn't removed.[<a href="https://twitter.com/molsjeroen/status/905713748173881345">Ref Link</a>]</p>
+</li>
+<li>
+<p>Use certificate pinning to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates, when making requests from your app. [<a href="https://dev.to/mplacona/certificate-pinning-in-android">Ref Link</a>]</p>
+</li>
+<li>
+<p>Do download the latest emulator using CLI</p>
+<pre><code>cd &lt;android_sdk&gt;/tools/bin
+./sdkmanager --channel=3 emulator
+</code></pre>
+<p>To check the version of emulator, use <code>./sdkmanager --channel=3 emulator</code></p>
+</li>
+<li>
+<p><strong><a href="https://android.jlelse.eu/android-strings-xml-tips-tricks-52b0c820cf7a">Checkout some tricks when using Android Strings in XML</a></strong></p>
+</li>
+<li>
+<p>Cleanup your Gradle caches by deleting files not accessed within the last month [<a href="https://github.com/gradle/gradle/issues/2304">Ref Link</a>]</p>
+<pre><code>find ~/.gradle -type f -atime +30 -delete
+find ~/.gradle -type d -mindepth 1 -empty -delete
+</code></pre>
+<blockquote>
+<p>To check the size of your gradle cache, run: <code>du -sh ~/.gradle</code></p>
+</blockquote>
+</li>
+<li>
+<p><strong><a href="https://blog.stylingandroid.com/tool-time-part-1-2/">Checkout some cool tricks when using <code>tools:</code> attribute in your android layouts, such as sample data and recyclerview item layout previews</a></strong></p>
+</li>
+<li>
+<p>Remove all debug log statements from the release build using the below proguard rules. (app's build.gradle should have <code>minifyEnabled true</code> set for this to work)</p>
+<pre><code># Remove all debug logs
+-assumenosideeffects class android.util.Log {
+    public static *** d(...);
+}
+</code></pre>
+<blockquote>
+<p>The above snippet is usually appended to contents of app/proguard-rules.pro file</p>
+</blockquote>
+</li>
+<li>
+<p><strong><a href="https://trevore.com/post/should-i-use-enums-in-android/">Should I use Enums in Android?</a></strong></p>
+<p><strong>tl;dr</strong></p>
+<ul>
+<li>
+<p>If you need code to be very performant integer constants may be the way to go</p>
+<pre><code class="language-java">public class Operator {
+    public static final int ADD = 1;
+    public static final int SUBTRACT = 2;
+    public static final int MULTIPLY = 3;
+    public static final int DIVIDE = 4;
+}
+</code></pre>
+</li>
+<li>
+<p>Use Enums because</p>
+<ul>
+<li>Are type-safe, so you can only use valid enum types</li>
+<li>Provide better code readability</li>
+<li>Can implement interfaces</li>
+<li>Support polymorphic behavior</li>
+<li>In some really trivial cases, Proguard can optimize Enums into integer constants for you [<a href="https://www.guardsquare.com/en/proguard/manual/optimizations">Ref Link</a>]</li>
+<li>Performance difference rarely makes a difference.</li>
+</ul>
+<pre><code class="language-java">public enum Operators {
+    Add, Subtract, Multiply, Divide
+}
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>The string resource <code>android.R.string.yes</code> doesnot yield string &quot;Yes&quot; instead it yields &quot;Ok&quot;. Similarly the string resource <code>android.R.string.no</code> doesnot yield string &quot;No&quot; instead it yields &quot;Cancel&quot; [<a href="https://twitter.com/mandybess/status/971901727711535105">Ref Link</a>]</p>
+<p><img src="img/android_str_mismatch.jpg" alt="string resource" /></p>
+</li>
+<li>
+<p>Don’t want generated files in your AS search results? Go to <code>Preferences -&gt; File Types -&gt; Ignore files and folders</code> and add the pattern to ignore - e.g. <code>*.dex;*.class;</code> [<a href="https://twitter.com/marianeum/status/1021385021695852544">Ref Link</a>]</p>
+</li>
+<li>
+<p>If you uncheck “Suspend” and check “Evaluate and Log” in breakpoint menu, the breakpoint will print evaluated statement into the uncluttered “Console” window. No need for recompile due to added Log.d statements anymore [<a href="https://twitter.com/jernejv/status/1021456131925979136">Ref Link</a>]</p>
+<p><img src="img/breakpoint_logs.jpg" alt="Breakpoint Logs" /></p>
+</li>
+<li>
+<p>To measure how long a method took to execute, you can use <code>TimingLogger</code> class. [<a href="https://developer.android.com/reference/android/util/TimingLogger">Ref Link</a>]</p>
+<ul>
+<li>Typical Usage
+<pre><code class="language-java">TimingLogger timings = new TimingLogger(TAG, &quot;methodA&quot;);
+// ... do some work A ...
+timings.addSplit(&quot;work A&quot;);
+// ... do some work B ...
+timings.addSplit(&quot;work B&quot;);
+// ... do some work C ...
+timings.addSplit(&quot;work C&quot;);
+timings.dumpToLog();
+</code></pre>
+</li>
+<li>Output
+<pre><code>D/TAG     ( 3459): methodA: begin
+D/TAG     ( 3459): methodA:      9 ms, work A
+D/TAG     ( 3459): methodA:      1 ms, work B
+D/TAG     ( 3459): methodA:      6 ms, work C
+D/TAG     ( 3459): methodA: end, 16 ms
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>If you're working with Android Things and you don't have an extrenal screen for your device, install <a href="https://github.com/Genymobile/scrcpy">scrcpy</a> and use it to see what's going on your Android IoT device. It works a charm over wireless adb. [<a href="https://twitter.com/Tunji_D/status/1019985858575978497">Ref Link</a>]</p>
+</li>
+<li>
+<p>Android Studio has this weird behaviour that it allows to edit its default code style, which leads to a weird side-effect. If you open your pre-setup project(with set codestyle and copyright configs) in Android Studio it will delete all pre-setup codestyle and copyright profile in this project. This is every much evident if you checked in your configs into git for sharing purpose, which is lost immediately as soon as you open the project</p>
+<pre><code class="language-bash">deleted:    .idea/codeStyles/Project.xml
+deleted:    .idea/codeStyles/codeStyleConfig.xml
+deleted:    .idea/copyright/profiles_settings.xml
+deleted:    .idea/copyright/copyright.xml
+</code></pre>
+<p>To fix that please follow along as below: [All thanks to <a href="https://twitter.com/tasomaniac">Said Tahsin Dane</a> for the solution]</p>
+<ul>
+<li>
+<p>We first need to verify that your <code>Default</code> codestyle isn't modified. To check that please open Android Studio with any project except your pre-setup(with set codestyle and copyright configs) project. Then navigate to <code>Preferences&gt;Edior&gt;Codestyle</code> and check if your code scheme has <code>Default</code> in <strong>BLUE</strong> color (this means it is modified).</p>
+<p><img src="img/modified_default.png" alt="modified_default" /></p>
+</li>
+<li>
+<p>However if it is not colored <strong>BLUE</strong>, you are good and you can go ahead to open your pre-setup(with set codestyle and copyright configs) project and everything should be pre-setup for you.</p>
+</li>
+<li>
+<p>If it is modified (colored <strong>BLUE</strong>), then click on the cog icon and select <code>Restore Default</code></p>
+<p><img src="img/restore_default.png" alt="restore_default" /></p>
+</li>
+<li>
+<p>After you hit that option, simply accept the change</p>
+<p><img src="img/accept_change.png" alt="accept_change" /></p>
+</li>
+<li>
+<p>Once done, you will see your Default is no more colored <strong>BLUE</strong> or modified, which means you are good</p>
+<p><img src="img/unmodified_default.png" alt="unmodified_default" /></p>
+</li>
+<li>
+<p>Now simply go ahead and open your pre-setup(with set codestyle and copyright configs) project and everything should be pre-setup for you.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>If you add <code>android:sharedUserId</code> to an already published app, the app data will be cleared for all users that install your upgrade (because Android changes the process). So if you ever intend to use it, you must add it before publishing your app [<a href="https://twitter.com/molsjeroen/status/1022840282012966912">Ref Link</a>]</p>
+</li>
+<li>
+<p>When opening up methods for testing, use otherwise to still hide it from code complete.[<a href="https://twitter.com/molsjeroen/status/996684391891038208">Tweet Link</a>, <a href="https://plugins.jetbrains.com/plugin/9952-visiblefortesting">Ref Link</a>]</p>
+<p><img src="img/making_methods_visible_for_testing.jpg" alt="making_methods_visible_for_testing" /></p>
+</li>
+<li>
+<p>You can group your recent Android Studio projects, and add icons to them [<a href="https://twitter.com/Flashmasterdash/status/996309558120402954/photo/1">Ref Link</a>]</p>
+<p><img src="img/group_recent_projects.jpg" alt="group_recent_projects" /></p>
+</li>
+<li>
+<p>Only build a single configuration to speed up debug builds. [<a href="https://twitter.com/molsjeroen/status/973615936279281666">Ref Link</a>]</p>
+<p><img src="img/build_single_config.jpg" alt="build_single_config" /></p>
+</li>
+<li>
+<p>Avoid the annoying jump to Design tab while editing XML. Prefer XML editor under Settings [<a href="https://twitter.com/rakshakhegde/status/907913497115160576">Ref Link</a>]</p>
+<p><img src="img/set_xml_as_preferred.jpg" alt="set_xml_as_preferred" /></p>
+</li>
+<li>
+<p>Reduce installed app size with <code>android:extractNativeLibs=&quot;false&quot;</code> in <application> [<a href="https://twitter.com/molsjeroen/status/819457612005736448">Tweet Link</a>, <a href="https://medium.com/@wkalicinski/smallerapk-part-8-native-libraries-open-from-apk-fc22713861ff">Ref Link</a>]</p>
+<img src="img/extract_native_libs.jpg" width="600"/>
+</li>
+<li>
+<p>Run a single unit test from the command line using the <code>--tests</code> option e.g: <code>./gradlew testDebugUnitTest --tests &quot;*.MainPresenterTest&quot;</code> . Use <code>*</code> to avoid typing the entire package name. [<a href="https://twitter.com/molsjeroen/status/976469806068256769">Ref Link</a>]</p>
+</li>
+<li>
+<p>Improve Android Studio code inspections with Thread annotations [<a href="https://twitter.com/molsjeroen/status/989447750176706560">Tweet Link</a>, <a href="https://developer.android.com/studio/write/annotations#thread-annotations">Ref Link</a>]</p>
+<img src="img/thread_annotations.jpg" width="600"/>
+</li>
+<li>
+<p>Use <code>adb</code> to put a phone into doze mode for testing [<a href="https://twitter.com/molsjeroen/status/872007858300362752">Tweet Link</a>, <a href="https://developer.android.com/training/monitoring-device-state/doze-standby#testing_doze">Ref Link</a>]</p>
+<img src="img/testing_doze_mode.jpg" width="600"/>
+</li>
+<li>
+<p>Get faster gradle builds by only using one resource configuration for your development builds [<a href="https://developer.android.com/studio/build/optimize-your-build#reduce_resources">Ref Link</a>]</p>
+<pre><code>android {
+  ...
+  productFlavors {
+    dev {
+      ...
+      // The following configuration limits the &quot;dev&quot; flavor to using
+      // English stringresources and xxhdpi screen-density resources.
+      resConfigs &quot;en&quot;, &quot;xxhdpi&quot;
+    }
+    ...
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Use <code>areNotificationsEnabled()</code> from <code>NotificationManagerCompat</code> to detect whether your users blocked your Notifications [<a href="https://twitter.com/tasomaniac/status/851888395152392193">Tweet Link</a>, <a href="https://developer.android.com/reference/androidx/core/app/NotificationManagerCompat.html#areNotificationsEnabled()">Ref Link</a>]</p>
+<img src="img/are_notification_enabled.jpg" height="400"/>
+</li>
+<li>
+<p><code>Activity.runOnUiThread</code> is just a convenient wrapper of <code>Handler.post</code>; don't pass around <code>Activity</code> just so you can use it. [<a href="https://twitter.com/devunwired/status/193385939115053056">Ref Link</a>]</p>
+</li>
+<li>
+<p>Define your interfaces with the highest possible option that will suffice. Don't use an <code>Activity</code> when a Context will do. [<a href="https://twitter.com/devunwired/status/193102514047041538">Ref Link</a>]</p>
+</li>
+<li>
+<p>If you're not building a replacement for the dialer, use <code>ACTION_DIAL</code> <em>not</em> <code>ACTION_CALL</code> to initiate a call. [<a href="https://twitter.com/kdarty/status/20971150330">Ref Link</a>]</p>
+</li>
+<li>
+<p>Specifying <code>buildToolsVersion</code> in your build.gradle files is optional when using Android plugin 3.0.0 or later. By default the plugin uses the minimum version of the build tools required by the version of the plugin you're using. [<a href="https://twitter.com/nisrulz/status/976730548084211718">Tweet Link</a>, <a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.LibraryExtension.html#com.android.build.gradle.LibraryExtension:buildToolsVersion">Ref Link</a>]</p>
+<p><img src="img/dont_specify_buildtoolsversion.jpg" alt="dont_specify_buildtoolsversion" /></p>
+</li>
+<li>
+<p>You can insert variables into AndroidManifest defined in <code>build.gradle</code> [<a href="https://twitter.com/jabbar_jigariyo/status/910754663925899264">Tweet Link</a>, <a href="https://developer.android.com/studio/build/manifest-build-variables">Ref Link</a>]</p>
+<p><img src="img/inject_vars_in_manifest.png" alt="inject_vars_in_manifest" /></p>
+</li>
+<li>
+<p>Requesting updates from a system service may drain battery, so register for updates in onResume and unregister in onPause. [<a href="https://twitter.com/nisrulz/status/818356887041118208">Ref Link</a>]</p>
+</li>
+<li>
+<p>Hierarchy Viewer won’t run on prod devices, if however u want to run it then follow below steps [<a href="https://twitter.com/nisrulz/status/800016465805983744">Tweet Link</a>, <a href="https://developer.android.com/studio/profile/hierarchy-viewer#setup">Ref Link</a>]</p>
+<p><img src="img/running_hierarchy_viewer.jpg" alt="running_hierarchy_viewer" /></p>
+</li>
+<li>
+<p>Variable and <code>init</code> block declaration order in Kotlin, actually matters :) if you want to use a variable inside init {} initialize it before it.</p>
+</li>
+<li>
+<p>When comparing intents it does <em>not</em> compare any extra data included in the intents [<a href="https://twitter.com/scottyab/status/388393250286870529">Tweet Link</a>, <a href="https://developer.android.com/reference/android/content/Intent#filterEquals(android.content.Intent)">Ref Link</a>]</p>
+</li>
+<li>
+<p>To show a ringtone picker to the user, use the <code>ACTION_RINGTONE_PICKER</code> intent to launch the picker as a subactivity. [<a href="https://twitter.com/pareshmayani/status/359390161399853056">Ref Link</a>]</p>
+</li>
+<li>
+<p>Want to remove focusState on an item in GridView? Try: <code>android:listSelector=&quot;#00000000&quot;</code> [<a href="https://twitter.com/BSkretting/status/176655811899166721">Ref Link</a>]</p>
+</li>
+<li>
+<p>You can generate the <strong>proguard</strong> keep rules via the APK Analyzer inside Android Studio. [<a href="https://medium.com/androiddevelopers/troubleshooting-proguard-issues-on-android-bce9de4f8a74">Ref Link</a>]</p>
+<p><img src="img/proguard_rules_apk_analyzer.gif" alt="proguard_rules_apk_analyzer" /></p>
+</li>
+<li>
+<p>When viewing an Android Manifest, there is a tab at the bottom that allows you to see the merged manifest. Use this to inspect the merged manifest and find conflicts. [<a href="https://developer.android.com/studio/build/manifest-merge#inspect_the_merged_manifest_and_find_conflicts">Ref Link</a>]</p>
+<p><img src="img/manifest-merged.png" alt="manifest-merged" /></p>
+</li>
+<li>
+<p>In the APK analyzer in Android Studio, classes/members listed in italic are only references, not definitions. If it's in italics, it's defined in another DEX file (or the SDK). [<a href="https://twitter.com/jebstuart/status/1093502138943197191">Ref Link</a>]</p>
+<p><img src="img/apk_analyzer_ref.jpeg" alt="apk_analyzer_ref" /></p>
+</li>
+<li>
+<p>To be able to write multiline Todo comments, simply indent by 1 tab from second line onwards. [<a href="https://twitter.com/Saketme/status/1156667576946253825">Ref Link</a>]</p>
+<p><img src="img/multiline_todo_comment.png" alt="multiline_todo_comment" /></p>
+</li>
+<li>
+<p>You can get rid of a lot of noise in the Logcat, by Right Clicking a selected text &gt; &quot;Fold lines like this&quot; option!. [<a href="https://twitter.com/nisrulz/status/1197253137683357698">Ref Link</a>]</p>
+<p><img src="img/fold_line_like_this.gif" alt="fold_line_like_this" /></p>
+</li>
+<li>
+<p>There is a quick way to surround your layout with a Linear Layout via using a Live Template. You can create one called <code>wrapll</code> by setting it up [<a href="https://twitter.com/nisrulz/status/1197666095886454789">Ref Link</a>]</p>
+<p><img src="img/live_template_wrapll_2.png" alt="live_template_wrapll_2" />
+<img src="img/live_template_wrapll_3.png" alt="live_template_wrapll_3" /></p>
+<p>...and use it as below</p>
+<p><img src="img/live_template_wrapll_1.gif" alt="live_template_wrapll_1" /></p>
+<blockquote>
+<p>You can create more based on your usecase :smile:</p>
+</blockquote>
+</li>
+<li>
+<p>You know how you can group ur code inside IDEs such as Android Studio and IntelliJ IDEA by using the <code>region</code> and <code>endregion</code> comment blocks. Turns out you can use the same trick to group inside XML files such as for layout, strings, styles, colors xml files [<a href="https://twitter.com/nisrulz/status/1271954906015023104">Ref Tweet</a>]</p>
+<p><img src="img/region_cmt.gif" alt="live_template_wrapll_1" /></p>
+</li>
+<li>
+<p>How many of you have had issue with special characters (&amp;,&lt;, &gt;, etc) in your strings.xml file? Did you know there is an action called &quot;Encode XML/HTML Special Characters&quot; inside Android Studio that can escape those characters for you! [<a href="https://twitter.com/nisrulz/status/1288498430525005824">Ref Tweet</a>]</p>
+<video width="640" controls>
+      <source src="img/encode_special_1.mp4" type="video/mp4">
+  </video>
+<ul>
+<li>
+<p>The option is also avaliable under <strong>Edit menu</strong> drop down</p>
+<p><img src="img/encode_special_2.png" alt="encode_special_2" /></p>
+</li>
+<li>
+<p>In case the issue is in just one line, you can also just <code>ALT+ENTER</code> to get contextual fix.</p>
+<p><img src="img/encode_special_3.png" alt="encode_special_3" /></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#tips-regarding-uiux" id="tips-regarding-uiux">Tips regarding UI/UX</a></h1>
+<ul>
+<li>
+<p><strong>Motion</strong></p>
+<ul>
+<li>Material Design uses real-world metaphors as its foundation. Objects in the real world don't move linearly, they move in curved paths and accelerate and decelerate according to the motion's properties.</li>
+<li>As such, motion should also use such properties and animate objects so that the motion feels natural rather than forced</li>
+<li>For example, a car leaving the screen in a movie starts off slowly, then accelerates till it's out of the frame. Similarly, views should be interpolated using classes like AccelerateInterpolator, FastOutSlowInInterpolator, etc. <a href="https://developer.android.com/reference/android/animation/TimeInterpolator.html">[More Info]</a></li>
+<li>When changing the visibilities of views, if you add <code>android:animateLayoutChanges=&quot;true&quot;</code> to the parent, you get a nice little animation for free. [<a href="https://proandroiddev.com/the-little-secret-of-android-animatelayoutchanges-e4caab2fddec">Ref Link</a>]</li>
+</ul>
+</li>
+<li>
+<p><strong>Typography</strong></p>
+<ul>
+<li>While custom typefaces can be used for branding, it is essential to stick to Roboto and Noto if possible, especially for body text, due to their clarity and optimistic nature.</li>
+<li>Roboto covers Latin, Greek and Cyrillic extended scripts, with Noto filling in for other language scripts <a href="https://material.google.com/style/typography.html#">[More Info]</a></li>
+<li>Weight balancing is an important aspect of typography, the fundamental concept of which is that the larger a typeface is, the less its weight should be so that it doesn't appear too thick and balances its weight with smaller typefaces of higher weights</li>
+<li>Typography should align to a 4dp baseline grid, and maintain a minimum contrast ratio of 4.5:1 based on luminance values, with a recommended ratio being 7:1.</li>
+<li>The ideal reading length for large blocks of text is 40 to 60 characters per line. Anything less is too narrow and anything more is too wide.</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Icons</strong></p>
+<ul>
+<li>Icons should be designed at 48dp, with 1dp edges, which equates to
+<ul>
+<li>48px by 48px at mdpi</li>
+<li>72px by 72px at hdpi</li>
+<li>96px by 96px at xhdpi</li>
+<li>144px by 144px at xxhdpi</li>
+<li>192px by 192px at xxxhdpi</li>
+</ul>
+</li>
+<li>An additional icon of 512px by 512px should be designed for use on Google Play</li>
+<li>Material icons, in addition to the base icon, should contain the following important elements
+<ul>
+<li>1dp tinted edge at the top</li>
+<li>1dp shaded edge at the bottom</li>
+<li>Contact shadow - a soft shadow around all edges of raised elements</li>
+<li>Finish - a soft tint to provide surface lighting, fading from upper life to lower right <a href="https://material.google.com/style/icons.html#icons-product-icons">[More Info]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Ripples</strong></p>
+<ul>
+<li>
+<p>When implementing Ripple Effect use <code>?attr/selectableItemBackground</code> instead of <code>?android:attr</code> (<a href="https://twitter.com/pareshmayani/status/772061422729637893">Ref</a>)</p>
+</li>
+<li>
+<p>When implementing Ripples contained within the view like Button, use (<a href="https://twitter.com/pareshmayani/status/772268888931176448">Ref</a>)</p>
+<pre><code class="language-xml">android:background=&quot;?attr/selectableItemBackground&quot;
+</code></pre>
+</li>
+<li>
+<p>When implementing Ripples that extend beyond the view's bounds like ImageView: (<a href="https://twitter.com/pareshmayani/status/772269413290520576">Ref</a>)</p>
+<pre><code class="language-xml">?attr/selectableItemBackgroundBorderless
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>Other Points to Note</strong>
+<ul>
+<li>Views should be aligned to Material Design's 8dp baseline grid and the keylines when possible. This gives the UI a sense of structure and hierarchy. <a href="https://material.google.com/layout/metrics-keylines.html">[More Info]</a></li>
+<li>If you plan on keeping a reference to any ViewGroup (LinearLayout, FrameLayout, RelativeLayout, etc.), and you don’t want to use any methods specific to this particular type of Layout, keep it as a ViewGroup object. <a href="https://android.jlelse.eu/android-pro-tip-1-443f423b4de6#.pklc9djmc">[More Info]</a></li>
+<li>While picking an accent color (if the brand already has one), pick a color complementary to the primary color so that the contrast is high enough</li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#tips-if-you-use-kotlin" id="tips-if-you-use-kotlin">Tips if you use Kotlin</a></h1>
+<ul>
+<li>
+<p><strong>Checkout <a href="https://fabiomsr.github.io/from-java-to-kotlin/">From Java to Kotlin</a></strong></p>
+<p>Cheatsheet when you come from Java to Kotlin. Very nice resource to compare the two languages.</p>
+</li>
+<li>
+<p><strong>Checkout <a href="https://android.github.io/kotlin-guides/index.html">Kotlin Style Guide</a> by Google</strong></p>
+</li>
+</ul>
+<h1><a class="header" href="#misc" id="misc">Misc</a></h1>
+<h3><a class="header" href="#other-resources" id="other-resources"><strong><em>Other Resources</em></strong></a></h3>
+<ul>
+<li>
+<p><a href="https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md">Adhere to the coding guidelines</a></p>
+</li>
+<li>
+<p><a href="https://dl.google.com/dl/android/maven2/index.html">Google's Maven Repository</a></p>
+</li>
+<li>
+<p><strong>Listen to podcasts</strong></p>
+<ol>
+<li><a href="http://fragmentedpodcast.com/">Fragmented</a></li>
+<li><a href="https://androidbackstage.blogspot.in/">Android Developers Backstage</a></li>
+</ol>
+<p>There are others too, but the above two are the popular ones, you can lookup more using tag <code>android</code> on sites offering Podcast Services.</p>
+<p>P.S : I use <a href="https://player.fm/">Player.fm</a> to listen to these podcasts. They even have an <a href="https://play.google.com/store/apps/details?id=fm.player&amp;hl=en">Android Client</a>, all for FREE.</p>
+</li>
+<li>
+<p><strong>Checkout <a href="https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed">Android Dialogs</a></strong>
+Short byte sized android interview videos with experts.</p>
+</li>
+<li>
+<p><strong>Checkout <a href="https://www.udacity.com/courses/android">Google's Udacity Android courses</a></strong></p>
+<p>Free courses and (paid) Nanodegree programs aimed at beginners up to advanced Android developers taught by professionals.</p>
+</li>
+<li>
+<p><strong>Checkout <a href="https://guides.codepath.com/android">CodePath Android Cliffnotes</a></strong></p>
+<p>It is the central crowdsourced resource for complete and up-to-date practical Android developer guides for any topic.</p>
+</li>
+<li>
+<p><strong><a href="http://jeroenmols.com/blog/2016/08/03/copyright/">Take care about copyright</a></strong></p>
+</li>
+<li>
+<p><strong>Checkout new android libraries</strong></p>
+<p><a href="https://android-arsenal.com/">Android Arsenal</a> - Android developer portal with tools, libraries, and apps</p>
+</li>
+<li>
+<p><strong>Checkout android example apps</strong></p>
+<ul>
+<li><a href="https://github.com/nisrulz/android-examples">Android Examples</a> - Simple basic isolated apps, for budding android devs.</li>
+<li><a href="https://github.com/googlesamples">Google Samples</a> - Various sample apps provided by Google</li>
+<li><a href="https://codelabs.developers.google.com/?cat=Android">Google Android Codelabs</a></li>
+<li><a href="https://codelabs.developers.google.com/?cat=Android">Google Android Codelabs</a></li>
+<li><a href="https://github.com/artem-zinnatullin/qualitymatters">QualityMatters</a></li>
+<li><a href="https://github.com/googlesamples/android-testing">Android-Testing</a></li>
+<li><a href="https://github.com/chiuki/espresso-samples">Espresso-Samples</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Follow on Twitter</strong></p>
+<ul>
+<li><a href="https://twitter.com/search?q=%23AndroidDev">#AndroidDev</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Create a List on Twitter</strong></p>
+<ul>
+<li><a href="https://twitter.com/nisrulz/lists/android">Android List</a></li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://www.amazon.ca/Effective-Java-2nd-Joshua-Bloch/dp/0321356683">Read the Effective Java by Joshua Bloch</a></strong></p>
+<ul>
+<li><a href="https://github.com/HugoMatilla/Effective-JAVA-Summary">Cheatsheet/Summary</a></li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://caster.io/">Subscribe to Caster.io</a></strong></p>
+<p>Bite-sized Android development videos</p>
+</li>
+<li>
+<p><strong>Bookmark these sites for staying upto date</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/user/androiddevelopers/videos">Android Developers - Youtube Channel</a></li>
+<li><a href="http://androidniceties.tumblr.com/">Android Niceties - UI Showcase</a></li>
+<li><a href="https://material.google.com/">Material Design Specs</a></li>
+<li><a href="https://material.io/components/">Material Components</a></li>
+<li><a href="https://material.io/">Everything About Material Design</a></li>
+<li><a href="https://developer.android.com/about/dashboards/index.html#Platform">Platform Version Distribution</a></li>
+<li><a href="https://sites.google.com/a/android.com/tools/recent">Android Studio Release Notes</a></li>
+<li><a href="https://android-developers.blogspot.in/">Android Developers Blog</a></li>
+<li><a href="https://www.reddit.com/r/androiddev">AndroidDev-Reddit</a></li>
+<li><a href="https://github.com/trending?l=java&amp;since=weekly">Github Trending Java Projects</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/android">Stackoverflow-Android tag</a></li>
+<li><a href="https://developer.android.com/topic/libraries/support-library/revisions.html">Support Library History</a></li>
+<li><a href="https://androidstudygroup.github.io/conferences/">Android Conferences</a></li>
+<li><a href="https://developer.android.com/reference/packages.html">Android Dev Docs</a></li>
+<li><a href="http://www.material.uplabs.com/">Material Up - DesignShowcase</a></li>
+<li><a href="https://dribbble.com/tags/material_design">Dribbble - MaterialDeisgnShowcase</a></li>
+<li><a href="https://github.com/aritraroy/UltimateAndroidReference">UltimateAndroidReference</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Bookmark these sites for keeping track of Android Support Libs(AOSP AndroidX)</strong></p>
+<ul>
+<li><a href="https://issuetracker.google.com/issues/new?component=396204&amp;template=1082185">File a bug/issue for Android KTX</a></li>
+<li><a href="https://android.googlesource.com/platform/frameworks/support/">Info regarding sending a PR to AOSP AndroidX Libs</a></li>
+<li><a href="https://android-review.googlesource.com/q/project:platform%252Fframeworks%252Fsupport+branch:androidx-master-dev">Stuff worked on for AOSP AndroidX</a></li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://github.com/ravidsrk/android-testing-guide">Checkout the Testing guide</a></strong></p>
+</li>
+<li>
+<p><strong>Use freely available mockable api points</strong></p>
+<ul>
+<li><a href="https://github.com/clafonta/Mockey">Mockey</a> - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.</li>
+<li><a href="http://jsonplaceholder.typicode.com/">JSON Placeholder</a> - Fake Online REST API for Testing and Prototyping</li>
+<li><a href="http://apistudio.io/">API Studio</a> - a playground for API developers</li>
+<li><a href="http://www.mocky.io/">Mocky</a> - Mock your HTTP responses to test your REST API</li>
+<li><a href="http://mockbin.com">Mockbin</a> - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests &amp; responses between libraries, sockets and APIs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Subscribe to newsletters to stay upto date</strong></p>
+<ul>
+<li><a href="http://androidweekly.net/">Android Weekly</a> - Free newsletter that helps you to stay cutting-edge with your Android Development</li>
+<li><a href="https://www.androiddevdigest.com/">AndroidDevDigest</a> - A Handcrafted Weekly #AndroidDev Newsletter</li>
+<li><a href="https://androidsweets.ongoodbits.com/">Infinium #AndroidSweets</a> - Fresh news from Droid zone</li>
+<li><a href="http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&amp;id=93b2272cb6">Kotlin Weekly</a> - Free newsletter to stay uptodate with Kotlin Development</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://plus.google.com/+ElliottHughes/posts/U3B6H3Sejvv">ADB/Fastboot Tools made available as a separate package by google</a>, download latest version for</strong></p>
+<ul>
+<li><a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">MacOSX</a></li>
+<li><a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">Linux</a></li>
+<li><a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip">Windows</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Some other awesome utility tools</strong></p>
+<ul>
+<li><a href="https://inloop.github.io/svg2android/">Android SVG to VectorDrawable</a> - One VectorDrawable to rule all screen densities</li>
+<li><a href="https://inloop.github.io/sqlite-viewer/">SQLite Viewer</a> - View sqlite file online</li>
+<li><a href="https://inloop.github.io/shadow4android/">Android 9-patch shadow generator</a> - Tool that makes fully customizable shadows possible</li>
+<li><a href="https://inloop.github.io/apk-method-count/">APK method count</a> - Tool that outputs per-package method counts</li>
+<li><a href="https://www.materialpalette.com/">Material Palette</a> - Easily generate the color pallete based on material design</li>
+<li><a href="https://material.io/color/#!/">Color Tool</a> - Create, share and apply color palettes to your UI</li>
+<li><a href="https://javadoc-themer.firebaseapp.com/">Javadoc Themer</a> - Give your boooring javadocs a splash of colors!</li>
+<li><a href="http://www.methodscount.com/">Method Count</a> - Use this tool to avoid the dreaded 65K method limit of the DEX file format!</li>
+<li><a href="https://gradleplease.appspot.com/">Gradle, please</a> - Lookup dependency reference name to include as your gradle dependencies</li>
+<li><a href="http://www.jsonschema2pojo.org/">jsonschema2pojo</a> - Generate Plain Old Java Objects from JSON or JSON-Schema</li>
+<li><a href="http://romannurik.github.io/AndroidAssetStudio/">Android Asset Studio</a> - A web-based set of tools for generating graphics and other assets that would eventually be in an Android application's res/ directory.</li>
+<li><a href="https://developer.android.com/distribute/tools/promote/device-art.html">Device Art Generator</a> - Quickly wrap app screenshots in device artwork</li>
+<li><a href="https://translate.google.com/toolkit/list?hl=en#translations/">Google Translator Toolkit</a> - Translate strings.xml files to any language and download as XML</li>
+<li><a href="http://jsonviewer.stack.hu/">JSONViewer</a> - Awesome JSON formatter</li>
+<li><a href="https://alexjlockwood.github.io/ShapeShifter/">ShapeShifter</a> - SVG path morphing animation editor.</li>
+<li><a href="https://app-privacy-policy-generator.firebaseapp.com/">App Privacy Policy Generator</a> - Generate a generic privacy policy for your app for the playstore.</li>
+<li><a href="https://github.com/Genymobile/gnirehtet">gnirehtet</a> - Reverse tethering for Android.</li>
+<li><a href="https://adapticon.tooo.io/">Adaptive Icons</a> - Try out the new Adaptive Icons in your browser</li>
+<li><a href="http://androidstarters.com/">Android Starters</a> - Handcrafted starter projects, optimized for simplicity and ease of use.</li>
+<li><a href="https://github.com/AzimoLabs/Language-Switcher-Tile">Language Switcher Tile</a> - An android plugin that allows you to easily change your device language.</li>
+<li><a href="https://fbflipper.com/">Flipper</a> - Flipper is a platform for debugging mobile apps on iOS and Android. Visualize, inspect, and control your apps from a simple desktop interface.</li>
+</ul>
+</li>
+<li>
+<p><strong>Awesome android libraries</strong></p>
+<ul>
+<li><a href="https://github.com/pushtorefresh/storio">StorIO</a> - Beautiful API for SQLiteDatabase and ContentResolver</li>
+<li><a href="https://github.com/square/retrofit">Retrofit</a> - Type-safe HTTP client for Android and Java by Square, Inc.</li>
+<li><a href="https://github.com/square/picasso">Picasso</a> - A powerful image downloading and caching library for Android</li>
+<li><a href="https://github.com/square/leakcanary">LeakCanary</a> - A memory leak detection library for Android and Java.</li>
+<li><a href="https://github.com/daimajia/AndroidViewAnimations">AndroidViewAnimations</a> - Cute view animation collection.</li>
+<li><a href="https://github.com/chrisjenx/Calligraphy">Calligraphy</a> - Custom fonts in Android the easy way.</li>
+<li><a href="https://github.com/Tapadoo/Alerter">Alerter</a> - Android Alerting Library</li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#extra--android-libraries-built-by-me" id="extra--android-libraries-built-by-me">Extra : Android Libraries built by me</a></h1>
+<ul>
+<li><a href="https://github.com/nisrulz/easydeviceinfo">EasyDeviceInfo</a> - Enabling device information to be at android developers hand like a piece of cake!</li>
+<li><a href="https://github.com/nisrulz/Sensey">Sensey</a> - Android library to make detecting gestures easy</li>
+<li><a href="https://github.com/nisrulz/validatetor">ValidateTor</a> - Android library for fast and simple string validation.</li>
+<li><a href="https://github.com/nisrulz/PackageHunter">PackageHunter</a> - Android library to hunt down package information</li>
+<li><a href="https://github.com/nisrulz/zentone">Zentone</a> - Easily generate audio tone in android</li>
+<li><a href="https://github.com/nisrulz/recyclerviewhelper">RecyclerViewHelper</a> - RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.</li>
+<li><a href="https://github.com/nisrulz/android-utils">android-utils</a> - Android Library facilitating some very common functionalities in the form of utility classes for Android.</li>
+<li><a href="https://github.com/nisrulz/lantern">Lantern</a> - Android library handling flashlight for camera and camera2 api. Added support for handling display/screen light.</li>
+<li><a href="https://github.com/nisrulz/stackedhorizontalprogressbar">StackedHorizontalProgressbar</a> - Android Library to implement stacked horizontal progressbar</li>
+<li><a href="https://github.com/nisrulz/qreader">QREader</a> - A library that uses google's mobile vision api and simplifies the QR code reading process</li>
+<li><a href="https://github.com/nisrulz/screenshott">ScreenShott</a> - Simple library to take a screenshot of the device screen, programmatically!</li>
+<li><a href="https://github.com/nisrulz/EvTrack">EvTrack</a> - Android library to make event and exception tracking easy</li>
+<li><a href="https://github.com/nisrulz/OptimusHTTP">OptimusHTTP</a> - Android library that simplifies networking in android via an async http client</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>

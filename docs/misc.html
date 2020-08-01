@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Misc - Android Tips &amp; Tricks</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Mastering Android Studio</li><li><ol class="section"><li class="chapter-item expanded "><a href="code-faster-using-keyboard.html"><strong aria-hidden="true">2.1.</strong> Code faster by using keyboard shortcuts</a></li><li class="chapter-item expanded "><a href="use-plugins-in-as.html"><strong aria-hidden="true">2.2.</strong> Use plugins to become more efficient</a></li><li class="chapter-item expanded "><a href="use-code-completion-in-as.html"><strong aria-hidden="true">2.3.</strong> Speed code using code-completion</a></li><li class="chapter-item expanded "><a href="configure-as.html"><strong aria-hidden="true">2.4.</strong> Configuring Android Studio</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> Playing in the Terminal</li><li><ol class="section"><li class="chapter-item expanded "><a href="adb-shell.html"><strong aria-hidden="true">3.1.</strong> Get used to ADB Shell</a></li><li class="chapter-item expanded "><a href="adb-aliases.html"><strong aria-hidden="true">3.2.</strong> Setup ADB Aliases</a></li><li class="chapter-item expanded "><a href="scrcpy.html"><strong aria-hidden="true">3.3.</strong> scrcpy: Control/Share your Android device</a></li></ol></li><li class="chapter-item expanded "><a href="make-better-choices-while-coding.html"><strong aria-hidden="true">4.</strong> Make better choices while coding</a></li><li class="chapter-item expanded "><a href="tips-regarding-uiux.html"><strong aria-hidden="true">5.</strong> Tips regarding UI/UX</a></li><li class="chapter-item expanded "><a href="tips-if-you-use-kotlin.html"><strong aria-hidden="true">6.</strong> Tips if you use Kotlin</a></li><li class="chapter-item expanded "><a href="misc.html" class="active"><strong aria-hidden="true">7.</strong> Misc</a></li><li class="chapter-item expanded "><a href="extra-android-libraries-built-by-me.html"><strong aria-hidden="true">8.</strong> Extra : Android Libraries built by me</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Android Tips &amp; Tricks</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#misc" id="misc">Misc</a></h1>
+<h3><a class="header" href="#other-resources" id="other-resources"><strong><em>Other Resources</em></strong></a></h3>
+<ul>
+<li>
+<p><a href="https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md">Adhere to the coding guidelines</a></p>
+</li>
+<li>
+<p><a href="https://dl.google.com/dl/android/maven2/index.html">Google's Maven Repository</a></p>
+</li>
+<li>
+<p><strong>Listen to podcasts</strong></p>
+<ol>
+<li><a href="http://fragmentedpodcast.com/">Fragmented</a></li>
+<li><a href="https://androidbackstage.blogspot.in/">Android Developers Backstage</a></li>
+</ol>
+<p>There are others too, but the above two are the popular ones, you can lookup more using tag <code>android</code> on sites offering Podcast Services.</p>
+<p>P.S : I use <a href="https://player.fm/">Player.fm</a> to listen to these podcasts. They even have an <a href="https://play.google.com/store/apps/details?id=fm.player&amp;hl=en">Android Client</a>, all for FREE.</p>
+</li>
+<li>
+<p><strong>Checkout <a href="https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed">Android Dialogs</a></strong>
+Short byte sized android interview videos with experts.</p>
+</li>
+<li>
+<p><strong>Checkout <a href="https://www.udacity.com/courses/android">Google's Udacity Android courses</a></strong></p>
+<p>Free courses and (paid) Nanodegree programs aimed at beginners up to advanced Android developers taught by professionals.</p>
+</li>
+<li>
+<p><strong>Checkout <a href="https://guides.codepath.com/android">CodePath Android Cliffnotes</a></strong></p>
+<p>It is the central crowdsourced resource for complete and up-to-date practical Android developer guides for any topic.</p>
+</li>
+<li>
+<p><strong><a href="http://jeroenmols.com/blog/2016/08/03/copyright/">Take care about copyright</a></strong></p>
+</li>
+<li>
+<p><strong>Checkout new android libraries</strong></p>
+<p><a href="https://android-arsenal.com/">Android Arsenal</a> - Android developer portal with tools, libraries, and apps</p>
+</li>
+<li>
+<p><strong>Checkout android example apps</strong></p>
+<ul>
+<li><a href="https://github.com/nisrulz/android-examples">Android Examples</a> - Simple basic isolated apps, for budding android devs.</li>
+<li><a href="https://github.com/googlesamples">Google Samples</a> - Various sample apps provided by Google</li>
+<li><a href="https://codelabs.developers.google.com/?cat=Android">Google Android Codelabs</a></li>
+<li><a href="https://codelabs.developers.google.com/?cat=Android">Google Android Codelabs</a></li>
+<li><a href="https://github.com/artem-zinnatullin/qualitymatters">QualityMatters</a></li>
+<li><a href="https://github.com/googlesamples/android-testing">Android-Testing</a></li>
+<li><a href="https://github.com/chiuki/espresso-samples">Espresso-Samples</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Follow on Twitter</strong></p>
+<ul>
+<li><a href="https://twitter.com/search?q=%23AndroidDev">#AndroidDev</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Create a List on Twitter</strong></p>
+<ul>
+<li><a href="https://twitter.com/nisrulz/lists/android">Android List</a></li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://www.amazon.ca/Effective-Java-2nd-Joshua-Bloch/dp/0321356683">Read the Effective Java by Joshua Bloch</a></strong></p>
+<ul>
+<li><a href="https://github.com/HugoMatilla/Effective-JAVA-Summary">Cheatsheet/Summary</a></li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://caster.io/">Subscribe to Caster.io</a></strong></p>
+<p>Bite-sized Android development videos</p>
+</li>
+<li>
+<p><strong>Bookmark these sites for staying upto date</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/user/androiddevelopers/videos">Android Developers - Youtube Channel</a></li>
+<li><a href="http://androidniceties.tumblr.com/">Android Niceties - UI Showcase</a></li>
+<li><a href="https://material.google.com/">Material Design Specs</a></li>
+<li><a href="https://material.io/components/">Material Components</a></li>
+<li><a href="https://material.io/">Everything About Material Design</a></li>
+<li><a href="https://developer.android.com/about/dashboards/index.html#Platform">Platform Version Distribution</a></li>
+<li><a href="https://sites.google.com/a/android.com/tools/recent">Android Studio Release Notes</a></li>
+<li><a href="https://android-developers.blogspot.in/">Android Developers Blog</a></li>
+<li><a href="https://www.reddit.com/r/androiddev">AndroidDev-Reddit</a></li>
+<li><a href="https://github.com/trending?l=java&amp;since=weekly">Github Trending Java Projects</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/android">Stackoverflow-Android tag</a></li>
+<li><a href="https://developer.android.com/topic/libraries/support-library/revisions.html">Support Library History</a></li>
+<li><a href="https://androidstudygroup.github.io/conferences/">Android Conferences</a></li>
+<li><a href="https://developer.android.com/reference/packages.html">Android Dev Docs</a></li>
+<li><a href="http://www.material.uplabs.com/">Material Up - DesignShowcase</a></li>
+<li><a href="https://dribbble.com/tags/material_design">Dribbble - MaterialDeisgnShowcase</a></li>
+<li><a href="https://github.com/aritraroy/UltimateAndroidReference">UltimateAndroidReference</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Bookmark these sites for keeping track of Android Support Libs(AOSP AndroidX)</strong></p>
+<ul>
+<li><a href="https://issuetracker.google.com/issues/new?component=396204&amp;template=1082185">File a bug/issue for Android KTX</a></li>
+<li><a href="https://android.googlesource.com/platform/frameworks/support/">Info regarding sending a PR to AOSP AndroidX Libs</a></li>
+<li><a href="https://android-review.googlesource.com/q/project:platform%252Fframeworks%252Fsupport+branch:androidx-master-dev">Stuff worked on for AOSP AndroidX</a></li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://github.com/ravidsrk/android-testing-guide">Checkout the Testing guide</a></strong></p>
+</li>
+<li>
+<p><strong>Use freely available mockable api points</strong></p>
+<ul>
+<li><a href="https://github.com/clafonta/Mockey">Mockey</a> - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.</li>
+<li><a href="http://jsonplaceholder.typicode.com/">JSON Placeholder</a> - Fake Online REST API for Testing and Prototyping</li>
+<li><a href="http://apistudio.io/">API Studio</a> - a playground for API developers</li>
+<li><a href="http://www.mocky.io/">Mocky</a> - Mock your HTTP responses to test your REST API</li>
+<li><a href="http://mockbin.com">Mockbin</a> - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests &amp; responses between libraries, sockets and APIs.</li>
+</ul>
+</li>
+<li>
+<p><strong>Subscribe to newsletters to stay upto date</strong></p>
+<ul>
+<li><a href="http://androidweekly.net/">Android Weekly</a> - Free newsletter that helps you to stay cutting-edge with your Android Development</li>
+<li><a href="https://www.androiddevdigest.com/">AndroidDevDigest</a> - A Handcrafted Weekly #AndroidDev Newsletter</li>
+<li><a href="https://androidsweets.ongoodbits.com/">Infinium #AndroidSweets</a> - Fresh news from Droid zone</li>
+<li><a href="http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&amp;id=93b2272cb6">Kotlin Weekly</a> - Free newsletter to stay uptodate with Kotlin Development</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="https://plus.google.com/+ElliottHughes/posts/U3B6H3Sejvv">ADB/Fastboot Tools made available as a separate package by google</a>, download latest version for</strong></p>
+<ul>
+<li><a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">MacOSX</a></li>
+<li><a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">Linux</a></li>
+<li><a href="https://dl.google.com/android/repository/platform-tools-latest-windows.zip">Windows</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Some other awesome utility tools</strong></p>
+<ul>
+<li><a href="https://inloop.github.io/svg2android/">Android SVG to VectorDrawable</a> - One VectorDrawable to rule all screen densities</li>
+<li><a href="https://inloop.github.io/sqlite-viewer/">SQLite Viewer</a> - View sqlite file online</li>
+<li><a href="https://inloop.github.io/shadow4android/">Android 9-patch shadow generator</a> - Tool that makes fully customizable shadows possible</li>
+<li><a href="https://inloop.github.io/apk-method-count/">APK method count</a> - Tool that outputs per-package method counts</li>
+<li><a href="https://www.materialpalette.com/">Material Palette</a> - Easily generate the color pallete based on material design</li>
+<li><a href="https://material.io/color/#!/">Color Tool</a> - Create, share and apply color palettes to your UI</li>
+<li><a href="https://javadoc-themer.firebaseapp.com/">Javadoc Themer</a> - Give your boooring javadocs a splash of colors!</li>
+<li><a href="http://www.methodscount.com/">Method Count</a> - Use this tool to avoid the dreaded 65K method limit of the DEX file format!</li>
+<li><a href="https://gradleplease.appspot.com/">Gradle, please</a> - Lookup dependency reference name to include as your gradle dependencies</li>
+<li><a href="http://www.jsonschema2pojo.org/">jsonschema2pojo</a> - Generate Plain Old Java Objects from JSON or JSON-Schema</li>
+<li><a href="http://romannurik.github.io/AndroidAssetStudio/">Android Asset Studio</a> - A web-based set of tools for generating graphics and other assets that would eventually be in an Android application's res/ directory.</li>
+<li><a href="https://developer.android.com/distribute/tools/promote/device-art.html">Device Art Generator</a> - Quickly wrap app screenshots in device artwork</li>
+<li><a href="https://translate.google.com/toolkit/list?hl=en#translations/">Google Translator Toolkit</a> - Translate strings.xml files to any language and download as XML</li>
+<li><a href="http://jsonviewer.stack.hu/">JSONViewer</a> - Awesome JSON formatter</li>
+<li><a href="https://alexjlockwood.github.io/ShapeShifter/">ShapeShifter</a> - SVG path morphing animation editor.</li>
+<li><a href="https://app-privacy-policy-generator.firebaseapp.com/">App Privacy Policy Generator</a> - Generate a generic privacy policy for your app for the playstore.</li>
+<li><a href="https://github.com/Genymobile/gnirehtet">gnirehtet</a> - Reverse tethering for Android.</li>
+<li><a href="https://adapticon.tooo.io/">Adaptive Icons</a> - Try out the new Adaptive Icons in your browser</li>
+<li><a href="http://androidstarters.com/">Android Starters</a> - Handcrafted starter projects, optimized for simplicity and ease of use.</li>
+<li><a href="https://github.com/AzimoLabs/Language-Switcher-Tile">Language Switcher Tile</a> - An android plugin that allows you to easily change your device language.</li>
+<li><a href="https://fbflipper.com/">Flipper</a> - Flipper is a platform for debugging mobile apps on iOS and Android. Visualize, inspect, and control your apps from a simple desktop interface.</li>
+</ul>
+</li>
+<li>
+<p><strong>Awesome android libraries</strong></p>
+<ul>
+<li><a href="https://github.com/pushtorefresh/storio">StorIO</a> - Beautiful API for SQLiteDatabase and ContentResolver</li>
+<li><a href="https://github.com/square/retrofit">Retrofit</a> - Type-safe HTTP client for Android and Java by Square, Inc.</li>
+<li><a href="https://github.com/square/picasso">Picasso</a> - A powerful image downloading and caching library for Android</li>
+<li><a href="https://github.com/square/leakcanary">LeakCanary</a> - A memory leak detection library for Android and Java.</li>
+<li><a href="https://github.com/daimajia/AndroidViewAnimations">AndroidViewAnimations</a> - Cute view animation collection.</li>
+<li><a href="https://github.com/chrisjenx/Calligraphy">Calligraphy</a> - Custom fonts in Android the easy way.</li>
+<li><a href="https://github.com/Tapadoo/Alerter">Alerter</a> - Android Alerting Library</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="tips-if-you-use-kotlin.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="extra-android-libraries-built-by-me.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="tips-if-you-use-kotlin.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="extra-android-libraries-built-by-me.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

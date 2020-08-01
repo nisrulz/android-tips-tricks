@@ -10,6 +10,9 @@ mdbook build
 # Checkout to gh-pages dir
 git checkout gh-pages
 
+# Delete existing docs dir
+rm -rf docs
+
 # Rename book dir to docs
 mv book docs
 
@@ -17,7 +20,7 @@ mv book docs
 git add .
 
 # Commit
-git commit -m "adding updated website"
+git commit -m "updated book with latest changes"
 
 # Push to deploy
 git push origin gh-pages

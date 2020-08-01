@@ -1,0 +1,555 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Gradle: Groovy Script Tricks - Android Tips &amp; Tricks</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Mastering Android Studio</li><li><ol class="section"><li class="chapter-item expanded "><a href="code-faster-using-keyboard.html"><strong aria-hidden="true">2.1.</strong> Code faster by using keyboard shortcuts</a></li><li class="chapter-item expanded "><a href="use-plugins-in-as.html"><strong aria-hidden="true">2.2.</strong> Use plugins to become more efficient</a></li><li class="chapter-item expanded "><a href="use-code-completion-in-as.html"><strong aria-hidden="true">2.3.</strong> Speed code using code-completion</a></li><li class="chapter-item expanded "><a href="configure-as.html"><strong aria-hidden="true">2.4.</strong> Configuring Android Studio</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> Playing in the Terminal</li><li><ol class="section"><li class="chapter-item expanded "><a href="adb-shell.html"><strong aria-hidden="true">3.1.</strong> Get used to ADB Shell</a></li><li class="chapter-item expanded "><a href="adb-aliases.html"><strong aria-hidden="true">3.2.</strong> Setup ADB Aliases</a></li><li class="chapter-item expanded "><a href="scrcpy.html"><strong aria-hidden="true">3.3.</strong> scrcpy: Control/Share your Android device</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">4.</strong> Gradle FTW</li><li><ol class="section"><li class="chapter-item expanded "><a href="working-with-gradle-wrapper.html"><strong aria-hidden="true">4.1.</strong> Working with Gradle Wrapper</a></li><li class="chapter-item expanded "><a href="gradle-groovy-script-tips.html" class="active"><strong aria-hidden="true">4.2.</strong> Gradle: Groovy Script Tricks</a></li><li class="chapter-item expanded "><a href="gradle-kotlin-script-tips.html"><strong aria-hidden="true">4.3.</strong> Gradle: Kotlin Script Tricks</a></li></ol></li><li class="chapter-item expanded "><a href="make-better-choices-while-coding.html"><strong aria-hidden="true">5.</strong> Make better choices while coding</a></li><li class="chapter-item expanded "><a href="tips-regarding-uiux.html"><strong aria-hidden="true">6.</strong> Tips regarding UI/UX</a></li><li class="chapter-item expanded "><a href="tips-if-you-use-kotlin.html"><strong aria-hidden="true">7.</strong> Tips if you use Kotlin</a></li><li class="chapter-item expanded "><strong aria-hidden="true">8.</strong> Embrace the community</li><li><ol class="section"><li class="chapter-item expanded "><a href="podcasts.html"><strong aria-hidden="true">8.1.</strong> Podcasts to listen</a></li><li class="chapter-item expanded "><a href="learning-resources.html"><strong aria-hidden="true">8.2.</strong> Learning Resources</a></li><li class="chapter-item expanded "><a href="android-examples.html"><strong aria-hidden="true">8.3.</strong> Examples to learn from</a></li></ol></li><li class="chapter-item expanded "><a href="helper-tools.html"><strong aria-hidden="true">9.</strong> Make use of Helper tools</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Android Tips &amp; Tricks</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#gradle-groovy-script-tricks" id="gradle-groovy-script-tricks">Gradle: Groovy Script Tricks</a></h1>
+<ul>
+<li>
+<p><strong>Use proguard</strong></p>
+<pre><code class="language-groovy">android {
+  ...
+  buildTypes {
+      release {
+          minifyEnabled true
+          proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+      }
+  }
+}
+</code></pre>
+<p>[<a href="https://www.guardsquare.com/en/proguard/manual/usage">Read more from the manual here</a>]</p>
+</li>
+<li>
+<p><strong>Use shrinkResources</strong></p>
+<pre><code class="language-groovy">android {
+  ...
+  buildTypes {
+      release {
+          shrinkResources true
+          minifyEnabled true
+          ...
+      }
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Split your apk using gradle when using Native code, do not bundle all of em together and ship!.. coz that will make you evil</strong></p>
+<pre><code class="language-groovy">defaultConfig {
+    ...
+
+    ndk {
+      abiFilters &quot;armeabi&quot;, &quot;armeabi-v7a&quot;, &quot;mips&quot;, &quot;x86&quot;
+    }
+  }
+
+//Split into platform dependent APK
+splits {
+  abi {
+    enable true
+    reset()
+    include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
+    universalApk false //generate an additional APK that contains all the ABIs
+  }
+}
+
+// map for the version code
+project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
+
+// Rename with proper versioning
+android.applicationVariants.all { variant -&gt;
+  // assign different version code for each output
+  variant.outputs.each { output -&gt;
+    output.versionCodeOverride =
+        project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) *
+            1000000 +
+            android.defaultConfig.versionCode
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>To have the each subproject script name match that of the project name</strong></p>
+<p>Then add this line in settings.gradle</p>
+<pre><code class="language-groovy">rootProject.children.each{
+  it.buildFileName = it.name + '.gradle'
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Use different package name for non-release builds</strong></p>
+<pre><code class="language-groovy">  android {
+      buildTypes {
+          debug {
+              applicationIdSuffix '.debug'
+              versionNameSuffix '-DEBUG'
+          }
+
+          release {
+              // ...
+          }
+      }
+  }
+</code></pre>
+</li>
+<li>
+<p><strong>Setup Android Studio to fail build if code contains <code>//STOPSHIP</code></strong> <a href="https://www.reddit.com/r/androiddev/comments/5c8b0a/i_know_android_studio_allows_you_to_make_custom/d9uhdzt/">[Ref Link]</a></p>
+<p>To enable the <code>//STOPSHIP</code> lint check, in your <code>build.gradle</code></p>
+<pre><code class="language-groovy">android {
+...
+    lintOptions {
+        abortOnError true
+        fatal 'StopShip'
+    }
+}
+</code></pre>
+<p>If you have a <code>//STOPSHIP</code> comment in your code, this will cause an error to be thrown when a release apk is generated.</p>
+<blockquote>
+<p>You can turn on //STOPSHIP highlighting in Android Studio (isn't enabled by default) in</p>
+<p><code>Preferences</code> &gt; <code>Editor</code> &gt; <code>Code Style</code> &gt; <code>Inspections</code>.</p>
+<p>Search for STOPSHIP to find the correct setting.</p>
+</blockquote>
+</li>
+<li>
+<p><strong>Output unit tests directly to the console</strong> <a href="https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f">[Ref Link]</a></p>
+<blockquote>
+<p>A small neat trick to see Android unit tests logging results as they happen in the terminal.</p>
+</blockquote>
+<pre><code class="language-groovy">android {
+    ...
+    testOptions.unitTests.all {
+      testLogging {
+        events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+        outputs.upToDateWhen { false }
+        showStandardStreams = true
+      }
+    }
+  }
+</code></pre>
+</li>
+<li>
+<p><strong>Define a variable at build time</strong>
+In your <code>build.gradle</code></p>
+<pre><code class="language-groovy">android{
+  defaultConfig {
+    ...
+    buildConfigField &quot;String&quot;, &quot;SERVER_ENDPOINT&quot;, '&quot;http://www.myendpoint.com&quot;'
+    buildConfigField &quot;int&quot;, &quot;FOO&quot;, &quot;52&quot;
+    buildConfigField &quot;boolean&quot;, &quot;LOG&quot;, &quot;false&quot;
+    ...
+  }
+}
+</code></pre>
+<p>and then use it in code as <code>BuildConfig.SERVER_ENDPOINT</code>, <code>BuildConfig.FOO</code>,<code>BuildConfig.LOG</code></p>
+</li>
+<li>
+<p><strong>Calculate the version code and version name in your <code>build.gradle</code> <strong>manually</strong><em>, based of version values</em></strong>
+In your app's <code>build.gradle</code></p>
+<pre><code class="language-groovy">versionMajor = 0
+versionMinor = 0
+versionPatch = 0
+versionBuild = 1
+
+verCode = versionMajor _ 1000000 + versionMinor _ 10000 + versionPatch \* 100 + versionBuild
+verName = &quot;${versionMajor}.${versionMinor}.${versionPatch}&quot;
+
+// Use
+android{
+  defaultConfig {
+        ...
+        versionCode verCode
+        versionName verName
+        ...
+  }
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Calculate the version code and version name in your <code>build.gradle</code> automatically, based on git information</strong></p>
+<blockquote>
+<p>Note: These functions go specifically inside the app's <code>build.gradle</code> and cannot be used with <code>ext</code>.</p>
+</blockquote>
+<p>In your app's <code>build.gradle</code></p>
+<pre><code class="language-groovy">// Version code is calculated as the number of commits from last commit on master
+def getVersionCode = { -&gt;
+  try {
+    def code = new ByteArrayOutputStream()
+    exec {
+      commandLine 'git', 'rev-list', 'HEAD', '--count'
+      standardOutput = code
+    }
+    return Integer.parseInt(code.toString().trim())
+  } catch (exception) {
+    return &quot;1&quot;;
+  }
+}
+
+// Version name is Last Tag Name + No. of commits form last Tag +  short git sha
+def getVersionName = { -&gt;
+  try {
+    def stdout = new ByteArrayOutputStream()
+    exec {
+      commandLine 'git', 'describe', '--tags', '--dirty'
+      standardOutput = stdout
+    }
+    return stdout.toString().trim()
+  } catch (exception) {
+    return &quot;0.0.0.1&quot;;
+  }
+}
+
+// Use
+android{
+  defaultConfig {
+    ...
+    versionCode getVersionCode()
+    versionName getVersionName()
+    ...
+  }
+}
+</code></pre>
+</li>
+</ul>
+<ul>
+<li>
+<p><strong>Get the date of build as a variable</strong>
+In your app's <code>build.gradle</code></p>
+<pre><code class="language-groovy">// Get the date of build
+def getDateOfBuild = { -&gt; // ISO 8601 time format
+  return new Date().format(&quot;yyyy-MM-dd'T'HH:mm'Z'&quot;).toString().trim()
+}
+
+// then use it as a variable in BuildConfig
+android{
+  defaultConfig {
+    ...
+    buildConfigField &quot;String&quot;, &quot;DATE_OF_BUILD&quot;, &quot;\&quot;${getDateOfBuild()}\&quot;&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Get the Git SHA as a variable</strong>
+In your app's <code>build.gradle</code></p>
+<pre><code class="language-groovy">// Get the last Git Short Hash
+def getGitHash = { -&gt;
+  def stdout = new ByteArrayOutputStream()
+  exec {
+    commandLine 'git', 'rev-parse', '--short', 'HEAD'
+    standardOutput = stdout
+  }
+  return stdout.toString().trim()
+}
+
+// then use it as a variable in BuildConfig
+android{
+  defaultConfig {
+    ...
+    buildConfigField &quot;String&quot;, &quot;GIT_SHA&quot;, &quot;\&quot;${getGitHash()}\&quot;&quot;
+  }
+}
+</code></pre>
+<blockquote>
+<p>Have a look at the <a href="https://github.com/zsoltk/paperwork">Paperwork Project</a>, which generates build info for your Android project without breaking incremental compilation</p>
+</blockquote>
+</li>
+<li>
+<p><strong><a href="https://developer.android.com/studio/preview/features/java8-support.html">Use Java 8 features by adding <code>sourceCompatibility</code> &amp; <code>targetCompatibility</code> to your build.gradle file</a></strong></p>
+<pre><code class="language-groovy">android {
+  ...
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong><a href="https://medium.com/pressure-labs/a-new-devs-guide-to-google-play-sanity-4-a-groovy-script-to-save-them-all-456a12672886">Setup a gradle task to archive apks and proguard files on build, for backup purposes</a></strong></p>
+<pre><code class="language-groovy">task deployApks(type:Copy) {
+    description = &quot;Copies APKs and Proguard mappings to the deploy directory&quot;
+    def appName = &quot;&lt;app_name&gt;&quot;;
+    def versionDir = android.defaultConfig.versionName+&quot;_&quot;+android.defaultConfig.versionCode;
+
+    println(&quot;Copies APK and Proguard to &quot; + versionDir)
+
+    from 'build/outputs/mapping/release/'
+    include '**/mapping.txt'
+    into '../.admin/deploy/' + versionDir
+    rename ('mapping.txt', &quot;${versionDir}-mapping.txt&quot;)
+
+    from ('.') {
+        exclude '**/build', '**/src'
+    }
+
+    include '*.apk'
+    into '../.admin/deploy/' + versionDir
+    rename ('app-release.apk', &quot;${appName}-${versionDir}.apk&quot;)
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Reference local <code>aar</code> files as below [<a href="http://stackoverflow.com/a/28816265/2745762">Stackoverflow Ref</a>]</strong></p>
+<pre><code class="language-groovy">  dependencies {
+     implementation(name:'nameOfYourAARFileWithoutExtension', ext:'aar')
+  }
+  repositories {
+     flatDir {
+        dirs 'libs'
+     }
+  }
+</code></pre>
+</li>
+<li>
+<p>Get faster gradle builds by only using one resource configuration for your development builds [<a href="https://developer.android.com/studio/build/optimize-your-build#reduce_resources">Ref Link</a>]</p>
+<pre><code class="language-groovy">android {
+  ...
+  productFlavors {
+    dev {
+      ...
+      // The following configuration limits the &quot;dev&quot; flavor to using
+      // English stringresources and xxhdpi screen-density resources.
+      resConfigs &quot;en&quot;, &quot;xxhdpi&quot;
+    }
+    ...
+  }
+}
+</code></pre>
+</li>
+<li>
+<p>Specifying <code>buildToolsVersion</code> in your build.gradle files is optional when using Android plugin 3.0.0 or later. By default the plugin uses the minimum version of the build tools required by the version of the plugin you're using. [<a href="https://twitter.com/nisrulz/status/976730548084211718">Tweet Link</a>, <a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.LibraryExtension.html#com.android.build.gradle.LibraryExtension:buildToolsVersion">Ref Link</a>]</p>
+<p><img src="img/dont_specify_buildtoolsversion.jpg" alt="dont_specify_buildtoolsversion" /></p>
+</li>
+<li>
+<p>You can insert variables into AndroidManifest defined in <code>build.gradle</code> [<a href="https://twitter.com/jabbar_jigariyo/status/910754663925899264">Tweet Link</a>, <a href="https://developer.android.com/studio/build/manifest-build-variables">Ref Link</a>]</p>
+<p><img src="img/inject_vars_in_manifest.png" alt="inject_vars_in_manifest" /></p>
+</li>
+<li>
+<p><strong>Make use of custom gradle tasks in your build.gradle files</strong></p>
+<p>Android uses Gradle as its build system, which actually allows one to make a lot of things easy by creating tasks to automate things.
+<a href="https://www.reddit.com/r/androiddev/comments/3ig3gm/show_us_your_gradle_tasks">This reddit post enlists a lot of such useful gradle scripts</a></p>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="working-with-gradle-wrapper.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="gradle-kotlin-script-tips.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="working-with-gradle-wrapper.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="gradle-kotlin-script-tips.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

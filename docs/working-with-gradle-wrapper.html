@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Extra : Android Libraries built by me - Android Tips &amp; Tricks</title>
+        <title>Working with Gradle Wrapper - Android Tips &amp; Tricks</title>
         
         
 
@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Mastering Android Studio</li><li><ol class="section"><li class="chapter-item expanded "><a href="code-faster-using-keyboard.html"><strong aria-hidden="true">2.1.</strong> Code faster by using keyboard shortcuts</a></li><li class="chapter-item expanded "><a href="use-plugins-in-as.html"><strong aria-hidden="true">2.2.</strong> Use plugins to become more efficient</a></li><li class="chapter-item expanded "><a href="use-code-completion-in-as.html"><strong aria-hidden="true">2.3.</strong> Speed code using code-completion</a></li><li class="chapter-item expanded "><a href="configure-as.html"><strong aria-hidden="true">2.4.</strong> Configuring Android Studio</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> Playing in the Terminal</li><li><ol class="section"><li class="chapter-item expanded "><a href="adb-shell.html"><strong aria-hidden="true">3.1.</strong> Get used to ADB Shell</a></li><li class="chapter-item expanded "><a href="adb-aliases.html"><strong aria-hidden="true">3.2.</strong> Setup ADB Aliases</a></li><li class="chapter-item expanded "><a href="scrcpy.html"><strong aria-hidden="true">3.3.</strong> scrcpy: Control/Share your Android device</a></li></ol></li><li class="chapter-item expanded "><a href="make-better-choices-while-coding.html"><strong aria-hidden="true">4.</strong> Make better choices while coding</a></li><li class="chapter-item expanded "><a href="tips-regarding-uiux.html"><strong aria-hidden="true">5.</strong> Tips regarding UI/UX</a></li><li class="chapter-item expanded "><a href="tips-if-you-use-kotlin.html"><strong aria-hidden="true">6.</strong> Tips if you use Kotlin</a></li><li class="chapter-item expanded "><a href="misc.html"><strong aria-hidden="true">7.</strong> Misc</a></li><li class="chapter-item expanded "><a href="extra-android-libraries-built-by-me.html" class="active"><strong aria-hidden="true">8.</strong> Extra : Android Libraries built by me</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Mastering Android Studio</li><li><ol class="section"><li class="chapter-item expanded "><a href="code-faster-using-keyboard.html"><strong aria-hidden="true">2.1.</strong> Code faster by using keyboard shortcuts</a></li><li class="chapter-item expanded "><a href="use-plugins-in-as.html"><strong aria-hidden="true">2.2.</strong> Use plugins to become more efficient</a></li><li class="chapter-item expanded "><a href="use-code-completion-in-as.html"><strong aria-hidden="true">2.3.</strong> Speed code using code-completion</a></li><li class="chapter-item expanded "><a href="configure-as.html"><strong aria-hidden="true">2.4.</strong> Configuring Android Studio</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> Playing in the Terminal</li><li><ol class="section"><li class="chapter-item expanded "><a href="adb-shell.html"><strong aria-hidden="true">3.1.</strong> Get used to ADB Shell</a></li><li class="chapter-item expanded "><a href="adb-aliases.html"><strong aria-hidden="true">3.2.</strong> Setup ADB Aliases</a></li><li class="chapter-item expanded "><a href="scrcpy.html"><strong aria-hidden="true">3.3.</strong> scrcpy: Control/Share your Android device</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">4.</strong> Gradle FTW</li><li><ol class="section"><li class="chapter-item expanded "><a href="working-with-gradle-wrapper.html" class="active"><strong aria-hidden="true">4.1.</strong> Working with Gradle Wrapper</a></li><li class="chapter-item expanded "><a href="gradle-groovy-script-tips.html"><strong aria-hidden="true">4.2.</strong> Gradle: Groovy Script Tricks</a></li><li class="chapter-item expanded "><a href="gradle-kotlin-script-tips.html"><strong aria-hidden="true">4.3.</strong> Gradle: Kotlin Script Tricks</a></li></ol></li><li class="chapter-item expanded "><a href="make-better-choices-while-coding.html"><strong aria-hidden="true">5.</strong> Make better choices while coding</a></li><li class="chapter-item expanded "><a href="tips-regarding-uiux.html"><strong aria-hidden="true">6.</strong> Tips regarding UI/UX</a></li><li class="chapter-item expanded "><a href="tips-if-you-use-kotlin.html"><strong aria-hidden="true">7.</strong> Tips if you use Kotlin</a></li><li class="chapter-item expanded "><strong aria-hidden="true">8.</strong> Embrace the community</li><li><ol class="section"><li class="chapter-item expanded "><a href="podcasts.html"><strong aria-hidden="true">8.1.</strong> Podcasts to listen</a></li><li class="chapter-item expanded "><a href="learning-resources.html"><strong aria-hidden="true">8.2.</strong> Learning Resources</a></li><li class="chapter-item expanded "><a href="android-examples.html"><strong aria-hidden="true">8.3.</strong> Examples to learn from</a></li></ol></li><li class="chapter-item expanded "><a href="helper-tools.html"><strong aria-hidden="true">9.</strong> Make use of Helper tools</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -155,21 +155,57 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#extra--android-libraries-built-by-me" id="extra--android-libraries-built-by-me">Extra : Android Libraries built by me</a></h1>
+                        <h1><a class="header" href="#working-with-gradle-wrapper" id="working-with-gradle-wrapper">Working with gradle wrapper</a></h1>
 <ul>
-<li><a href="https://github.com/nisrulz/easydeviceinfo">EasyDeviceInfo</a> - Enabling device information to be at android developers hand like a piece of cake!</li>
-<li><a href="https://github.com/nisrulz/Sensey">Sensey</a> - Android library to make detecting gestures easy</li>
-<li><a href="https://github.com/nisrulz/validatetor">ValidateTor</a> - Android library for fast and simple string validation.</li>
-<li><a href="https://github.com/nisrulz/PackageHunter">PackageHunter</a> - Android library to hunt down package information</li>
-<li><a href="https://github.com/nisrulz/zentone">Zentone</a> - Easily generate audio tone in android</li>
-<li><a href="https://github.com/nisrulz/recyclerviewhelper">RecyclerViewHelper</a> - RecyclerViewHelper provides the most common functions around recycler view like Swipe to dismiss, Drag and Drop, Divider in the ui, events for when item selected and when not selected, on-click listener for items.</li>
-<li><a href="https://github.com/nisrulz/android-utils">android-utils</a> - Android Library facilitating some very common functionalities in the form of utility classes for Android.</li>
-<li><a href="https://github.com/nisrulz/lantern">Lantern</a> - Android library handling flashlight for camera and camera2 api. Added support for handling display/screen light.</li>
-<li><a href="https://github.com/nisrulz/stackedhorizontalprogressbar">StackedHorizontalProgressbar</a> - Android Library to implement stacked horizontal progressbar</li>
-<li><a href="https://github.com/nisrulz/qreader">QREader</a> - A library that uses google's mobile vision api and simplifies the QR code reading process</li>
-<li><a href="https://github.com/nisrulz/screenshott">ScreenShott</a> - Simple library to take a screenshot of the device screen, programmatically!</li>
-<li><a href="https://github.com/nisrulz/EvTrack">EvTrack</a> - Android library to make event and exception tracking easy</li>
-<li><a href="https://github.com/nisrulz/OptimusHTTP">OptimusHTTP</a> - Android library that simplifies networking in android via an async http client</li>
+<li>
+<p><strong>To force re-download of dependencies</strong></p>
+<pre><code class="language-gradle">./gradlew --refresh-dependencies
+</code></pre>
+</li>
+<li>
+<p><strong>To exclude a certain task from being run by gradle</strong></p>
+<p>Suppose you want to exclude the task <code>javaDoc</code> then use <code>-x</code> option followed by the task name, i.e <code>javaDoc</code> in this case.</p>
+<pre><code class="language-gradle">./gradlew clean build -x javaDoc
+</code></pre>
+</li>
+<li>
+<p><strong>Stop a running gradle build process</strong></p>
+<pre><code class="language-bash">./gradlew -stop
+</code></pre>
+</li>
+<li>
+<p><strong>Upgrade gradle wrapper to latest release version i.e 6.5</strong></p>
+<p>Run this inside your project folder via terminal</p>
+<pre><code class="language-bash">./gradlew wrapper --gradle-version 6.5 --distribution-type all
+</code></pre>
+</li>
+<li>
+<p><strong>Make use of Build Cache to speed up your builds.</strong> </p>
+<p>Set the below property in your global <code>gradle.properties</code> file</p>
+<pre><code>android.enableBuildCache=true
+</code></pre>
+</li>
+<li>
+<p><strong>Make your builds faster by building offline</strong> <a href="https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f">[Ref Link]</a></p>
+<blockquote>
+<p>The <code>--offline</code> flag tells gradle to always use dependency modules from the cache, regardless if they are due to be checked again. When running offline, gradle will never attempt to access the network to perform dependency resolution. If required modules are not present in the dependency cache, build execution will fail.</p>
+</blockquote>
+<ul>
+<li>
+<p>Assembling develop debug at full speed:</p>
+<pre><code class="language-gradle">./gradlew assembleDevelopDebug --offline
+</code></pre>
+</li>
+<li>
+<p>Running your unit tests at full speed:</p>
+<pre><code class="language-gradle">./gradlew test --offline
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>Run a single unit test from the command line using the <code>--tests</code> option e.g: <code>./gradlew testDebugUnitTest --tests &quot;*.MainPresenterTest&quot;</code> . Use <code>*</code> to avoid typing the entire package name. [<a href="https://twitter.com/molsjeroen/status/976469806068256769">Ref Link</a>]</p>
+</li>
 </ul>
 
                     </main>
@@ -177,11 +213,15 @@
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="misc.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="scrcpy.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
+                        
+                            <a rel="next" href="gradle-groovy-script-tips.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -191,11 +231,15 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="misc.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="scrcpy.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
+                
+                    <a rel="next" href="gradle-groovy-script-tips.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 

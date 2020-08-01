@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Mastering Android Studio</li><li><ol class="section"><li class="chapter-item expanded "><a href="code-faster-using-keyboard.html"><strong aria-hidden="true">2.1.</strong> Code faster by using keyboard shortcuts</a></li><li class="chapter-item expanded "><a href="use-plugins-in-as.html"><strong aria-hidden="true">2.2.</strong> Use plugins to become more efficient</a></li><li class="chapter-item expanded "><a href="use-code-completion-in-as.html"><strong aria-hidden="true">2.3.</strong> Speed code using code-completion</a></li><li class="chapter-item expanded "><a href="configure-as.html"><strong aria-hidden="true">2.4.</strong> Configuring Android Studio</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> Playing in the Terminal</li><li><ol class="section"><li class="chapter-item expanded "><a href="adb-shell.html"><strong aria-hidden="true">3.1.</strong> Get used to ADB Shell</a></li><li class="chapter-item expanded "><a href="adb-aliases.html"><strong aria-hidden="true">3.2.</strong> Setup ADB Aliases</a></li><li class="chapter-item expanded "><a href="scrcpy.html"><strong aria-hidden="true">3.3.</strong> scrcpy: Control/Share your Android device</a></li></ol></li><li class="chapter-item expanded "><a href="make-better-choices-while-coding.html" class="active"><strong aria-hidden="true">4.</strong> Make better choices while coding</a></li><li class="chapter-item expanded "><a href="tips-regarding-uiux.html"><strong aria-hidden="true">5.</strong> Tips regarding UI/UX</a></li><li class="chapter-item expanded "><a href="tips-if-you-use-kotlin.html"><strong aria-hidden="true">6.</strong> Tips if you use Kotlin</a></li><li class="chapter-item expanded "><a href="misc.html"><strong aria-hidden="true">7.</strong> Misc</a></li><li class="chapter-item expanded "><a href="extra-android-libraries-built-by-me.html"><strong aria-hidden="true">8.</strong> Extra : Android Libraries built by me</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><strong aria-hidden="true">2.</strong> Mastering Android Studio</li><li><ol class="section"><li class="chapter-item expanded "><a href="code-faster-using-keyboard.html"><strong aria-hidden="true">2.1.</strong> Code faster by using keyboard shortcuts</a></li><li class="chapter-item expanded "><a href="use-plugins-in-as.html"><strong aria-hidden="true">2.2.</strong> Use plugins to become more efficient</a></li><li class="chapter-item expanded "><a href="use-code-completion-in-as.html"><strong aria-hidden="true">2.3.</strong> Speed code using code-completion</a></li><li class="chapter-item expanded "><a href="configure-as.html"><strong aria-hidden="true">2.4.</strong> Configuring Android Studio</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">3.</strong> Playing in the Terminal</li><li><ol class="section"><li class="chapter-item expanded "><a href="adb-shell.html"><strong aria-hidden="true">3.1.</strong> Get used to ADB Shell</a></li><li class="chapter-item expanded "><a href="adb-aliases.html"><strong aria-hidden="true">3.2.</strong> Setup ADB Aliases</a></li><li class="chapter-item expanded "><a href="scrcpy.html"><strong aria-hidden="true">3.3.</strong> scrcpy: Control/Share your Android device</a></li></ol></li><li class="chapter-item expanded "><strong aria-hidden="true">4.</strong> Gradle FTW</li><li><ol class="section"><li class="chapter-item expanded "><a href="working-with-gradle-wrapper.html"><strong aria-hidden="true">4.1.</strong> Working with Gradle Wrapper</a></li><li class="chapter-item expanded "><a href="gradle-groovy-script-tips.html"><strong aria-hidden="true">4.2.</strong> Gradle: Groovy Script Tricks</a></li><li class="chapter-item expanded "><a href="gradle-kotlin-script-tips.html"><strong aria-hidden="true">4.3.</strong> Gradle: Kotlin Script Tricks</a></li></ol></li><li class="chapter-item expanded "><a href="make-better-choices-while-coding.html" class="active"><strong aria-hidden="true">5.</strong> Make better choices while coding</a></li><li class="chapter-item expanded "><a href="tips-regarding-uiux.html"><strong aria-hidden="true">6.</strong> Tips regarding UI/UX</a></li><li class="chapter-item expanded "><a href="tips-if-you-use-kotlin.html"><strong aria-hidden="true">7.</strong> Tips if you use Kotlin</a></li><li class="chapter-item expanded "><strong aria-hidden="true">8.</strong> Embrace the community</li><li><ol class="section"><li class="chapter-item expanded "><a href="podcasts.html"><strong aria-hidden="true">8.1.</strong> Podcasts to listen</a></li><li class="chapter-item expanded "><a href="learning-resources.html"><strong aria-hidden="true">8.2.</strong> Learning Resources</a></li><li class="chapter-item expanded "><a href="android-examples.html"><strong aria-hidden="true">8.3.</strong> Examples to learn from</a></li></ol></li><li class="chapter-item expanded "><a href="helper-tools.html"><strong aria-hidden="true">9.</strong> Make use of Helper tools</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -164,18 +164,6 @@
 </ul>
 <ul>
 <li>
-<p><strong>Reference local <code>aar</code> files as below [<a href="http://stackoverflow.com/a/28816265/2745762">Stackoverflow Ref</a>]</strong></p>
-<pre><code class="language-gradle">  dependencies {
-     implementation(name:'nameOfYourAARFileWithoutExtension', ext:'aar')
-  }
-  repositories {
-     flatDir {
-        dirs 'libs'
-     }
-  }
-</code></pre>
-</li>
-<li>
 <p><strong>Use <a href="https://github.com/JakeWharton/pidcat">Pidcat</a> for a better log reading experience</strong></p>
 </li>
 <li>
@@ -212,98 +200,10 @@
 <p>If you do <strong>have</strong> to use png, compress them. Take a look at <a href="https://tinypng.com">TinyPNG</a>.</p>
 </li>
 <li>
-<p><strong>Use proguard</strong></p>
-<pre><code class="language-gradle">android {
-  ...
-  buildTypes {
-      release {
-          minifyEnabled true
-          proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-      }
-  }
-}
-</code></pre>
-<p>[<a href="https://www.guardsquare.com/en/proguard/manual/usage">Read more from the manual here</a>]</p>
-</li>
-<li>
-<p><strong>Use shrinkResources</strong></p>
-<pre><code class="language-gradle">android {
-  ...
-  buildTypes {
-      release {
-          shrinkResources true
-          minifyEnabled true
-          ...
-      }
-  }
-}
-</code></pre>
-</li>
-<li>
-<p><strong>Follow the below <a href="https://medium.com/@skaliakoudas/decreasing-build-times-by-decreasing-gradle-memory-requirements-7fcafc6d98ea#.otnm0ofb6">rule to have faster gradle builds</a></strong></p>
-<pre><code class="language-gradle">Gradle memory &gt;= Dex memory + 1Gb
-</code></pre>
-</li>
-<li>
-<p><strong>Split your apk using gradle when using Native code, do not bundle all of em together and ship!.. coz that will make you evil</strong></p>
-<pre><code class="language-gradle">defaultConfig {
-    ...
-
-    ndk {
-      abiFilters &quot;armeabi&quot;, &quot;armeabi-v7a&quot;, &quot;mips&quot;, &quot;x86&quot;
-    }
-  }
-
-//Split into platform dependent APK
-splits {
-  abi {
-    enable true
-    reset()
-    include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
-    universalApk false //generate an additional APK that contains all the ABIs
-  }
-}
-
-// map for the version code
-project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
-
-// Rename with proper versioning
-android.applicationVariants.all { variant -&gt;
-  // assign different version code for each output
-  variant.outputs.each { output -&gt;
-    output.versionCodeOverride =
-        project.ext.versionCodes.get(output.getFilter(com.android.build.OutputFile.ABI), 0) *
-            1000000 +
-            android.defaultConfig.versionCode
-  }
-}
-</code></pre>
-</li>
-<li>
 <p><strong>Learn about some architecture such as MVP or Clean</strong></p>
 </li>
 <li>
 <p><strong>Try to understand and follow TDD (Test Driven Development)</strong></p>
-</li>
-<li>
-<p><strong>To force re-download of dependencies</strong></p>
-<pre><code class="language-gradle">./gradlew --refresh-dependencies
-</code></pre>
-</li>
-<li>
-<p><strong>To exclude a certain task from being run by gradle</strong></p>
-<p>Suppose you want to exclude the task <code>javaDoc</code> then use <code>-x</code> option followed by the task name, i.e <code>javaDoc</code> in this case.</p>
-<pre><code class="language-gradle">./gradlew clean build -x javaDoc
-</code></pre>
-</li>
-<li>
-<p><strong>To have the each subproject script name match that of the project name</strong></p>
-<p>Then add this line in settings.gradle</p>
-<pre><code class="language-gradle">rootProject.children.each{
-  it.buildFileName = it.name + '.gradle'
-}
-</code></pre>
-<p><strong><a href="https://github.com/shekhargulati/gradle-tips">Checkout more gradle tips here</a></strong></p>
 </li>
 <li>
 <p><strong>Follow the DRY principle</strong>
@@ -317,22 +217,6 @@ DRY = Do not Repeat Yourself</p>
 <p>With the speed android dependencies update, sooner or later you are going to encounter some sort of dependency conflict. The solution is making use of Dependency Resolution. <a href="https://docs.gradle.org/current/dsl/org.gradle.api.artifacts.ResolutionStrategy.html">Official Reference</a></p>
 </li>
 <li>
-<p><strong>Use different package name for non-release builds</strong></p>
-<pre><code class="language-gradle">  android {
-      buildTypes {
-          debug {
-              applicationIdSuffix '.debug'
-              versionNameSuffix '-DEBUG'
-          }
-
-          release {
-              // ...
-          }
-      }
-  }
-</code></pre>
-</li>
-<li>
 <p><strong><a href="http://blog.nimbledroid.com/2016/09/06/stop-memory-leaks.html">Find and STOP leaking memory in your android app</a></strong></p>
 </li>
 <li>
@@ -342,36 +226,10 @@ DRY = Do not Repeat Yourself</p>
 <p><strong><a href="http://jeroenmols.com/blog/2016/03/07/resourcenaming/">Follow a standard naming convention for your resources</a></strong></p>
 </li>
 <li>
-<p><strong>Make use of custom gradle tasks in your build.gradle files</strong></p>
-<p>Android uses Gradle as its build system, which actually allows one to make a lot of things easy by creating tasks to automate things.
-<a href="https://www.reddit.com/r/androiddev/comments/3ig3gm/show_us_your_gradle_tasks">This reddit post enlists a lot of such useful gradle scripts</a></p>
-</li>
-<li>
 <p><strong>Use a proper .gitignore in your Android Projects, <a href="/android.gitignore">Check it here</a></strong></p>
 </li>
 <li>
 <p><strong><a href="https://github.com/square/leakcanary">Use LeakCanary to detect memory leaks in your app</a></strong> - Its a memory leak detection library for Android and Java.</p>
-</li>
-<li>
-<p><strong>Speed up your gradle builds in Android Studio 2.3+</strong></p>
-<ul>
-<li>
-<p>Switch to gradle 3.4.1</p>
-<p>Run this inside your project folder to update your gradle wrapper</p>
-<pre><code class="language-bash">./gradlew wrapper --gradle-version 3.4.1 --distribution-type all
-</code></pre>
-</li>
-<li>
-<p>Set the below property in your global <code>gradle.properties</code> file</p>
-<pre><code>android.enableBuildCache=true
-</code></pre>
-</li>
-</ul>
-</li>
-<li>
-<p><strong>Stop a running gradle build process</strong></p>
-<pre><code class="language-bash">./gradlew -stop
-</code></pre>
 </li>
 <li>
 <p><strong>Enable gradle to automatically download missing platforms in android sdk</strong></p>
@@ -394,24 +252,6 @@ DRY = Do not Repeat Yourself</p>
 <li>Next re-sync your project</li>
 <li>Everything should become consistent and functional.</li>
 </ul>
-</li>
-<li>
-<p><strong>Setup Android Studio to fail build if code contains <code>//STOPSHIP</code></strong> <a href="https://www.reddit.com/r/androiddev/comments/5c8b0a/i_know_android_studio_allows_you_to_make_custom/d9uhdzt/">[Ref Link]</a></p>
-<p>To enable the <code>//STOPSHIP</code> lint check, in your <code>build.gradle</code></p>
-<pre><code class="language-gradle">android {
-...
-    lintOptions {
-        abortOnError true
-        fatal 'StopShip'
-    }
-}
-</code></pre>
-<p>If you have a <code>//STOPSHIP</code> comment in your code, this will cause an error to be thrown when a release apk is generated.</p>
-<blockquote>
-<p>You can turn on //STOPSHIP highlighting in Android Studio (isn't enabled by default) in</p>
-<p><code>Preferences</code> &gt; <code>Editor</code> &gt; <code>Code Style</code> &gt; <code>Inspections</code>.</p>
-<p>Search for STOPSHIP to find the correct setting.</p>
-</blockquote>
 </li>
 <li>
 <p><strong>Use <a href="https://github.com/cesarferreira/alfi"><code>alfi</code></a> to find the gradle dependency statement for a library</strong></p>
@@ -443,41 +283,6 @@ DRY = Do not Repeat Yourself</p>
 </ul>
 </li>
 <li>
-<p><strong>Output unit tests directly to the console</strong> <a href="https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f">[Ref Link]</a></p>
-<blockquote>
-<p>A small neat trick to see Android unit tests logging results as they happen in the terminal.</p>
-</blockquote>
-<pre><code class="language-gradle">android {
-    ...
-    testOptions.unitTests.all {
-      testLogging {
-        events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
-        outputs.upToDateWhen { false }
-        showStandardStreams = true
-      }
-    }
-  }
-</code></pre>
-</li>
-<li>
-<p><strong>Make your builds faster by building offline</strong> <a href="https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f">[Ref Link]</a></p>
-<blockquote>
-<p>The <code>--offline</code> flag tells gradle to always use dependency modules from the cache, regardless if they are due to be checked again. When running offline, gradle will never attempt to access the network to perform dependency resolution. If required modules are not present in the dependency cache, build execution will fail.</p>
-</blockquote>
-<ul>
-<li>
-<p>Assembling develop debug at full speed:</p>
-<pre><code class="language-gradle">./gradlew assembleDevelopDebug --offline
-</code></pre>
-</li>
-<li>
-<p>Running your unit tests at full speed:</p>
-<pre><code class="language-gradle">./gradlew test --offline
-</code></pre>
-</li>
-</ul>
-</li>
-<li>
 <p><strong>Use an abtracted <a href="/Logger.java">Logger</a> class</strong></p>
 </li>
 <li>
@@ -498,134 +303,6 @@ DRY = Do not Repeat Yourself</p>
 <ul>
 <li>Take a look at <a href="https://app-privacy-policy-generator.firebaseapp.com/">App Privacy Policy Generator</a>, a web app to generate a generic privacy policy for your app.</li>
 </ul>
-</li>
-<li>
-<p><strong>Define a variable at build time</strong>
-In your <code>build.gradle</code></p>
-<pre><code class="language-gradle">android{
-  defaultConfig {
-    ...
-    buildConfigField &quot;String&quot;, &quot;SERVER_ENDPOINT&quot;, '&quot;http://www.myendpoint.com&quot;'
-    buildConfigField &quot;int&quot;, &quot;FOO&quot;, &quot;52&quot;
-    buildConfigField &quot;boolean&quot;, &quot;LOG&quot;, &quot;false&quot;
-    ...
-  }
-}
-</code></pre>
-<p>and then use it in code as <code>BuildConfig.SERVER_ENDPOINT</code>, <code>BuildConfig.FOO</code>,<code>BuildConfig.LOG</code></p>
-</li>
-<li>
-<p><strong>Calculate the version code and version name in your <code>build.gradle</code> <strong>manually</strong><em>, based of version values</em></strong>
-In your app's <code>build.gradle</code></p>
-<pre><code class="language-gradle">versionMajor = 0
-versionMinor = 0
-versionPatch = 0
-versionBuild = 1
-
-verCode = versionMajor _ 1000000 + versionMinor _ 10000 + versionPatch \* 100 + versionBuild
-verName = &quot;${versionMajor}.${versionMinor}.${versionPatch}&quot;
-
-// Use
-android{
-  defaultConfig {
-        ...
-        versionCode verCode
-        versionName verName
-        ...
-  }
-}
-</code></pre>
-</li>
-</ul>
-<ul>
-<li>
-<p><strong>Calculate the version code and version name in your <code>build.gradle</code> automatically, based on git information</strong></p>
-<blockquote>
-<p>Note: These functions go specifically inside the app's <code>build.gradle</code> and cannot be used with <code>ext</code>.</p>
-</blockquote>
-<p>In your app's <code>build.gradle</code></p>
-<pre><code class="language-gradle">// Version code is calculated as the number of commits from last commit on master
-def getVersionCode = { -&gt;
-  try {
-    def code = new ByteArrayOutputStream()
-    exec {
-      commandLine 'git', 'rev-list', 'HEAD', '--count'
-      standardOutput = code
-    }
-    return Integer.parseInt(code.toString().trim())
-  } catch (exception) {
-    return &quot;1&quot;;
-  }
-}
-
-// Version name is Last Tag Name + No. of commits form last Tag +  short git sha
-def getVersionName = { -&gt;
-  try {
-    def stdout = new ByteArrayOutputStream()
-    exec {
-      commandLine 'git', 'describe', '--tags', '--dirty'
-      standardOutput = stdout
-    }
-    return stdout.toString().trim()
-  } catch (exception) {
-    return &quot;0.0.0.1&quot;;
-  }
-}
-
-// Use
-android{
-  defaultConfig {
-    ...
-    versionCode getVersionCode()
-    versionName getVersionName()
-    ...
-  }
-}
-</code></pre>
-</li>
-</ul>
-<ul>
-<li>
-<p><strong>Get the date of build as a variable</strong>
-In your app's <code>build.gradle</code></p>
-<pre><code class="language-gradle">// Get the date of build
-def getDateOfBuild = { -&gt; // ISO 8601 time format
-  return new Date().format(&quot;yyyy-MM-dd'T'HH:mm'Z'&quot;).toString().trim()
-}
-
-// then use it as a variable in BuildConfig
-android{
-  defaultConfig {
-    ...
-    buildConfigField &quot;String&quot;, &quot;DATE_OF_BUILD&quot;, &quot;\&quot;${getDateOfBuild()}\&quot;&quot;
-  }
-}
-</code></pre>
-</li>
-<li>
-<p><strong>Get the Git SHA as a variable</strong>
-In your app's <code>build.gradle</code></p>
-<pre><code class="language-gradle">// Get the last Git Short Hash
-def getGitHash = { -&gt;
-  def stdout = new ByteArrayOutputStream()
-  exec {
-    commandLine 'git', 'rev-parse', '--short', 'HEAD'
-    standardOutput = stdout
-  }
-  return stdout.toString().trim()
-}
-
-// then use it as a variable in BuildConfig
-android{
-  defaultConfig {
-    ...
-    buildConfigField &quot;String&quot;, &quot;GIT_SHA&quot;, &quot;\&quot;${getGitHash()}\&quot;&quot;
-  }
-}
-</code></pre>
-<blockquote>
-<p>Have a look at the <a href="https://github.com/zsoltk/paperwork">Paperwork Project</a>, which generates build info for your Android project without breaking incremental compilation</p>
-</blockquote>
 </li>
 <li>
 <p><strong>Activity LifeCycle</strong> [<a href="https://www.bignerdranch.com/blog/android-activity-lifecycle-onStop/">Ref Link</a>]</p>
@@ -664,41 +341,6 @@ android{
 <li>
 <p><strong>Use below to display your app launch time</strong> [<a href="https://twitter.com/molsjeroen/status/851367439996784640">Ref Link</a>]</p>
 <pre><code class="language-bash">adb shell am start -W &lt;packagename&gt;/. &lt;activityname&gt;
-</code></pre>
-</li>
-<li>
-<p><strong><a href="https://developer.android.com/studio/preview/features/java8-support.html">Use Java 8 features by adding <code>sourceCompatibility</code> &amp; <code>targetCompatibility</code> to your build.gradle file</a></strong></p>
-<pre><code class="language-gradle">android {
-  ...
-  compileOptions {
-    sourceCompatibility JavaVersion.VERSION_1_8
-    targetCompatibility JavaVersion.VERSION_1_8
-  }
-}
-</code></pre>
-</li>
-<li>
-<p><strong><a href="https://medium.com/pressure-labs/a-new-devs-guide-to-google-play-sanity-4-a-groovy-script-to-save-them-all-456a12672886">Setup a gradle task to archive apks and proguard files on build, for backup purposes</a></strong></p>
-<pre><code class="language-gradle">task deployApks(type:Copy) {
-    description = &quot;Copies APKs and Proguard mappings to the deploy directory&quot;
-    def appName = &quot;&lt;app_name&gt;&quot;;
-    def versionDir = android.defaultConfig.versionName+&quot;_&quot;+android.defaultConfig.versionCode;
-
-    println(&quot;Copies APK and Proguard to &quot; + versionDir)
-
-    from 'build/outputs/mapping/release/'
-    include '**/mapping.txt'
-    into '../.admin/deploy/' + versionDir
-    rename ('mapping.txt', &quot;${versionDir}-mapping.txt&quot;)
-
-    from ('.') {
-        exclude '**/build', '**/src'
-    }
-
-    include '*.apk'
-    into '../.admin/deploy/' + versionDir
-    rename ('app-release.apk', &quot;${appName}-${versionDir}.apk&quot;)
-}
 </code></pre>
 </li>
 <li>
@@ -965,31 +607,12 @@ deleted:    .idea/copyright/copyright.xml
 <img src="img/extract_native_libs.jpg" width="600"/>
 </li>
 <li>
-<p>Run a single unit test from the command line using the <code>--tests</code> option e.g: <code>./gradlew testDebugUnitTest --tests &quot;*.MainPresenterTest&quot;</code> . Use <code>*</code> to avoid typing the entire package name. [<a href="https://twitter.com/molsjeroen/status/976469806068256769">Ref Link</a>]</p>
-</li>
-<li>
 <p>Improve Android Studio code inspections with Thread annotations [<a href="https://twitter.com/molsjeroen/status/989447750176706560">Tweet Link</a>, <a href="https://developer.android.com/studio/write/annotations#thread-annotations">Ref Link</a>]</p>
 <img src="img/thread_annotations.jpg" width="600"/>
 </li>
 <li>
 <p>Use <code>adb</code> to put a phone into doze mode for testing [<a href="https://twitter.com/molsjeroen/status/872007858300362752">Tweet Link</a>, <a href="https://developer.android.com/training/monitoring-device-state/doze-standby#testing_doze">Ref Link</a>]</p>
 <img src="img/testing_doze_mode.jpg" width="600"/>
-</li>
-<li>
-<p>Get faster gradle builds by only using one resource configuration for your development builds [<a href="https://developer.android.com/studio/build/optimize-your-build#reduce_resources">Ref Link</a>]</p>
-<pre><code>android {
-  ...
-  productFlavors {
-    dev {
-      ...
-      // The following configuration limits the &quot;dev&quot; flavor to using
-      // English stringresources and xxhdpi screen-density resources.
-      resConfigs &quot;en&quot;, &quot;xxhdpi&quot;
-    }
-    ...
-  }
-}
-</code></pre>
 </li>
 <li>
 <p>Use <code>areNotificationsEnabled()</code> from <code>NotificationManagerCompat</code> to detect whether your users blocked your Notifications [<a href="https://twitter.com/tasomaniac/status/851888395152392193">Tweet Link</a>, <a href="https://developer.android.com/reference/androidx/core/app/NotificationManagerCompat.html#areNotificationsEnabled()">Ref Link</a>]</p>
@@ -1003,14 +626,6 @@ deleted:    .idea/copyright/copyright.xml
 </li>
 <li>
 <p>If you're not building a replacement for the dialer, use <code>ACTION_DIAL</code> <em>not</em> <code>ACTION_CALL</code> to initiate a call. [<a href="https://twitter.com/kdarty/status/20971150330">Ref Link</a>]</p>
-</li>
-<li>
-<p>Specifying <code>buildToolsVersion</code> in your build.gradle files is optional when using Android plugin 3.0.0 or later. By default the plugin uses the minimum version of the build tools required by the version of the plugin you're using. [<a href="https://twitter.com/nisrulz/status/976730548084211718">Tweet Link</a>, <a href="https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.LibraryExtension.html#com.android.build.gradle.LibraryExtension:buildToolsVersion">Ref Link</a>]</p>
-<p><img src="img/dont_specify_buildtoolsversion.jpg" alt="dont_specify_buildtoolsversion" /></p>
-</li>
-<li>
-<p>You can insert variables into AndroidManifest defined in <code>build.gradle</code> [<a href="https://twitter.com/jabbar_jigariyo/status/910754663925899264">Tweet Link</a>, <a href="https://developer.android.com/studio/build/manifest-build-variables">Ref Link</a>]</p>
-<p><img src="img/inject_vars_in_manifest.png" alt="inject_vars_in_manifest" /></p>
 </li>
 <li>
 <p>Requesting updates from a system service may drain battery, so register for updates in onResume and unregister in onPause. [<a href="https://twitter.com/nisrulz/status/818356887041118208">Ref Link</a>]</p>
@@ -1052,18 +667,8 @@ deleted:    .idea/copyright/copyright.xml
 <p><img src="img/fold_line_like_this.gif" alt="fold_line_like_this" /></p>
 </li>
 <li>
-<p>There is a quick way to surround your layout with a Linear Layout via using a Live Template. You can create one called <code>wrapll</code> by setting it up [<a href="https://twitter.com/nisrulz/status/1197666095886454789">Ref Link</a>]</p>
-<p><img src="img/live_template_wrapll_2.png" alt="live_template_wrapll_2" />
-<img src="img/live_template_wrapll_3.png" alt="live_template_wrapll_3" /></p>
-<p>...and use it as below</p>
-<p><img src="img/live_template_wrapll_1.gif" alt="live_template_wrapll_1" /></p>
-<blockquote>
-<p>You can create more based on your usecase :smile:</p>
-</blockquote>
-</li>
-<li>
 <p>You know how you can group ur code inside IDEs such as Android Studio and IntelliJ IDEA by using the <code>region</code> and <code>endregion</code> comment blocks. Turns out you can use the same trick to group inside XML files such as for layout, strings, styles, colors xml files [<a href="https://twitter.com/nisrulz/status/1271954906015023104">Ref Tweet</a>]</p>
-<p><img src="img/region_cmt.gif" alt="live_template_wrapll_1" /></p>
+<p><img src="img/region_cmt.gif" alt="region_cmt" /></p>
 </li>
 <li>
 <p>How many of you have had issue with special characters (&amp;,&lt;, &gt;, etc) in your strings.xml file? Did you know there is an action called &quot;Encode XML/HTML Special Characters&quot; inside Android Studio that can escape those characters for you! [<a href="https://twitter.com/nisrulz/status/1288498430525005824">Ref Tweet</a>]</p>
@@ -1088,7 +693,7 @@ deleted:    .idea/copyright/copyright.xml
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="scrcpy.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="gradle-kotlin-script-tips.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
@@ -1106,7 +711,7 @@ deleted:    .idea/copyright/copyright.xml
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="scrcpy.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="gradle-kotlin-script-tips.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 

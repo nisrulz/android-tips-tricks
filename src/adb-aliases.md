@@ -28,9 +28,19 @@ export ANDROID_TOOLS_3="$ANDROID_HOME/build-tools/29.0.3/"
 # Add all to the path
 export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ANDROID_TOOLS_2:$ANDROID_TOOLS_3"
 
-# Get package name of the passed apk file
-# Usage: getPackageName app-debug.apk
-alias getPackageName="apkanalyzer -h manifest application-id $1"
+# Demo Mode : https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md
+# Enable Demo Mode on your device
+# Usage: enableDemoMode
+alias enableDemoMode="adb shell settings put global sysui_demo_allowed 1 && adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200 && adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false && adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false && adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100"
+
+# Disable Demo Mode on your device
+# Usage: disableDemoMode
+alias disableDemoMode="adb shell am broadcast -a com.android.systemui.demo -e command exit"
+
+# Install and Grant all permissions for an apk
+# Usage: grantAllPermissionsForApk path/to/apk/Application.apk
+alias grantAllPermissionsForApk="adb install -g $1"
+
 
 # Take a screenshot
 # Usage: screenshot
@@ -52,10 +62,9 @@ alias rmapp="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X uninstal
 # Usage: clearapp com.example.demoapp
 alias clearapp="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X shell pm clear $1"
 
-# Launch your debug apk on your connected device
-# Execute at the root of your android project
-# Usage: launchDebugApk
-alias launchDebugApk="adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e 'package: name' | cut -d \' -f 2` 1"
+# Get package name of the passed apk file
+# Usage: getPackageName app-debug.apk
+alias getPackageName="apkanalyzer -h manifest application-id $1"
 
 # Stress test the debug apk with 100000 ui events
 # Execute at the root of your android project
@@ -64,21 +73,6 @@ function stressTestApk() {
     local APP_PACKAGE_NAME=$(getPackageName $1)
     adb shell monkey -p $APP_PACKAGE_NAME 100000
 }
-
-
-# Demo Mode : https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md
-# Enable Demo Mode on your device
-# Usage: enableDemoMode
-alias enableDemoMode="adb shell settings put global sysui_demo_allowed 1 && adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200 && adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false && adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false && adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100"
-
-# Disable Demo Mode on your device
-# Usage: disableDemoMode
-alias disableDemoMode="adb shell am broadcast -a com.android.systemui.demo -e command exit"
-
-
-# Install and Grant all permissions for an apk
-# Usage: grantAllPermissionsForApk path/to/apk/Application.apk
-alias grantAllPermissionsForApk="adb install -g $1"
 
 # Install APK to device
 # Use as: apkinstall app-debug.apk
@@ -92,7 +86,7 @@ alias buildAndInstallApk='./gradlew assembleDebug && apkinstall ./app/build/outp
 # Launch your debug apk on your connected device
 # Execute at the root of your android project
 # Usage: launchDebugApk
-alias launchDebugApk="adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e 'package: name' | cut -d \' -f 2` 1"
+alias launchDebugApk="adb shell monkey -p $(getPackageName ./app/build/outputs/apk/debug/app-debug.apk) 1"
 
 # ------------- Single command to build+install+launch apk------------#
 # Execute at the root of your android project

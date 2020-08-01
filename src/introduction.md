@@ -1,7 +1,5 @@
 ![Image](img/github_banner.png)
 
-
-
 Cheatsheet about tips and tricks for Android Development
 
 This is a simple set of tips and tricks regarding Android Development which I have gathered from various sources. It helps me direct other android devs in my community regarding stuff each android dev should know about. It is also there for me to keep track of anything I either learn on my own or from other sources now and then when browsing the internet.

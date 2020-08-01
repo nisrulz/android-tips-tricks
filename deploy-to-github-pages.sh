@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo ""
-echo "Deployig to github pages..."
+echo "Deploying to github pages..."
 echo ""
 
 # Build the book from src dir

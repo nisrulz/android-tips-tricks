@@ -182,9 +182,18 @@ export ANDROID_TOOLS_3=&quot;$ANDROID_HOME/build-tools/29.0.3/&quot;
 # Add all to the path
 export PATH=&quot;$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ANDROID_TOOLS_2:$ANDROID_TOOLS_3&quot;
 
-# Get package name of the passed apk file
-# Usage: getPackageName app-debug.apk
-alias getPackageName=&quot;apkanalyzer -h manifest application-id $1&quot;
+# Demo Mode : https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md
+# Enable Demo Mode on your device
+# Usage: enableDemoMode
+alias enableDemoMode=&quot;adb shell settings put global sysui_demo_allowed 1 &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200 &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100&quot;
+
+# Disable Demo Mode on your device
+# Usage: disableDemoMode
+alias disableDemoMode=&quot;adb shell am broadcast -a com.android.systemui.demo -e command exit&quot;
+
+# Install and Grant all permissions for an apk
+# Usage: grantAllPermissionsForApk path/to/apk/Application.apk
+alias grantAllPermissionsForApk=&quot;adb install -g $1&quot;
 
 # Take a screenshot
 # Usage: screenshot
@@ -206,10 +215,9 @@ alias rmapp=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X uni
 # Usage: clearapp com.example.demoapp
 alias clearapp=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X shell pm clear $1&quot;
 
-# Launch your debug apk on your connected device
-# Execute at the root of your android project
-# Usage: launchDebugApk
-alias launchDebugApk=&quot;adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e 'package: name' | cut -d \' -f 2` 1&quot;
+# Get package name of the passed apk file
+# Usage: getPackageName app-debug.apk
+alias getPackageName=&quot;apkanalyzer -h manifest application-id $1&quot;
 
 # Stress test the debug apk with 100000 ui events
 # Execute at the root of your android project
@@ -219,42 +227,30 @@ function stressTestApk() {
     adb shell monkey -p $APP_PACKAGE_NAME 100000
 }
 
-
-# Demo Mode : https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md
-# Enable Demo Mode on your device
-# Usage: enableDemoMode
-alias enableDemoMode=&quot;adb shell settings put global sysui_demo_allowed 1 &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200 &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100&quot;
-
-# Disable Demo Mode on your device
-# Usage: disableDemoMode
-alias disableDemoMode=&quot;adb shell am broadcast -a com.android.systemui.demo -e command exit&quot;
-
-
-# Install and Grant all permissions for an apk
-# Usage: grantAllPermissionsForApk path/to/apk/Application.apk
-alias grantAllPermissionsForApk=&quot;adb install -g $1&quot;
-
 # Install APK to device
 # Use as: apkinstall app-debug.apk
 alias apkinstall=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X install -r $1&quot;
 
 # As an alternative to apkinstall, you can also do just ./gradlew installDebug
 # Alias for building and installing the apk to connected device
-# Use as: buildAndInstallApk
-alias buildAndInstallApk='./gradlew assembleDebug &amp;&amp; apkinstall ./app/build/outputs/apk/debug/app-debug.apk'
+# Use as: buildAndInstallApk path/to/apk_file.apk
+# Example: To build and install debug apk
+#        &gt; buildAndInstallApk  ./app/build/outputs/apk/debug/app-debug.apk
+alias buildAndInstallApk=&quot;./gradlew assembleDebug &amp;&amp; apkinstall $1&quot;
 
-# Launch your debug apk on your connected device
+# Launch your apk on your connected device
 # Execute at the root of your android project
-# Usage: launchDebugApk
-alias launchDebugApk=&quot;adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e 'package: name' | cut -d \' -f 2` 1&quot;
+# Usage: launchApk path/to/apk_file.apk
+# Example: To launch debug apk
+#        &gt; launchApk  ./app/build/outputs/apk/debug/app-debug.apk
+alias launchApk=&quot;adb shell monkey -p $(getPackageName $1) 1&quot;
 
 # ------------- Single command to build+install+launch apk------------#
 # Execute at the root of your android project
-# Use as: buildInstallLaunchDebugApk
-alias buildInstallLaunchDebugApk=&quot;buildAndInstallApk &amp;&amp; launchDebugApk&quot;
-
-# Note: Here we are building, installing and launching the debug apk which is usually in the path: `./app/build/outputs/apk/debug/app-debug.apk` when this command is executed from the root of the project
-# If you would like to install and run any other apk, simply replace the path for debug apk with path of your own apk
+# Use as: buildInstallLaunchApk path/to/apk_file.apk
+# Example: To build, install and launch debug apk
+#        &gt; buildInstallLaunchApk  ./app/build/outputs/apk/debug/app-debug.apk
+alias buildInstallLaunchApk=&quot;buildAndInstallApk $1 &amp;&amp; launchDebugApk $1&quot;
 </code></pre>
 
                     </main>

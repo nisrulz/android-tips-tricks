@@ -41,7 +41,6 @@ alias disableDemoMode="adb shell am broadcast -a com.android.systemui.demo -e co
 # Usage: grantAllPermissionsForApk path/to/apk/Application.apk
 alias grantAllPermissionsForApk="adb install -g $1"
 
-
 # Take a screenshot
 # Usage: screenshot
 alias screenshot="adb exec-out screencap -p > screen-$(date -j "+%s").png"
@@ -80,19 +79,22 @@ alias apkinstall="adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X ins
 
 # As an alternative to apkinstall, you can also do just ./gradlew installDebug
 # Alias for building and installing the apk to connected device
-# Use as: buildAndInstallApk
-alias buildAndInstallApk='./gradlew assembleDebug && apkinstall ./app/build/outputs/apk/debug/app-debug.apk'
+# Use as: buildAndInstallApk path/to/apk_file.apk
+# Example: To build and install debug apk
+#        > buildAndInstallApk  ./app/build/outputs/apk/debug/app-debug.apk
+alias buildAndInstallApk="./gradlew assembleDebug && apkinstall $1"
 
-# Launch your debug apk on your connected device
+# Launch your apk on your connected device
 # Execute at the root of your android project
-# Usage: launchDebugApk
-alias launchDebugApk="adb shell monkey -p $(getPackageName ./app/build/outputs/apk/debug/app-debug.apk) 1"
+# Usage: launchApk path/to/apk_file.apk
+# Example: To launch debug apk
+#        > launchApk  ./app/build/outputs/apk/debug/app-debug.apk
+alias launchApk="adb shell monkey -p $(getPackageName $1) 1"
 
 # ------------- Single command to build+install+launch apk------------#
 # Execute at the root of your android project
-# Use as: buildInstallLaunchDebugApk
-alias buildInstallLaunchDebugApk="buildAndInstallApk && launchDebugApk"
-
-# Note: Here we are building, installing and launching the debug apk which is usually in the path: `./app/build/outputs/apk/debug/app-debug.apk` when this command is executed from the root of the project
-# If you would like to install and run any other apk, simply replace the path for debug apk with path of your own apk
+# Use as: buildInstallLaunchApk path/to/apk_file.apk
+# Example: To build, install and launch debug apk
+#        > buildInstallLaunchApk  ./app/build/outputs/apk/debug/app-debug.apk
+alias buildInstallLaunchApk="buildAndInstallApk $1 && launchDebugApk $1"
 ```

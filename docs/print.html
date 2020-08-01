@@ -392,9 +392,37 @@
 <li><strong><a href="https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8">Learn about various techniques involved when using ADB</a></strong></li>
 </ul>
 <h1><a class="header" href="#setup-adb-aliases" id="setup-adb-aliases">Setup ADB Aliases</a></h1>
-<p><strong>Setup handy <code>adb</code> aliases for your terminal</strong> <a href="https://medium.com/@jonfhancock/bash-your-way-to-better-android-development-1169bc3e0424#.8zcc4m5ch">[Ref Link]</a></p>
 <p>Append the below <strong>Aliases</strong> to your <code>~/.bashrc</code> or <code>~/.zshrc</code> file, save and restart the terminal. Once saved, use them as show in <strong>Usage</strong> column</p>
-<pre><code class="language-bash"># Take a screenshot
+<pre><code class="language-bash">#############################################################
+# Android aliases + path
+#############################################################
+
+# Path to Android SDK (This is for Mac, replace for your OS)
+export ANDROID_HOME=$HOME/Library/Android/sdk
+
+# Path to NDK
+export ANDROID_NDK_HOME=$ANDROID_HOME/ndk
+
+# Path to Android platform tools (adb, fastboot, etc)
+export ANDROID_PLATFORM_TOOLS=&quot;$ANDROID_HOME/platform-tools&quot;
+
+# Path to Android tools (monitor, mksdcard, emulator-check, emulator, etc)
+export ANDROID_TOOLS_1=&quot;$ANDROID_HOME/tools&quot;
+
+# Path to Android tools (apkanalyzer, avdmanager, monkeyrunner, lint, sdkmanager etc)
+export ANDROID_TOOLS_2=&quot;$ANDROID_HOME/tools/bin&quot;
+
+# Path to Android tools (aapt, apksigner, zipalign, etc)
+export ANDROID_TOOLS_3=&quot;$ANDROID_HOME/build-tools/29.0.3/&quot;
+
+# Add all to the path
+export PATH=&quot;$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ANDROID_TOOLS_2:$ANDROID_TOOLS_3&quot;
+
+# Get package name of the passed apk file
+# Usage: getPackageName app-debug.apk
+alias getPackageName=&quot;apkanalyzer -h manifest application-id $1&quot;
+
+# Take a screenshot
 # Usage: screenshot
 alias screenshot=&quot;adb exec-out screencap -p &gt; screen-$(date -j &quot;+%s&quot;).png&quot;
 
@@ -418,6 +446,51 @@ alias clearapp=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X 
 # Execute at the root of your android project
 # Usage: launchDebugApk
 alias launchDebugApk=&quot;adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e 'package: name' | cut -d \' -f 2` 1&quot;
+
+# Stress test the debug apk with 100000 ui events
+# Execute at the root of your android project
+# Use as: stressTestDebugApk apk_file.apk
+function stressTestApk() {
+    local APP_PACKAGE_NAME=$(getPackageName $1)
+    adb shell monkey -p $APP_PACKAGE_NAME 100000
+}
+
+
+# Demo Mode : https://android.googlesource.com/platform/frameworks/base/+/master/packages/SystemUI/docs/demo_mode.md
+# Enable Demo Mode on your device
+# Usage: enableDemoMode
+alias enableDemoMode=&quot;adb shell settings put global sysui_demo_allowed 1 &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command clock -e hhmm 1200 &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command network -e mobile show -e level 4 -e datatype false &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command notifications -e visible false &amp;&amp; adb shell am broadcast -a com.android.systemui.demo -e command battery -e plugged false -e level 100&quot;
+
+# Disable Demo Mode on your device
+# Usage: disableDemoMode
+alias disableDemoMode=&quot;adb shell am broadcast -a com.android.systemui.demo -e command exit&quot;
+
+
+# Install and Grant all permissions for an apk
+# Usage: grantAllPermissionsForApk path/to/apk/Application.apk
+alias grantAllPermissionsForApk=&quot;adb install -g $1&quot;
+
+# Install APK to device
+# Use as: apkinstall app-debug.apk
+alias apkinstall=&quot;adb devices | tail -n +2 | cut -sf 1 | xargs -I X adb -s X install -r $1&quot;
+
+# As an alternative to apkinstall, you can also do just ./gradlew installDebug
+# Alias for building and installing the apk to connected device
+# Use as: buildAndInstallApk
+alias buildAndInstallApk='./gradlew assembleDebug &amp;&amp; apkinstall ./app/build/outputs/apk/debug/app-debug.apk'
+
+# Launch your debug apk on your connected device
+# Execute at the root of your android project
+# Usage: launchDebugApk
+alias launchDebugApk=&quot;adb shell monkey -p `aapt dump badging ./app/build/outputs/apk/debug/app-debug.apk | grep -e 'package: name' | cut -d \' -f 2` 1&quot;
+
+# ------------- Single command to build+install+launch apk------------#
+# Execute at the root of your android project
+# Use as: buildInstallLaunchDebugApk
+alias buildInstallLaunchDebugApk=&quot;buildAndInstallApk &amp;&amp; launchDebugApk&quot;
+
+# Note: Here we are building, installing and launching the debug apk which is usually in the path: `./app/build/outputs/apk/debug/app-debug.apk` when this command is executed from the root of the project
+# If you would like to install and run any other apk, simply replace the path for debug apk with path of your own apk
 </code></pre>
 <h1><a class="header" href="#a-hrefhttpsgithubcomgenymobilescrcpyscrcpya" id="a-hrefhttpsgithubcomgenymobilescrcpyscrcpya"><a href="https://github.com/genymobile/scrcpy">scrcpy</a></a></h1>
 <p>It is basically used to display and control your Android device and is the open source equivalent of <a href="http://www.vysor.io/">Vysor</a>. The good folks at <a href="https://www.genymotion.com/">Genymotion</a> built this tool and then open sourced it (Open Source FTW).</p>

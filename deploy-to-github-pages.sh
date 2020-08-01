@@ -21,3 +21,6 @@ git commit -m "adding updated website"
 
 # Push to deploy
 git push origin gh-pages
+
+# Switch back to last branch
+git checkout -

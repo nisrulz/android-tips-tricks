@@ -31,3 +31,17 @@
 
 
   **Complete Keymap Guide : [Linux/Win | MacOSX](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)**
+
+### Other Tips/Tricks
+
+- Did you know you can quickly lookup the definition of any function by navigating to the function call and using `Opt + Space` on macOS or `Alt + Space` on Win/Linux inside Android Studio🙀 [[Ref Tweet](https://twitter.com/nisrulz/status/1291115617651699712)]
+  
+    <video width="640" controls>
+        <source src="img/quicklookup_def.mp4" type="video/mp4">
+    </video>
+
+- Annoyed by the Design view always opening up when you open a layout or drawable xml file?🙄Navigate to Preferences ▶️Editor ▶️Layout Editor and choose "Code" option, to always open in Code view. [[Ref Tweet](https://twitter.com/nisrulz/status/12908175832565678084)]
+
+    ![always_use_code_view](img/always_use_code_view.png)
+
+- Bunch of quick tips about refactoring under this [blogpost I wrote for raywenderlich.com](https://www.raywenderlich.com/2807578-android-studio-tips-and-tricks)

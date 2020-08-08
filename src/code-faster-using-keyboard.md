@@ -36,9 +36,7 @@
 
 - Did you know you can quickly lookup the definition of any function by navigating to the function call and using `Opt + Space` on macOS or `Alt + Space` on Win/Linux inside Android Studio🙀 [[Ref Tweet](https://twitter.com/nisrulz/status/1291115617651699712)]
   
-    <video width="640" controls>
-        <source src="img/quicklookup_def.mp4" type="video/mp4">
-    </video>
+    ![quicklookup_def](img/quicklookup_def.gif)
 
 - Annoyed by the Design view always opening up when you open a layout or drawable xml file?🙄Navigate to Preferences ▶️Editor ▶️Layout Editor and choose "Code" option, to always open in Code view. [[Ref Tweet](https://twitter.com/nisrulz/status/12908175832565678084)]
 

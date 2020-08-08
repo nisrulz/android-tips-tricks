@@ -445,9 +445,7 @@
 
 - How many of you have had issue with special characters (&,<, >, etc) in your strings.xml file? Did you know there is an action called "Encode XML/HTML Special Characters" inside Android Studio that can escape those characters for you! [[Ref Tweet](https://twitter.com/nisrulz/status/1288498430525005824)]
 
-    <video width="640" controls>
-        <source src="img/encode_special_1.mp4" type="video/mp4">
-    </video>
+    ![encode_special_1](img/encode_special_1.gif)
 
     - The option is also avaliable under **Edit menu** drop down
 

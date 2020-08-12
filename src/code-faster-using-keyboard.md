@@ -42,4 +42,12 @@
 
     ![always_use_code_view](img/always_use_code_view.png)
 
+- If you want to use keyboard shortcuts with bookmarks, then make use of "Bookmark with Mnemonic". Once assigned a number, you can jump to the bookmark using `Ctrl + Number`. [[Ref Tweet](https://twitter.com/nisrulz/status/1293643013877637120)]
+
+    ![bookmarks_mnemonic_as](img/bookmarks_mnemonic_as.gif)
+
+- When working with a class file dat has a lot of loc, often times one needs to jump between some parts of the same file. To do that, one can use the "Bookmarks" in Android Studio! Simply mark the line of code as Bookmark & open up the Bookmark Panel to jump. [[Ref Tweet](https://twitter.com/nisrulz/status/1293642003792748548)]
+
+    ![bookmarks_as](img/bookmarks_as.gif)
+
 - Bunch of quick tips about refactoring under this [blogpost I wrote for raywenderlich.com](https://www.raywenderlich.com/2807578-android-studio-tips-and-tricks)

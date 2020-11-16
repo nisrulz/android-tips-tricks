@@ -14,6 +14,7 @@
 - [Device Art Generator](https://developer.android.com/distribute/tools/promote/device-art.html) - Quickly wrap app screenshots in device artwork
 - [Google Translator Toolkit](https://translate.google.com/toolkit/list?hl=en#translations/) - Translate strings.xml files to any language and download as XML
 - [JSONViewer](http://jsonviewer.stack.hu/) - Awesome JSON formatter
+- [ExtendsClass](https://extendsclass.com/json-generator.html) - Random JSON Generator
 - [ShapeShifter](https://alexjlockwood.github.io/ShapeShifter/) - SVG path morphing animation editor.
 - [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/) - Generate a generic privacy policy for your app for the playstore.
 - [gnirehtet](https://github.com/Genymobile/gnirehtet) - Reverse tethering for Android.
@@ -26,7 +27,6 @@
 
   - [Mockey](https://github.com/clafonta/Mockey) - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.
   - [JSON Placeholder](http://jsonplaceholder.typicode.com/) - Fake Online REST API for Testing and Prototyping
-  - [API Studio](http://apistudio.io/) - a playground for API developers
   - [Mocky](http://www.mocky.io/) - Mock your HTTP responses to test your REST API
   - [Mockbin](http://mockbin.com) - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.
 

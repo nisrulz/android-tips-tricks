@@ -68,9 +68,6 @@
 
   > This is an experimental option and it only downloads build tools and platforms, but doesn't actually update Google or Support repository [[Bug Ref]](https://code.google.com/p/android/issues/detail?id=212309)
 
-* **Donot include both `jcenter()` & `mavenCentral()` in your `build.gradle` file**
-
-  JCenter is a superset of MavenCentral. [[Ref tweet]](https://twitter.com/molsjeroen/status/791606774210199553)
 
 * **Clear your gradle cache if you think that bundled support and google play services lib in android sdk are inconsistent**
 

@@ -32,7 +32,7 @@
   Set the below property in your global `gradle.properties` file
 
   ```
-  android.enableBuildCache=true
+  org.gradle.caching=true
   ```
 
 * **Make your builds faster by building offline** [[Ref Link]](https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f)

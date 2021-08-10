@@ -436,7 +436,7 @@
 
   ![fold_line_like_this](img/fold_line_like_this.gif)
 
-- You know how you can group ur code inside IDEs such as Android Studio and IntelliJ IDEA by using the `region` and `endregion` comment blocks. Turns out you can use the same trick to group inside XML files such as for layout, strings, styles, colors xml files [[Ref Tweet](https://twitter.com/nisrulz/status/1271954906015023104)]
+- You know how you can group ur code inside IDEs such as Android Studio and IntelliJ IDEA by using the `region` and `endregion` comment blocks. Turns out you can use the same trick to group inside XML files such as for layout, strings, styles, colors xml files [[Ref Tweet](https://web.archive.org/web/20200614000022/https://twitter.com/nisrulz/status/1271954906015023104)]
   
     ![region_cmt](img/region_cmt.gif)
 

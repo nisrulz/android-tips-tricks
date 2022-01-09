@@ -17,6 +17,7 @@
 - [Make better choices while coding](./make-better-choices-while-coding.md)
 - [Tips regarding UI/UX](./tips-regarding-uiux.md)
 - [Tips if you use Kotlin](./tips-if-you-use-kotlin.md)
+- [Misc Tips](./misc.md)
 - [Embrace the community]()
     - [Podcasts to listen](./podcasts.md)
     - [Learning Resources](./learning-resources.md)

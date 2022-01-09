@@ -17,3 +17,23 @@
 - **Create a List on Twitter**
 
   - [Android List](https://twitter.com/nisrulz/lists/android)
+
+- **Fix issue with Audio getting worse on your Bluetooth Headset when starting Emulator**
+
+  You can deal with this problem in 2 ways.
+  1. Using Terminal
+
+    ```sh
+    # i.e emulator -noaudio-avd Pixel_4a_API_31
+    emulator -noaudio-avd <emulator_name>
+    ```
+
+  2. Editing the config for Emulator
+
+    Navigate to your existing Emulator and edit the `config.ini` file
+    
+    ```sh
+    # Wipe Data + Cold Boot once
+    hw.audioInput = no
+    hw. audioOutput = no
+    ```

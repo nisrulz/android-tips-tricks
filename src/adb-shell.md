@@ -22,5 +22,4 @@ Few handy commands you can use to interact with emulator/device, through termina
 | Launch an installed app using its package name                                                                                                                                                   | `adb shell monkey -p com.yourapp.packagename 1`                                  |
 | [Stress test](https://developer.android.com/studio/test/monkey) your app using its package name by sending a pseudo-random stream of user events into the system                                 | `adb shell monkey -p com.yourapp.packagename -v 500`                             |
 
-- **[Learn about various techniques involved when using ADB](https://android.jlelse.eu/do-you-like-to-adb-fcae3655b9c8)**
-
+- **[Learn about various techniques involved when using ADB](https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/)**

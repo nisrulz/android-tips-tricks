@@ -8,7 +8,7 @@
     - [Configuring Android Studio](./configure-as.md)
 - [Playing in the Terminal]()
     - [Get used to ADB Shell](./adb-shell.md)
-    - [Setup ADB Aliases](./adb-aliases.md)
+    - [Setup Android Aliases](./android-aliases.md)
     - [scrcpy: Control/Share your Android device](./scrcpy.md)
 - [Gradle FTW]()
     - [Working with Gradle Wrapper](./working-with-gradle-wrapper.md)

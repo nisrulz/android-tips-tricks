@@ -37,3 +37,4 @@
     hw.audioInput = no
     hw. audioOutput = no
     ```
+    Read an indepth article [here](https://blog.mmckenna.me/android-emulators-vs-bluetooth-headphones)

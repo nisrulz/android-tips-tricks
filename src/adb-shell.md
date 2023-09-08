@@ -21,5 +21,9 @@ Few handy commands you can use to interact with emulator/device, through termina
 | Take a Screenshot                                                                                                                                                                                | `adb shell screencap -p \| perl -pe 's/\x0D\x0A/\x0A/g' > screenshot.png`        |
 | Launch an installed app using its package name                                                                                                                                                   | `adb shell monkey -p com.yourapp.packagename 1`                                  |
 | [Stress test](https://developer.android.com/studio/test/monkey) your app using its package name by sending a pseudo-random stream of user events into the system                                 | `adb shell monkey -p com.yourapp.packagename -v 500`                             |
+| Send input text to a connected device instead of typing manually.                                  | `adb shell input text 'helloworld@xyz.com'`   |
+| Check device logs                                  | `adb logcat`   |
+| To save Android device logs locally on your computer using ADB                                  | `adb logcat > device_logs.txt`   |       
+
 
 - **[Learn about various techniques involved when using ADB](https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/)**

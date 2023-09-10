@@ -8,6 +8,18 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 <a href="https://nisrulz.com/android-tips-tricks" target="_blank" noopener>Click here to navigate to the searchable book version</a>
 
+
+### Development
+
+#### Build Book
+```mdbook build```
+
+#### Build book and serve locally
+```mdbook serve --open```
+
+#### Build book and publish to Github Pages
+```./deploy-to-github-pages.sh```
+
 ### Show some ♥️ and 🌟 the repo to support the project
 
 [![GitHub stars](https://img.shields.io/github/stars/nisrulz/android-tips-tricks.svg?style=social&label=Star)](https://github.com/nisrulz/android-tips-tricks) [![GitHub forks](https://img.shields.io/github/forks/nisrulz/android-tips-tricks.svg?style=social&label=Fork)](https://github.com/nisrulz/android-tips-tricks/fork) [![GitHub watchers](https://img.shields.io/github/watchers/nisrulz/android-tips-tricks.svg?style=social&label=Watch)](https://github.com/nisrulz/android-tips-tricks) [![GitHub followers](https://img.shields.io/github/followers/nisrulz.svg?style=social&label=Follow)](https://github.com/nisrulz/android-tips-tricks)  

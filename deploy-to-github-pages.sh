@@ -4,6 +4,9 @@ echo ""
 echo "Deploying to github pages..."
 echo ""
 
+# Cleanup up last rendered book
+mdbook clean 
+
 # Build the book from src dir
 mdbook build
 

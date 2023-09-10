@@ -5,8 +5,10 @@
         <meta charset="UTF-8">
         <title>Android Tips &amp; Tricks</title>
         <meta name="robots" content="noindex" />
+
+
         <!-- Custom HTML head -->
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -17,25 +19,29 @@
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
         <link rel="stylesheet" href="css/print.css" media="print">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
         <link rel="stylesheet" href="fonts/fonts.css">
+
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
         <link rel="stylesheet" href="tomorrow-night.css">
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
+
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -51,7 +57,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -63,12 +69,14 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
-            var sidebar = 'hidden';
+            var sidebar = null;
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
             }
             html.classList.remove('sidebar-visible');
             html.classList.add("sidebar-" + sidebar);
@@ -81,11 +89,33 @@
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
@@ -94,7 +124,7 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
@@ -111,6 +141,7 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
+
                     </div>
                 </div>
 
@@ -124,8 +155,9 @@
                         </ul>
                     </div>
                 </div>
+
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -152,7 +184,7 @@
 <p>If you appreciate my work, consider <a href="https://www.paypal.me/nisrulz/5usd">buying me</a> a cup of ☕️ to keep me recharged 🤘🏼 [<a href="https://www.paypal.me/nisrulz/5usd">PayPal</a>]</p>
 <p><a href="https://twitter.com/nisrulz"><img src="https://img.shields.io/twitter/follow/nisrulz.svg?style=social" alt="Twitter Follow" /></a></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="code-faster-by-using-keyboard-shortcuts"><a class="header" href="#code-faster-by-using-keyboard-shortcuts">Code faster by using keyboard shortcuts</a></h1>
-<table><thead><tr><th>Description</th><th>Mac</th><th>Linux/Win</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Description</th><th>Mac</th><th>Linux/Win</th></tr></thead><tbody>
 <tr><td>Lookup IDE commands / Actions</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>A</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>A</kbd></td></tr>
 <tr><td>Open Class</td><td><kbd>Cmd</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>O</kbd></td></tr>
 <tr><td>Open File</td><td><kbd>Cmd</kbd> <kbd>Shift</kbd> <kbd>O</kbd></td><td><kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>N</kbd></td></tr>
@@ -180,6 +212,7 @@
 <tr><td>Grow/Shrink selection from cursor</td><td><kbd>Opt</kbd> <kbd>Up/Down Arrow key</kbd></td><td><kbd>Shift</kbd> <kbd>Ctrl</kbd> <kbd>W</kbd></td></tr>
 <tr><td><a href="https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3">Multicursor Selection</a></td><td><kbd>Ctrl</kbd> <kbd>G</kbd></td><td><kbd>Alt</kbd> <kbd>J</kbd></td></tr>
 </tbody></table>
+</div>
 <p><strong>Complete Keymap Guide : <a href="https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf">Linux/Win | MacOSX</a></strong></p>
 <h3 id="other-tipstricks"><a class="header" href="#other-tipstricks">Other Tips/Tricks</a></h3>
 <ul>
@@ -369,7 +402,7 @@
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="adb-shell"><a class="header" href="#adb-shell">ADB Shell</a></h1>
 <p>Few handy commands you can use to interact with emulator/device, through terminal.</p>
-<table><thead><tr><th>Description</th><th>Command</th></tr></thead><tbody>
+<div class="table-wrapper"><table><thead><tr><th>Description</th><th>Command</th></tr></thead><tbody>
 <tr><td>List all connected devices</td><td><code>adb devices</code></td></tr>
 <tr><td>Install an application on device<br>-s to install on the SD Card<br>-g to grant all permissions listed in the manifest <a href="https://developer.android.com/studio/command-line/adb.html">[More Info]</a></td><td><code>adb install -r ~/application.apk</code></td></tr>
 <tr><td>Uninstall an application</td><td><code>adb uninstall your.app.package</code></td></tr>
@@ -387,7 +420,11 @@
 <tr><td>Take a Screenshot</td><td><code>adb shell screencap -p \| perl -pe 's/\x0D\x0A/\x0A/g' &gt; screenshot.png</code></td></tr>
 <tr><td>Launch an installed app using its package name</td><td><code>adb shell monkey -p com.yourapp.packagename 1</code></td></tr>
 <tr><td><a href="https://developer.android.com/studio/test/monkey">Stress test</a> your app using its package name by sending a pseudo-random stream of user events into the system</td><td><code>adb shell monkey -p com.yourapp.packagename -v 500</code></td></tr>
+<tr><td>Send input text to a connected device instead of typing manually.</td><td><code>adb shell input text &quot;helloworld@xyz.com&quot;</code></td></tr>
+<tr><td>Check device logs</td><td><code>adb logcat</code></td></tr>
+<tr><td>To save Android device logs locally on your computer using ADB</td><td><code>adb logcat &gt; device_logs.txt</code></td></tr>
 </tbody></table>
+</div>
 <ul>
 <li><strong><a href="https://crushingcode.nisrulz.com/posts/do-you-like-to-adb/">Learn about various techniques involved when using ADB</a></strong></li>
 </ul>
@@ -1617,12 +1654,13 @@ emulator -noaudio-avd &lt;emulator_name&gt;
 hw.audioInput = no
 hw. audioOutput = no
 </code></pre>
+<p>Read an indepth article <a href="https://blog.mmckenna.me/android-emulators-vs-bluetooth-headphones">here</a></p>
 </li>
 </ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="podcasts-to-listen"><a class="header" href="#podcasts-to-listen">Podcasts to listen</a></h1>
 <ol>
 <li><a href="http://fragmentedpodcast.com/">Fragmented</a></li>
-<li><a href="https://androidbackstage.blogspot.in/">Android Developers Backstage</a></li>
+<li><a href="https://developer.android.com/podcasts">Android Developer Podcasts</a></li>
 </ol>
 <p>There are others too, but the above two are the popular ones, you can lookup more using tag <code>android</code> on sites offering Podcast Services.</p>
 <p>P.S : I use <a href="https://player.fm/">Player.fm</a> to listen to these podcasts. They even have an <a href="https://play.google.com/store/apps/details?id=fm.player&amp;hl=en">Android Client</a>, all for FREE.</p>
@@ -1809,31 +1847,43 @@ Short byte sized android interview videos with experts.</p>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+
+
                         <div style="clear: both"></div>
                     </nav>
                 </div>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
             </nav>
 
         </div>
 
-        <script type="text/javascript">
+
+
+
+        <script>
             window.playground_copyable = true;
         </script>
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        <script type="text/javascript">
+
+        <script>
         window.addEventListener('load', function() {
             window.setTimeout(window.print, 100);
         });
         </script>
+
+    </div>
     </body>
 </html>

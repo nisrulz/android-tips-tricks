@@ -1,0 +1,56 @@
+name: Build and deploy book
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v10 # v10.3.3
+
+      - name: Check links
+        run: uv run scripts/check_links.py src Readme.md --timeout 15
+        # exits 1 on dead links, failing the deploy
+
+      - name: Install mdBook
+        uses: peaceiris/actions-mdbook@v2 # v2.0.0
+        with:
+          # pinned, not `latest`, so a compromised release can't flow in automatically
+          mdbook-version: "0.5.4" # rust-lang/mdBook v0.5.4
+
+      - name: Build book
+        run: mdbook build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5 # v5.0.0
+        with:
+          path: book
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5 # v5.0.1

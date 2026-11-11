@@ -15,6 +15,7 @@
     - [Gradle: Groovy Script Tricks](./gradle-groovy-script-tips.md)
     - [Gradle: Kotlin Script Tricks](./gradle-kotlin-script-tips.md)
 - [Make better choices while coding](./make-better-choices-while-coding.md)
+- [Modern Android Tips](./modern-android-tips.md)
 - [Tips regarding UI/UX](./tips-regarding-uiux.md)
 - [Tips if you use Kotlin](./tips-if-you-use-kotlin.md)
 - [Misc Tips](./misc.md)

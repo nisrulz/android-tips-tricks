@@ -15,14 +15,12 @@ Preferably use a font in Android Studio that's easy to read and is at a font siz
 
 You should use a standard codestyle, so possible contenders can be
 
-- [AOSP Codestyle](https://source.android.com/source/code-style.html)
+- [AOSP Codestyle](https://source.android.com/docs/setup/contribute/code-style)
 - [Square IntelliJ Codestyle](https://github.com/square/java-code-styles)
-- [Grandcentrix Codestyle](https://github.com/grandcentrix/AndroidCodeStyle)
+- [Grandcentrix Codestyle](https://github.com/GCX-HCI/grandcentrix-AndroidCodeStyle)
 
 ## Misc tips
 
-* **Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/2016.2/working-with-embedded-local-terminal.html)**
+* **Use the [Embedded Terminal inside Android Studio](https://www.jetbrains.com/help/idea/terminal-emulator.html)**
 
-* **Use the Memory/Network/CPU Monitor inside Android Studio to profile your code/app**
-
-* **[Configure Android Studio for speed](https://medium.com/google-developer-experts/configuring-android-studio-4aa4f54f1153#.rq0z6qlaq)**
+* **Use the Profiler inside Android Studio to profile your code/app**

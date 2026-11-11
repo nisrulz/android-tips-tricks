@@ -10,26 +10,23 @@ Append the below **Aliases** to your `~/.bashrc` or `~/.zshrc` file, save and re
 # Path to Android SDK (This is for Mac, replace for your OS)
 export ANDROID_HOME=$HOME/Library/Android/sdk
 
-# Path to NDK
-export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/22.1.7171670
+# Path to NDK (update to the version installed on your machine)
+export ANDROID_NDK_HOME=$ANDROID_HOME/ndk/28.2.13676358
 
 # Path to Android platform tools (adb, fastboot, etc)
 export ANDROID_PLATFORM_TOOLS="$ANDROID_HOME/platform-tools"
 
-# Path to Android tools (monitor, mksdcard, emulator-check, emulator, etc)
-export ANDROID_TOOLS_1="$ANDROID_HOME/tools"
-
-# Path to Android tools (apkanalyzer, avdmanager, monkeyrunner, lint, sdkmanager etc)
-export ANDROID_TOOLS_2="$ANDROID_HOME/tools/bin"
+# Path to Android cmdline tools (apkanalyzer, avdmanager, sdkmanager, lint etc)
+export ANDROID_CMDLINE_TOOLS="$ANDROID_HOME/cmdline-tools/latest/bin"
 
 # Path to Android tools (aapt, apksigner, zipalign, etc)
-export ANDROID_TOOLS_3="$ANDROID_HOME/build-tools/29.0.3/"
+export ANDROID_BUILD_TOOLS="$ANDROID_HOME/build-tools/36.0.0/"
 
 # Path to Android tools (emulator)
 export ANDROID_TOOLS_4="$ANDROID_HOME/emulator/"
 
 # Add all to the path
-export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_TOOLS:$ANDROID_TOOLS_2:$ANDROID_TOOLS_3:$ANDROID_TOOLS_4"
+export PATH="$PATH:$ANDROID_PLATFORM_TOOLS:$ANDROID_CMDLINE_TOOLS:$ANDROID_BUILD_TOOLS:$ANDROID_TOOLS_4"
 
 #############################################################
 # Setup Android Aliases

@@ -8,13 +8,15 @@
     buildTypes {
         release {
             minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
   }
   ```
 
-  [[Read more from the manual here](https://www.guardsquare.com/en/proguard/manual/usage)]
+  > Modern Android builds use R8, which replaces ProGuard and is enabled by default when `minifyEnabled true`.
+
+  [[Read more from the manual here](https://www.guardsquare.com/manual/configuration/usage)]
 
 * **Use shrinkResources**
 
@@ -38,7 +40,7 @@
       ...
 
       ndk {
-        abiFilters "armeabi", "armeabi-v7a", "mips", "x86"
+        abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
       }
     }
 
@@ -47,13 +49,13 @@
     abi {
       enable true
       reset()
-      include 'armeabi', 'armeabi-v7a', 'mips', 'x86' //select ABIs to build APKs for
+      include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64' //select ABIs to build APKs for
       universalApk false //generate an additional APK that contains all the ABIs
     }
   }
 
   // map for the version code
-  project.ext.versionCodes = ['armeabi': 1, 'armeabi-v7a': 2, 'mips': 5, 'x86': 8]
+  project.ext.versionCodes = ['armeabi-v7a': 1, 'arm64-v8a': 2, 'x86': 5, 'x86_64': 8]
 
   // Rename with proper versioning
   android.applicationVariants.all { variant ->
@@ -101,12 +103,14 @@
   ```groovy
   android {
   ...
-      lintOptions {
-          abortOnError true
+      lint {
+          abortOnError = true
           fatal 'StopShip'
       }
   }
   ```
+
+  > The `lintOptions` block was replaced by `lint` in AGP 7.0+.
 
   If you have a `//STOPSHIP` comment in your code, this will cause an error to be thrown when a release apk is generated.
 
@@ -116,7 +120,7 @@
   >
   > Search for STOPSHIP to find the correct setting.
 
-* **Output unit tests directly to the console** [[Ref Link]](https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f)
+* **Output unit tests directly to the console**
 
   > A small neat trick to see Android unit tests logging results as they happen in the terminal.
 
@@ -262,19 +266,21 @@
 
   > Have a look at the [Paperwork Project](https://github.com/zsoltk/paperwork), which generates build info for your Android project without breaking incremental compilation
 
-* **[Use Java 8 features by adding `sourceCompatibility` & `targetCompatibility` to your build.gradle file](https://developer.android.com/studio/preview/features/java8-support.html)**
+* **[Use Java 8 features by adding `sourceCompatibility` & `targetCompatibility` to your build.gradle file](https://developer.android.com/studio/write/java8-support)**
 
   ```groovy
   android {
     ...
     compileOptions {
-      sourceCompatibility JavaVersion.VERSION_1_8
-      targetCompatibility JavaVersion.VERSION_1_8
+      sourceCompatibility JavaVersion.VERSION_17
+      targetCompatibility JavaVersion.VERSION_17
     }
   }
   ```
 
-* **[Setup a gradle task to archive apks and proguard files on build, for backup purposes](https://medium.com/pressure-labs/a-new-devs-guide-to-google-play-sanity-4-a-groovy-script-to-save-them-all-456a12672886)**
+  > Modern AGP versions require JDK 17; use the highest version your `minSdkVersion` desugaring setup supports.
+
+* **[Setup a gradle task to archive apks and proguard files on build, for backup purposes]**
 
   ```groovy
   task deployApks(type:Copy) {
@@ -312,7 +318,7 @@
     }
   ```
 
-* Get faster gradle builds by only using one resource configuration for your development builds [[Ref Link](https://developer.android.com/studio/build/optimize-your-build#reduce_resources)]
+* Get faster gradle builds by only using one resource configuration for your development builds [[Ref Link](https://developer.android.com/build/optimize-your-build#reduce_resources)]
 
   ```groovy
   android {
@@ -329,11 +335,11 @@
   }
   ```
 
-* Specifying `buildToolsVersion` in your build.gradle files is optional when using Android plugin 3.0.0 or later. By default the plugin uses the minimum version of the build tools required by the version of the plugin you're using. [[Tweet Link](https://twitter.com/nisrulz/status/976730548084211718), [Ref Link](https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.LibraryExtension.html#com.android.build.gradle.LibraryExtension:buildToolsVersion)]
+* Specifying `buildToolsVersion` in your build.gradle files is optional. By default the plugin uses the minimum version of the build tools required by the version of the plugin you're using.
 
   ![dont_specify_buildtoolsversion](img/dont_specify_buildtoolsversion.jpg)
 
-* You can insert variables into AndroidManifest defined in `build.gradle` [[Tweet Link](https://twitter.com/jabbar_jigariyo/status/910754663925899264), [Ref Link](https://developer.android.com/studio/build/manifest-build-variables)]
+* You can insert variables into AndroidManifest defined in `build.gradle` [[Ref Link](https://developer.android.com/build/manage-manifests)]
 
   ![inject_vars_in_manifest](img/inject_vars_in_manifest.png)
 

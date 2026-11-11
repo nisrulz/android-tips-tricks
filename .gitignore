@@ -1,1 +1,3 @@
 book/
+.trash/
+__pycache__/

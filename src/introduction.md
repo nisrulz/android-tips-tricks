@@ -12,7 +12,7 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 ### Featured in
 
-[![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23110-blue.svg)](https://www.androiddevdigest.com/digest-110/) [![awesome-android](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/JStumpp/awesome-android#resources)
+[![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![awesome-android](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/JStumpp/awesome-android#resources)
 
 **Also included in**
 
@@ -24,4 +24,3 @@ This curated cheatsheet includes tips and tricks that I have been following in m
 
 If you appreciate my work, consider [buying me](https://www.paypal.me/nisrulz/5usd) a cup of ☕️ to keep me recharged 🤘🏼 [[PayPal](https://www.paypal.me/nisrulz/5usd)]
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/nisrulz.svg?style=social)](https://twitter.com/nisrulz)

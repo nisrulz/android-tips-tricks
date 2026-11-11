@@ -12,34 +12,22 @@
 
     Add Sort Lines action in Edit menu to sort selected lines or whole file if the selection is empty.
 
-4. [Findbugs](https://plugins.jetbrains.com/plugin/3847?pr=idea)
-
-    Provides static byte code analysis to look for bugs in Java code from within Android Studio
-
-5. [Sonar Lint](https://plugins.jetbrains.com/plugin/7973)
+4. [Sonar Lint](https://plugins.jetbrains.com/plugin/7973)
 
     The plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code.
 
-6. [Checkstyles](https://plugins.jetbrains.com/plugin/1065)
+5. [Checkstyles](https://plugins.jetbrains.com/plugin/1065)
 
     The plugin provides both real-time and on-demand scanning of Java files from within Android Studio.
 
-7. [ADB Idea](https://plugins.jetbrains.com/plugin/7380)
+6. [ADB Idea](https://plugins.jetbrains.com/plugin/7380)
 
     The plugin that adds ADB commands to Android Studio and IntelliJ such as ADB Uninstall App, ADB Kill App, ADB Restart App, etc
 
-8. [Exynap](https://plugins.jetbrains.com/androidstudio/plugin/8600-exynap)
-
-    The plugin which helps you find and implement the code you require in an instant.
-
-9. [Dagger IntelliJ Plugin](https://github.com/square/dagger-intellij-plugin)
-
-    The Dagger IntelliJ plugin creates visual connections between a @Inject object and the @Provides method that creates it.
-
-10. [JVM Debugger Memory View](https://plugins.jetbrains.com/idea/plugin/8537-jvm-debugger-memory-view)
+7. [JVM Debugger Memory View](https://plugins.jetbrains.com/idea/plugin/8537-jvm-debugger-memory-view)
 
     This plugin extends the built-in JVM debugger with capabilities to explore objects in the JVM heap during a debug session.
 
-11. [Android Parcelable code generator](https://plugins.jetbrains.com/plugin/7332-android-parcelable-code-generator)
+8. [Android Parcelable code generator](https://plugins.jetbrains.com/plugin/7332-android-parcelable-code-generator)
 
     Plugin which generates Android Parcelable boilerplate code for you.

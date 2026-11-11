@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
 echo ""
 echo "Deploying to github pages..."
 echo ""

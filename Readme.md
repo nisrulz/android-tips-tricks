@@ -9,7 +9,7 @@
 
 ### Featured in
 
-[![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![AndroidDev Digest](https://img.shields.io/badge/AndroidDev%20Digest-%23110-blue.svg)](https://web.archive.org/web/20211208063820/https://www.androiddevdigest.com/digest-110/) [![awesome-android](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/JStumpp/awesome-android#resources)
+[![Android Weekly](https://img.shields.io/badge/Android%20Weekly-%23221-blue.svg)](http://androidweekly.net/issues/issue-221) [![awesome-android](https://cdn.jsdelivr.net/gh/sindresorhus/awesome@d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/JStumpp/awesome-android#resources)
 
 **Also included in**
 
@@ -26,14 +26,33 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 ### Development
 
-#### Build Book
-```mdbook build```
+A [Makefile](Makefile) wraps the common commands — run `make` to list them:
 
-#### Build book and serve locally
-```mdbook serve --open```
+#### Build the book
+```sh
+make build        # mdbook build, output in book/
+```
 
-#### Build book and publish to Github Pages
-```./deploy-to-github-pages.sh```
+#### Build book and serve locally with live reload
+```sh
+make serve        # mdbook serve --open
+```
+
+#### Validate links in the book sources
+```sh
+make check-links               # writes link-report.md, exits 1 on dead links
+make check-links REPORT=...    # custom report path
+```
+
+#### Build book and publish to GitHub Pages
+```sh
+make deploy       # ./deploy-to-github-pages.sh
+```
+
+#### Clean build artifacts
+```sh
+make clean        # mdbook clean
+```
 
 #### Credits
 

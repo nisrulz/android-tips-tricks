@@ -20,6 +20,10 @@
 
   A tool to analyze battery consumers using Android "bugreport" files.
 
+* **Vet a project before you trust it — check what runs on your machine when you clone, open, install or build it**
+
+  Git hooks, Gradle init scripts, npm `postinstall`, VS Code `folderOpen` tasks and similar run code automatically as a side effect of ordinary workflows. [Side Eye](https://github.com/nisrulz/side-eye) scans a directory, repository URL or ZIP for these surfaces and reports findings with severity, without ever running anything from the project it scans.
+
 * **Always use a constant version value like "1.2.0"**
 
   Avoid using `+` when specifying the version of dependencies.

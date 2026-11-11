@@ -13,6 +13,11 @@
 - [JSONViewer](https://jsonviewer.stack.hu/) - Awesome JSON formatter
 - [ExtendsClass](https://extendsclass.com/json-generator.html) - Random JSON Generator
 - [ShapeShifter](https://shapeshifter.design/) - SVG path morphing animation editor.
+- [App Icon Badger](https://nisrulz.com/app-icon-badger/) - Overlay version badges and text on your app icon, right in the browser.
+- [DrawableForge](https://nisrulz.com/drawableforge/) - Forge one image into every screen density (with lossless/lossy WebP and night variant support), right in the browser.
+- [Tiny Vector Drawable](https://nisrulz.com/tiny-vector-drawable/) - Shrink and minify your VectorDrawable/AnimatedVectorDrawable XML files. Runs locally, nothing uploaded.
+- [ADB Keep Screen On](https://github.com/nisrulz/adb-keep-screen-on) - CLI tool that keeps your device screen awake while connected over ADB, and restores the original setting on disconnect.
+- [Side Eye](https://github.com/nisrulz/side-eye) - Scan a project (directory, repo URL or ZIP) for anything that would run code on your machine on clone, open, install or build - git hooks, Gradle scripts, npm postinstall, VS Code tasks. Reads files, never runs them.
 - [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/) - Generate a generic privacy policy for your app for the playstore.
 - [gnirehtet](https://github.com/Genymobile/gnirehtet) - Reverse tethering for Android.
 - [Language Switcher Tile](https://github.com/AzimoLabs/Language-Switcher-Tile) - An android plugin that allows you to easily change your device language.

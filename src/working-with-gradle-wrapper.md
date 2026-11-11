@@ -19,23 +19,15 @@
   ./gradlew -stop
   ```
 
-* **Upgrade gradle wrapper to latest release version i.e 6.5**
+* **Upgrade gradle wrapper to latest release version (check [gradle.org/releases](https://gradle.org/releases/) for the current one, i.e 9.8.2)**
 
   Run this inside your project folder via terminal
 
   ```bash
-  ./gradlew wrapper --gradle-version 6.5 --distribution-type all
+  ./gradlew wrapper --gradle-version 9.8.2 --distribution-type all
   ```
 
-* **Make use of Build Cache to speed up your builds.** 
-
-  Set the below property in your global `gradle.properties` file
-
-  ```
-  android.enableBuildCache=true
-  ```
-
-* **Make your builds faster by building offline** [[Ref Link]](https://medium.com/@cesarmcferreira/mastering-the-terminal-side-of-android-development-e7520466c521#.1cw4bto7f)
+* **Make your builds faster by building offline**
 
   > The `--offline` flag tells gradle to always use dependency modules from the cache, regardless if they are due to be checked again. When running offline, gradle will never attempt to access the network to perform dependency resolution. If required modules are not present in the dependency cache, build execution will fail.
 
@@ -51,5 +43,5 @@
     ./gradlew test --offline
     ```
 
-* Run a single unit test from the command line using the `--tests` option e.g: `./gradlew testDebugUnitTest --tests "*.MainPresenterTest"` . Use `*` to avoid typing the entire package name. [[Ref Link](https://twitter.com/molsjeroen/status/976469806068256769)]
+* Run a single unit test from the command line using the `--tests` option e.g: `./gradlew testDebugUnitTest --tests "*.MainPresenterTest"` . Use `*` to avoid typing the entire package name.
 

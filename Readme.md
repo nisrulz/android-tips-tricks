@@ -26,14 +26,33 @@ Contributions are always welcome, hoping people will help me in growing this. To
 
 ### Development
 
-#### Build Book
-```mdbook build```
+A [Makefile](Makefile) wraps the common commands — run `make` to list them:
 
-#### Build book and serve locally
-```mdbook serve --open```
+#### Build the book
+```sh
+make build        # mdbook build, output in book/
+```
 
-#### Build book and publish to Github Pages
-```./deploy-to-github-pages.sh```
+#### Build book and serve locally with live reload
+```sh
+make serve        # mdbook serve --open
+```
+
+#### Validate links in the book sources
+```sh
+make check-links               # writes link-report.md, exits 1 on dead links
+make check-links REPORT=...    # custom report path
+```
+
+#### Build book and publish to GitHub Pages
+```sh
+make deploy       # ./deploy-to-github-pages.sh
+```
+
+#### Clean build artifacts
+```sh
+make clean        # mdbook clean
+```
 
 #### Credits
 

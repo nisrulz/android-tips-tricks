@@ -30,10 +30,11 @@ jobs:
         run: uv run scripts/check_links.py src Readme.md --timeout 15
         # exits 1 on dead links, failing the deploy
 
-      - name: Install mdBook (latest)
+      - name: Install mdBook
         uses: peaceiris/actions-mdbook@v2 # v2.0.0
         with:
-          mdbook-version: latest
+          # pinned, not `latest`, so a compromised release can't flow in automatically
+          mdbook-version: "0.5.4" # rust-lang/mdBook v0.5.4
 
       - name: Build book
         run: mdbook build

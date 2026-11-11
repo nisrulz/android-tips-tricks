@@ -46,7 +46,7 @@
 
     ![bookmarks_mnemonic_as](img/bookmarks_mnemonic_as.gif)
 
-- When working with a class file dat has a lot of loc, often times one needs to jump between some parts of the same file. To do that, one can use the "Bookmarks" in Android Studio! Simply mark the line of code as Bookmark & open up the Bookmark Panel to jump.
+- When working with a class file that has a lot of loc, often times one needs to jump between some parts of the same file. To do that, one can use the "Bookmarks" in Android Studio! Simply mark the line of code as Bookmark & open up the Bookmark Panel to jump.
 
     ![bookmarks_as](img/bookmarks_as.gif)
 

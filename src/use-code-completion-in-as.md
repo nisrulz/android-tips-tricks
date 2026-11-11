@@ -8,7 +8,7 @@
 - `logd` - Generates `Log.d(TAG, "");`
 - `logm` - Log current method name and its arguments.
 - `logr` - Log result of the current method
-- `logt` - static logtaf with current classname
+- `logt` - static logtag with current classname
 - `psf` - public static final
 - `sout` - Prints a string to System.out
 - `soutm` - Prints current class and method names to System.out

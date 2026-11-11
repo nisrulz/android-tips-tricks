@@ -287,7 +287,7 @@
 
   ![Breakpoint Logs](img/breakpoint_logs.jpg)
 
-- If you're working with Android Things and you don't have an extrenal screen for your device, install [scrcpy](https://github.com/Genymobile/scrcpy) and use it to see what's going on your Android IoT device. It works a charm over wireless adb.
+- If you're working with Android Things and you don't have an external screen for your device, install [scrcpy](https://github.com/Genymobile/scrcpy) and use it to see what's going on your Android IoT device. It works a charm over wireless adb.
 
 - Android Studio has this weird behaviour that it allows to edit its default code style, which leads to a weird side-effect. If you open your pre-setup project(with set codestyle and copyright configs) in Android Studio it will delete all pre-setup codestyle and copyright profile in this project. This is every much evident if you checked in your configs into git for sharing purpose, which is lost immediately as soon as you open the project
 
@@ -394,7 +394,7 @@
 
     ![encode_special_1](img/encode_special_1.gif)
 
-    - The option is also avaliable under **Edit menu** drop down
+    - The option is also available under **Edit menu** drop down
 
         ![encode_special_2](img/encode_special_2.png)
 

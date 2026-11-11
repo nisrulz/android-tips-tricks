@@ -5,11 +5,11 @@
 - **Checkout [Android Dialogs](https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed)**
   Short byte sized android interview videos with experts.
 
-- **Checkout [Google's Udacity Android courses](https://www.udacity.com/courses/android)**
+- **[Checkout Google's Udacity Android courses](https://www.udacity.com/courses/android)**
 
   Free courses and (paid) Nanodegree programs aimed at beginners up to advanced Android developers taught by professionals.
 
-- **Checkout [CodePath Android Cliffnotes](https://guides.codepath.com/android)**
+- **Checkout [CodePath Android Cliffnotes](https://guides.codepath.org/android)**
 
   It is the central crowdsourced resource for complete and up-to-date practical Android developer guides for any topic.
 
@@ -17,26 +17,19 @@
 
   - [Cheatsheet/Summary](https://github.com/HugoMatilla/Effective-JAVA-Summary)
 
-- **[Subscribe to Caster.io](https://caster.io/)**
-
-  Bite-sized Android development videos
-
 - **Bookmark these sites for staying upto date**
     - [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
-    - [Android Niceties - UI Showcase](http://androidniceties.tumblr.com/)
-    - [Material Design Specs](https://material.google.com/)
-    - [Material Components](https://material.io/components/)
-    - [Everything About Material Design](https://material.io/)
+    - [Material Design Specs](https://m2.material.io/guidelines/)
+    - [Material Components](https://m3.material.io/components/)
+    - [Everything About Material Design](https://m3.material.io/)
     - [Platform Version Distribution](https://developer.android.com/about/dashboards/index.html#Platform)
-    - [Android Studio Release Notes](https://sites.google.com/a/android.com/tools/recent)
-    - [Android Developers Blog](https://android-developers.blogspot.in/)
+    - [Android Studio Release Notes](https://developer.android.com/studio/releases)
+    - [Android Developers Blog](https://android-developers.googleblog.com/)
     - [AndroidDev-Reddit](https://www.reddit.com/r/androiddev)
     - [Github Trending Java Projects](https://github.com/trending?l=java&since=weekly)
     - [Stackoverflow-Android tag](https://stackoverflow.com/questions/tagged/android)
-    - [Support Library History](https://developer.android.com/topic/libraries/support-library/revisions.html)
     - [Android Conferences](https://androidstudygroup.github.io/conferences/)
     - [Android Dev Docs](https://developer.android.com/reference/packages.html)
-    - [Material Up - DesignShowcase](http://www.material.uplabs.com/)
     - [Dribbble - MaterialDeisgnShowcase](https://dribbble.com/tags/material_design)
     - [UltimateAndroidReference](https://github.com/aritraroy/UltimateAndroidReference)
 
@@ -52,6 +45,4 @@
 - **Subscribe to newsletters to stay upto date**
 
   - [Android Weekly](http://androidweekly.net/) - Free newsletter that helps you to stay cutting-edge with your Android Development
-  - [AndroidDevDigest](https://www.androiddevdigest.com/) - A Handcrafted Weekly #AndroidDev Newsletter
-  - [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/) - Fresh news from Droid zone
   - [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6) - Free newsletter to stay uptodate with Kotlin Development

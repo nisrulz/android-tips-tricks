@@ -17,7 +17,7 @@
 - `gone` - Set view visibility to GONE
 - `noInstance` - private empty constructor to prohibit instance creation
 
-- There is a quick way to surround your layout with a Linear Layout via using a Live Template. You can create one called `wrapll` by setting it up [[Ref Link](https://twitter.com/nisrulz/status/1197666095886454789)]
+- There is a quick way to surround your layout with a Linear Layout via using a Live Template. You can create one called `wrapll` by setting it up
 
   ![live_template_wrapll_2](img/live_template_wrapll_2.png)
   ![live_template_wrapll_3](img/live_template_wrapll_3.png)
